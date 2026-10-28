@@ -70,13 +70,8 @@ export async function saveState(v:State):Promise<boolean>{
     return false;
   }finally{db?.close()}
 }
-export function write(v:State):boolean{
-  if(!valid(v)||typeof window==="undefined")return false;
-  cache={...v,transactions:v.transactions.map(t=>({...t}))};
-  void saveState(cache);
-  window.dispatchEvent(new Event("bob-new-state-change"));
-  return true;
-}
+// Persist state only through saveState(), which resolves after IndexedDB commits.
+// A synchronous writer could report success before durable storage finishes.
 export function balance(s:State):number{return s.openingBalance+s.transactions.filter(t=>t.status==="posted").reduce((n,t)=>n+(t.type==="credit"?t.amount:-t.amount),0)}
 export function money(n:number):string{return new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR"}).format(n)}
 
