@@ -11,6 +11,7 @@ An independent, separately branded finance-workspace prototype. It does not modi
 - `/settings` — edit account display, opening balance, sample PIN and transactions; validated JSON import/export.
 - `/transfers` — multi-step sample fund-transfer details, review and completion preview. It never sends funds.
 - `/payees` — add/remove fictional beneficiaries stored in this browser.
+- `/help-support` — local sample support chat with browser-only history; it does not contact an agent.
 - `/demo-documents` — printable sample account summary, clearly labelled **DEMO — NOT A BANK-ISSUED DOCUMENT**.
 
 ## Assets and design
