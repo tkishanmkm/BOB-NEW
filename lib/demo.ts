@@ -102,8 +102,28 @@ export async function saveState(v:State):Promise<boolean>{
 export function balance(s:State):number{return s.openingBalance+s.transactions.filter(t=>t.status==="posted").reduce((n,t)=>n+(t.type==="credit"?t.amount:-t.amount),0)}
 export function money(n:number):string{return new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR"}).format(n)}
 
+function validWorkspacePayees(value:unknown):boolean{
+  if(!Array.isArray(value)||value.length>500)return false;
+  const ids=new Set<string>(),accounts=new Set<string>();
+  return value.every((item:unknown)=>{
+    if(!item||typeof item!=="object")return false;
+    const p=item as {id?:unknown;name?:unknown;bank?:unknown;account?:unknown;code?:unknown};
+    if(typeof p.id!=="string"||!p.id.trim()||p.id.length>100||ids.has(p.id)||typeof p.name!=="string"||!p.name.trim()||p.name.length>100||typeof p.bank!=="string"||!p.bank.trim()||p.bank.length>100||typeof p.account!=="string"||!/^[0-9]{6,18}$/.test(p.account)||accounts.has(p.account)||typeof p.code!=="string"||!/^[A-Za-z]{4}0[A-Za-z0-9]{6}$/.test(p.code))return false;
+    ids.add(p.id);accounts.add(p.account);return true;
+  });
+}
+function validWorkspaceMessages(value:unknown):boolean{
+  if(!Array.isArray(value)||value.length>200)return false;
+  const ids=new Set<string>();
+  return value.every((item:unknown)=>{
+    if(!item||typeof item!=="object")return false;
+    const m=item as {id?:unknown;text?:unknown;sender?:unknown;time?:unknown};
+    if(typeof m.id!=="string"||!m.id.trim()||m.id.length>100||ids.has(m.id)||typeof m.text!=="string"||!m.text.trim()||m.text.length>1000||(m.sender!=="you"&&m.sender!=="daybook")||typeof m.time!=="string"||!m.time.trim()||m.time.length>100)return false;
+    ids.add(m.id);return true;
+  });
+}
 export async function restoreWorkspaceRecords(account:State,payees:unknown,supportMessages:unknown):Promise<boolean>{
-  if(!valid(account)||typeof window==="undefined")return false;
+  if(!valid(account)||!validWorkspacePayees(payees)||!validWorkspaceMessages(supportMessages)||typeof window==="undefined")return false;
   const next:State={...account,transactions:account.transactions.map(t=>({...t}))};
   const operation=saveQueue.then(async()=>{
     let db:IDBDatabase|undefined;
