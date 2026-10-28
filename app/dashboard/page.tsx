@@ -3,24 +3,25 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Shell } from "@/components/app-shell";
+import { ApkAssetIcon, type AssetKey } from "@/components/apk-asset-map";
 import { read, balance, money, type State } from "@/lib/demo";
 
-const primaryActions = [
-  { icon: "↗", title: "Fund transfer", detail: "Create and review a transfer", href: "/transfers" },
-  { icon: "▤", title: "Passbook", detail: "Search account activity", href: "/passbook" },
-  { icon: "♙", title: "Beneficiaries", detail: "Manage saved recipients", href: "/payees" },
-  { icon: "▣", title: "Account details", detail: "View your account profile", href: "/account-details" },
-  { icon: "▧", title: "Account statement", detail: "Review account activity", href: "/statement" },
-  { icon: "⚙", title: "Settings", detail: "Manage profile and records", href: "/settings" },
+const primaryActions: { icon: AssetKey; title: string; detail: string; href: string }[] = [
+  { icon: "transfer", title: "Fund transfer", detail: "Create and review a transfer", href: "/transfers" },
+  { icon: "passbook", title: "Passbook", detail: "Search account activity", href: "/passbook" },
+  { icon: "beneficiaries", title: "Beneficiaries", detail: "Manage saved recipients", href: "/payees" },
+  { icon: "account", title: "Account details", detail: "View your account profile", href: "/account-details" },
+  { icon: "statement", title: "Account statement", detail: "Review account activity", href: "/statement" },
+  { icon: "settings", title: "Settings", detail: "Manage profile and records", href: "/settings" },
 ];
 
-const exploreActions = [
-  { icon: "▤", title: "Bill payments", href: "/bill-pay" },
-  { icon: "▣", title: "Cards", href: "/cards" },
-  { icon: "⌕", title: "UPI", href: "/upi" },
-  { icon: "◷", title: "Fixed deposit", href: "/fixed-deposit" },
-  { icon: "◇", title: "Offers", href: "/offers" },
-  { icon: "?", title: "Help & support", href: "/help-support" },
+const exploreActions: { icon: AssetKey; title: string; href: string }[] = [
+  { icon: "billPay", title: "Bill payments", href: "/bill-pay" },
+  { icon: "cards", title: "Cards", href: "/cards" },
+  { icon: "upi", title: "UPI", href: "/upi" },
+  { icon: "fixedDeposit", title: "Fixed deposit", href: "/fixed-deposit" },
+  { icon: "offers", title: "Offers", href: "/offers" },
+  { icon: "help", title: "Help & support", href: "/help-support" },
 ];
 
 export default function Dashboard() {
@@ -43,19 +44,19 @@ export default function Dashboard() {
       <Link className="btn dashboard-outline" href="/account-details">View account details →</Link>
     </div>
 
-    <section className="card balance dashboard-balance" aria-label="Available balance">
-      <div className="balance-top"><div><p className="balance-caption">Available balance</p><h2>{money(balance(s))}</h2><p className="balance-account">{s.accountLabel} <span>·</span> {s.maskedId}</p></div><span className="balance-mark" aria-hidden="true">◈</span></div>
+    <section className="card balance dashboard-balance" aria-label="Available sample balance">
+      <div className="balance-top"><div><p className="balance-caption">Available sample balance</p><h2>{money(balance(s))}</h2><p className="balance-account">{s.accountLabel} <span>·</span> {s.maskedId}</p></div><span className="balance-mark" aria-hidden="true">◈</span></div>
       <div className="balance-foot"><span>● Stored on this device</span><Link href="/statement">View statement ↗</Link></div>
     </section>
 
     <section className="dashboard-section">
       <div className="section-heading"><div><h2>Quick actions</h2><p className="muted">Frequently used account services.</p></div></div>
-      <div className="dashboard-action-grid">{primaryActions.map(a => <Link className="dashboard-action" href={a.href} key={a.title}><span className="dashboard-action-icon" aria-hidden="true">{a.icon}</span><span className="dashboard-action-copy"><strong>{a.title}</strong><small>{a.detail}</small></span><span className="action-arrow" aria-hidden="true">→</span></Link>)}</div>
+      <div className="dashboard-action-grid">{primaryActions.map(a => <Link className="dashboard-action" href={a.href} key={a.title}><ApkAssetIcon asset={a.icon} size={26} className="dashboard-action-icon"/><span className="dashboard-action-copy"><strong>{a.title}</strong><small>{a.detail}</small></span><span className="action-arrow" aria-hidden="true">→</span></Link>)}</div>
     </section>
 
     <section className="dashboard-section">
       <div className="section-heading"><div><h2>Explore services</h2><p className="muted">More account tools and service areas.</p></div><Link href="/more">View all →</Link></div>
-      <div className="dashboard-explore-grid">{exploreActions.map(a => <Link className="dashboard-explore" href={a.href} key={a.title}><span aria-hidden="true">{a.icon}</span><strong>{a.title}</strong><span aria-hidden="true">↗</span></Link>)}</div>
+      <div className="dashboard-explore-grid">{exploreActions.map(a => <Link className="dashboard-explore" href={a.href} key={a.title}><ApkAssetIcon asset={a.icon} size={24}/><strong>{a.title}</strong><span aria-hidden="true">↗</span></Link>)}</div>
     </section>
 
     <section className="card dashboard-recent">
