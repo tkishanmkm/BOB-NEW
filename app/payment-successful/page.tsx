@@ -17,10 +17,12 @@ export default function PaymentSuccessfulPage() {
     };
   }, []);
 
+  // Array order reflects the order in which the local previews were saved.
+  // Reverse it so two previews made on the same day show the newest one.
   const latest: Tx | undefined = state?.transactions
-    .filter((tx) => tx.description.startsWith("SIMULATION — Transfer preview to "))
     .slice()
-    .sort((a, b) => b.date.localeCompare(a.date))[0];
+    .reverse()
+    .find((tx) => tx.description.startsWith("SIMULATION — Transfer preview to "));
 
   return <Shell>
     <section className="success-panel" aria-labelledby="result-title">
