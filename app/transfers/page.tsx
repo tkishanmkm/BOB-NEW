@@ -19,6 +19,7 @@ export default function Transfers() {
   const [amount, setAmount] = useState("100");
   const [remark, setRemark] = useState("");
   const [error, setError] = useState("");
+  const [saving, setSaving] = useState(false);
   const [payees, setPayees] = useState<Payee[]>([]);
   const [selectedPayee, setSelectedPayee] = useState("");
 
@@ -38,6 +39,7 @@ export default function Transfers() {
   }
 
   async function finish() {
+    if (saving) return;
     const value = Number(amount);
     if (!Number.isFinite(value) || value <= 0) {
       setError("Enter a valid positive amount.");
@@ -59,12 +61,18 @@ export default function Transfers() {
         },
       ],
     };
-    const saved = await saveState(next);
-    if (!saved) {
-      setError("The sample result could not be saved in this browser. No result was recorded. Check browser storage and try again.");
-      return;
+    setSaving(true);
+    setError("");
+    try {
+      const saved = await saveState(next);
+      if (!saved) {
+        setError("The sample result could not be saved in this browser. No result was recorded. Check browser storage and try again.");
+        return;
+      }
+      router.push("/payment-successful");
+    } finally {
+      setSaving(false);
     }
-    router.push("/payment-successful");
   }
 
   function review(e: React.FormEvent) {
@@ -101,7 +109,7 @@ export default function Transfers() {
       <div className="receipt-row"><span>Recipient</span><b>{recipient}</b></div><div className="receipt-row"><span>Institution</span><b>{bank}</b></div><div className="receipt-row"><span>Account</span><b>•••• {account.slice(-4)}</b></div><div className="receipt-row"><span>IFSC-format code</span><b>{ifsc}</b></div><div className="receipt-row"><span>Amount</span><b>{money(Number(amount))}</b></div><div className="receipt-row"><span>Note</span><b>{remark || "—"}</b></div>
       <p className="warning">NO PAYMENT WILL BE SENT — LOCAL PROTOTYPE ONLY</p>
       {error && <p className="error" role="alert">{error}</p>}
-      <div className="actions"><button type="button" className="secondary" onClick={() => { setStage("details"); setError(""); }}>Back to edit</button><button type="button" onClick={finish}>Finish and view result</button></div>
+      <div className="actions"><button type="button" className="secondary" onClick={() => { setStage("details"); setError(""); }}>Back to edit</button><button type="button" onClick={finish} disabled={saving}>{saving ? "Saving sample result…" : "Finish and view result"}</button></div>
     </section>}
   </Shell>;
 }
