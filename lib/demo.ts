@@ -175,14 +175,36 @@ export async function getLocalRecord<T>(key:string,fallback:T,persistMigration=t
   }finally{db.close()}
 }
 export async function setLocalRecord<T>(key:string,value:T):Promise<void>{
-  const db=await openDB();
-  try{await putRecordById(db,"collection:"+key,value);try{localStorage.removeItem(key)}catch{}}
-  finally{db.close()}
+  const operation=saveQueue.then(async()=>{
+    let db:IDBDatabase|undefined;
+    try{
+      db=await openDB();
+      await putRecordById(db,"collection:"+key,value);
+      try{localStorage.removeItem(key)}catch{}
+    }finally{db?.close()}
+  });
+  // Keep the queue usable after a failed collection write while returning the
+  // original rejection to the caller.
+  saveQueue=operation.then(()=>undefined,()=>undefined);
+  return operation;
 }
 export async function deleteLocalRecord(key:string):Promise<void>{
-  const db=await openDB();
-  try{await new Promise<void>((resolve,reject)=>{const tx=db.transaction(STORE,"readwrite");tx.objectStore(STORE).delete("collection:"+key);tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error||new Error("Could not delete local records."))});try{localStorage.removeItem(key)}catch{}}
-  finally{db.close()}
+  const operation=saveQueue.then(async()=>{
+    let db:IDBDatabase|undefined;
+    try{
+      db=await openDB();
+      await new Promise<void>((resolve,reject)=>{
+        const tx=db!.transaction(STORE,"readwrite");
+        tx.objectStore(STORE).delete("collection:"+key);
+        tx.oncomplete=()=>resolve();
+        tx.onerror=()=>reject(tx.error||new Error("Could not delete local records."));
+        tx.onabort=()=>reject(tx.error||new Error("Local record deletion was cancelled."));
+      });
+      try{localStorage.removeItem(key)}catch{}
+    }finally{db?.close()}
+  });
+  saveQueue=operation.then(()=>undefined,()=>undefined);
+  return operation;
 }
 function readRecordById(db:IDBDatabase,id:string):Promise<unknown>{
   return new Promise((resolve,reject)=>{const tx=db.transaction(STORE,"readonly");const request=tx.objectStore(STORE).get(id);request.onsuccess=()=>resolve(request.result?.value);request.onerror=()=>reject(request.error||new Error("Could not read local records."))});
