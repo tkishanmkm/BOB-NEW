@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="#f7f8fd" />
+            <corners android:topLeftRadius="@dimen/elite_sdk_spacing_10dp" android:topRightRadius="10.0dp" android:bottomLeftRadius="10.0dp" android:bottomRightRadius="10.0dp" />
+        </shape>
+    </item>
+</selector>

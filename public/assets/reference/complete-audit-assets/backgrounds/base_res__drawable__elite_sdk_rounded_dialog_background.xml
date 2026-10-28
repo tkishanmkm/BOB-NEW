@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/elite_sdk_white_f7" />
+    <corners android:topLeftRadius="@dimen/elite_sdk_line_spacing_caption" android:topRightRadius="@dimen/elite_sdk_line_spacing_caption" />
+</shape>

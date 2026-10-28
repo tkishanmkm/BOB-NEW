@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="103.67297dp" android:width="91.076996dp" android:viewportWidth="91.077" android:viewportHeight="103.673"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/aactionableBlueColor" android:pathData="M78.621,70.646m-3.532,0a3.532,3.532 0,1 1,7.064 0a3.532,3.532 0,1 1,-7.064 0" />
+    <path android:fillColor="@color/aactionableBlueColor" android:pathData="M34.86,34.782h21.385a19.034,19.034 0,1 0,-21.385 0ZM42.535,9.441L38.462,9.441a1.346,1.346 0,0 1,0 -2.691L52.702,6.75a1.346,1.346 0,1 1,0 2.691h-4.434a7.707,7.707 0,0 1,1.6 3.364L52.702,12.805a1.346,1.346 0,0 1,0 2.691h-2.833a7.308,7.308 0,0 1,-7.33 6.055h-0.691l7.723,7.349a1.408,1.408 0,0 1,0.054 1.953,1.341 1.341,0 0,1 -1.9,0.045l-10.181,-9.635a1.4,1.4 0,0 1,0.923 -2.4h4.074A4.668,4.668 0,0 0,47.102 15.499h-8.64a1.346,1.346 0,0 1,0 -2.691h8.64a4.668,4.668 0,0 0,-4.566 -3.364Z" />
+    <path android:fillColor="@color/aactionableBlueColor" android:pathData="M5.831,34.782h24.75A21.694,21.694 0,0 1,24.223 23.121L5.831,23.121a5.831,5.831 0,0 0,0 11.661Z" />
+    <path android:fillColor="@color/aactionableBlueColor" android:pathData="M91.078,36.821L91.078,28.541a5.421,5.421 0,0 0,-5.381 -5.42L66.884,23.121a21.7,21.7 0,0 1,-6.358 11.661h25.17A8.023,8.023 0,0 1,91.078 36.821Z" />
+    <path android:fillColor="@color/aactionableBlueColor" android:pathData="M5.411,103.674l80.3,-0.207a5.391,5.391 0,0 0,5.368 -5.382L91.079,86.361L70.493,86.361a1.392,1.392 0,0 1,-1.108 -0.63l-9.886,-14.42a1.366,1.366 0,0 1,0 -1.538l9.886,-14.4a1.4,1.4 0,0 1,1.108 -0.635h20.584L91.077,42.835a5.37,5.37 0,0 0,-5.382 -5.361L5.829,37.474A8.478,8.478 0,0 1,0.029 35.157L0.029,98.287a5.388,5.388 0,0 0,5.382 5.382Z" />
+    <path android:fillColor="@color/aactionableBlueColor" android:pathData="M71.202,83.67h19.876L91.078,57.432L71.202,57.432l-8.961,13.119ZM78.622,64.423a6.223,6.223 0,1 1,-6.223 6.223A6.223,6.223 0,0 1,78.622 64.423Z" />
+</vector>
