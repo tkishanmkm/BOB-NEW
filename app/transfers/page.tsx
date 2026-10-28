@@ -9,6 +9,23 @@ import { money, read, saveState, getLocalRecord, type State } from "@/lib/demo";
 type Stage = "details" | "review";
 type Payee = { id: string; name: string; bank: string; account: string; code: string };
 const PAYEES_KEY = "bob-new-sample-payees-v1";
+function validPayees(value: unknown): Payee[] | null {
+  if (!Array.isArray(value) || value.length > 500) return null;
+  const ids = new Set<string>();
+  const accounts = new Set<string>();
+  for (const item of value) {
+    if (!item || typeof item !== "object") return null;
+    const p = item as Partial<Payee>;
+    if (typeof p.id !== "string" || !p.id.trim() || p.id.length > 100 || ids.has(p.id)
+      || typeof p.name !== "string" || !p.name.trim() || p.name.length > 100
+      || typeof p.bank !== "string" || !p.bank.trim() || p.bank.length > 100
+      || typeof p.account !== "string" || !/^[0-9]{6,18}$/.test(p.account) || accounts.has(p.account)
+      || typeof p.code !== "string" || !/^[A-Za-z]{4}0[A-Za-z0-9]{6}$/.test(p.code)) return null;
+    ids.add(p.id);
+    accounts.add(p.account);
+  }
+  return value as Payee[];
+}
 export default function Transfers() {
   const router = useRouter();
   const [stage, setStage] = useState<Stage>("details");
@@ -28,8 +45,11 @@ export default function Transfers() {
     let active = true;
     (async () => { try {
       const saved: unknown = await getLocalRecord<unknown>(PAYEES_KEY, []);
-      if (active && Array.isArray(saved)) setPayees(saved.filter((p): p is Payee => !!p && typeof p.id === "string" && typeof p.name === "string" && typeof p.bank === "string" && typeof p.account === "string" && typeof p.code === "string"));
-    } catch { if (active) { setPayees([]); setPayeesLoadError(true); } } })();
+      if (!active) return;
+      const loaded = validPayees(saved);
+      if (loaded) setPayees(loaded);
+      else setPayeesLoadError(true);
+    } catch { if (active) { setPayeesLoadError(true); } } })();
     return () => { active = false; };
   }, []);
 
@@ -94,7 +114,7 @@ export default function Transfers() {
     {stage === "details" && <form className="card" onSubmit={review}>
       <h2>Recipient details</h2><p className="muted">Use fictional information only. Do not enter sensitive banking details.</p>
       <Field label="Choose a saved beneficiary"><select value={selectedPayee} onChange={e => choosePayee(e.target.value)}><option value="">Enter details manually</option>{payees.map(p => <option key={p.id} value={p.id}>{p.name} · •••• {p.account.slice(-4)}</option>)}</select></Field>
-      {payeesLoadError ? <p className="error" role="alert">Saved beneficiaries could not be loaded from browser storage. You can retry by reloading this page, or enter fictional placeholder details manually.</p> : payees.length === 0 && <p className="muted">No saved beneficiaries yet. Add a recipient on the <Link href="/payees">Beneficiaries page</Link>.</p>}
+      {payeesLoadError ? <p className="error" role="alert">Saved beneficiary data is invalid or could not be loaded. No saved recipients are shown. You may enter fictional placeholder details manually, but inspect or recover browser data before editing beneficiaries.</p> : payees.length === 0 && <p className="muted">No saved beneficiaries yet. Add a recipient on the <Link href="/payees">Beneficiaries page</Link>.</p>}
       <div className="grid">
         <Field label="Recipient name"><input value={recipient} maxLength={100} onChange={e => setRecipient(e.target.value)} required /></Field>
         <Field label="Institution name"><input value={bank} maxLength={100} onChange={e => setBank(e.target.value)} required /></Field>
