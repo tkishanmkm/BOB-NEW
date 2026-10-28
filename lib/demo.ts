@@ -1,9 +1,65 @@
 export type Tx={id:string;date:string;description:string;amount:number;type:"credit"|"debit";status:"posted"|"pending"};
 export type State={schemaVersion:1;name:string;accountLabel:string;maskedId:string;openingBalance:number;demoPin:string;mobile:string;email:string;address:string;branch:string;customerId:string;accountNumber:string;ifsc:string;dob:string;panNumber:string;transactions:Tx[]};
 export const KEY="bob-new-state-v1";
-export const DEFAULT:State={schemaVersion:1,name:"Sample User",accountLabel:"Sample Savings Account",maskedId:"SAMPLE •••• 4821",openingBalance:25000,demoPin:"2468",mobile:"",email:"",address:"",branch:"Sample Branch",customerId:"SAMPLE-CUST-001",accountNumber:"XXXXXX4821",ifsc:"SAMP0000001",dob:"",panNumber:"SAMPLE-PAN",transactions:[{id:"sample-credit",date:"2026-10-25",description:"Sample credit",amount:5000,type:"credit",status:"posted"},{id:"sample-debit",date:"2026-10-24",description:"Sample purchase",amount:850,type:"debit",status:"posted"}]};
-export function valid(v:unknown):v is State{if(!v||typeof v!=="object")return false;const s=v as Partial<State>;if(s.schemaVersion!==1||typeof s.name!=="string"||s.name.length>100||typeof s.accountLabel!=="string"||s.accountLabel.length>100||typeof s.maskedId!=="string"||s.maskedId.length>80||typeof s.openingBalance!=="number"||!Number.isFinite(s.openingBalance)||s.openingBalance<0||typeof s.demoPin!=="string"||!/^[0-9]{4,6}$/.test(s.demoPin)||!["mobile","email","address","branch","customerId","accountNumber","ifsc","dob","panNumber"].every(k=>s[k as keyof State]===undefined||typeof s[k as keyof State]==="string"&&(s[k as keyof State] as string).length<=200)||!Array.isArray(s.transactions)||s.transactions.length>5000)return false;const ids=new Set<string>();return s.transactions.every((item:unknown)=>{if(!item||typeof item!=="object")return false;const t=item as Partial<Tx>;if(typeof t.id!=="string"||!t.id||t.id.length>100||ids.has(t.id)||typeof t.date!=="string"||!/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(t.date)||typeof t.description!=="string"||t.description.length>300||typeof t.amount!=="number"||!Number.isFinite(t.amount)||t.amount<0||(t.type!=="credit"&&t.type!=="debit")||(t.status!=="posted"&&t.status!=="pending"))return false;ids.add(t.id);const d=new Date(t.date+"T00:00:00Z");return !Number.isNaN(d.getTime())&&d.toISOString().slice(0,10)===t.date})}
-export function read():State{if(typeof window==="undefined")return DEFAULT;try{const raw=localStorage.getItem(KEY);if(!raw)return DEFAULT;const value:unknown=JSON.parse(raw);return valid(value)?({...DEFAULT,...value} as State):DEFAULT}catch{return DEFAULT}}
-export function write(v:State):boolean{if(!valid(v)||typeof window==="undefined")return false;try{localStorage.setItem(KEY,JSON.stringify(v));window.dispatchEvent(new Event("bob-new-state-change"));return true}catch{return false}}
+const DB_NAME="bob-new-local-store";
+const DB_VERSION=1;
+const STORE="records";
+const STATE_RECORD="account-state";
+export const DEFAULT:State={schemaVersion:1,name:"Account Holder",accountLabel:"Savings Account",maskedId:"•••• 4821",openingBalance:25000,demoPin:"2468",mobile:"",email:"",address:"",branch:"Main Branch",customerId:"CUST-0001",accountNumber:"XXXXXX4821",ifsc:"SAMP0000001",dob:"",panNumber:"",transactions:[{id:"initial-credit",date:"2026-10-25",description:"Account credit",amount:5000,type:"credit",status:"posted"},{id:"initial-debit",date:"2026-10-24",description:"Purchase",amount:850,type:"debit",status:"posted"}]};
+let cache:State={...DEFAULT,transactions:DEFAULT.transactions.map(t=>({...t}))};
+let hydrated=false;
+let hydrationPromise:Promise<State>|null=null;
+function openDB():Promise<IDBDatabase>{
+  return new Promise((resolve,reject)=>{
+    if(typeof indexedDB==="undefined"){reject(new Error("IndexedDB is unavailable in this browser."));return}
+    const request=indexedDB.open(DB_NAME,DB_VERSION);
+    request.onupgradeneeded=()=>{const db=request.result;if(!db.objectStoreNames.contains(STORE))db.createObjectStore(STORE,{keyPath:"id"})};
+    request.onsuccess=()=>resolve(request.result);
+    request.onerror=()=>reject(request.error||new Error("Could not open local database."));
+  });
+}
+function readRecord(db:IDBDatabase):Promise<unknown>{
+  return new Promise((resolve,reject)=>{const tx=db.transaction(STORE,"readonly");const request=tx.objectStore(STORE).get(STATE_RECORD);request.onsuccess=()=>resolve(request.result?.value);request.onerror=()=>reject(request.error||new Error("Could not read local records."))});
+}
+function putRecord(db:IDBDatabase,value:State):Promise<void>{
+  return new Promise((resolve,reject)=>{const tx=db.transaction(STORE,"readwrite");tx.objectStore(STORE).put({id:STATE_RECORD,value});tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error||new Error("Could not save local records."));tx.onabort=()=>reject(tx.error||new Error("Local save was cancelled."))});
+}
+export async function hydrate():Promise<State>{
+  if(typeof window==="undefined")return cache;
+  if(hydrationPromise)return hydrationPromise;
+  hydrationPromise=(async()=>{
+    try{
+      const db=await openDB();
+      let stored=await readRecord(db);
+      if(!valid(stored)){
+        let legacy:unknown=null;
+        try{const raw=localStorage.getItem(KEY);if(raw)legacy=JSON.parse(raw)}catch{}
+        const initial=valid(legacy)?({...DEFAULT,...legacy} as State):cache;
+        await putRecord(db,initial);
+        stored=initial;
+      }
+      db.close();
+      if(valid(stored))cache={...DEFAULT,...stored,transactions:stored.transactions.map(t=>({...t}))};
+      try{localStorage.removeItem(KEY)}catch{}
+      hydrated=true;
+      window.dispatchEvent(new Event("bob-new-state-change"));
+      return cache;
+    }catch(error){
+      hydrationPromise=null;
+      throw error;
+    }
+  })();
+  return hydrationPromise;
+}
+export function isHydrated(){return hydrated}
+export function valid(v:unknown):v is State{if(!v||typeof v!=="object")return false;const s=v as Partial<State>;if(s.schemaVersion!==1||typeof s.name!=="string"||s.name.length>100||typeof s.accountLabel!=="string"||s.accountLabel.length>100||typeof s.maskedId!=="string"||s.maskedId.length>80||typeof s.openingBalance!=="number"||!Number.isFinite(s.openingBalance)||s.openingBalance<0||typeof s.demoPin!=="string"||!/^[0-9]{4,6}$/.test(s.demoPin)||![ "mobile","email","address","branch","customerId","accountNumber","ifsc","dob","panNumber"].every(k=>s[k as keyof State]===undefined||typeof s[k as keyof State]==="string"&&(s[k as keyof State] as string).length<=200)||!Array.isArray(s.transactions)||s.transactions.length>5000)return false;const ids=new Set<string>();return s.transactions.every((item:unknown)=>{if(!item||typeof item!=="object")return false;const t=item as Partial<Tx>;if(typeof t.id!=="string"||!t.id||t.id.length>100||ids.has(t.id)||typeof t.date!=="string"||!/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(t.date)||typeof t.description!=="string"||t.description.length>300||typeof t.amount!=="number"||!Number.isFinite(t.amount)||t.amount<0||(t.type!=="credit"&&t.type!=="debit")||(t.status!=="posted"&&t.status!=="pending"))return false;ids.add(t.id);const d=new Date(t.date+"T00:00:00Z");return !Number.isNaN(d.getTime())&&d.toISOString().slice(0,10)===t.date})}
+export function read():State{return {...cache,transactions:cache.transactions.map(t=>({...t}))}}
+export function write(v:State):boolean{
+  if(!valid(v)||typeof window==="undefined")return false;
+  cache={...v,transactions:v.transactions.map(t=>({...t}))};
+  void (async()=>{try{const db=await openDB();await putRecord(db,cache);db.close();hydrated=true;window.dispatchEvent(new Event("bob-new-state-change"))}catch{window.dispatchEvent(new CustomEvent("bob-new-storage-error",{detail:"Could not save to IndexedDB. Check browser storage availability."}))}})();
+  window.dispatchEvent(new Event("bob-new-state-change"));
+  return true;
+}
 export function balance(s:State):number{return s.openingBalance+s.transactions.filter(t=>t.status==="posted").reduce((n,t)=>n+(t.type==="credit"?t.amount:-t.amount),0)}
 export function money(n:number):string{return new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR"}).format(n)}
