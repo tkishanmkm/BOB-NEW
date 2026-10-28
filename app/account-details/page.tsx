@@ -26,7 +26,7 @@ export default function AccountDetailsPage() {
       <div className="grid">
         <Detail label="Display name" value={state.name}/>
         <Detail label="Account label" value={state.accountLabel}/>
-        <Detail label="Sample account identifier" value={state.maskedId}/><Detail label="Account number (sample)" value={state.accountNumber||"Not set"}/><Detail label="Customer ID (sample)" value={state.customerId||"Not set"}/><Detail label="Branch (sample)" value={state.branch||"Not set"}/><Detail label="IFSC-format code (sample)" value={state.ifsc||"Not set"}/><Detail label="Mobile (sample)" value={state.mobile||"Not set"}/><Detail label="Email (sample)" value={state.email||"Not set"}/><Detail label="Address (sample)" value={state.address||"Not set"}/>
+        <Detail label="Sample account identifier" value={state.maskedId}/><Detail label="Account number (sample)" value={state.accountNumber||"Not set"}/><Detail label="Customer ID (sample)" value={state.customerId||"Not set"}/><Detail label="Branch (sample)" value={state.branch||"Not set"}/><Detail label="IFSC-format code (sample)" value={state.ifsc||"Not set"}/><Detail label="Date of birth (sample)" value={state.dob||"Not set"}/><Detail label="PAN placeholder (sample)" value={state.panNumber||"Not set"}/><Detail label="Mobile (sample)" value={state.mobile||"Not set"}/><Detail label="Email (sample)" value={state.email||"Not set"}/><Detail label="Address (sample)" value={state.address||"Not set"}/>
         <Detail label="Calculated sample balance" value={money(balance(state))}/>
         <Detail label="Opening balance" value={money(state.openingBalance)}/>
         <Detail label="Posted transactions" value={String(posted)}/>
