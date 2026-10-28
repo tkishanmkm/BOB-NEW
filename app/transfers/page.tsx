@@ -77,12 +77,13 @@ export default function Transfers() {
       setError("The local transaction history has reached its 5,000-entry limit. No result was recorded.");
       return;
     }
+    const transferId = crypto.randomUUID();
     const next: State = {
       ...current,
       transactions: [
         ...current.transactions,
         {
-          id: crypto.randomUUID(),
+          id: transferId,
           date: new Date().toISOString().slice(0, 10),
           description: "Transfer result for " + recipient.trim() + (remark.trim() ? " · " + remark.trim() : ""),
           amount: value,
@@ -99,7 +100,7 @@ export default function Transfers() {
         setError("The sample result could not be saved in this browser. No result was recorded. Check browser storage and try again.");
         return;
       }
-      router.push("/payment-successful");
+      router.push("/payment-successful?id=" + encodeURIComponent(transferId));
     } catch {
       setError("The sample result could not be saved or opened. Check browser storage and try again; no bank payment was sent.");
     } finally {
