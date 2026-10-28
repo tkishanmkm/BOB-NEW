@@ -1,22 +1,33 @@
 # BOB-NEW — Independent Finance Workspace
 
-This repository is a separate, independently branded finance-workspace prototype. It does not modify or import proprietary branding from BOB-WORLD and does not connect to real bank/payment systems.
+This is a separate, independently branded finance-workspace prototype. It does not modify or copy the branded interface of BOB-WORLD and does not connect to real banking or payment systems.
 
-## Safety and scope
-- Use fictional/sample account data only.
-- Never enter real PINs, passwords, account numbers, or customer records.
-- Transfer flows are simulations only; no payment is initiated.
-- Any generated financial-style document must retain the clear label **DEMO — NOT A BANK-ISSUED DOCUMENT**.
-- Browser storage is a prototype convenience, not secure storage for sensitive financial data.
-- This project is not production-ready until builds, tests, security review, and device checks have been completed.
+## Current implementation
+- Next.js App Router, React, and TypeScript foundation.
+- Routes: local access gate, overview, transactions, settings, transfer preview, and account-summary preview.
+- One shared browser-local state model for sample profile, account display, opening balance, and transactions.
+- Schema validation for imported JSON, duplicate transaction-ID rejection, and date/amount/type/status checks.
+- Settings supports editing, adding/removing transactions, JSON import, and JSON export.
+- Dashboard balance includes posted transactions only; pending transactions are excluded.
+- Transfer page only previews intent; it does not create or send payments.
+- Printable account summary always displays **DEMO — NOT A BANK-ISSUED DOCUMENT**.
 
-## Planned milestones
-1. Independent app foundation and route shell.
-2. Shared validated account/profile/transaction state.
-3. Settings with safe JSON import/export and storage error handling.
-4. Dashboard/passbook balance consistency and transaction validation.
-5. Navigation, accessibility, responsive layout, and automated checks.
-6. Build/test evidence and release checklist.
+## Run locally
+Node.js 20.9+ recommended.
+```sh
+npm install
+npm run dev
+```
+Quality commands:
+```sh
+npm run lint
+npm run typecheck
+npm run build
+```
 
-## Development
-The planned stack is Next.js, React, TypeScript, and browser-local sample state. No GitHub Actions minutes are required for local development.
+## Important limitations
+- The local PIN gate is only a navigation convenience, not secure authentication. Do not enter real credentials or financial data.
+- Browser localStorage is not secure storage and this prototype has no server/database.
+- No real banking, identity verification, or payment rails are connected.
+- Not production-ready until dependency installation, lint, typecheck, build, interaction tests, security review, and device testing have passed.
+- UI/assets from the reference APK have not been copied; exact screen-by-screen mapping remains separate work.
