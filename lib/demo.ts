@@ -118,7 +118,8 @@ export async function getLocalRecord<T>(key:string,fallback:T):Promise<T>{
         value=fallback;
       }
       await putRecordById(db,"collection:"+key,value);
-      try{localStorage.removeItem(key)}catch{}
+      // Keep the legacy copy until the caller validates the record's schema.
+      // This preserves a recovery source if the migrated value is malformed.
     }
     return value as T;
   }finally{db.close()}
