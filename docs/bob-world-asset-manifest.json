@@ -1,0 +1,1283 @@
+﻿[
+    {
+        "sourcePath":  "logos\\base_assets__flutter_assets__assets__images__activateUpi__bob_world_logo.svg",
+        "targetPath":  "/assets/reference/logos/base_assets__flutter_assets__assets__images__activateUpi__bob_world_logo.svg",
+        "bytes":  4311,
+        "sha256":  "3CB3C910892A38475AAB56F9501C5A4878DF073FA0D07674A7A901F592213C8A",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_assets__flutter_assets__assets__images__bharat_connect__Bharat_Connect_Primary_Logo_PNG.png",
+        "targetPath":  "/assets/reference/logos/base_assets__flutter_assets__assets__images__bharat_connect__Bharat_Connect_Primary_Logo_PNG.png",
+        "bytes":  44515,
+        "sha256":  "F9912A6900595053EF5B384397F205FB08B7A9BA487DC9BE7713C0ED7C609C57",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_assets__flutter_assets__assets__images__bharat_connect__Bharat_Connect_Reverse_Logo_PNG.png",
+        "targetPath":  "/assets/reference/logos/base_assets__flutter_assets__assets__images__bharat_connect__Bharat_Connect_Reverse_Logo_PNG.png",
+        "bytes":  55775,
+        "sha256":  "68B2A49DACEB74CF7B358267776DD9BA90F547121546A177F337193E2E2CD3A4",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_assets__flutter_assets__assets__images__bharat_connect__Bharat_Connect_Reverse_Logo_White_BG_PNG.png",
+        "targetPath":  "/assets/reference/logos/base_assets__flutter_assets__assets__images__bharat_connect__Bharat_Connect_Reverse_Logo_White_BG_PNG.png",
+        "bytes":  40459,
+        "sha256":  "CA21FB0F629E00569115FA8A9F5452F19F9E8B673C3BA8EA5B65242163E5C61C",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_assets__flutter_assets__assets__images__bharat_connect__B_Assured_Logo_PNG.png",
+        "targetPath":  "/assets/reference/logos/base_assets__flutter_assets__assets__images__bharat_connect__B_Assured_Logo_PNG.png",
+        "bytes":  100011,
+        "sha256":  "4F8AB196570492B1797421220BBDDFABF41A38106F315D5B4DF34462C1405972",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_assets__flutter_assets__assets__images__createVpa__defaultBankLogo.png",
+        "targetPath":  "/assets/reference/logos/base_assets__flutter_assets__assets__images__createVpa__defaultBankLogo.png",
+        "bytes":  1076,
+        "sha256":  "D8E9C784D9BCE9512674CD6C1590D5481DCB1B70624606E0F3971EC02CD6817A",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_assets__flutter_assets__assets__images__dashBoard__bobupiLogo.png",
+        "targetPath":  "/assets/reference/logos/base_assets__flutter_assets__assets__images__dashBoard__bobupiLogo.png",
+        "bytes":  14852,
+        "sha256":  "AF5FAA2AAF85BFCDC4425079FB695290302B363AFC607F2C64B9733F5F0AED6A",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_assets__flutter_assets__assets__images__dashBoard__bob_e_pay_logo.png",
+        "targetPath":  "/assets/reference/logos/base_assets__flutter_assets__assets__images__dashBoard__bob_e_pay_logo.png",
+        "bytes":  34775,
+        "sha256":  "27A49FF147B1B534B52F55E624AF3D7D1001EA996ED9FA95C119133B7329D1DF",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_assets__flutter_assets__assets__images__dashBoard__bob_logo.png",
+        "targetPath":  "/assets/reference/logos/base_assets__flutter_assets__assets__images__dashBoard__bob_logo.png",
+        "bytes":  17562,
+        "sha256":  "A0873F8E69B70B7F80D9DB174B41E7F0DBF1769E93D62FDD64FAC4E0231092D0",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_assets__flutter_assets__assets__images__dashBoard__epayLogo.svg",
+        "targetPath":  "/assets/reference/logos/base_assets__flutter_assets__assets__images__dashBoard__epayLogo.svg",
+        "bytes":  8251,
+        "sha256":  "3EBE4ABCCA058CDBC9832AD9151DE7691D1E1C91A370754ABA66D5328B85C5E0",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_assets__flutter_assets__assets__images__dashBoard__logout.svg",
+        "targetPath":  "/assets/reference/logos/base_assets__flutter_assets__assets__images__dashBoard__logout.svg",
+        "bytes":  978,
+        "sha256":  "92D78F9ABBC870DD0743F79541DD5C7C5B18F8287FA8FADC8C1E09C85308440F",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_assets__flutter_assets__assets__images__mySpace__logout.svg",
+        "targetPath":  "/assets/reference/logos/base_assets__flutter_assets__assets__images__mySpace__logout.svg",
+        "bytes":  1315,
+        "sha256":  "11C242E3B8F445F2B9233FA4C73E5CDC37877B20C2DF66E8E20F539BEA65084A",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_assets__flutter_assets__assets__images__mySpace__upilogo.png",
+        "targetPath":  "/assets/reference/logos/base_assets__flutter_assets__assets__images__mySpace__upilogo.png",
+        "bytes":  1022,
+        "sha256":  "8C02EDD91989E7144F2CC6550FF5C09532F1320650DFDEFA638D6F13E4763A28",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_assets__flutter_assets__assets__images__mySpace__upiLogoSvg.SVG",
+        "targetPath":  "/assets/reference/logos/base_assets__flutter_assets__assets__images__mySpace__upiLogoSvg.SVG",
+        "bytes":  6674,
+        "sha256":  "53F3100680E7B56C701C9BB4D3BD2E89ADE09368D8A820E15C192D21E5890317",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_assets__flutter_assets__assets__images__sendMoney__upi_logo.svg",
+        "targetPath":  "/assets/reference/logos/base_assets__flutter_assets__assets__images__sendMoney__upi_logo.svg",
+        "bytes":  964,
+        "sha256":  "E337519BF8C7170E7844FDBF78AAB08CDCC40E47F013C175AB3D3A10E1A4502B",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_assets__flutter_assets__assets__images__sendMoney__upi_logo2.svg",
+        "targetPath":  "/assets/reference/logos/base_assets__flutter_assets__assets__images__sendMoney__upi_logo2.svg",
+        "bytes":  14788,
+        "sha256":  "8389A5DE1E94BCC48A848489E4B600837D786331A85157F5B248572730DDA29E",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_assets__flutter_assets__assets__images__upilite__upi_lite_logo.svg",
+        "targetPath":  "/assets/reference/logos/base_assets__flutter_assets__assets__images__upilite__upi_lite_logo.svg",
+        "bytes":  12272,
+        "sha256":  "98D6D8C360E7546D9CEE0A03613447CE09EEC3C4997E7257F97D2119FB722064",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_assets__flutter_assets__assets__images__upi_circle__upi_circle_logo.svg",
+        "targetPath":  "/assets/reference/logos/base_assets__flutter_assets__assets__images__upi_circle__upi_circle_logo.svg",
+        "bytes":  13665,
+        "sha256":  "BE356D5CDA8EA5BC0CE72CBF876C68314783A072C407739F322D2EAC69AC5E5E",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_assets__flutter_assets__assets__images__upi_circle__upi_circle_logo_2.png",
+        "targetPath":  "/assets/reference/logos/base_assets__flutter_assets__assets__images__upi_circle__upi_circle_logo_2.png",
+        "bytes":  4427,
+        "sha256":  "E58616A57CAD4B86AFEFED27071398D7207D725E01CA09C572822B11A48AA8C1",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_assets__flutter_assets__assets__images__upi_circle__upi_circle_new_logo.png",
+        "targetPath":  "/assets/reference/logos/base_assets__flutter_assets__assets__images__upi_circle__upi_circle_new_logo.png",
+        "bytes":  2196,
+        "sha256":  "1B4E8BA01D62DE9D88B765B8DE230FBF5A91E594764A9F11CA1A8DB4EC1586F7",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_res__drawable-mdpi__src_assets_newui_splashscreen.png",
+        "targetPath":  "/assets/reference/logos/base_res__drawable-mdpi__src_assets_newui_splashscreen.png",
+        "bytes":  11462,
+        "sha256":  "9779AEA0BBDEC4701E836B7848403317B35821CF9838B3331406D9BD4F75E132",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_res__drawable-mdpi__src_assets_newui_splashscreenend.png",
+        "targetPath":  "/assets/reference/logos/base_res__drawable-mdpi__src_assets_newui_splashscreenend.png",
+        "bytes":  615388,
+        "sha256":  "2F239E2A4CAC634AA6DAB1D203FB1C879938D11821F1B5AAB1DC5EAC394F2E1D",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_res__drawable-nodpi__bank_logo.png",
+        "targetPath":  "/assets/reference/logos/base_res__drawable-nodpi__bank_logo.png",
+        "bytes":  46531,
+        "sha256":  "39BB2123E3FFD9E4A7C8F837DC6697DB22FA636D76A6979D7798F76B6BF5CC8B",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_res__drawable-nodpi__cheg_bank_reward_logo.png",
+        "targetPath":  "/assets/reference/logos/base_res__drawable-nodpi__cheg_bank_reward_logo.png",
+        "bytes":  12675,
+        "sha256":  "C99745C73F1051F3152A357697C4C5B0EB6CC8F6BC934901F3B217C113B769D0",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_res__drawable-xxhdpi__axis_bank_logo.png",
+        "targetPath":  "/assets/reference/logos/base_res__drawable-xxhdpi__axis_bank_logo.png",
+        "bytes":  9097,
+        "sha256":  "3C74245B5CBFA728D7AE87328930BDF8EA17098BE01F1FB9C9F94AA7F7A89F46",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_res__drawable-xxhdpi__ic_upi_npci_logo.png",
+        "targetPath":  "/assets/reference/logos/base_res__drawable-xxhdpi__ic_upi_npci_logo.png",
+        "bytes":  4762,
+        "sha256":  "04DE787B9B6FF51D38EDB0CD7784BF96C97587705A59BA84EDFD3E37C9A5FFA1",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_res__drawable-xxhdpi__logo_bhim.png",
+        "targetPath":  "/assets/reference/logos/base_res__drawable-xxhdpi__logo_bhim.png",
+        "bytes":  24439,
+        "sha256":  "E9A7338547DC7E4E76EDE7C30E8136EC628CA64880E4C1E1028C7BDAC71CD26C",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_res__drawable-xxhdpi__logo_bhim2.png",
+        "targetPath":  "/assets/reference/logos/base_res__drawable-xxhdpi__logo_bhim2.png",
+        "bytes":  11780,
+        "sha256":  "D221C835E8FD54B990923B58E8D81BA5083176A82BFE3352688B3C3DF5917F56",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_res__drawable-xxhdpi__logo_upi_bhim.png",
+        "targetPath":  "/assets/reference/logos/base_res__drawable-xxhdpi__logo_upi_bhim.png",
+        "bytes":  5888,
+        "sha256":  "5B807CC0CE117BC06512CA0A29DBBBCD62A27043BA2EB619967E17884AD9AE08",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_res__drawable__cheg_ib_splash_screen.png",
+        "targetPath":  "/assets/reference/logos/base_res__drawable__cheg_ib_splash_screen.png",
+        "bytes":  125507,
+        "sha256":  "4A52188B6E3DCC978F02A7BE79F8E1D0283ED58DA4904D93593353FC439451E6",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_res__drawable__mudra_logo.png",
+        "targetPath":  "/assets/reference/logos/base_res__drawable__mudra_logo.png",
+        "bytes":  195477,
+        "sha256":  "E4132094F4260D5595AF2B346CE77D70B8A7A6DF75DC8CC5D094E3062B512AFA",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\base_res__drawable__zopper_logo_insurer.png",
+        "targetPath":  "/assets/reference/logos/base_res__drawable__zopper_logo_insurer.png",
+        "bytes":  37542,
+        "sha256":  "1D3CCDACE63163E4F396029992BE50AD13A63DE4B98F26610D428B37257D6759",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.hdpi_res__drawable-hdpi-v4__bankofbarodalogo.png",
+        "targetPath":  "/assets/reference/logos/split_config.hdpi_res__drawable-hdpi-v4__bankofbarodalogo.png",
+        "bytes":  12464,
+        "sha256":  "CC8C09C14CC8F6BAEDCD44A0B6ECC286A2B0AF4D56B09691798182BCA98C2707",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.hdpi_res__drawable-hdpi-v4__bankofbarodalogo_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.hdpi_res__drawable-hdpi-v4__bankofbarodalogo_gl.png",
+        "bytes":  12464,
+        "sha256":  "CC8C09C14CC8F6BAEDCD44A0B6ECC286A2B0AF4D56B09691798182BCA98C2707",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.hdpi_res__drawable-hdpi-v4__bob_logo.png",
+        "targetPath":  "/assets/reference/logos/split_config.hdpi_res__drawable-hdpi-v4__bob_logo.png",
+        "bytes":  3707,
+        "sha256":  "15D35718B0A691325A4D05642ED8FF55042C04C160E6830793CC6B66CFFD1300",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.hdpi_res__drawable-hdpi-v4__bob_logo_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.hdpi_res__drawable-hdpi-v4__bob_logo_gl.png",
+        "bytes":  3707,
+        "sha256":  "15D35718B0A691325A4D05642ED8FF55042C04C160E6830793CC6B66CFFD1300",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-hdpi-v4__exo_edit_mode_logo.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-hdpi-v4__exo_edit_mode_logo.png",
+        "bytes":  458,
+        "sha256":  "CEC4E1F0FDEF99F8E8A4E71A1AB962B406F5EA525D223A0BFFB44067165B478E",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-hdpi-v4__ic_bob_logo_original.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-hdpi-v4__ic_bob_logo_original.png",
+        "bytes":  9822,
+        "sha256":  "78D517316AE781356468B23B9ACF2A4D5843D2C05148955C145A705F5F746074",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-hdpi-v4__ic_bob_logo_original_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-hdpi-v4__ic_bob_logo_original_gl.png",
+        "bytes":  9822,
+        "sha256":  "78D517316AE781356468B23B9ACF2A4D5843D2C05148955C145A705F5F746074",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-hdpi-v4__ic_bob_logo_white.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-hdpi-v4__ic_bob_logo_white.png",
+        "bytes":  6428,
+        "sha256":  "155965FDB0D23F9C906BA294CC1C7E6A41CE19BB7EF2D4086A584149B149738C",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-hdpi-v4__ic_bob_logo_white_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-hdpi-v4__ic_bob_logo_white_gl.png",
+        "bytes":  6428,
+        "sha256":  "155965FDB0D23F9C906BA294CC1C7E6A41CE19BB7EF2D4086A584149B149738C",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-ldpi-v4__exo_edit_mode_logo.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-ldpi-v4__exo_edit_mode_logo.png",
+        "bytes":  265,
+        "sha256":  "4FDF374BC579FDFF835309745FCC9FE2AF87F832723655EE2C33202179653BA0",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-ldpi-v4__ic_bob_logo_original.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-ldpi-v4__ic_bob_logo_original.png",
+        "bytes":  4046,
+        "sha256":  "3B97F0667E3E8953D526AA6A3AC19E26F6A92CC3E830295A7FAD9577D61F9378",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-ldpi-v4__ic_bob_logo_original_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-ldpi-v4__ic_bob_logo_original_gl.png",
+        "bytes":  4046,
+        "sha256":  "3B97F0667E3E8953D526AA6A3AC19E26F6A92CC3E830295A7FAD9577D61F9378",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-ldpi-v4__ic_bob_logo_white.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-ldpi-v4__ic_bob_logo_white.png",
+        "bytes":  2588,
+        "sha256":  "6C1902884872E452F300A1C57435689D05276553FD3F33AC5FD77B458C60459B",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-ldpi-v4__ic_bob_logo_white_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-ldpi-v4__ic_bob_logo_white_gl.png",
+        "bytes":  2588,
+        "sha256":  "6C1902884872E452F300A1C57435689D05276553FD3F33AC5FD77B458C60459B",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-mdpi-v4__bankofbarodalogo.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-mdpi-v4__bankofbarodalogo.png",
+        "bytes":  6320,
+        "sha256":  "38CE38DC107341A7AB801DB8BBD5BD0AB4CC40D38D456BF5DBCD1DB02411288F",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-mdpi-v4__bankofbarodalogo_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-mdpi-v4__bankofbarodalogo_gl.png",
+        "bytes":  6320,
+        "sha256":  "38CE38DC107341A7AB801DB8BBD5BD0AB4CC40D38D456BF5DBCD1DB02411288F",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-mdpi-v4__bob_logo.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-mdpi-v4__bob_logo.png",
+        "bytes":  2222,
+        "sha256":  "FCE67160C614B82104BC6B6F127D3A4B991E1612D0569C1B6D4339D1ABCA6114",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-mdpi-v4__bob_logo_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-mdpi-v4__bob_logo_gl.png",
+        "bytes":  2222,
+        "sha256":  "FCE67160C614B82104BC6B6F127D3A4B991E1612D0569C1B6D4339D1ABCA6114",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-mdpi-v4__exo_edit_mode_logo.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-mdpi-v4__exo_edit_mode_logo.png",
+        "bytes":  368,
+        "sha256":  "D7CCE2DD3468B436D2D48D0333377DAF116AB5FE32E931F72730C683AE3C040F",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-mdpi-v4__ic_bob_logo_original.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-mdpi-v4__ic_bob_logo_original.png",
+        "bytes":  5927,
+        "sha256":  "2A4DA4CA3E56097EEA747D220D77715518BB98E8C782AC6ECAFD2F8CAC0FED45",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-mdpi-v4__ic_bob_logo_original_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-mdpi-v4__ic_bob_logo_original_gl.png",
+        "bytes":  5927,
+        "sha256":  "2A4DA4CA3E56097EEA747D220D77715518BB98E8C782AC6ECAFD2F8CAC0FED45",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-mdpi-v4__ic_bob_logo_white.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-mdpi-v4__ic_bob_logo_white.png",
+        "bytes":  3848,
+        "sha256":  "B95DABCB64086E1CAF0E8B19F5652B93DC3AB342B852BD2FC48E31E2F56F0041",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-mdpi-v4__ic_bob_logo_white_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-mdpi-v4__ic_bob_logo_white_gl.png",
+        "bytes":  3848,
+        "sha256":  "B95DABCB64086E1CAF0E8B19F5652B93DC3AB342B852BD2FC48E31E2F56F0041",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-xhdpi-v4__exo_edit_mode_logo.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-xhdpi-v4__exo_edit_mode_logo.png",
+        "bytes":  658,
+        "sha256":  "57B26A821946F7983091AB8F002175EA6D4BD2B0595B79A4C8559F05CDAD1F0A",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-xhdpi-v4__ic_bob_logo_original.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-xhdpi-v4__ic_bob_logo_original.png",
+        "bytes":  13563,
+        "sha256":  "0FB667A19D94911BB0D0447288089F455CB292D2476C65ADE4468FC1CFAABBE9",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-xhdpi-v4__ic_bob_logo_original_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-xhdpi-v4__ic_bob_logo_original_gl.png",
+        "bytes":  13563,
+        "sha256":  "0FB667A19D94911BB0D0447288089F455CB292D2476C65ADE4468FC1CFAABBE9",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-xhdpi-v4__ic_bob_logo_white.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-xhdpi-v4__ic_bob_logo_white.png",
+        "bytes":  9724,
+        "sha256":  "DACE27805374DE6E156D73C5E3E9F9B3DA75EFF8224C7068C12B2D87F1A65F7D",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-xhdpi-v4__ic_bob_logo_white_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-xhdpi-v4__ic_bob_logo_white_gl.png",
+        "bytes":  9724,
+        "sha256":  "DACE27805374DE6E156D73C5E3E9F9B3DA75EFF8224C7068C12B2D87F1A65F7D",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-xxhdpi-v4__exo_edit_mode_logo.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-xxhdpi-v4__exo_edit_mode_logo.png",
+        "bytes":  998,
+        "sha256":  "67340F6CB415F06D3673C41B028E39FD5B7D2D8212A8817F23EA057E57EC6A4D",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-xxhdpi-v4__ic_bob_logo_original.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-xxhdpi-v4__ic_bob_logo_original.png",
+        "bytes":  22058,
+        "sha256":  "518024A633FA0D257E22A012B64A87F97DC3DF59E0CD1851A29A382CB811AED7",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-xxhdpi-v4__ic_bob_logo_original_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-xxhdpi-v4__ic_bob_logo_original_gl.png",
+        "bytes":  22058,
+        "sha256":  "518024A633FA0D257E22A012B64A87F97DC3DF59E0CD1851A29A382CB811AED7",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-xxhdpi-v4__ic_bob_logo_white.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-xxhdpi-v4__ic_bob_logo_white.png",
+        "bytes":  15171,
+        "sha256":  "543C0EC938F3C3FAD5DD502E8F277C6DA251689742C0516A6DD16625CD403210",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-xxhdpi-v4__ic_bob_logo_white_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-xxhdpi-v4__ic_bob_logo_white_gl.png",
+        "bytes":  15171,
+        "sha256":  "543C0EC938F3C3FAD5DD502E8F277C6DA251689742C0516A6DD16625CD403210",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-xxxhdpi-v4__exo_edit_mode_logo.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-xxxhdpi-v4__exo_edit_mode_logo.png",
+        "bytes":  1397,
+        "sha256":  "2B9FE01E57556FFBB8E2EEC60265E0B077C7B39CD1904C8A7520E77E2D2635FD",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-xxxhdpi-v4__ic_bob_logo_original.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-xxxhdpi-v4__ic_bob_logo_original.png",
+        "bytes":  31437,
+        "sha256":  "C3A151B7975D61F1886C499C2FD28003CF1F75AB3E50F1E6922E95DA1759D6E9",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-xxxhdpi-v4__ic_bob_logo_original_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-xxxhdpi-v4__ic_bob_logo_original_gl.png",
+        "bytes":  31437,
+        "sha256":  "C3A151B7975D61F1886C499C2FD28003CF1F75AB3E50F1E6922E95DA1759D6E9",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-xxxhdpi-v4__ic_bob_logo_white.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-xxxhdpi-v4__ic_bob_logo_white.png",
+        "bytes":  22117,
+        "sha256":  "4485C51C5F0BEF616553D35924007DAAC16CDF14F67A49B9D3E7E06C4EF8CCA3",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable-xxxhdpi-v4__ic_bob_logo_white_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable-xxxhdpi-v4__ic_bob_logo_white_gl.png",
+        "bytes":  22117,
+        "sha256":  "4485C51C5F0BEF616553D35924007DAAC16CDF14F67A49B9D3E7E06C4EF8CCA3",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable__bankofbarodalogo.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable__bankofbarodalogo.png",
+        "bytes":  12464,
+        "sha256":  "CC8C09C14CC8F6BAEDCD44A0B6ECC286A2B0AF4D56B09691798182BCA98C2707",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable__bankofbarodalogo_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable__bankofbarodalogo_gl.png",
+        "bytes":  12464,
+        "sha256":  "CC8C09C14CC8F6BAEDCD44A0B6ECC286A2B0AF4D56B09691798182BCA98C2707",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable__bob_logo.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable__bob_logo.png",
+        "bytes":  3707,
+        "sha256":  "15D35718B0A691325A4D05642ED8FF55042C04C160E6830793CC6B66CFFD1300",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.ldpi_res__drawable__bob_logo_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.ldpi_res__drawable__bob_logo_gl.png",
+        "bytes":  3707,
+        "sha256":  "15D35718B0A691325A4D05642ED8FF55042C04C160E6830793CC6B66CFFD1300",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.xhdpi_res__drawable-xhdpi-v4__bankofbarodalogo.png",
+        "targetPath":  "/assets/reference/logos/split_config.xhdpi_res__drawable-xhdpi-v4__bankofbarodalogo.png",
+        "bytes":  17794,
+        "sha256":  "3B461B55F4654094B5264507FC64CA64347D379A4549B076353E0FF91F561E31",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.xhdpi_res__drawable-xhdpi-v4__bankofbarodalogo_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.xhdpi_res__drawable-xhdpi-v4__bankofbarodalogo_gl.png",
+        "bytes":  17794,
+        "sha256":  "3B461B55F4654094B5264507FC64CA64347D379A4549B076353E0FF91F561E31",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.xhdpi_res__drawable-xhdpi-v4__bob_logo.png",
+        "targetPath":  "/assets/reference/logos/split_config.xhdpi_res__drawable-xhdpi-v4__bob_logo.png",
+        "bytes":  4459,
+        "sha256":  "2A09E0768484C718A7E9DF4AE078C2ED6C192D1F4DE658C518F25DE2E35482A7",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.xhdpi_res__drawable-xhdpi-v4__bob_logo_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.xhdpi_res__drawable-xhdpi-v4__bob_logo_gl.png",
+        "bytes":  4459,
+        "sha256":  "2A09E0768484C718A7E9DF4AE078C2ED6C192D1F4DE658C518F25DE2E35482A7",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.xxhdpi_res__drawable-xxhdpi-v4__bankofbarodalogo.png",
+        "targetPath":  "/assets/reference/logos/split_config.xxhdpi_res__drawable-xxhdpi-v4__bankofbarodalogo.png",
+        "bytes":  32592,
+        "sha256":  "E1F851E91BAFAA8AD6AB123468ED6AD8D6E808C0FBFDD2C0707C73D743CB8D17",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.xxhdpi_res__drawable-xxhdpi-v4__bankofbarodalogo_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.xxhdpi_res__drawable-xxhdpi-v4__bankofbarodalogo_gl.png",
+        "bytes":  32592,
+        "sha256":  "E1F851E91BAFAA8AD6AB123468ED6AD8D6E808C0FBFDD2C0707C73D743CB8D17",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.xxhdpi_res__drawable-xxhdpi-v4__bob_logo.png",
+        "targetPath":  "/assets/reference/logos/split_config.xxhdpi_res__drawable-xxhdpi-v4__bob_logo.png",
+        "bytes":  8336,
+        "sha256":  "223EB36CB1D745CC3403EA2A4F22F4938FD1ED8DF6537915F2FACA31C28F8EAE",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.xxhdpi_res__drawable-xxhdpi-v4__bob_logo_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.xxhdpi_res__drawable-xxhdpi-v4__bob_logo_gl.png",
+        "bytes":  8336,
+        "sha256":  "223EB36CB1D745CC3403EA2A4F22F4938FD1ED8DF6537915F2FACA31C28F8EAE",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.xxxhdpi_res__drawable-xxxhdpi-v4__bankofbarodalogo.png",
+        "targetPath":  "/assets/reference/logos/split_config.xxxhdpi_res__drawable-xxxhdpi-v4__bankofbarodalogo.png",
+        "bytes":  43096,
+        "sha256":  "4389883452CAC47ECD3990DEF47A91D7FE90F43702A8FC58A7F73770E656B4C5",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.xxxhdpi_res__drawable-xxxhdpi-v4__bankofbarodalogo_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.xxxhdpi_res__drawable-xxxhdpi-v4__bankofbarodalogo_gl.png",
+        "bytes":  43096,
+        "sha256":  "4389883452CAC47ECD3990DEF47A91D7FE90F43702A8FC58A7F73770E656B4C5",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.xxxhdpi_res__drawable-xxxhdpi-v4__bob_logo.png",
+        "targetPath":  "/assets/reference/logos/split_config.xxxhdpi_res__drawable-xxxhdpi-v4__bob_logo.png",
+        "bytes":  10161,
+        "sha256":  "999CD7FF8DDD57F14AD249650D8F7AA4916176D3DEC33DB7FB6763F8A318076A",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "logos\\split_config.xxxhdpi_res__drawable-xxxhdpi-v4__bob_logo_gl.png",
+        "targetPath":  "/assets/reference/logos/split_config.xxxhdpi_res__drawable-xxxhdpi-v4__bob_logo_gl.png",
+        "bytes":  10161,
+        "sha256":  "999CD7FF8DDD57F14AD249650D8F7AA4916176D3DEC33DB7FB6763F8A318076A",
+        "category":  "logos"
+    },
+    {
+        "sourcePath":  "backgrounds\\base_assets__flutter_assets__assets__images__accountManagement__success_background.svg",
+        "targetPath":  "/assets/reference/backgrounds/base_assets__flutter_assets__assets__images__accountManagement__success_background.svg",
+        "bytes":  1463,
+        "sha256":  "15CF755D769E3C347E0EBD69180905DBBCB6E5BB8BBFF5B05C1032E59FF98B3C",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\base_assets__flutter_assets__assets__images__dashBoard__bob_bg.png",
+        "targetPath":  "/assets/reference/backgrounds/base_assets__flutter_assets__assets__images__dashBoard__bob_bg.png",
+        "bytes":  212512,
+        "sha256":  "93085C71D897821FAF0F4634026ABB46DE487AB7FC89F1A02B04F0CFD0496E14",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\base_res__drawable-hdpi__notification_oversize_large_icon_bg.png",
+        "targetPath":  "/assets/reference/backgrounds/base_res__drawable-hdpi__notification_oversize_large_icon_bg.png",
+        "bytes":  909,
+        "sha256":  "AA00088D0D9FD97BD92ED9FFD29B54BB69A48A984AA73448CE553FB9D812BE41",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\base_res__drawable-nodpi__home_bg.jpg",
+        "targetPath":  "/assets/reference/backgrounds/base_res__drawable-nodpi__home_bg.jpg",
+        "bytes":  7955,
+        "sha256":  "0AAEB3BEFF948FFB233702E060300FE262485251F7CBE4CF443D2E3496FB664D",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\base_res__drawable-nodpi__ic_cheg_pop_up_bg.webp",
+        "targetPath":  "/assets/reference/backgrounds/base_res__drawable-nodpi__ic_cheg_pop_up_bg.webp",
+        "bytes":  15656,
+        "sha256":  "5BA4A392FC0B806E209D21001326B5B254EC45D9A7A34925444B7B1B4813C345",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.hdpi_res__drawable-hdpi-v4__abc_cab_background_top_mtrl_alpha.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.hdpi_res__drawable-hdpi-v4__abc_cab_background_top_mtrl_alpha.9.png",
+        "bytes":  226,
+        "sha256":  "67E701476927078D89AB0BBB39FFF12D69702592A7A428237A21168A21EC1038",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.hdpi_res__drawable-hdpi-v4__abc_popup_background_mtrl_mult.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.hdpi_res__drawable-hdpi-v4__abc_popup_background_mtrl_mult.9.png",
+        "bytes":  1098,
+        "sha256":  "00A1AC74D8164CB5C4749A0B2E77E2C6DA4A90ABE873D8604F29841C19357C66",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.hdpi_res__drawable-hdpi-v4__common_google_signin_btn_icon_dark_normal_background.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.hdpi_res__drawable-hdpi-v4__common_google_signin_btn_icon_dark_normal_background.9.png",
+        "bytes":  897,
+        "sha256":  "9865619196624A3CBA32A36B0111357AFEA3148F123221BA8C7265BC681AB8A9",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.hdpi_res__drawable-hdpi-v4__common_google_signin_btn_icon_light_normal_background.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.hdpi_res__drawable-hdpi-v4__common_google_signin_btn_icon_light_normal_background.9.png",
+        "bytes":  683,
+        "sha256":  "94A0B6363A09D466A3DC3722379AB367D9FF73A21BA0FF2C5BAB6C30AA5F8B38",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.hdpi_res__drawable-hdpi-v4__common_google_signin_btn_text_dark_normal_background.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.hdpi_res__drawable-hdpi-v4__common_google_signin_btn_text_dark_normal_background.9.png",
+        "bytes":  960,
+        "sha256":  "D66F7061C274B1B6F8524993367AF902737DDF9187DB0CC8D91A8C64AD9B944A",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.hdpi_res__drawable-hdpi-v4__common_google_signin_btn_text_light_normal_background.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.hdpi_res__drawable-hdpi-v4__common_google_signin_btn_text_light_normal_background.9.png",
+        "bytes":  694,
+        "sha256":  "DC9A0AE125491CCDAC95B57B5EEE4060EFD191294E171C8E369D7D0EC3AB2268",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.hdpi_res__drawable-hdpi-v4__notify_panel_notification_icon_bg.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.hdpi_res__drawable-hdpi-v4__notify_panel_notification_icon_bg.png",
+        "bytes":  107,
+        "sha256":  "8430EC003E003F3F2BA2F78D48FD150E25407667E530E82E87A7D4841C0FD676",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.ldpi_res__drawable-hdpi-v4__loader_background.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.ldpi_res__drawable-hdpi-v4__loader_background.png",
+        "bytes":  46661,
+        "sha256":  "3BE4B88304804576EA470057AEF0EADCD43BFE643376456F06E063BFB3D8897A",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.ldpi_res__drawable-hdpi-v4__loader_background_gl.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.ldpi_res__drawable-hdpi-v4__loader_background_gl.png",
+        "bytes":  44275,
+        "sha256":  "9E36A8A348BED6015683BA0285EC656C2D13B2795E056AF9DEC4024C4F13636B",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.ldpi_res__drawable-ldpi-v4__loader_background.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.ldpi_res__drawable-ldpi-v4__loader_background.png",
+        "bytes":  27254,
+        "sha256":  "7A46F338163306420F8E9E0523C4644E1CE7A77D10D07C80D4D9B6AD21C0981F",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.ldpi_res__drawable-ldpi-v4__loader_background_gl.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.ldpi_res__drawable-ldpi-v4__loader_background_gl.png",
+        "bytes":  24901,
+        "sha256":  "E52CC1B305B1A1FB65BB19E135878DCB2C0CD7F0A9BCDE30A1D4D37BFA488203",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.ldpi_res__drawable-mdpi-v4__abc_cab_background_top_mtrl_alpha.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.ldpi_res__drawable-mdpi-v4__abc_cab_background_top_mtrl_alpha.9.png",
+        "bytes":  216,
+        "sha256":  "FB71E11C090133A97FE84FA3B76A263B429C9032EC467854B0E32A3157A5EBA5",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.ldpi_res__drawable-mdpi-v4__abc_popup_background_mtrl_mult.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.ldpi_res__drawable-mdpi-v4__abc_popup_background_mtrl_mult.9.png",
+        "bytes":  776,
+        "sha256":  "5C7C682FFB64F4B531DE0F9549C0DA11C337576E426618522BFD1D35A451A414",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.ldpi_res__drawable-mdpi-v4__common_google_signin_btn_icon_dark_normal_background.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.ldpi_res__drawable-mdpi-v4__common_google_signin_btn_icon_dark_normal_background.9.png",
+        "bytes":  610,
+        "sha256":  "71BFD776B21B1102F26E31A0F6DC65D40DE2CBAE650C7528241D5CDC17EAC991",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.ldpi_res__drawable-mdpi-v4__common_google_signin_btn_icon_light_normal_background.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.ldpi_res__drawable-mdpi-v4__common_google_signin_btn_icon_light_normal_background.9.png",
+        "bytes":  500,
+        "sha256":  "77D8CC5447360EFBA3B3F1659BEA9680ECCBE47E2AAA07424D562F0E5C8AF829",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.ldpi_res__drawable-mdpi-v4__common_google_signin_btn_text_dark_normal_background.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.ldpi_res__drawable-mdpi-v4__common_google_signin_btn_text_dark_normal_background.9.png",
+        "bytes":  615,
+        "sha256":  "9635DAB0F3C0B0557F3535D9655784F68130DB57CE3920AE68C2D4CAB4EDD35E",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.ldpi_res__drawable-mdpi-v4__common_google_signin_btn_text_light_normal_background.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.ldpi_res__drawable-mdpi-v4__common_google_signin_btn_text_light_normal_background.9.png",
+        "bytes":  465,
+        "sha256":  "08A416ADAD6C0E9BECE3238674A76B24BBAC2CE95C1CFFCA817B3C675AC69F6B",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.ldpi_res__drawable-mdpi-v4__loader_background.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.ldpi_res__drawable-mdpi-v4__loader_background.png",
+        "bytes":  5413,
+        "sha256":  "C4EA18CD026B5F6E5A026960FDE00076A85FA8428F7B6F93B0F417AEF4A7D908",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.ldpi_res__drawable-mdpi-v4__loader_background_gl.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.ldpi_res__drawable-mdpi-v4__loader_background_gl.png",
+        "bytes":  5316,
+        "sha256":  "7C1DA2D3F6489E48A0E87315346F41598528897ED4AF093D2F88C3199FE1B85B",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.ldpi_res__drawable-mdpi-v4__notify_panel_notification_icon_bg.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.ldpi_res__drawable-mdpi-v4__notify_panel_notification_icon_bg.png",
+        "bytes":  98,
+        "sha256":  "0D773E62C756422313262846C787E58F67E0EE87E45E1AE9942002E816C4CB9E",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.ldpi_res__drawable-xhdpi-v4__loader_background.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.ldpi_res__drawable-xhdpi-v4__loader_background.png",
+        "bytes":  65344,
+        "sha256":  "C9C5E0A269B414D2B54385735436E359F2926135B3C6E8870B59615529490294",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.ldpi_res__drawable-xhdpi-v4__loader_background_gl.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.ldpi_res__drawable-xhdpi-v4__loader_background_gl.png",
+        "bytes":  62297,
+        "sha256":  "1DBE388FDEB37492BA4989287C46BB4874B1C92FCE069E2688CE308627CBE096",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.ldpi_res__drawable-xxhdpi-v4__loader_background.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.ldpi_res__drawable-xxhdpi-v4__loader_background.png",
+        "bytes":  105171,
+        "sha256":  "48B14747245D871B89ADB07F6EEC7DD6E16626C1B8988DC8D7D44D768DDE376E",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.ldpi_res__drawable-xxhdpi-v4__loader_background_gl.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.ldpi_res__drawable-xxhdpi-v4__loader_background_gl.png",
+        "bytes":  98388,
+        "sha256":  "EEDBB9BE5EDB2E83E9FE5345E9A989475F704951045E4C7E5DBCAB744CE81189",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.ldpi_res__drawable-xxxhdpi-v4__loader_background.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.ldpi_res__drawable-xxxhdpi-v4__loader_background.png",
+        "bytes":  150300,
+        "sha256":  "0E1C9CE14DAB9A9780DCFC99050BC28512A72A6E90E49A57C8FBE5A4C4D4C7AB",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.ldpi_res__drawable-xxxhdpi-v4__loader_background_gl.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.ldpi_res__drawable-xxxhdpi-v4__loader_background_gl.png",
+        "bytes":  141037,
+        "sha256":  "FE1583E62BE0EB4AD4003D1DFC2B412EF0F76333C02FAB2561BD27C78579F6CD",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xhdpi_res__drawable-xhdpi-v4__abc_cab_background_top_mtrl_alpha.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xhdpi_res__drawable-xhdpi-v4__abc_cab_background_top_mtrl_alpha.9.png",
+        "bytes":  229,
+        "sha256":  "F65A87EFA2F53D6FE2D848CFCA1F6C90AEA5E9FC67FF47F5949A6DD2A76EBE1B",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xhdpi_res__drawable-xhdpi-v4__abc_popup_background_mtrl_mult.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xhdpi_res__drawable-xhdpi-v4__abc_popup_background_mtrl_mult.9.png",
+        "bytes":  1544,
+        "sha256":  "1F7DD8B3521353AF473F41850887E9385CF61C390C6E34E4E2BD991921CCFDF8",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xhdpi_res__drawable-xhdpi-v4__common_google_signin_btn_icon_dark_normal_background.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xhdpi_res__drawable-xhdpi-v4__common_google_signin_btn_icon_dark_normal_background.9.png",
+        "bytes":  1032,
+        "sha256":  "9D62D3EABEFAF89E6018D3902CC8C4BB888A8891D9639DEDA8FB58BA60FE1822",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xhdpi_res__drawable-xhdpi-v4__common_google_signin_btn_icon_light_normal_background.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xhdpi_res__drawable-xhdpi-v4__common_google_signin_btn_icon_light_normal_background.9.png",
+        "bytes":  776,
+        "sha256":  "F62BF21D152A276AE8D9A0D62997F12C60D64EC812FD973FF60E3295DEEE34B4",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xhdpi_res__drawable-xhdpi-v4__common_google_signin_btn_text_dark_normal_background.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xhdpi_res__drawable-xhdpi-v4__common_google_signin_btn_text_dark_normal_background.9.png",
+        "bytes":  1086,
+        "sha256":  "FCB4416A4F5F5B4D72854D91722289789B30BB562C6F0F57975818AB555CC809",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xhdpi_res__drawable-xhdpi-v4__common_google_signin_btn_text_light_normal_background.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xhdpi_res__drawable-xhdpi-v4__common_google_signin_btn_text_light_normal_background.9.png",
+        "bytes":  808,
+        "sha256":  "092BF333080E2B3ECE63147EA15E6AC04915968C010E5C3F85F8CB650D61ECB7",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xhdpi_res__drawable-xhdpi-v4__notify_panel_notification_icon_bg.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xhdpi_res__drawable-xhdpi-v4__notify_panel_notification_icon_bg.png",
+        "bytes":  138,
+        "sha256":  "B44EEDA34D7A529C2FE55719EB098FA29707CAA91D18DE06A7A775D6E6BCF973",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xxhdpi_res__drawable-xhdpi-v4__notify_panel_notification_icon_bg.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xxhdpi_res__drawable-xhdpi-v4__notify_panel_notification_icon_bg.png",
+        "bytes":  138,
+        "sha256":  "B44EEDA34D7A529C2FE55719EB098FA29707CAA91D18DE06A7A775D6E6BCF973",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xxhdpi_res__drawable-xxhdpi-v4__abc_cab_background_top_mtrl_alpha.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xxhdpi_res__drawable-xxhdpi-v4__abc_cab_background_top_mtrl_alpha.9.png",
+        "bytes":  237,
+        "sha256":  "D68D03967FB222F7E35772A2E0637F73B4DD0D6CBB9EE3F2B4432D2F90C257DB",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xxhdpi_res__drawable-xxhdpi-v4__abc_popup_background_mtrl_mult.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xxhdpi_res__drawable-xxhdpi-v4__abc_popup_background_mtrl_mult.9.png",
+        "bytes":  2305,
+        "sha256":  "E1A2B864D0114A8471662F8E30FFCBB2EB9FFD414D36239612DEF8C7792A450A",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xxhdpi_res__drawable-xxhdpi-v4__common_google_signin_btn_icon_dark_normal_background.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xxhdpi_res__drawable-xxhdpi-v4__common_google_signin_btn_icon_dark_normal_background.9.png",
+        "bytes":  1510,
+        "sha256":  "BE03693C47D3C4D4466F14A695EACCD210B61E91D808C0C4A46D6F021B598278",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xxhdpi_res__drawable-xxhdpi-v4__common_google_signin_btn_icon_light_normal_background.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xxhdpi_res__drawable-xxhdpi-v4__common_google_signin_btn_icon_light_normal_background.9.png",
+        "bytes":  1138,
+        "sha256":  "71F14A18275F8678FD9F0C1C0AFFC400A975A0B815B82ECA7345B6AAECF978EE",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xxhdpi_res__drawable-xxhdpi-v4__common_google_signin_btn_text_dark_normal_background.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xxhdpi_res__drawable-xxhdpi-v4__common_google_signin_btn_text_dark_normal_background.9.png",
+        "bytes":  1638,
+        "sha256":  "42A1B93BA380EEBA9D499582DF981A535F872AF234AD6600675FFF37459306E5",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xxhdpi_res__drawable-xxhdpi-v4__common_google_signin_btn_text_light_normal_background.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xxhdpi_res__drawable-xxhdpi-v4__common_google_signin_btn_text_light_normal_background.9.png",
+        "bytes":  1255,
+        "sha256":  "5624A284ADF8A5E8E7C2560524EB05D7EE97D09A9C2DBE3A76A840766015AE30",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xxxhdpi_res__drawable-xhdpi-v4__notify_panel_notification_icon_bg.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xxxhdpi_res__drawable-xhdpi-v4__notify_panel_notification_icon_bg.png",
+        "bytes":  138,
+        "sha256":  "B44EEDA34D7A529C2FE55719EB098FA29707CAA91D18DE06A7A775D6E6BCF973",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xxxhdpi_res__drawable-xxhdpi-v4__abc_cab_background_top_mtrl_alpha.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xxxhdpi_res__drawable-xxhdpi-v4__abc_cab_background_top_mtrl_alpha.9.png",
+        "bytes":  237,
+        "sha256":  "D68D03967FB222F7E35772A2E0637F73B4DD0D6CBB9EE3F2B4432D2F90C257DB",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xxxhdpi_res__drawable-xxhdpi-v4__abc_popup_background_mtrl_mult.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xxxhdpi_res__drawable-xxhdpi-v4__abc_popup_background_mtrl_mult.9.png",
+        "bytes":  2305,
+        "sha256":  "E1A2B864D0114A8471662F8E30FFCBB2EB9FFD414D36239612DEF8C7792A450A",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xxxhdpi_res__drawable-xxhdpi-v4__common_google_signin_btn_icon_dark_normal_background.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xxxhdpi_res__drawable-xxhdpi-v4__common_google_signin_btn_icon_dark_normal_background.9.png",
+        "bytes":  1510,
+        "sha256":  "BE03693C47D3C4D4466F14A695EACCD210B61E91D808C0C4A46D6F021B598278",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xxxhdpi_res__drawable-xxhdpi-v4__common_google_signin_btn_icon_light_normal_background.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xxxhdpi_res__drawable-xxhdpi-v4__common_google_signin_btn_icon_light_normal_background.9.png",
+        "bytes":  1138,
+        "sha256":  "71F14A18275F8678FD9F0C1C0AFFC400A975A0B815B82ECA7345B6AAECF978EE",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xxxhdpi_res__drawable-xxhdpi-v4__common_google_signin_btn_text_dark_normal_background.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xxxhdpi_res__drawable-xxhdpi-v4__common_google_signin_btn_text_dark_normal_background.9.png",
+        "bytes":  1638,
+        "sha256":  "42A1B93BA380EEBA9D499582DF981A535F872AF234AD6600675FFF37459306E5",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "backgrounds\\split_config.xxxhdpi_res__drawable-xxhdpi-v4__common_google_signin_btn_text_light_normal_background.9.png",
+        "targetPath":  "/assets/reference/backgrounds/split_config.xxxhdpi_res__drawable-xxhdpi-v4__common_google_signin_btn_text_light_normal_background.9.png",
+        "bytes":  1255,
+        "sha256":  "5624A284ADF8A5E8E7C2560524EB05D7EE97D09A9C2DBE3A76A840766015AE30",
+        "category":  "backgrounds"
+    },
+    {
+        "sourcePath":  "banners\\base_assets__flutter_assets__assets__images__upi_circle__upi_circle_banner.png",
+        "targetPath":  "/assets/reference/banners/base_assets__flutter_assets__assets__images__upi_circle__upi_circle_banner.png",
+        "bytes":  192058,
+        "sha256":  "DE047A9CF49E61CBA40838D6575A3D1375EECF5E9B10A4377BCEBB96988AF6E3",
+        "category":  "banners"
+    },
+    {
+        "sourcePath":  "banners\\base_assets__flutter_assets__assets__images__upi_circle__upi_circle_banner.svg",
+        "targetPath":  "/assets/reference/banners/base_assets__flutter_assets__assets__images__upi_circle__upi_circle_banner.svg",
+        "bytes":  745872,
+        "sha256":  "0AEF46778C8F5FC4884B1319A122A0D5771FA14B16FFCFA7770465FF086A320A",
+        "category":  "banners"
+    },
+    {
+        "sourcePath":  "banners\\base_res__drawable-mdpi__src_assets_images_introcarousel.png",
+        "targetPath":  "/assets/reference/banners/base_res__drawable-mdpi__src_assets_images_introcarousel.png",
+        "bytes":  82287,
+        "sha256":  "453B5AA5571A1D3135ED2733DBD85269DEF0FDF0AA7F9C87B2CE28FB79D6C934",
+        "category":  "banners"
+    },
+    {
+        "sourcePath":  "banners\\base_res__drawable-mdpi__src_assets_images_nudgebanner.png",
+        "targetPath":  "/assets/reference/banners/base_res__drawable-mdpi__src_assets_images_nudgebanner.png",
+        "bytes":  84126,
+        "sha256":  "6B3755EB2F511FC4829AFF3CEB8B9F69C53EEC3CBA6CCE1DBEB4EC00B6430002",
+        "category":  "banners"
+    },
+    {
+        "sourcePath":  "fonts\\base_assets__Accumin_Pro_Bold.ttf",
+        "targetPath":  "/assets/reference/fonts/base_assets__Accumin_Pro_Bold.ttf",
+        "bytes":  110900,
+        "sha256":  "0AEE91689B92137E8167008C901DE152CF93D32DAF2E35A624F1D60CDBC456DF",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "fonts\\base_assets__Acumin-BdPro.ttf",
+        "targetPath":  "/assets/reference/fonts/base_assets__Acumin-BdPro.ttf",
+        "bytes":  83784,
+        "sha256":  "99DEB299FF78BA765605C71C8E80A67F3CB1E15331DCE03761DEC25B094BD050",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "fonts\\base_assets__Acumin-BdPro_gl.ttf",
+        "targetPath":  "/assets/reference/fonts/base_assets__Acumin-BdPro_gl.ttf",
+        "bytes":  83784,
+        "sha256":  "99DEB299FF78BA765605C71C8E80A67F3CB1E15331DCE03761DEC25B094BD050",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "fonts\\base_assets__Acumin-RPro.ttf",
+        "targetPath":  "/assets/reference/fonts/base_assets__Acumin-RPro.ttf",
+        "bytes":  81988,
+        "sha256":  "3F05AB8D12586C0BE911D6ACEB7CADB7275AC11EE0F4572236AD0A7C0563D687",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "fonts\\base_assets__Acumin-RPro_gl.ttf",
+        "targetPath":  "/assets/reference/fonts/base_assets__Acumin-RPro_gl.ttf",
+        "bytes":  81988,
+        "sha256":  "3F05AB8D12586C0BE911D6ACEB7CADB7275AC11EE0F4572236AD0A7C0563D687",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "fonts\\base_assets__Acumin_Pro_Light.ttf",
+        "targetPath":  "/assets/reference/fonts/base_assets__Acumin_Pro_Light.ttf",
+        "bytes":  111488,
+        "sha256":  "69313DC31432445A15C613F5DD63F5A0F5D5DF049C8224B03459006FD2862A2F",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "fonts\\base_assets__Acumin_Pro_Medium.ttf",
+        "targetPath":  "/assets/reference/fonts/base_assets__Acumin_Pro_Medium.ttf",
+        "bytes":  113484,
+        "sha256":  "FC0B386086BC6B5FFE4F5DA36BCEFF5A3DDC955C95E7526946E202CAE984866B",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "fonts\\base_assets__Acumin_Pro_Regular.ttf",
+        "targetPath":  "/assets/reference/fonts/base_assets__Acumin_Pro_Regular.ttf",
+        "bytes":  63600,
+        "sha256":  "C46522BA4AD2B149902ADFF8EC0D3078DB2CF9667559770D844B437C6C055142",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "fonts\\base_assets__flutter_assets__assets__fonts__Acumin.otf",
+        "targetPath":  "/assets/reference/fonts/base_assets__flutter_assets__assets__fonts__Acumin.otf",
+        "bytes":  81988,
+        "sha256":  "3F05AB8D12586C0BE911D6ACEB7CADB7275AC11EE0F4572236AD0A7C0563D687",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "fonts\\base_assets__flutter_assets__assets__fonts__Gabarito-ExtraBold.ttf",
+        "targetPath":  "/assets/reference/fonts/base_assets__flutter_assets__assets__fonts__Gabarito-ExtraBold.ttf",
+        "bytes":  102308,
+        "sha256":  "DCD6A656E11F150A0DCD71496AE0B0E58658EA0E8D1EFE5D18365C9C58C47209",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "fonts\\base_assets__flutter_assets__assets__fonts__Gabarito.ttf",
+        "targetPath":  "/assets/reference/fonts/base_assets__flutter_assets__assets__fonts__Gabarito.ttf",
+        "bytes":  101996,
+        "sha256":  "7C922564E558EDE696FCE8D841471297DDC9F7D333628BC6DB200B3D0AE06DA0",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "fonts\\base_assets__flutter_assets__fonts__MaterialIcons-Regular.otf",
+        "targetPath":  "/assets/reference/fonts/base_assets__flutter_assets__fonts__MaterialIcons-Regular.otf",
+        "bytes":  5588,
+        "sha256":  "34BA7A0C7287CEF611609DD008BA540CF266046E62ECCB51A4D7EE14EB7A3B54",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "fonts\\base_assets__flutter_assets__packages__cupertino_icons__assets__CupertinoIcons.ttf",
+        "targetPath":  "/assets/reference/fonts/base_assets__flutter_assets__packages__cupertino_icons__assets__CupertinoIcons.ttf",
+        "bytes":  848,
+        "sha256":  "EDD21B1E12AD804D2629D5BA587265201452173228D2579FA0CF9CEC1929EF42",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "fonts\\base_assets__fonts__acuminpro_light.ttf",
+        "targetPath":  "/assets/reference/fonts/base_assets__fonts__acuminpro_light.ttf",
+        "bytes":  114140,
+        "sha256":  "5EDB19F069759EC994C7729B71F44BA0B462EF2B633DB3939F11679651BE22E7",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "fonts\\base_assets__fonts__acumin_bditpro.otf",
+        "targetPath":  "/assets/reference/fonts/base_assets__fonts__acumin_bditpro.otf",
+        "bytes":  82692,
+        "sha256":  "04D885A8BCF21CBE8963E67AF0FD67DADADC434F895C86D99D1F19FE96AEECE5",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "fonts\\base_assets__fonts__acumin_bdpro.otf",
+        "targetPath":  "/assets/reference/fonts/base_assets__fonts__acumin_bdpro.otf",
+        "bytes":  83784,
+        "sha256":  "99DEB299FF78BA765605C71C8E80A67F3CB1E15331DCE03761DEC25B094BD050",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "fonts\\base_assets__fonts__acumin_itpro.otf",
+        "targetPath":  "/assets/reference/fonts/base_assets__fonts__acumin_itpro.otf",
+        "bytes":  83356,
+        "sha256":  "FB3A9CD1507C13FAB6305CFC7A83DDE84BEB839DF4D4FD05DA89757DDA347E16",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "fonts\\base_assets__fonts__acumin_rpro.otf",
+        "targetPath":  "/assets/reference/fonts/base_assets__fonts__acumin_rpro.otf",
+        "bytes":  81988,
+        "sha256":  "3F05AB8D12586C0BE911D6ACEB7CADB7275AC11EE0F4572236AD0A7C0563D687",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "fonts\\base_assets__fonts__Roboto_Italic.ttf",
+        "targetPath":  "/assets/reference/fonts/base_assets__fonts__Roboto_Italic.ttf",
+        "bytes":  173516,
+        "sha256":  "2C0958E0C7E9B63F36F672D3CCCBA14CA0D7CE2E3D6945B38E4EF3DE35B79691",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "fonts\\base_assets__fonts__Roboto_Light.ttf",
+        "targetPath":  "/assets/reference/fonts/base_assets__fonts__Roboto_Light.ttf",
+        "bytes":  170012,
+        "sha256":  "DB02096A91C20AB62D459001A1059BC8D78CAA35D637DC91494C4440815A6AC1",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "fonts\\base_res__raw__src_idbdabpackage_nativeassets_fonts_acuminrpro.otf",
+        "targetPath":  "/assets/reference/fonts/base_res__raw__src_idbdabpackage_nativeassets_fonts_acuminrpro.otf",
+        "bytes":  81988,
+        "sha256":  "3F05AB8D12586C0BE911D6ACEB7CADB7275AC11EE0F4572236AD0A7C0563D687",
+        "category":  "fonts"
+    },
+    {
+        "sourcePath":  "launcher-icons\\base_res__mipmap-hdpi__ic_launcher.png",
+        "targetPath":  "/assets/reference/launcher-icons/base_res__mipmap-hdpi__ic_launcher.png",
+        "bytes":  2899,
+        "sha256":  "8D10D8B49CCB174B3865473A55CE4DE038264B9220B47B4AE830DC260A4F21DF",
+        "category":  "launcher-icons"
+    },
+    {
+        "sourcePath":  "launcher-icons\\base_res__mipmap-hdpi__ic_launcher_foreground.png",
+        "targetPath":  "/assets/reference/launcher-icons/base_res__mipmap-hdpi__ic_launcher_foreground.png",
+        "bytes":  8816,
+        "sha256":  "0BFC4315C2D7AB8B6B8974D491C3CCF2B6D6F497168DA8FE21FCAA8FEAA80185",
+        "category":  "launcher-icons"
+    },
+    {
+        "sourcePath":  "launcher-icons\\base_res__mipmap-hdpi__ic_launcher_gl_round.webp",
+        "targetPath":  "/assets/reference/launcher-icons/base_res__mipmap-hdpi__ic_launcher_gl_round.webp",
+        "bytes":  2556,
+        "sha256":  "98D2F98845ABCF8C749487FE87451107A722C05B231CE88FFD98F52D21DB37DD",
+        "category":  "launcher-icons"
+    },
+    {
+        "sourcePath":  "launcher-icons\\base_res__mipmap-hdpi__ic_launcher_round.png",
+        "targetPath":  "/assets/reference/launcher-icons/base_res__mipmap-hdpi__ic_launcher_round.png",
+        "bytes":  2899,
+        "sha256":  "8D10D8B49CCB174B3865473A55CE4DE038264B9220B47B4AE830DC260A4F21DF",
+        "category":  "launcher-icons"
+    },
+    {
+        "sourcePath":  "launcher-icons\\base_res__mipmap-mdpi__ic_launcher.png",
+        "targetPath":  "/assets/reference/launcher-icons/base_res__mipmap-mdpi__ic_launcher.png",
+        "bytes":  1661,
+        "sha256":  "72DCD97F3BA2453B6673D00688228BA920CE39BBD47564BD8FC1E7E0C900A4AE",
+        "category":  "launcher-icons"
+    },
+    {
+        "sourcePath":  "launcher-icons\\base_res__mipmap-mdpi__ic_launcher_foreground.png",
+        "targetPath":  "/assets/reference/launcher-icons/base_res__mipmap-mdpi__ic_launcher_foreground.png",
+        "bytes":  5121,
+        "sha256":  "5FE0A2FC926DAF25F7349BE0D865838C0044F5065CA1AB4049EC912F77961D42",
+        "category":  "launcher-icons"
+    },
+    {
+        "sourcePath":  "launcher-icons\\base_res__mipmap-mdpi__ic_launcher_gl_round.webp",
+        "targetPath":  "/assets/reference/launcher-icons/base_res__mipmap-mdpi__ic_launcher_gl_round.webp",
+        "bytes":  1610,
+        "sha256":  "F483B557F15FE922F4E64F941E700E9F8E279B3271FA99C0F0B4E6F81202591A",
+        "category":  "launcher-icons"
+    },
+    {
+        "sourcePath":  "launcher-icons\\base_res__mipmap-mdpi__ic_launcher_round.png",
+        "targetPath":  "/assets/reference/launcher-icons/base_res__mipmap-mdpi__ic_launcher_round.png",
+        "bytes":  1661,
+        "sha256":  "72DCD97F3BA2453B6673D00688228BA920CE39BBD47564BD8FC1E7E0C900A4AE",
+        "category":  "launcher-icons"
+    },
+    {
+        "sourcePath":  "launcher-icons\\base_res__mipmap-xhdpi__ic_launcher.png",
+        "targetPath":  "/assets/reference/launcher-icons/base_res__mipmap-xhdpi__ic_launcher.png",
+        "bytes":  4343,
+        "sha256":  "063281BFCE7966DC1B04F5E056B212970C1E2FC1BCFCFDD27601FFFC29906D49",
+        "category":  "launcher-icons"
+    },
+    {
+        "sourcePath":  "launcher-icons\\base_res__mipmap-xhdpi__ic_launcher_foreground.png",
+        "targetPath":  "/assets/reference/launcher-icons/base_res__mipmap-xhdpi__ic_launcher_foreground.png",
+        "bytes":  13107,
+        "sha256":  "DFACD6BCF8CD66CD3C0A0E8492AC13776E1F92B9CD7EC8F5F8CD2A4392D81DBC",
+        "category":  "launcher-icons"
+    },
+    {
+        "sourcePath":  "launcher-icons\\base_res__mipmap-xhdpi__ic_launcher_gl_round.webp",
+        "targetPath":  "/assets/reference/launcher-icons/base_res__mipmap-xhdpi__ic_launcher_gl_round.webp",
+        "bytes":  3634,
+        "sha256":  "F2F3597EC66CF56782B9087D7A7A7E0ADD03BC20EDD40AFE8B069BC49ACBF52E",
+        "category":  "launcher-icons"
+    },
+    {
+        "sourcePath":  "launcher-icons\\base_res__mipmap-xhdpi__ic_launcher_round.png",
+        "targetPath":  "/assets/reference/launcher-icons/base_res__mipmap-xhdpi__ic_launcher_round.png",
+        "bytes":  4343,
+        "sha256":  "063281BFCE7966DC1B04F5E056B212970C1E2FC1BCFCFDD27601FFFC29906D49",
+        "category":  "launcher-icons"
+    },
+    {
+        "sourcePath":  "launcher-icons\\base_res__mipmap-xxhdpi__ic_launcher.png",
+        "targetPath":  "/assets/reference/launcher-icons/base_res__mipmap-xxhdpi__ic_launcher.png",
+        "bytes":  7392,
+        "sha256":  "876CDBB00A42E36D0D7EA8EDE16F25847CF16684466C96156F4F8E170A7CC533",
+        "category":  "launcher-icons"
+    },
+    {
+        "sourcePath":  "launcher-icons\\base_res__mipmap-xxhdpi__ic_launcher_foreground.png",
+        "targetPath":  "/assets/reference/launcher-icons/base_res__mipmap-xxhdpi__ic_launcher_foreground.png",
+        "bytes":  22801,
+        "sha256":  "A6744719B509AF3595773CFCC5CD27D87B9A52825BA46D02FEE48604279872EA",
+        "category":  "launcher-icons"
+    },
+    {
+        "sourcePath":  "launcher-icons\\base_res__mipmap-xxhdpi__ic_launcher_gl_round.webp",
+        "targetPath":  "/assets/reference/launcher-icons/base_res__mipmap-xxhdpi__ic_launcher_gl_round.webp",
+        "bytes":  5814,
+        "sha256":  "AFC8A3FAEF93B56807D57055C847762C2A0AF50FFDE2305C2337E0F6022A00EF",
+        "category":  "launcher-icons"
+    },
+    {
+        "sourcePath":  "launcher-icons\\base_res__mipmap-xxhdpi__ic_launcher_round.png",
+        "targetPath":  "/assets/reference/launcher-icons/base_res__mipmap-xxhdpi__ic_launcher_round.png",
+        "bytes":  7392,
+        "sha256":  "876CDBB00A42E36D0D7EA8EDE16F25847CF16684466C96156F4F8E170A7CC533",
+        "category":  "launcher-icons"
+    },
+    {
+        "sourcePath":  "launcher-icons\\base_res__mipmap-xxxhdpi__ic_launcher.png",
+        "targetPath":  "/assets/reference/launcher-icons/base_res__mipmap-xxxhdpi__ic_launcher.png",
+        "bytes":  11096,
+        "sha256":  "9EFE7375306965ED5AFB0062B79BB1D97FAADA2D2173A105021F230D5FFBAE32",
+        "category":  "launcher-icons"
+    },
+    {
+        "sourcePath":  "launcher-icons\\base_res__mipmap-xxxhdpi__ic_launcher_foreground.png",
+        "targetPath":  "/assets/reference/launcher-icons/base_res__mipmap-xxxhdpi__ic_launcher_foreground.png",
+        "bytes":  32823,
+        "sha256":  "29E3417B3CE2D581D088FF088A797E569E5040935B2A441BE5BB8176F609F480",
+        "category":  "launcher-icons"
+    },
+    {
+        "sourcePath":  "launcher-icons\\base_res__mipmap-xxxhdpi__ic_launcher_gl_round.webp",
+        "targetPath":  "/assets/reference/launcher-icons/base_res__mipmap-xxxhdpi__ic_launcher_gl_round.webp",
+        "bytes":  8284,
+        "sha256":  "45828DC70CF08504CEF8AB91FDF2B4A0B6050EAC11A06238C4EF6C1AB420A4D0",
+        "category":  "launcher-icons"
+    },
+    {
+        "sourcePath":  "launcher-icons\\base_res__mipmap-xxxhdpi__ic_launcher_round.png",
+        "targetPath":  "/assets/reference/launcher-icons/base_res__mipmap-xxxhdpi__ic_launcher_round.png",
+        "bytes":  11096,
+        "sha256":  "9EFE7375306965ED5AFB0062B79BB1D97FAADA2D2173A105021F230D5FFBAE32",
+        "category":  "launcher-icons"
+    }
+]
