@@ -26,19 +26,19 @@ export default function PaymentSuccessfulPage() {
 
   return <Shell>
     <section className="success-panel" aria-labelledby="result-title">
-      <div className="pill">SAMPLE WORKSPACE</div>
+      <div className="pill">LOCAL WORKSPACE</div>
       <h1 id="result-title">Transfer preview complete</h1>
       <p><strong>No payment was made.</strong> This is a local simulation result, not a successful bank transfer. No bank, payment network, recipient or account was contacted.</p>
-      {!state && <p className="muted">Loading the saved sample result…</p>}
+      {!state && <p className="muted">Loading saved transfer result…</p>}
       {state && latest && <>
-        <div className="receipt-row"><span>Result</span><b>Pending simulation</b></div>
+        <div className="receipt-row"><span>Result</span><b>Pending — not processed</b></div>
         <div className="receipt-row"><span>Reference</span><b>{latest.id}</b></div>
         <div className="receipt-row"><span>Date</span><b>{latest.date}</b></div>
         <div className="receipt-row"><span>Sample recipient</span><b>{latest.description.replace("SIMULATION — Transfer preview to ", "").split(" · ")[0]}</b></div>
         <div className="receipt-row"><span>Amount</span><b>{money(latest.amount)}</b></div>
         <p className="warning">DEMO RESULT — NOT A PAYMENT CONFIRMATION OR BANK RECEIPT</p>
       </>}
-      {state && !latest && <p className="muted">No saved transfer preview was found. Start a new sample transfer to create one.</p>}
+      {state && !latest && <p className="muted">No saved transfer preview was found. Start a new local transfer to create one.</p>}
       <div className="actions"><Link className="btn secondary" href="/passbook">View sample transactions</Link><Link className="btn" href="/transfers">Create another preview</Link><Link className="btn secondary" href="/dashboard">Back to overview</Link></div>
     </section>
   </Shell>;
