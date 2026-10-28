@@ -196,3 +196,36 @@ button:active,.btn:active{transform:translateY(1px)}
 
 /* Passbook route responsive layout */
 .apk-page-heading{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}.apk-page-heading>.apk-asset-icon{flex:0 0 48px;width:48px;height:48px}.apk-page-heading h1{margin:0 0 4px}.apk-page-heading .eyebrow{margin:0 0 4px}.passbook-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.passbook-summary>div{display:grid;align-content:start;gap:5px;min-width:0}.passbook-summary strong{font-size:17px;overflow-wrap:anywhere}.passbook-summary small{font-size:12px;color:var(--app-muted)}.passbook-filter-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(140px,.8fr) minmax(140px,.8fr);gap:12px}.passbook-transactions .section-title{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--app-border);padding-bottom:12px}.passbook-transactions .section-title h2,.passbook-transactions .section-title p{margin:0}.passbook-row{display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:12px;padding:15px 0;border-bottom:1px solid var(--app-border)}.passbook-row:last-child{border-bottom:0}.passbook-transaction-symbol{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--app-blue-soft);font-size:20px;font-weight:800}.passbook-transaction-symbol.credit,.amount-credit{color:#16764b}.passbook-transaction-symbol.debit,.amount-debit{color:var(--app-text)}.passbook-transaction-copy{display:grid;gap:3px;min-width:0}.passbook-transaction-copy>a{font-weight:750;overflow-wrap:anywhere}.passbook-transaction-copy small{font-size:11px;color:var(--app-muted);overflow-wrap:anywhere}.passbook-transaction-copy small a{font-weight:700}.passbook-row>strong{white-space:nowrap}@media(max-width:720px){.passbook-summary{grid-template-columns:1fr 1fr}.passbook-summary>div:first-child{grid-column:1/-1;padding-bottom:12px;border-bottom:1px solid var(--app-border)}.passbook-filter-grid{grid-template-columns:1fr}.passbook-row{grid-template-columns:32px minmax(0,1fr);gap:10px}.passbook-transaction-symbol{width:30px;height:30px}.passbook-row>strong{grid-column:2;white-space:normal}}
+
+/* Receipt preview uses the same local prototype tokens and extracted activity icon. */
+.receipt-page-heading{min-width:0}
+.receipt-selector{max-width:850px;margin-inline:auto}
+.receipt-paper{max-width:850px;margin-inline:auto;padding:clamp(18px,4vw,34px)}
+.receipt-brand{display:flex;align-items:center;gap:13px;padding-bottom:18px;border-bottom:1px solid var(--app-border)}
+.receipt-brand>div{display:grid;gap:4px;min-width:0}
+.receipt-brand strong{font-size:16px}
+.receipt-brand small{color:var(--app-muted);font-size:11px}
+.receipt-sample-stamp{margin-left:auto;border:1px solid #c04d1c;color:#a84319;border-radius:6px;padding:5px 8px;font-size:10px;font-weight:900;letter-spacing:.1em;transform:rotate(-4deg)}
+.receipt-status{text-align:center;padding:28px 8px;border-bottom:1px dashed #bfc9d7}
+.receipt-status>span{font-size:11px;letter-spacing:.09em;color:var(--app-muted);font-weight:800}
+.receipt-status h2{font-size:clamp(27px,5vw,36px);margin:12px 0 5px}
+.receipt-status p{margin:0;overflow-wrap:anywhere}
+.receipt-section-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:22px}
+.receipt-section-heading h2{margin:0;font-size:18px}
+.receipt-section-heading>.apk-asset-icon{width:40px;height:40px;flex-basis:40px}
+.receipt-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px;padding:10px 0 20px}
+.receipt-field{display:grid;gap:5px;min-width:0;padding:13px 0;border-bottom:1px solid var(--app-border)}
+.receipt-field span{font-size:11px;color:var(--app-muted)}
+.receipt-field strong{font-size:13px;overflow-wrap:anywhere}
+.receipt-disclaimer{font-size:11px;border-top:1px dashed #bfc9d7;padding-top:14px;color:#555;line-height:1.65}
+@media(max-width:600px){
+ .receipt-grid{grid-template-columns:1fr}
+ .receipt-page-heading{flex-wrap:wrap}
+ .receipt-page-heading .statement-print-button{margin-left:0}
+ .receipt-sample-stamp{font-size:9px;padding:4px 6px}
+}
+@media print{
+ .receipt-paper{max-width:none!important;padding:0!important;border:0!important}
+ .receipt-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .receipt-sample-stamp{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
