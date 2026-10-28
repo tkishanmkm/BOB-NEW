@@ -12,10 +12,18 @@ let hydrationPromise:Promise<State>|null=null;
 function openDB():Promise<IDBDatabase>{
   return new Promise((resolve,reject)=>{
     if(typeof indexedDB==="undefined"){reject(new Error("IndexedDB is unavailable in this browser."));return}
+    let settled=false;
     const request=indexedDB.open(DB_NAME,DB_VERSION);
     request.onupgradeneeded=()=>{const db=request.result;if(!db.objectStoreNames.contains(STORE))db.createObjectStore(STORE,{keyPath:"id"})};
-    request.onsuccess=()=>resolve(request.result);
-    request.onerror=()=>reject(request.error||new Error("Could not open local database."));
+    request.onsuccess=()=>{
+      const db=request.result;
+      db.onversionchange=()=>db.close();
+      if(settled){db.close();return}
+      settled=true;
+      resolve(db);
+    };
+    request.onerror=()=>{if(!settled){settled=true;reject(request.error||new Error("Could not open local database."))}};
+    request.onblocked=()=>{if(!settled){settled=true;reject(new Error("Local database upgrade is blocked by another open tab. Close other BOB-NEW tabs and retry."))}};
   });
 }
 function readRecord(db:IDBDatabase):Promise<unknown>{
@@ -28,8 +36,9 @@ export async function hydrate():Promise<State>{
   if(typeof window==="undefined")return cache;
   if(hydrationPromise)return hydrationPromise;
   hydrationPromise=(async()=>{
+    let db:IDBDatabase|undefined;
     try{
-      const db=await openDB();
+      db=await openDB();
       let stored=await readRecord(db);
       if(!valid(stored)){
         let legacy:unknown=null;
@@ -38,7 +47,6 @@ export async function hydrate():Promise<State>{
         await putRecord(db,initial);
         stored=initial;
       }
-      db.close();
       if(valid(stored))cache={...DEFAULT,...stored,transactions:stored.transactions.map(t=>({...t}))};
       try{localStorage.removeItem(KEY)}catch{}
       hydrated=true;
@@ -47,7 +55,7 @@ export async function hydrate():Promise<State>{
     }catch(error){
       hydrationPromise=null;
       throw error;
-    }
+    }finally{db?.close()}
   })();
   return hydrationPromise;
 }
