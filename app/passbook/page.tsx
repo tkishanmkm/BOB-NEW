@@ -24,11 +24,13 @@ export default function Passbook() {
   }, []);
 
   const transactions = useMemo(() => state.transactions
-    .filter((tx) => type === "all" || tx.type === type)
-    .filter((tx) => status === "all" || tx.status === status)
-    .filter((tx) => !query.trim() || tx.description.toLowerCase().includes(query.trim().toLowerCase()) || tx.date.includes(query.trim()) || tx.id.toLowerCase().includes(query.trim().toLowerCase()))
-    .slice()
-    .sort((a, b) => b.date.localeCompare(a.date) || b.id.localeCompare(a.id)), [state.transactions, query, type, status]);
+    .map((tx, index) => ({ tx, index }))
+    .filter(({ tx }) => type === "all" || tx.type === type)
+    .filter(({ tx }) => status === "all" || tx.status === status)
+    .filter(({ tx }) => !query.trim() || tx.description.toLowerCase().includes(query.trim().toLowerCase()) || tx.date.includes(query.trim()) || tx.id.toLowerCase().includes(query.trim().toLowerCase()))
+    // Random IDs are not timestamps; preserve saved order for same-day entries.
+    .sort((a, b) => b.tx.date.localeCompare(a.tx.date) || b.index - a.index)
+    .map(({ tx }) => tx), [state.transactions, query, type, status]);
 
   const postedCredits = transactions.filter(tx => tx.type === "credit" && tx.status === "posted").reduce((sum, tx) => sum + tx.amount, 0);
   const postedDebits = transactions.filter(tx => tx.type === "debit" && tx.status === "posted").reduce((sum, tx) => sum + tx.amount, 0);
