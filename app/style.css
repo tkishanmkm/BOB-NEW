@@ -73,3 +73,126 @@ button:active,.btn:active{transform:translateY(1px)}
 .service-icon.apk-asset-icon{width:42px;height:42px;flex-basis:42px;padding:8px}
 .service-icon.apk-asset-icon img{max-width:25px;max-height:25px}
 .apk-asset-fallback{font-size:10px;font-weight:900;letter-spacing:.04em;color:var(--app-primary,#1f3c66)}
+
+/* Passbook / transaction ledger layout */
+.passbook-heading{align-items:flex-start}.passbook-heading>.apk-asset-icon{width:52px;height:52px;flex-basis:52px;border-radius:15px}.passbook-heading h1{margin:0 0 4px}.passbook-heading p{margin-top:0}.passbook-balance{display:flex;justify-content:space-between;align-items:center;gap:24px;background:linear-gradient(115deg,#fff,#f4f7fc)}.passbook-balance h2{font-size:clamp(27px,4vw,36px);margin:5px 0}.passbook-balance small{color:var(--app-muted)}.passbook-summary{display:flex;gap:24px;flex-wrap:wrap}.passbook-summary>div{display:grid;gap:4px}.passbook-summary strong{font-size:16px}.passbook-filters{grid-template-columns:minmax(0,1.4fr) minmax(150px,.8fr) minmax(150px,.8fr)}.passbook-ledger-title{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--app-border);padding-bottom:12px}.passbook-ledger-title h2{margin:0}.passbook-entry{display:grid;grid-template-columns:42px minmax(0,1fr) auto;align-items:center;gap:13px;padding:17px 0;border-bottom:1px solid var(--app-border)}.passbook-entry:last-child{border-bottom:0}.passbook-entry-icon{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--app-blue-soft);color:var(--app-primary);font-size:22px;font-weight:800}.passbook-entry-copy{display:grid;gap:3px;min-width:0}.passbook-entry-copy>a:first-child{font-weight:750;overflow-wrap:anywhere}.passbook-entry-copy small,.passbook-entry-amount small{font-size:11px;color:var(--app-muted)}.passbook-entry-copy .passbook-receipt-link{font-size:12px;font-weight:700;width:fit-content}.passbook-entry-amount{display:grid;justify-items:end;gap:3px;white-space:nowrap}.credit-value{color:#16764b}.debit-value{color:#26374d}.passbook-footnote{font-size:12px;margin:0 0 20px}@media(max-width:720px){.passbook-balance{align-items:flex-start;flex-direction:column}.passbook-summary{width:100%;justify-content:space-between;border-top:1px solid var(--app-border);padding-top:14px}.passbook-filters{grid-template-columns:1fr}.passbook-entry{grid-template-columns:36px minmax(0,1fr);gap:10px}.passbook-entry-icon{width:34px;height:34px}.passbook-entry-amount{grid-column:2;display:flex;justify-content:space-between;align-items:center;white-space:normal}.passbook-entry-amount b{font-size:14px}}
+
+/* Responsive passbook ledger polish for the independent local prototype */
+.passbook-entry{display:grid;grid-template-columns:40px minmax(0,1fr) auto;align-items:center;gap:12px;padding:16px 0;border-bottom:1px solid var(--app-border)}
+.passbook-entry:last-child{border-bottom:0}
+.passbook-entry-copy{display:grid;gap:4px;min-width:0}
+.passbook-entry-copy small,.passbook-entry-amount small{font-size:11px;color:var(--app-muted)}
+.passbook-entry-copy>a:first-child{font-weight:750;overflow-wrap:anywhere}
+.passbook-entry-amount{display:grid;justify-items:end;gap:3px;white-space:nowrap}
+.passbook-entry-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--app-blue-soft);color:var(--app-primary);font-size:21px;font-weight:800}
+.passbook-summary{display:flex;gap:24px;flex-wrap:wrap}
+.passbook-summary>div{display:grid;gap:4px}
+.passbook-filters{grid-template-columns:minmax(0,1.4fr) minmax(150px,.8fr) minmax(150px,.8fr)}
+.passbook-ledger-title{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--app-border);padding-bottom:12px}
+.passbook-ledger-title h2{margin:0}
+.credit-value{color:#16764b}.debit-value{color:var(--app-text)}
+@media(max-width:720px){.passbook-filters{grid-template-columns:1fr}.passbook-entry{grid-template-columns:34px minmax(0,1fr);gap:10px}.passbook-entry-icon{width:32px;height:32px}.passbook-entry-amount{grid-column:2;display:flex;justify-content:space-between;align-items:center;white-space:normal}.passbook-summary{width:100%;justify-content:space-between}}
+
+/* Dedicated account, passbook and statement layouts. Extracted assets are
+   mapped by screen family; exact parity still requires source screen captures. */
+.apk-page-heading{align-items:flex-start;gap:15px}
+.apk-page-heading>.apk-asset-icon{margin-top:5px;flex:0 0 48px;width:48px;height:48px;border-radius:14px}
+.apk-page-heading>.apk-asset-icon img{max-width:30px;max-height:30px}
+.apk-page-heading .eyebrow{margin:0 0 2px}
+.apk-page-heading h1{margin:0;font-size:clamp(25px,3vw,32px)}
+.apk-page-heading .muted{margin:5px 0 0}
+.passbook-summary{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:18px;background:linear-gradient(125deg,#fff,#f4f8fd)}
+.passbook-summary>div{display:grid;gap:5px;min-width:0}
+.passbook-summary strong{font-size:19px;overflow-wrap:anywhere}
+.passbook-summary small{color:var(--app-muted)}
+.passbook-filter-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.section-title{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
+.section-title h2{margin:0;font-size:19px}
+.section-title p{margin:4px 0 0;font-size:12px}
+.section-title>.apk-asset-icon{width:42px;height:42px;flex-basis:42px}
+.passbook-row{display:grid;grid-template-columns:42px minmax(0,1fr) auto;align-items:center;gap:12px;padding:15px 0;border-bottom:1px solid var(--app-border)}
+.passbook-row:last-child{border-bottom:0}
+.passbook-transaction-symbol{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;font-size:23px;font-weight:800}
+.passbook-transaction-symbol.credit{background:#e7f6ee;color:#188653}
+.passbook-transaction-symbol.debit{background:#fff0e8;color:#c04d1c}
+.passbook-transaction-copy{display:grid;gap:3px;min-width:0}
+.passbook-transaction-copy>a,.passbook-transaction-copy>a:first-child{font-weight:750;overflow-wrap:anywhere}
+.passbook-transaction-copy small{font-size:11px;color:var(--app-muted);overflow-wrap:anywhere}
+.passbook-row>strong{font-size:14px;text-align:right;white-space:nowrap}
+.amount-credit{color:#188653!important}
+.amount-debit{color:#b94b2b!important}
+.account-overview-top{display:flex;align-items:center;gap:14px}
+.account-avatar{display:grid;place-items:center;width:58px;height:58px;flex:0 0 58px;border-radius:17px;background:var(--app-blue-soft)}
+.account-overview-top h2{margin:2px 0;font-size:22px}
+.account-overview-top p{margin:2px 0;color:var(--app-muted);font-size:13px}
+.account-balance-strip{display:grid;gap:5px;margin-top:20px;padding:19px;border-radius:12px;background:linear-gradient(120deg,var(--app-primary-deep),var(--app-primary));color:#fff}
+.account-balance-strip span,.account-balance-strip small{opacity:.85;font-size:12px}
+.account-balance-strip strong{font-family:Gabarito,Acumin,sans-serif;font-size:clamp(25px,4vw,34px)}
+.account-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+.account-stats>div{display:grid;gap:3px;padding:13px;border:1px solid var(--app-border);border-radius:10px}
+.account-stats strong{font-size:21px}
+.account-stats span{font-size:11px;color:var(--app-muted)}
+.account-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}
+.account-detail-item{display:grid;gap:5px;min-width:0;padding:14px 0;border-bottom:1px solid var(--app-border)}
+.account-detail-item span{font-size:12px;color:var(--app-muted)}
+.account-detail-item strong{overflow-wrap:anywhere;font-size:14px}
+.account-local-note p{max-width:850px;margin-bottom:0;color:var(--app-muted)}
+.statement-print-button{margin-left:auto;white-space:nowrap}
+.statement-filters .field{margin-top:8px}
+.statement-summary-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.statement-summary-item{display:grid;gap:7px;margin-bottom:0}
+.statement-summary-item>span{font-size:12px;color:var(--app-muted)}
+.statement-summary-item>strong{font-size:20px;overflow-wrap:anywhere}
+.statement-document{padding:clamp(16px,3vw,28px)}
+.statement-brand{display:flex;align-items:center;gap:11px;margin-bottom:18px}
+.statement-brand>div{display:grid;gap:3px}
+.statement-brand strong{font-size:15px}
+.statement-brand small{font-size:11px;color:var(--app-muted)}
+.statement-header h2{margin:8px 0 2px}
+.statement-header>p{margin:3px 0;color:var(--app-muted);font-size:12px}
+.statement-account-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 18px;margin:17px 0;padding:15px 0;border-top:1px solid var(--app-border);border-bottom:1px solid var(--app-border)}
+.statement-account-meta span{font-size:12px;overflow-wrap:anywhere}
+.statement-header .statement-period{font-weight:700;color:var(--app-text)}
+.statement-header .statement-disclaimer{margin-bottom:18px}
+.statement-table-wrap{overflow-x:auto}
+.statement-table{width:100%;border-collapse:collapse;font-size:12px}
+.statement-table th{text-align:left;background:var(--app-blue-soft);color:var(--app-primary);font-weight:800;white-space:nowrap}
+.statement-table th,.statement-table td{padding:12px 10px;border-bottom:1px solid var(--app-border);vertical-align:top}
+.statement-table td{overflow-wrap:anywhere}
+.statement-table td:nth-child(4){text-align:right;white-space:nowrap;font-weight:750}
+.status-chip{display:inline-block;padding:4px 7px;border-radius:999px;font-size:10px;font-weight:750}
+.status-chip.posted{background:#e7f6ee;color:#176c46}
+.status-chip.pending{background:#fff1e4;color:#8a4819}
+.statement-footnote{margin:18px 0 0;padding-top:13px;border-top:1px dashed var(--app-border);font-size:11px;color:var(--app-muted)}
+@media(max-width:760px){
+ .passbook-summary{grid-template-columns:1fr 1fr}
+ .passbook-summary>div:first-child{grid-column:1/-1;padding-bottom:12px;border-bottom:1px solid var(--app-border)}
+ .passbook-filter-grid{grid-template-columns:1fr}
+ .statement-summary-grid{grid-template-columns:1fr}
+ .statement-print-button{align-self:center;padding:9px 10px;font-size:12px}
+ .statement-table{min-width:650px}
+}
+@media(max-width:520px){
+ .passbook-row{grid-template-columns:36px minmax(0,1fr);gap:10px}
+ .passbook-transaction-symbol{width:34px;height:34px}
+ .passbook-row>strong{grid-column:2;text-align:left}
+ .account-detail-grid{grid-template-columns:1fr}
+ .account-stats{gap:7px}
+ .account-stats>div{padding:10px}
+ .account-stats strong{font-size:18px}
+ .statement-account-meta{grid-template-columns:1fr}
+ .apk-page-heading{gap:11px}
+ .apk-page-heading>.apk-asset-icon{width:42px;height:42px;flex-basis:42px}
+}
+@media print{
+ header,.notice,.nav,.no-print,button{display:none!important}
+ body{background:#fff!important}
+ .layout,.main{display:block!important;margin:0!important;padding:0!important}
+ .card{box-shadow:none!important;break-inside:avoid}
+ .statement-table-wrap{overflow:visible!important}
+ .statement-table{min-width:0!important}
+ .statement-document{border:0!important}
+}
+
+/* Passbook route responsive layout */
+.apk-page-heading{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}.apk-page-heading>.apk-asset-icon{flex:0 0 48px;width:48px;height:48px}.apk-page-heading h1{margin:0 0 4px}.apk-page-heading .eyebrow{margin:0 0 4px}.passbook-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.passbook-summary>div{display:grid;align-content:start;gap:5px;min-width:0}.passbook-summary strong{font-size:17px;overflow-wrap:anywhere}.passbook-summary small{font-size:12px;color:var(--app-muted)}.passbook-filter-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(140px,.8fr) minmax(140px,.8fr);gap:12px}.passbook-transactions .section-title{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--app-border);padding-bottom:12px}.passbook-transactions .section-title h2,.passbook-transactions .section-title p{margin:0}.passbook-row{display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:12px;padding:15px 0;border-bottom:1px solid var(--app-border)}.passbook-row:last-child{border-bottom:0}.passbook-transaction-symbol{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--app-blue-soft);font-size:20px;font-weight:800}.passbook-transaction-symbol.credit,.amount-credit{color:#16764b}.passbook-transaction-symbol.debit,.amount-debit{color:var(--app-text)}.passbook-transaction-copy{display:grid;gap:3px;min-width:0}.passbook-transaction-copy>a{font-weight:750;overflow-wrap:anywhere}.passbook-transaction-copy small{font-size:11px;color:var(--app-muted);overflow-wrap:anywhere}.passbook-transaction-copy small a{font-weight:700}.passbook-row>strong{white-space:nowrap}@media(max-width:720px){.passbook-summary{grid-template-columns:1fr 1fr}.passbook-summary>div:first-child{grid-column:1/-1;padding-bottom:12px;border-bottom:1px solid var(--app-border)}.passbook-filter-grid{grid-template-columns:1fr}.passbook-row{grid-template-columns:32px minmax(0,1fr);gap:10px}.passbook-transaction-symbol{width:30px;height:30px}.passbook-row>strong{grid-column:2;white-space:normal}}

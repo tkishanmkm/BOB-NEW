@@ -12,8 +12,8 @@
 - Manifest records: **6913**
 - Manifest asset paths missing from public/: **0**
 - Files currently under public/: **7332** (181.24 MiB)
-- Distinct statically detected /assets/ references in app/components/lib: **6**
-- Detected references that resolve to public/: **6**
+- Distinct statically detected /assets/ references in app/components/lib: **28**
+- Detected references that resolve to public/: **28**
 - Detected references that do not resolve to public/: **0**
 
 ## Source route mapping
@@ -99,6 +99,28 @@ The source manifest is compared against actual files under public/. A present fi
 
 - /assets/daybook-mark.svg
 - /assets/institution-generic.svg
+- /assets/reference/flutter-ui/assets/images/activateUpi/mobile_icon.svg
+- /assets/reference/flutter-ui/assets/images/activateUpi/scanner_icon.svg
+- /assets/reference/flutter-ui/assets/images/activateUpi/shop_icon.svg
+- /assets/reference/flutter-ui/assets/images/activateUpi/transaction_history_icon.svg
+- /assets/reference/flutter-ui/assets/images/bbps_raise_complaint/complaint_info_icon.svg
+- /assets/reference/flutter-ui/assets/images/cardDetails/bob_card_icon.svg
+- /assets/reference/flutter-ui/assets/images/dashBoard/alerts.svg
+- /assets/reference/flutter-ui/assets/images/dashBoard/bank.svg
+- /assets/reference/flutter-ui/assets/images/dashBoard/beneficiary.svg
+- /assets/reference/flutter-ui/assets/images/dashBoard/billPayment.svg
+- /assets/reference/flutter-ui/assets/images/dashBoard/contact.svg
+- /assets/reference/flutter-ui/assets/images/dashBoard/needHelp.svg
+- /assets/reference/flutter-ui/assets/images/dashBoard/transcationHistory.svg
+- /assets/reference/flutter-ui/assets/images/mySpace/accountManagement.svg
+- /assets/reference/flutter-ui/assets/images/mySpace/earn.svg
+- /assets/reference/flutter-ui/assets/images/mySpace/personalDetails.svg
+- /assets/reference/flutter-ui/assets/images/mySpace/save.svg
+- /assets/reference/flutter-ui/assets/images/profileManagement/lock.svg
+- /assets/reference/flutter-ui/assets/images/rechargesAndBills/loan_icon.svg
+- /assets/reference/flutter-ui/assets/images/sendMoney/bank_transfer_icon.svg
+- /assets/reference/flutter-ui/assets/images/transactionHistory/history.svg
+- /assets/reference/flutter-ui/assets/images/vpaExist/faq.svg
 - /assets/reference/fonts/base_assets__flutter_assets__assets__fonts__Acumin.otf
 - /assets/reference/fonts/base_assets__flutter_assets__assets__fonts__Gabarito-ExtraBold.ttf
 - /assets/reference/fonts/base_assets__flutter_assets__assets__fonts__Gabarito.ttf
