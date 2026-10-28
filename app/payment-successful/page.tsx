@@ -39,8 +39,9 @@ export default function PaymentSuccessfulPage() {
         <p className="warning">LOCAL RESULT â€” NOT A PAYMENT CONFIRMATION OR BANK RECEIPT</p>
       </>}
       {state && !latest && <p className="muted">No saved transfer result was found. Start a new transfer to create one.</p>}
-      <div className="actions no-print"><button type="button" onClick={() => window.print()}>Print / Save sample receipt</button><Link className="btn secondary" href="/statement">View statement</Link><Link className="btn secondary" href="/passbook">View transactions</Link><Link className="btn" href="/transfers">Create another transfer</Link><Link className="btn secondary" href="/dashboard">Back to overview</Link></div>
+      <div className="actions no-print"><button type="button" onClick={() => window.print()}>Print / Save sample receipt</button><Link className="btn secondary" href="/statement">View statement</Link><Link className="btn secondary" href={latest ? "/receipt?id="+encodeURIComponent(latest.id) : "/receipt"}>View receipt</Link><Link className="btn secondary" href="/passbook">View transactions</Link><Link className="btn" href="/transfers">Create another transfer</Link><Link className="btn secondary" href="/dashboard">Back to overview</Link></div>
     </section>
     <style jsx global>{`@media print { header, nav, .no-print, .notice { display:none !important; } body { background:white !important; } .layout,.main { display:block !important; margin:0 !important; padding:0 !important; } .success-panel { box-shadow:none !important; border:1px solid #ddd; } }`}</style>  </Shell>;
 }
+
 
