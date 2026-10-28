@@ -12,8 +12,8 @@
 - Manifest records: **6913**
 - Manifest asset paths missing from public/: **0**
 - Files currently under public/: **7332** (181.24 MiB)
-- Distinct statically detected /assets/ references in app/components/lib: **3**
-- Detected references that resolve to public/: **3**
+- Distinct statically detected /assets/ references in app/components/lib: **6**
+- Detected references that resolve to public/: **6**
 - Detected references that do not resolve to public/: **0**
 
 ## Source route mapping
@@ -99,6 +99,9 @@ The source manifest is compared against actual files under public/. A present fi
 
 - /assets/daybook-mark.svg
 - /assets/institution-generic.svg
+- /assets/reference/fonts/base_assets__flutter_assets__assets__fonts__Acumin.otf
+- /assets/reference/fonts/base_assets__flutter_assets__assets__fonts__Gabarito-ExtraBold.ttf
+- /assets/reference/fonts/base_assets__flutter_assets__assets__fonts__Gabarito.ttf
 - /assets/transfer-generic.svg
 
 ### Unresolved statically detected asset references
