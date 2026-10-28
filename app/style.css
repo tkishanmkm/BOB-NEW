@@ -229,3 +229,40 @@ button:active,.btn:active{transform:translateY(1px)}
  .receipt-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
  .receipt-sample-stamp{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
+
+/* Fund transfer route refinement: local prototype only */
+.transfer-page-heading{margin-bottom:20px}
+.transfer-page-heading h1{margin:0 0 4px}
+.transfer-page-heading .muted{margin:0}
+.transfer-page-heading>.apk-asset-icon{background:#e8eef8;border:1px solid #d7e2f1}
+.transfer-form{padding:clamp(18px,3vw,28px)}
+.transfer-form>h2{margin:0 0 5px}
+.transfer-form>.muted{margin:0 0 18px}
+.transfer-form>.field{margin:14px 0 18px}
+.transfer-form .grid{gap:8px 18px}
+.transfer-form input,.transfer-form select{min-height:44px;width:100%;min-width:0}
+.transfer-form input[type=number]{font-variant-numeric:tabular-nums}
+.transfer-form button[type=submit]{min-width:170px;margin-top:4px}
+.transfer-review-card{padding:clamp(18px,3vw,28px)}
+.transfer-review-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
+.transfer-review-heading h2{margin:0}
+.transfer-review-heading .eyebrow{margin:0 0 3px}
+.transfer-review-heading>.apk-asset-icon{background:#e8eef8}
+.transfer-review-card .receipt-row{align-items:flex-start;gap:18px}
+.transfer-review-card .receipt-row span{color:var(--app-muted);flex:0 0 38%}
+.transfer-review-card .receipt-row b{min-width:0;text-align:right;overflow-wrap:anywhere}
+.transfer-review-card .warning{margin:18px 0}
+.transfer-review-card .actions{justify-content:flex-end}
+button:disabled{opacity:.6;cursor:wait;transform:none}
+@media(max-width:650px){
+ .transfer-form .grid{grid-template-columns:minmax(0,1fr)}
+ .transfer-form button[type=submit]{width:100%}
+ .transfer-review-card .receipt-row{gap:10px}
+ .transfer-review-card .receipt-row span{flex-basis:42%}
+ .transfer-review-card .actions{display:grid;grid-template-columns:1fr}
+ .transfer-review-card .actions button{width:100%}
+}
+@media print{
+ .transfer-page-heading,.transfer-form,.stepper,.info-banner,.nav,header{display:none!important}
+ .transfer-review-card{box-shadow:none!important;border:1px solid #ddd!important}
+}

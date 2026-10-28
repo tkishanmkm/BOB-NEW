@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Shell } from "@/components/app-shell";
+import { ApkAssetIcon } from "@/components/apk-asset-map";
 import { money, read, saveState, getLocalRecord, type State } from "@/lib/demo";
 
 type Stage = "details" | "review";
@@ -120,10 +121,10 @@ export default function Transfers() {
   }
 
   return <Shell>
-    <div className="page-heading"><Image src="/assets/transfer-generic.svg" width={36} height={36} alt="" /><div><h1>Fund transfer</h1><p className="muted">Review a transfer using locally stored prototype details.</p></div></div>
+    <div className="page-heading apk-page-heading transfer-page-heading"><ApkAssetIcon asset="transfer" size={30}/><div><p className="eyebrow">PAYMENT SERVICES</p><h1>Fund transfer</h1><p className="muted">Review a transfer using locally stored prototype details.</p></div></div>
     <div className="info-banner"><Image src="/assets/institution-generic.svg" width={32} height={32} alt="" /><div><b>Local prototype</b><div>No money is moved and no bank is contacted. Finishing records a pending result in this browser’s transaction history.</div></div></div>
     <div className="stepper"><span className={stage === "details" ? "active" : ""}>1 · Details</span><span className={stage === "review" ? "active" : ""}>2 · Review</span><span>3 · Result</span></div>
-    {stage === "details" && <form className="card" onSubmit={review}>
+    {stage === "details" && <form className="card transfer-form" onSubmit={review}>
       <h2>Recipient details</h2><p className="muted">Use fictional information only. Do not enter sensitive banking details.</p>
       <Field label="Choose a saved beneficiary"><select value={selectedPayee} onChange={e => choosePayee(e.target.value)}><option value="">Enter details manually</option>{payees.map(p => <option key={p.id} value={p.id}>{p.name} · •••• {p.account.slice(-4)}</option>)}</select></Field>
       {payeesLoadError ? <p className="error" role="alert">Saved beneficiary data is invalid or could not be loaded. No saved recipients are shown. You may enter fictional placeholder details manually, but inspect or recover browser data before editing beneficiaries.</p> : payees.length === 0 && <p className="muted">No saved beneficiaries yet. Add a recipient on the <Link href="/payees">Beneficiaries page</Link>.</p>}
@@ -137,8 +138,8 @@ export default function Transfers() {
       </div>
       {error && <p className="error" role="alert">{error}</p>}<button type="submit">Review transfer</button>
     </form>}
-    {stage === "review" && <section className="card">
-      <h2>Review transfer</h2>
+    {stage === "review" && <section className="card transfer-review-card">
+      <div className="transfer-review-heading"><div><p className="eyebrow">STEP 2 OF 3</p><h2>Review transfer</h2></div><ApkAssetIcon asset="account" size={26}/></div>
       <div className="receipt-row"><span>Recipient</span><b>{recipient}</b></div><div className="receipt-row"><span>Institution</span><b>{bank}</b></div><div className="receipt-row"><span>Account</span><b>•••• {account.slice(-4)}</b></div><div className="receipt-row"><span>IFSC-format code</span><b>{ifsc}</b></div><div className="receipt-row"><span>Amount</span><b>{money(Number(amount))}</b></div><div className="receipt-row"><span>Note</span><b>{remark || "—"}</b></div>
       <p className="warning">NO PAYMENT WILL BE SENT — LOCAL PROTOTYPE ONLY</p>
       {error && <p className="error" role="alert">{error}</p>}
