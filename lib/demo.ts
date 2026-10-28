@@ -27,7 +27,16 @@ function openDB():Promise<IDBDatabase>{
   });
 }
 function readRecord(db:IDBDatabase):Promise<unknown>{
-  return new Promise((resolve,reject)=>{const tx=db.transaction(STORE,"readonly");const request=tx.objectStore(STORE).get(STATE_RECORD);request.onsuccess=()=>resolve(request.result?.value);request.onerror=()=>reject(request.error||new Error("Could not read local records."))});
+  return new Promise((resolve,reject)=>{
+    const tx=db.transaction(STORE,"readonly");
+    const request=tx.objectStore(STORE).get(STATE_RECORD);
+    let value:unknown;
+    request.onsuccess=()=>{value=request.result?.value};
+    request.onerror=()=>reject(request.error||new Error("Could not read local account records."));
+    tx.oncomplete=()=>resolve(value);
+    tx.onerror=()=>reject(tx.error||new Error("Reading local account records failed."));
+    tx.onabort=()=>reject(tx.error||new Error("Reading local account records was cancelled."));
+  });
 }
 function putRecord(db:IDBDatabase,value:State):Promise<void>{
   return new Promise((resolve,reject)=>{const tx=db.transaction(STORE,"readwrite");tx.objectStore(STORE).put({id:STATE_RECORD,value});tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error||new Error("Could not save local records."));tx.onabort=()=>reject(tx.error||new Error("Local save was cancelled."))});
@@ -207,7 +216,16 @@ export async function deleteLocalRecord(key:string):Promise<void>{
   return operation;
 }
 function readRecordById(db:IDBDatabase,id:string):Promise<unknown>{
-  return new Promise((resolve,reject)=>{const tx=db.transaction(STORE,"readonly");const request=tx.objectStore(STORE).get(id);request.onsuccess=()=>resolve(request.result?.value);request.onerror=()=>reject(request.error||new Error("Could not read local records."))});
+  return new Promise((resolve,reject)=>{
+    const tx=db.transaction(STORE,"readonly");
+    const request=tx.objectStore(STORE).get(id);
+    let value:unknown;
+    request.onsuccess=()=>{value=request.result?.value};
+    request.onerror=()=>reject(request.error||new Error("Could not read local collection records."));
+    tx.oncomplete=()=>resolve(value);
+    tx.onerror=()=>reject(tx.error||new Error("Reading local collection records failed."));
+    tx.onabort=()=>reject(tx.error||new Error("Reading local collection records was cancelled."));
+  });
 }
 function putRecordById(db:IDBDatabase,id:string,value:unknown):Promise<void>{
   return new Promise((resolve,reject)=>{const tx=db.transaction(STORE,"readwrite");tx.objectStore(STORE).put({id,value});tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error||new Error("Could not save local records."));tx.onabort=()=>reject(tx.error||new Error("Local save was cancelled."))});
