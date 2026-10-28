@@ -298,3 +298,15 @@ button:disabled{opacity:.6;cursor:wait;transform:none}
  .statement-header,.statement-table tr{break-inside:avoid}
  .statement-footnote{font-size:9px}
 }
+
+/* Passbook date filters and reset action */
+.passbook-search-card .passbook-filter-grid{grid-template-columns:minmax(0,1.6fr) repeat(2,minmax(130px,.85fr))}
+.passbook-filter-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px}
+.passbook-filter-footer p{margin:0;min-width:0}
+.passbook-filter-footer .btn{flex:0 0 auto}
+@media(max-width:720px){
+ .passbook-search-card .passbook-filter-grid{grid-template-columns:minmax(0,1fr)}
+ .passbook-filter-footer{align-items:stretch;flex-direction:column}
+ .passbook-filter-footer .btn{width:100%}
+}
+@media print{.passbook-search-card{display:none!important}}
