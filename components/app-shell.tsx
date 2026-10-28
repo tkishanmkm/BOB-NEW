@@ -1,0 +1,3 @@
+"use client";
+import Link from "next/link";
+export function Shell({children}:{children:React.ReactNode}){return <><header><Link className="brand" href="/dashboard">Daybook</Link><span className="pill">SAMPLE DATA</span></header><div className="notice">INDEPENDENT SAMPLE WORKSPACE — not connected to a bank or payment service.</div><div className="layout"><nav className="nav">{[["/dashboard","Overview"],["/passbook","Transactions"],["/transfers","Transfer preview"],["/demo-documents","Document preview"],["/settings","Settings"]].map(([u,l])=><Link href={u} key={u}>{l}</Link>)}</nav><main className="main">{children}</main></div></>}
