@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Shell } from "@/components/app-shell";
-import { money, read, write, getLocalRecord, type State } from "@/lib/demo";
+import { money, read, saveState, getLocalRecord, type State } from "@/lib/demo";
 
 type Stage = "details" | "review";
 type Payee = { id: string; name: string; bank: string; account: string; code: string };
@@ -37,7 +37,7 @@ export default function Transfers() {
     if (p) { setRecipient(p.name); setBank(p.bank); setAccount(p.account); setIfsc(p.code); }
   }
 
-  function finish() {
+  async function finish() {
     const value = Number(amount);
     if (!Number.isFinite(value) || value <= 0) {
       setError("Enter a valid positive amount.");
@@ -59,8 +59,9 @@ export default function Transfers() {
         },
       ],
     };
-    if (!write(next)) {
-      setError("The transfer result could not be saved in this browser. Check browser storage and try again.");
+    const saved = await saveState(next);
+    if (!saved) {
+      setError("The sample result could not be saved in this browser. No result was recorded. Check browser storage and try again.");
       return;
     }
     router.push("/payment-successful");
