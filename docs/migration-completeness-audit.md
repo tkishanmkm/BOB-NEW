@@ -5,9 +5,9 @@
 ## Summary
 
 - Source routes listed in inventory: **52**
-- Next.js page files (including dynamic route file): **27**
-- Source routes with dedicated route file: **18**
-- Source routes served by generic feature page: **34**
+- Next.js page files (including dynamic route file): **29**
+- Source routes with dedicated route file: **19**
+- Source routes served by generic feature page: **33**
 - Source routes without direct or dynamic configuration: **0**
 - Manifest records: **6913**
 - Manifest asset paths missing from public/: **0**
@@ -51,7 +51,7 @@
 | `/invest` | Investments | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
 | `/kyc-details` | KYC details | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
 | `/link-bank` | Link bank | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/more` | More services | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
+| `/more` | More services | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 | `/need-help` | Need help | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 | `/nominee-registration` | Nominee registration | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
 | `/offers` | Offers | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |

@@ -1,8 +1,18 @@
 const base = (process.env.SMOKE_BASE_URL || "http://localhost:3000").replace(/\/$/, "");
 const routes = [
-  "/", "/dashboard", "/settings", "/payees", "/help-support",
-  "/statement", "/receipt", "/fund-transfer", "/transfers",
-  "/account-details", "/account-statement", "/passbook",
+  "/", "/splash", "/dashboard", "/more", "/about", "/account-actions",
+  "/account-statement", "/agent-live-chat", "/ai-assistant-chat", "/alerts",
+  "/all-accounts", "/app-settings", "/bill-pay", "/borrow", "/bus-tickets",
+  "/cards", "/change-login-pin", "/change-transaction-pin", "/cheque-book-request",
+  "/complaints", "/contact-details", "/contact-us-help", "/credit-card-apply",
+  "/current-account-details", "/digital-loan", "/digital-planner", "/faqs",
+  "/fixed-deposit", "/fund-transfer", "/help", "/invest", "/kyc-details",
+  "/link-bank", "/need-help", "/nominee-registration", "/offers", "/passbook",
+  "/personal-details", "/personal-loan-info", "/positive-pay", "/profile",
+  "/recharge", "/save", "/scan", "/security", "/settings", "/shop-and-pay",
+  "/shop", "/statement-analysis", "/switch-to-classic", "/upi", "/video-call",
+  "/watch-demo", "/payees", "/help-support", "/receipt", "/transfers",
+  "/account-details", "/demo-documents", "/payment-successful",
 ];
 let failures = 0;
 for (const route of routes) {
