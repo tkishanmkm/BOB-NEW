@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Shell } from "@/components/app-shell";
 import { money, read, write, getLocalRecord, type State } from "@/lib/demo";
@@ -69,7 +70,7 @@ export default function Transfers() {
     e.preventDefault();
     const n = Number(amount);
     if (!recipient.trim() || !bank.trim() || !/^[A-Za-z]{4}0[A-Za-z0-9]{6}$/.test(ifsc) || !/^[0-9]{6,18}$/.test(account) || !Number.isFinite(n) || n <= 0) {
-      setError("Check recipient, sample account number, IFSC-format code and positive amount.");
+      setError("Check recipient, account number, code and positive amount.");
       return;
     }
     setError("");
@@ -83,7 +84,7 @@ export default function Transfers() {
     {stage === "details" && <form className="card" onSubmit={review}>
       <h2>Recipient details</h2><p className="muted">Use fictional information only. Do not enter sensitive banking details.</p>
       <Field label="Choose a saved beneficiary"><select value={selectedPayee} onChange={e => choosePayee(e.target.value)}><option value="">Enter details manually</option>{payees.map(p => <option key={p.id} value={p.id}>{p.name} · •••• {p.account.slice(-4)}</option>)}</select></Field>
-      {payees.length === 0 && <p className="muted">No saved beneficiaries yet. Add a recipient on the <a href="/payees">Beneficiaries page</a>.</p>}
+      {payees.length === 0 && <p className="muted">No saved beneficiaries yet. Add a recipient on the <Link href="/payees">Beneficiaries page</Link>.</p>}
       <div className="grid">
         <Field label="Recipient name"><input value={recipient} maxLength={100} onChange={e => setRecipient(e.target.value)} required /></Field>
         <Field label="Institution name"><input value={bank} maxLength={100} onChange={e => setBank(e.target.value)} required /></Field>
@@ -95,11 +96,11 @@ export default function Transfers() {
       {error && <p className="error" role="alert">{error}</p>}<button type="submit">Review transfer</button>
     </form>}
     {stage === "review" && <section className="card">
-      <h2>Review sample transfer</h2>
-      <div className="receipt-row"><span>Recipient</span><b>{recipient}</b></div><div className="receipt-row"><span>Institution</span><b>{bank}</b></div><div className="receipt-row"><span>Sample account</span><b>•••• {account.slice(-4)}</b></div><div className="receipt-row"><span>IFSC-format code</span><b>{ifsc}</b></div><div className="receipt-row"><span>Amount</span><b>{money(Number(amount))}</b></div><div className="receipt-row"><span>Note</span><b>{remark || "—"}</b></div>
-      <p className="warning">SIMULATION ONLY — NO PAYMENT WILL BE SENT</p>
+      <h2>Review transfer</h2>
+      <div className="receipt-row"><span>Recipient</span><b>{recipient}</b></div><div className="receipt-row"><span>Institution</span><b>{bank}</b></div><div className="receipt-row"><span>Account</span><b>•••• {account.slice(-4)}</b></div><div className="receipt-row"><span>IFSC-format code</span><b>{ifsc}</b></div><div className="receipt-row"><span>Amount</span><b>{money(Number(amount))}</b></div><div className="receipt-row"><span>Note</span><b>{remark || "—"}</b></div>
+      <p className="warning">NO PAYMENT WILL BE SENT — LOCAL PROTOTYPE ONLY</p>
       {error && <p className="error" role="alert">{error}</p>}
-      <div className="actions"><button type="button" className="secondary" onClick={() => { setStage("details"); setError(""); }}>Back to edit</button><button type="button" onClick={finish}>Finish sample preview</button></div>
+      <div className="actions"><button type="button" className="secondary" onClick={() => { setStage("details"); setError(""); }}>Back to edit</button><button type="button" onClick={finish}>Finish and view result</button></div>
     </section>}
   </Shell>;
 }
