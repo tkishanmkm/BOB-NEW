@@ -62,12 +62,21 @@ export default function Transfers() {
   async function finish() {
     if (saving) return;
     const value = Number(amount);
-    if (!Number.isFinite(value) || value <= 0) {
+    if (!Number.isFinite(value) || value <= 0 || !Number.isFinite(Math.round(value * 100) / 100)) {
       setError("Enter a valid positive amount.");
       setStage("details");
       return;
     }
+    if (!recipient.trim() || !bank.trim() || !/^[A-Za-z]{4}0[A-Za-z0-9]{6}$/.test(ifsc) || !/^[0-9]{6,18}$/.test(account)) {
+      setError("Recipient details are invalid. Return to details and correct them.");
+      setStage("details");
+      return;
+    }
     const current = read();
+    if (current.transactions.length >= 5000) {
+      setError("The local transaction history has reached its 5,000-entry limit. No result was recorded.");
+      return;
+    }
     const next: State = {
       ...current,
       transactions: [
@@ -91,6 +100,8 @@ export default function Transfers() {
         return;
       }
       router.push("/payment-successful");
+    } catch {
+      setError("The sample result could not be saved or opened. Check browser storage and try again; no bank payment was sent.");
     } finally {
       setSaving(false);
     }
