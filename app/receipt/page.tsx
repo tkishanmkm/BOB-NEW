@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { Shell } from "@/components/app-shell";
@@ -9,6 +9,8 @@ export default function ReceiptPage() {
   const [selectedId, setSelectedId] = useState("");
   useEffect(() => {
     const refresh = () => setState(read());
+    const requestedId = new URLSearchParams(window.location.search).get("id");
+    if (requestedId) setSelectedId(requestedId);
     refresh();
     window.addEventListener("bob-new-state-change", refresh);
     window.addEventListener("storage", refresh);
@@ -35,6 +37,11 @@ export default function ReceiptPage() {
         <ReceiptRow label="Customer ID (sample)" value={state.customerId || "Not set"}/>
         <ReceiptRow label="Branch (sample)" value={state.branch || "Not set"}/>
         <ReceiptRow label="IFSC-format code (sample)" value={state.ifsc || "Not set"}/>
+        <ReceiptRow label="Mobile (sample)" value={state.mobile || "Not set"}/>
+        <ReceiptRow label="Email (sample)" value={state.email || "Not set"}/>
+        <ReceiptRow label="Address (sample)" value={state.address || "Not set"}/>
+        <ReceiptRow label="Date of birth (sample)" value={state.dob || "Not set"}/>
+        <ReceiptRow label="PAN (sample)" value={state.panNumber || "Not set"}/>
       </div>
       <p className="receipt-warning">DEMO ONLY · This receipt is generated from editable data stored in this browser. It does not verify that money was sent or received.</p>
     </article> : <section className="card"><p>No saved transactions are available. Add sample activity or import validated sample data in Settings.</p></section>}
