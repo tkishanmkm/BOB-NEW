@@ -54,10 +54,26 @@ export async function hydrate():Promise<State>{
 export function isHydrated(){return hydrated}
 export function valid(v:unknown):v is State{if(!v||typeof v!=="object")return false;const s=v as Partial<State>;if(s.schemaVersion!==1||typeof s.name!=="string"||s.name.length>100||typeof s.accountLabel!=="string"||s.accountLabel.length>100||typeof s.maskedId!=="string"||s.maskedId.length>80||typeof s.openingBalance!=="number"||!Number.isFinite(s.openingBalance)||s.openingBalance<0||typeof s.demoPin!=="string"||!/^[0-9]{4,6}$/.test(s.demoPin)||![ "mobile","email","address","branch","customerId","accountNumber","ifsc","dob","panNumber"].every(k=>s[k as keyof State]===undefined||typeof s[k as keyof State]==="string"&&(s[k as keyof State] as string).length<=200)||!Array.isArray(s.transactions)||s.transactions.length>5000)return false;const ids=new Set<string>();return s.transactions.every((item:unknown)=>{if(!item||typeof item!=="object")return false;const t=item as Partial<Tx>;if(typeof t.id!=="string"||!t.id||t.id.length>100||ids.has(t.id)||typeof t.date!=="string"||!/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(t.date)||typeof t.description!=="string"||t.description.length>300||typeof t.amount!=="number"||!Number.isFinite(t.amount)||t.amount<0||(t.type!=="credit"&&t.type!=="debit")||(t.status!=="posted"&&t.status!=="pending"))return false;ids.add(t.id);const d=new Date(t.date+"T00:00:00Z");return !Number.isNaN(d.getTime())&&d.toISOString().slice(0,10)===t.date})}
 export function read():State{return {...cache,transactions:cache.transactions.map(t=>({...t}))}}
+export async function saveState(v:State):Promise<boolean>{
+  if(!valid(v)||typeof window==="undefined")return false;
+  const next:State={...v,transactions:v.transactions.map(t=>({...t}))};
+  let db:IDBDatabase|undefined;
+  try{
+    db=await openDB();
+    await putRecord(db,next);
+    cache=next;
+    hydrated=true;
+    window.dispatchEvent(new Event("bob-new-state-change"));
+    return true;
+  }catch{
+    window.dispatchEvent(new CustomEvent("bob-new-storage-error",{detail:"Could not save to IndexedDB. Check browser storage availability."}));
+    return false;
+  }finally{db?.close()}
+}
 export function write(v:State):boolean{
   if(!valid(v)||typeof window==="undefined")return false;
   cache={...v,transactions:v.transactions.map(t=>({...t}))};
-  void (async()=>{try{const db=await openDB();await putRecord(db,cache);db.close();hydrated=true;window.dispatchEvent(new Event("bob-new-state-change"))}catch{window.dispatchEvent(new CustomEvent("bob-new-storage-error",{detail:"Could not save to IndexedDB. Check browser storage availability."}))}})();
+  void saveState(cache);
   window.dispatchEvent(new Event("bob-new-state-change"));
   return true;
 }
