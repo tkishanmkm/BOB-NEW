@@ -1,0 +1,236 @@
+﻿[
+    {
+        "path":  "work\\base-decoded\\assets\\flutter_assets\\assets\\fonts\\Acumin.otf",
+        "file":  "Acumin.otf",
+        "bytes":  81988,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\assets\\flutter_assets\\assets\\fonts\\Gabarito-ExtraBold.ttf",
+        "file":  "Gabarito-ExtraBold.ttf",
+        "bytes":  102308,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\assets\\flutter_assets\\assets\\fonts\\Gabarito.ttf",
+        "file":  "Gabarito.ttf",
+        "bytes":  101996,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\assets\\flutter_assets\\fonts\\MaterialIcons-Regular.otf",
+        "file":  "MaterialIcons-Regular.otf",
+        "bytes":  5588,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\assets\\flutter_assets\\packages\\cupertino_icons\\assets\\CupertinoIcons.ttf",
+        "file":  "CupertinoIcons.ttf",
+        "bytes":  848,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\assets\\fonts\\acuminpro_light.ttf",
+        "file":  "acuminpro_light.ttf",
+        "bytes":  114140,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\assets\\fonts\\acumin_bditpro.otf",
+        "file":  "acumin_bditpro.otf",
+        "bytes":  82692,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\assets\\fonts\\acumin_bdpro.otf",
+        "file":  "acumin_bdpro.otf",
+        "bytes":  83784,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\assets\\fonts\\acumin_itpro.otf",
+        "file":  "acumin_itpro.otf",
+        "bytes":  83356,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\assets\\fonts\\acumin_rpro.otf",
+        "file":  "acumin_rpro.otf",
+        "bytes":  81988,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\assets\\fonts\\Roboto_Italic.ttf",
+        "file":  "Roboto_Italic.ttf",
+        "bytes":  173516,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\assets\\fonts\\Roboto_Light.ttf",
+        "file":  "Roboto_Light.ttf",
+        "bytes":  170012,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\assets\\Accumin_Pro_Bold.ttf",
+        "file":  "Accumin_Pro_Bold.ttf",
+        "bytes":  110900,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\assets\\Acumin-BdPro.ttf",
+        "file":  "Acumin-BdPro.ttf",
+        "bytes":  83784,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\assets\\Acumin-BdPro_gl.ttf",
+        "file":  "Acumin-BdPro_gl.ttf",
+        "bytes":  83784,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\assets\\Acumin-RPro.ttf",
+        "file":  "Acumin-RPro.ttf",
+        "bytes":  81988,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\assets\\Acumin-RPro_gl.ttf",
+        "file":  "Acumin-RPro_gl.ttf",
+        "bytes":  81988,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\assets\\Acumin_Pro_Light.ttf",
+        "file":  "Acumin_Pro_Light.ttf",
+        "bytes":  111488,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\assets\\Acumin_Pro_Medium.ttf",
+        "file":  "Acumin_Pro_Medium.ttf",
+        "bytes":  113484,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\assets\\Acumin_Pro_Regular.ttf",
+        "file":  "Acumin_Pro_Regular.ttf",
+        "bytes":  63600,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\res\\font\\accumin_pro_bold.ttf",
+        "file":  "accumin_pro_bold.ttf",
+        "bytes":  110900,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\res\\font\\accumin_pro_bold_gl.ttf",
+        "file":  "accumin_pro_bold_gl.ttf",
+        "bytes":  110900,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\res\\font\\acumin_bdpro.ttf",
+        "file":  "acumin_bdpro.ttf",
+        "bytes":  83784,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\res\\font\\acumin_bdpro_gl.ttf",
+        "file":  "acumin_bdpro_gl.ttf",
+        "bytes":  83784,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\res\\font\\acumin_itpro.otf",
+        "file":  "acumin_itpro.otf",
+        "bytes":  83356,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\res\\font\\acumin_pro_light.ttf",
+        "file":  "acumin_pro_light.ttf",
+        "bytes":  81988,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\res\\font\\acumin_pro_light_gl.ttf",
+        "file":  "acumin_pro_light_gl.ttf",
+        "bytes":  81988,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\res\\font\\acumin_pro_medium.ttf",
+        "file":  "acumin_pro_medium.ttf",
+        "bytes":  81988,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\res\\font\\acumin_pro_medium_gl.ttf",
+        "file":  "acumin_pro_medium_gl.ttf",
+        "bytes":  81988,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\res\\font\\acumin_pro_regular.ttf",
+        "file":  "acumin_pro_regular.ttf",
+        "bytes":  63600,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\res\\font\\acumin_pro_regular_gl.ttf",
+        "file":  "acumin_pro_regular_gl.ttf",
+        "bytes":  63600,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\res\\font\\acumin_rpro.otf",
+        "file":  "acumin_rpro.otf",
+        "bytes":  81988,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\res\\font\\acumin_rpro_gl.ttf",
+        "file":  "acumin_rpro_gl.ttf",
+        "bytes":  81988,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\res\\font\\notosans.ttf",
+        "file":  "notosans.ttf",
+        "bytes":  556500,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\res\\font\\roboto_bold.otf",
+        "file":  "roboto_bold.otf",
+        "bytes":  83784,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\res\\font\\roboto_italic.ttf",
+        "file":  "roboto_italic.ttf",
+        "bytes":  170504,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\res\\font\\roboto_medium_numbers.ttf",
+        "file":  "roboto_medium_numbers.ttf",
+        "bytes":  3316,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\res\\font\\roboto_regular.otf",
+        "file":  "roboto_regular.otf",
+        "bytes":  81988,
+        "source":  "decoded APK"
+    },
+    {
+        "path":  "work\\base-decoded\\res\\raw\\src_idbdabpackage_nativeassets_fonts_acuminrpro.otf",
+        "file":  "src_idbdabpackage_nativeassets_fonts_acuminrpro.otf",
+        "bytes":  81988,
+        "source":  "decoded APK"
+    }
+]

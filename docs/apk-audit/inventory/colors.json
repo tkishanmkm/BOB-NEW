@@ -1,0 +1,5667 @@
+﻿[
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "aactionableBlueColor",
+        "value":  "#1f3c66"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "abc_decor_view_status_guard",
+        "value":  "#ff000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "abc_decor_view_status_guard_light",
+        "value":  "#ffffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "abc_search_url_text_normal",
+        "value":  "#7fa87f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "abc_search_url_text_pressed",
+        "value":  "@android:color/black"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "abc_search_url_text_selected",
+        "value":  "@android:color/black"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "accent",
+        "value":  "#ff19437a"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "accent_material_dark",
+        "value":  "@color/material_deep_teal_200"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "accent_material_light",
+        "value":  "@color/material_deep_teal_500"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "activateBg",
+        "value":  "#1a33bf02"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "activatedTextColor",
+        "value":  "#33bf02"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "addishlist_bg",
+        "value":  "#fba43d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "address_bar_shadow_color",
+        "value":  "#cabbbbbb"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "aliceblue",
+        "value":  "#f0f8ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "androidx_core_ripple_material_light",
+        "value":  "#1f000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "androidx_core_secondary_text_default_material_light",
+        "value":  "#8a000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "antiquewhite",
+        "value":  "#faebd7"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "aqua",
+        "value":  "#00ffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "aquamarine",
+        "value":  "#7fffd4"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "azure",
+        "value":  "#f0ffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "backgroundColor",
+        "value":  "#f8f0e3"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "background_floating_material_dark",
+        "value":  "@color/material_grey_800"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "background_floating_material_light",
+        "value":  "@android:color/white"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "background_material_dark",
+        "value":  "@color/material_grey_850"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "background_material_light",
+        "value":  "@color/material_grey_50"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "banner_bg_color",
+        "value":  "#f9f5b2"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "bd_tab_selected",
+        "value":  "#8027374d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "beige",
+        "value":  "#f5f5dc"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "bestSellerAllBg",
+        "value":  "@color/chegLibPrimaryDarkColor"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "bestSellerBg",
+        "value":  "@color/chegBgDark"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "bestSellerFilterItemBg",
+        "value":  "@color/chegBgDark"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "bestSellerItemBg",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "best_deal_container_bg",
+        "value":  "#e4e5e9"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "beverage_bg",
+        "value":  "#dff5a7"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "beverage_color",
+        "value":  "#49501f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "bg_semitransparent",
+        "value":  "#80000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "bg_toast",
+        "value":  "#cc434343"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "biometric_error_color",
+        "value":  "#ff5722"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "bisque",
+        "value":  "#ffe4c4"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "black",
+        "value":  "#ff000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "black_20_transparent",
+        "value":  "#cc212121"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "black_70_transparent",
+        "value":  "#4c212121"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "black_80_transparent",
+        "value":  "#8c212121"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "black_text",
+        "value":  "#212121"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "blanchedalmond",
+        "value":  "#ffebcd"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "blue",
+        "value":  "@color/seed"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "blue_15_opaque",
+        "value":  "#2600b9cc"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "blue_addrs_color",
+        "value":  "#458df5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "blueviolet",
+        "value":  "#8a2be2"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "bob_icon_color",
+        "value":  "#162b75"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "bob_icon_color_blue",
+        "value":  "#1f3c66"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "bob_icon_color_light_blue",
+        "value":  "#95afcb"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "bob_orange_color",
+        "value":  "#f26522"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "border_grey",
+        "value":  "#858688"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "bottomSheetDividerColor",
+        "value":  "@color/chegSecondaryText"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "brand_bg",
+        "value":  "#ebebeb"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "bright_foreground_disabled_material_dark",
+        "value":  "#80ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "bright_foreground_disabled_material_light",
+        "value":  "#80000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "bright_foreground_inverse_material_dark",
+        "value":  "@color/bright_foreground_material_light"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "bright_foreground_inverse_material_light",
+        "value":  "@color/bright_foreground_material_dark"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "bright_foreground_material_dark",
+        "value":  "@android:color/white"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "bright_foreground_material_light",
+        "value":  "@android:color/black"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "brown",
+        "value":  "#a52a2a"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "browser_actions_bg_grey",
+        "value":  "#f5f5f5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "browser_actions_divider_color",
+        "value":  "#1e000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "browser_actions_text_color",
+        "value":  "#de000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "browser_actions_title_color",
+        "value":  "#646464"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "btn_bg",
+        "value":  "#e3002c"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "burlywood",
+        "value":  "#deb887"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "button_material_dark",
+        "value":  "#ff5a595b"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "button_material_light",
+        "value":  "#ffd6d7d7"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "buyNowColor",
+        "value":  "@color/aactionableBlueColor"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "buyNowGCEmailBg",
+        "value":  "@color/chegBgLight"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "buyNowGCPaymentOptionBg",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "buyNowGCPriceBg",
+        "value":  "#edffee"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "cadetblue",
+        "value":  "#5f9ea0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "calendar_date_disabled",
+        "value":  "#b9b9b9"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "call_notification_answer_color",
+        "value":  "#1d873b"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "call_notification_decline_color",
+        "value":  "#d93025"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "cardview_dark_background",
+        "value":  "#ff424242"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "cardview_light_background",
+        "value":  "#ffffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "cardview_shadow_end_color",
+        "value":  "#03000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "cardview_shadow_start_color",
+        "value":  "#37000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "catalyst_logbox_background",
+        "value":  "#ffffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "catalyst_redbox_background",
+        "value":  "#eecc0000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "categoryFilterTextColor",
+        "value":  "@color/chegPrimaryText"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "categoryListbg",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "categorySelectedTabColor",
+        "value":  "#000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "categoryTabBg",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "categoryTabIndicatorColor",
+        "value":  "@color/chegLibPrimaryColor"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "category_item_offer_text",
+        "value":  "#b6b6b6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chartreuse",
+        "value":  "#7fff00"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chefInstantvoucherColor",
+        "value":  "#27374d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegActivateButtonBg",
+        "value":  "#33bf02"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegBgDark",
+        "value":  "#f5f3f9"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegBgLight",
+        "value":  "#1a021555"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegBlack",
+        "value":  "#000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegBlueTextColor",
+        "value":  "#1a68e5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegBodyText",
+        "value":  "#27374d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegBottomsheetPillColor",
+        "value":  "#f0f0f0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegCardBg",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegCashbackButtonBg",
+        "value":  "#1d90f5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegCloDetailTitleColorBg",
+        "value":  "#ec3949"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegColorOffersGreen",
+        "value":  "#b4d587"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegCopyButtonTint",
+        "value":  "#00914e"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegDarkGray",
+        "value":  "#7a7a7a"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegFeedbackBg",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegFilterCardColor",
+        "value":  "#f6f6f6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegGCamount",
+        "value":  "#808aaa"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegGcCardDetailBgColor",
+        "value":  "#eaeaea"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegGiftCardDetailHeading",
+        "value":  "#939393"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegGiftcardBg",
+        "value":  "@color/chegLibPrimaryColor"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegGiftcardText",
+        "value":  "#008b42"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegGray",
+        "value":  "#f0f0f0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegGrayTextColor",
+        "value":  "#a3a3a3"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegGreen",
+        "value":  "#008b42"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegGrey50",
+        "value":  "#fafafa"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegHintColor",
+        "value":  "#111111"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegIbColor",
+        "value":  "#011c4a"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegLibPrimaryColor",
+        "value":  "#f15046"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegLibPrimaryDarkColor",
+        "value":  "#ff7f50"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegLightBlue",
+        "value":  "#9cbae0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegLightGrayBg",
+        "value":  "#f9f9f9"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegNavBg",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegNavIcon",
+        "value":  "@color/chegLibPrimaryColor"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegNavIconUnselected",
+        "value":  "@color/chegPrimaryText"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegOrangeColor",
+        "value":  "#f45c43"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegPillColor",
+        "value":  "@color/lightGray"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegPrimaryText",
+        "value":  "#27374d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegProcessingColor",
+        "value":  "#f39c35"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegRed",
+        "value":  "#ff0000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegScratchCardPillColor",
+        "value":  "@color/chegBgLight"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegSecondaryText",
+        "value":  "#27374d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegStoreReward",
+        "value":  "#021555"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegStoreStroke",
+        "value":  "#e0e0e0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegTabIndicatorColor",
+        "value":  "#f15046"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegToolBarBackdrop",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegToolBarItemColor",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chegWhite",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "cheg_body_bg",
+        "value":  "#f2f3f5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "cheg_card_stroke",
+        "value":  "#f5f3f9"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "cheg_ib_button_color",
+        "value":  "#fdef00"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "cheg_selected_green",
+        "value":  "#008b42"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "cheg_sort_content_color",
+        "value":  "#767676"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "cheg_sort_title_color",
+        "value":  "#b6b6b6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "cheg_status_bar_scrim_color",
+        "value":  "@color/chegBgDark"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "cheg_toolbar_end_color",
+        "value":  "#59b0e7"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "cheg_toolbar_start_color",
+        "value":  "#2e8fe3"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "chocolate",
+        "value":  "#d2691e"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "coffe",
+        "value":  "#8e6843"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorAccent",
+        "value":  "@color/elite_sdk_app_color"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorAccent1",
+        "value":  "#e3814c"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorBlack",
+        "value":  "#000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorBlack_20",
+        "value":  "#cccccc"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorBlack_trans_20",
+        "value":  "#999999"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorBlack_trans_40",
+        "value":  "#666666"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorBlack_trans_60",
+        "value":  "#333333"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorBlue",
+        "value":  "#1f3c66"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorBlue_gl",
+        "value":  "#1f3c66"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorBlue_trans_20",
+        "value":  "#d2d8e0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorBlue_trans_40",
+        "value":  "#a5b1c2"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorBlue_trans_60",
+        "value":  "#798aa3"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorBlue_trans_80",
+        "value":  "#4c6385"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorDeepOrange",
+        "value":  "#ff3100"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorDeepOrange_trans_20",
+        "value":  "#cc2700"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorDeepOrange_trans_40",
+        "value":  "#991d00"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorDeepOrange_trans_60",
+        "value":  "#661400"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorGray",
+        "value":  "#7a111111"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorGrayDropDown",
+        "value":  "#7a111111"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorLoginEtBackground",
+        "value":  "#f2f3f3"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorLoginTextFeild",
+        "value":  "#565656"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorNormalBlue",
+        "value":  "#044e7f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorPortalBlue",
+        "value":  "#0072aa"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorPrimary",
+        "value":  "#044e7f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorPrimaryDark",
+        "value":  "@color/elite_sdk_black"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorStepGray",
+        "value":  "#eaeaea"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorThumbMiddle",
+        "value":  "#b6b6b6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colorWhite",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_222222",
+        "value":  "#222222"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_333333",
+        "value":  "#333333"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_444444",
+        "value":  "#444444"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_555555",
+        "value":  "#555555"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_888888",
+        "value":  "#888888"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_909090",
+        "value":  "#909090"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_accent1_gl",
+        "value":  "#e3814c"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_accent1_main",
+        "value":  "#e3814c"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_black_gl",
+        "value":  "#000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_black_trans_20_gl",
+        "value":  "#999999"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_black_trans_40_gl",
+        "value":  "#666666"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_black_trans_60_gl",
+        "value":  "#333333"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_blue_gl",
+        "value":  "#133d69"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_deep_orange_gl",
+        "value":  "#ff3100"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_e9e9e9",
+        "value":  "#e9e9e9"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_field_background_gl",
+        "value":  "#a2b1c4"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_gray_gl",
+        "value":  "#7a111111"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_item_background_gl",
+        "value":  "#b2b2b2"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_login_et_background_gl",
+        "value":  "#f2f3f3"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_login_text_field_gl",
+        "value":  "#565656"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_orange",
+        "value":  "#e47d3b"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_order_state_line",
+        "value":  "#d7d7d7"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_portal_blue_gl",
+        "value":  "#0072aa"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_primary_dark_gl",
+        "value":  "#ff5900"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_primary_dark_main",
+        "value":  "#ff5900"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_primary_gl",
+        "value":  "#133d69"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_primary_main",
+        "value":  "#133d69"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_red_gl",
+        "value":  "#ff0000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_step_gray_gl",
+        "value":  "#eaeaea"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_thumb_middle_gl",
+        "value":  "#b6b6b6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_tv_order_status",
+        "value":  "#191919"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "color_white_gl",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "colour_primary",
+        "value":  "#000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "commercial_vehicle_color",
+        "value":  "#edf9ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "common_google_signin_btn_text_dark_default",
+        "value":  "@android:color/white"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "common_google_signin_btn_text_dark_disabled",
+        "value":  "#1f000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "common_google_signin_btn_text_dark_focused",
+        "value":  "@android:color/black"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "common_google_signin_btn_text_dark_pressed",
+        "value":  "@android:color/white"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "common_google_signin_btn_text_light_default",
+        "value":  "#90000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "common_google_signin_btn_text_light_disabled",
+        "value":  "#1f000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "common_google_signin_btn_text_light_focused",
+        "value":  "#90000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "common_google_signin_btn_text_light_pressed",
+        "value":  "#de000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "contactUsBg",
+        "value":  "@color/chegBgDark"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "contactUsSubmitButtonColor",
+        "value":  "@color/chegGreen"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "contactUsToolbarColor",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "coral",
+        "value":  "#ff7f50"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "cornflowerblue",
+        "value":  "#6495ed"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "cornsilk",
+        "value":  "#fff8dc"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "coupon_text_color",
+        "value":  "#a4a4a4"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "credit_vidya_background_color",
+        "value":  "#3061ad"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "credit_vidya_background_color_gl",
+        "value":  "#3061ad"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "crimson",
+        "value":  "#dc143c"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "cyan",
+        "value":  "#00ffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "dark_red",
+        "value":  "#e22853"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "darkblue",
+        "value":  "#00008b"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "darkcyan",
+        "value":  "#008b8b"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "darkgoldenrod",
+        "value":  "#b8860b"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "darkgray",
+        "value":  "#a9a9a9"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "darkgreen",
+        "value":  "#006400"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "darkgrey",
+        "value":  "#707070"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "darkgrey_color",
+        "value":  "#d4d4d4"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "darkkhaki",
+        "value":  "#bdb76b"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "darkmagenta",
+        "value":  "#8b008b"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "darkolivegreen",
+        "value":  "#556b2f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "darkorange",
+        "value":  "#ff8c00"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "darkorchid",
+        "value":  "#9932cc"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "darkred",
+        "value":  "#8b0000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "darksalmon",
+        "value":  "#e9967a"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "darkseagreen",
+        "value":  "#8fbc8f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "darkslateblue",
+        "value":  "#483d8b"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "darkslategray",
+        "value":  "#2f4f4f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "darkturquoise",
+        "value":  "#00ced1"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "darkviolet",
+        "value":  "#9400d3"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "dealSelectedTabText",
+        "value":  "@color/chegPrimaryText"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "dealTabIndicator",
+        "value":  "@color/chegLibPrimaryColor"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "deeppink",
+        "value":  "#ff1493"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "deepskyblue",
+        "value":  "#00bfff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "defaultBannerIndicatorColor",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "defaultTutorialIndicatorColor",
+        "value":  "@color/chegBgDark"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "default_overlay_color",
+        "value":  "#aaffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_bottom_navigation_shadow_color",
+        "value":  "#14000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_dark_default_color_background",
+        "value":  "#121212"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_dark_default_color_error",
+        "value":  "#cf6679"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_dark_default_color_on_background",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_dark_default_color_on_error",
+        "value":  "#000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_dark_default_color_on_primary",
+        "value":  "#000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_dark_default_color_on_secondary",
+        "value":  "#000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_dark_default_color_on_surface",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_dark_default_color_primary",
+        "value":  "#ba86fc"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_dark_default_color_primary_dark",
+        "value":  "#000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_dark_default_color_primary_variant",
+        "value":  "#3700b3"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_dark_default_color_secondary",
+        "value":  "#03dac6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_dark_default_color_secondary_variant",
+        "value":  "#03dac6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_dark_default_color_surface",
+        "value":  "#121212"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_default_color_background",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_default_color_error",
+        "value":  "#b00020"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_default_color_on_background",
+        "value":  "#000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_default_color_on_error",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_default_color_on_primary",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_default_color_on_secondary",
+        "value":  "#000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_default_color_on_surface",
+        "value":  "#000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_default_color_primary",
+        "value":  "#6200ee"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_default_color_primary_dark",
+        "value":  "#3700b3"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_default_color_primary_variant",
+        "value":  "#3700b3"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_default_color_secondary",
+        "value":  "#03dac6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_default_color_secondary_variant",
+        "value":  "#018786"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_default_color_surface",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_fab_shadow_end_color",
+        "value":  "@android:color/transparent"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_fab_shadow_mid_color",
+        "value":  "#14000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_fab_shadow_start_color",
+        "value":  "#44000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_fab_stroke_end_inner_color",
+        "value":  "#0a000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_fab_stroke_end_outer_color",
+        "value":  "#0f000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_fab_stroke_top_inner_color",
+        "value":  "#1affffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_fab_stroke_top_outer_color",
+        "value":  "#2effffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "design_snackbar_background_color",
+        "value":  "#323232"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "dim_foreground_disabled_material_dark",
+        "value":  "#80bebebe"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "dim_foreground_disabled_material_light",
+        "value":  "#80323232"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "dim_foreground_material_dark",
+        "value":  "#ffbebebe"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "dim_foreground_material_light",
+        "value":  "#ff323232"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "dimgray",
+        "value":  "#696969"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "disable_blue",
+        "value":  "#c5e0ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "disable_gray",
+        "value":  "#909090"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "disclaimerButtonColor",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "disclaimer_bg_button",
+        "value":  "#4cb1e4"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "divider_color",
+        "value":  "#e5e5e5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "dodgerblue",
+        "value":  "#1e90ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_app_color",
+        "value":  "@color/elite_sdk_blue_66"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_app_secondary_color",
+        "value":  "#f15a2b"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_aqua_color",
+        "value":  "#439a7f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_background_color",
+        "value":  "@color/elite_sdk_white_eee"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_background_gray",
+        "value":  "#f4f4f4"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_bg_off_white",
+        "value":  "#fcfcfc"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_black",
+        "value":  "#000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_black_alpha50",
+        "value":  "#8a000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_black_alpha90",
+        "value":  "#e6000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_blue",
+        "value":  "#0000ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_blue_23",
+        "value":  "#237ce3"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_blue_28",
+        "value":  "#280071"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_blue_66",
+        "value":  "#1f3c66"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_blue_color",
+        "value":  "#0e6590"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_blue_gray",
+        "value":  "#eceff1"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_btn_solid_color",
+        "value":  "@color/elite_sdk_app_color"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_btn_stroke_color",
+        "value":  "@color/elite_sdk_app_color"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_btn_textColorHighlight",
+        "value":  "#ffff9200"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_btn_text_color",
+        "value":  "@color/elite_sdk_white"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_category_blue",
+        "value":  "#56a4ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_category_green",
+        "value":  "#51c7a2"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_category_orange",
+        "value":  "#ffd200"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_category_pink",
+        "value":  "#f6d3cd"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_category_sky",
+        "value":  "#36ceff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_dark_gray",
+        "value":  "#f33b3b3b"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_discount_bg_color",
+        "value":  "@color/elite_sdk_app_color"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_discount_text_color",
+        "value":  "@color/elite_sdk_white"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_divider_line_color",
+        "value":  "#e0e0e1"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_dotted_divider",
+        "value":  "#e0e0e0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_edittext_background_gray",
+        "value":  "#fbfbfb"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_edittext_stroke_gray",
+        "value":  "#eaeaea"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_flight_divider_color",
+        "value":  "#19000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_gray",
+        "value":  "#808080"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_gray_400",
+        "value":  "#40000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_gray_97",
+        "value":  "#979797"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_gray_9b",
+        "value":  "#9b9b9b"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_gray_alpha10",
+        "value":  "#8c000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_gray_alpha60",
+        "value":  "#4a4a4a"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_gray_alpha90",
+        "value":  "#8024253d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_gray_f5",
+        "value":  "#f5f5f5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_gray_icon",
+        "value":  "#cecece"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_gray_light",
+        "value":  "#f3f3f3"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_gray_medium",
+        "value":  "#cfcfcf"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_gray_shadow",
+        "value":  "#bdbdbd"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_green",
+        "value":  "#008000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_green_28c",
+        "value":  "#28c76f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_grey_1a0",
+        "value":  "#1a000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_grey_1e0",
+        "value":  "#1e000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_grey_dfdf",
+        "value":  "#dfdfdf"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_grey_f1",
+        "value":  "#f1f7ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_grey_f6",
+        "value":  "#f6f6f6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_home_background",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_home_tab_color",
+        "value":  "@color/elite_sdk_white"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_light_blue",
+        "value":  "#4a90e2"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_light_blue01a",
+        "value":  "#01a9e0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_light_blue_color",
+        "value":  "#e1f3fc"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_light_gray",
+        "value":  "#f3f3f3"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_light_green",
+        "value":  "#76ce15"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_light_red",
+        "value":  "#e57373"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_light_sky",
+        "value":  "#4c003366"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_lightest_gray",
+        "value":  "#61000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_lris_blue",
+        "value":  "#00a9e0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_milestone_color",
+        "value":  "@color/elite_sdk_app_secondary_color"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_navy_blue",
+        "value":  "#24253d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_offer_button_color",
+        "value":  "@color/elite_sdk_app_secondary_color"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_offer_green",
+        "value":  "#7ed321"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_offer_red",
+        "value":  "#e20028"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_offer_yellow",
+        "value":  "#ffbf1f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_orange",
+        "value":  "#fdc60a"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_orange_color",
+        "value":  "#f15a2b"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_primary_text_color",
+        "value":  "@color/elite_sdk_black"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_progress_background_tint",
+        "value":  "#d1d1d1"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_red",
+        "value":  "#ff0000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_searchBoxColor",
+        "value":  "#1ed0d0d0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_search_box_color",
+        "value":  "#1ed0d0d0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_secondary_text_color",
+        "value":  "#424242"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_shimmer_color",
+        "value":  "#dddddd"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_shopping_cart_text_color",
+        "value":  "@color/elite_sdk_light_blue"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_spannable_text_color",
+        "value":  "@color/elite_sdk_app_color"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_tab_disabled_text_color",
+        "value":  "#9b9b9b"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_tab_indicator_color",
+        "value":  "@color/elite_sdk_orange_color"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_tab_text_color",
+        "value":  "@color/elite_sdk_app_color"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_tertiary_text_color",
+        "value":  "@color/elite_sdk_gray"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_toolbar_background_color",
+        "value":  "@color/elite_sdk_white"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_toolbar_hint_color",
+        "value":  "@color/elite_sdk_gray"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_toolbar_icon_color",
+        "value":  "@color/elite_sdk_app_color"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_toolbar_sub_title_color",
+        "value":  "@color/elite_sdk_tertiary_text_color"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_toolbar_title_color",
+        "value":  "@color/elite_sdk_app_color"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_trans_failed",
+        "value":  "#ff001f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_trans_process",
+        "value":  "#f5a623"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_trans_success",
+        "value":  "#25ae88"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_translucent",
+        "value":  "#4d000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_transparent",
+        "value":  "#00000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_unselected_tab_text_color",
+        "value":  "@color/elite_sdk_app_color"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_very_light_gray",
+        "value":  "#f0f0f0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_view_more_label_color",
+        "value":  "@color/elite_sdk_app_secondary_color"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_white",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_white_eee",
+        "value":  "#eeeeee"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_white_f7",
+        "value":  "#f7f7f7"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_white_f9",
+        "value":  "#f9f9f9"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "elite_sdk_yellow_points_color",
+        "value":  "#f5a623"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "error",
+        "value":  "#de5245"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "error_color_material_dark",
+        "value":  "#ff7043"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "error_color_material_light",
+        "value":  "#ff5722"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "error_red",
+        "value":  "#dc4738"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "etcolor",
+        "value":  "#f47622"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "exo_black_opacity_60",
+        "value":  "#98000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "exo_black_opacity_70",
+        "value":  "#b3000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "exo_bottom_bar_background",
+        "value":  "#b0000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "exo_edit_mode_background_color",
+        "value":  "#fff4f3f0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "exo_error_message_background_color",
+        "value":  "#aa000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "exo_styled_error_message_background",
+        "value":  "#80808080"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "exo_white",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "exo_white_opacity_70",
+        "value":  "#b3ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "favourite_bg",
+        "value":  "#dee1e7"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "fb_bg",
+        "value":  "@color/chegLibPrimaryColor"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "feedbackSendButtonColor",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "filterApplyButtonColor",
+        "value":  "@color/chegLibPrimaryColor"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "filterCancelButtonColor",
+        "value":  "@color/chegPrimaryText"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "filterTypeColor",
+        "value":  "@color/aactionableBlueColor"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "fire_color",
+        "value":  "#fff8dd"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "firebrick",
+        "value":  "#b22222"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "floralwhite",
+        "value":  "#fffaf0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "foreground_material_dark",
+        "value":  "@android:color/white"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "foreground_material_light",
+        "value":  "@android:color/black"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "forestgreen",
+        "value":  "#228b22"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "fuchsia",
+        "value":  "#ff00ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "gainsboro",
+        "value":  "#dcdcdc"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "general_btn_background",
+        "value":  "#fbeede"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ghostwhite",
+        "value":  "#f8f8ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "giftCardNextButtonColor",
+        "value":  "@color/chegGreen"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "gold",
+        "value":  "#ffd700"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "goldenrod",
+        "value":  "#daa520"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "gray",
+        "value":  "#808080"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "gray_808080",
+        "value":  "#808080"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "gray_color_list",
+        "value":  "#a6a6a6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "gray_color_list_gl",
+        "value":  "#a6a6a6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "gray_dark",
+        "value":  "#757f7e"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "gray_food_bg",
+        "value":  "#e7e7e9"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "gray_light",
+        "value":  "#e8e7e7"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "green",
+        "value":  "#008000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "green_color_list",
+        "value":  "#1ac29f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "green_color_list_gl",
+        "value":  "#1ac29f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "greencorner",
+        "value":  "#00a940"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "greenyellow",
+        "value":  "#adff2f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "grey",
+        "value":  "#43000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "grey_10",
+        "value":  "#1a000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "grey_70_transparent",
+        "value":  "#4c757f7e"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "grey_text",
+        "value":  "#757575"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "group_color",
+        "value":  "#e7eeff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "header_background",
+        "value":  "#f1f1f1"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "health_btn_background",
+        "value":  "#fee0d0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "health_color",
+        "value":  "#fbdbc7"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "helpTextBg",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "highlighted_text_material_dark",
+        "value":  "#6680cbc4"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "highlighted_text_material_light",
+        "value":  "#66009688"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "hint_text_colour",
+        "value":  "#c1cecd"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "home_bg_color",
+        "value":  "#e7e7e7"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "home_color",
+        "value":  "#e0e5ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "home_page_button",
+        "value":  "#311c35"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "honeydew",
+        "value":  "#f0fff0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "hotpink",
+        "value":  "#ff69b4"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "household_bg",
+        "value":  "#ace5ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "household_btn",
+        "value":  "#006d8e"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ic_launcher_background",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ic_launcher_gl_background",
+        "value":  "#ffd700"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "iconGiftcardSearchTint",
+        "value":  "#d3152a"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "iconTint",
+        "value":  "@color/aactionableBlueColor"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "immersive_background",
+        "value":  "#88000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "indianred",
+        "value":  "#cd5c5c"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "indigo",
+        "value":  "#4b0082"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "info_back",
+        "value":  "#feefc3"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "intentsdk_transparent",
+        "value":  "#00ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ivory",
+        "value":  "#fffff0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "khaki",
+        "value":  "#f0e68c"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lavender",
+        "value":  "#e6e6fa"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lavenderblush",
+        "value":  "#fff0f5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lawngreen",
+        "value":  "#7cfc00"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "leap_33_opaque",
+        "value":  "#33ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "leap_33_transparent",
+        "value":  "#33000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "leap_393939",
+        "value":  "#393939"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "leap_disable_assistant_btn_border",
+        "value":  "#e1e1e1"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "leap_gradient_trash_bg_start",
+        "value":  "#99090909"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "leap_overlay_bg",
+        "value":  "#b3000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "leap_overlay_bg_extra_light",
+        "value":  "#59000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lemonchiffon",
+        "value":  "#fffacd"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "life_btn_background",
+        "value":  "#e7f3ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "life_color",
+        "value":  "#fdf2f6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lightGray",
+        "value":  "#86ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lightGrayBorder",
+        "value":  "#3b000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "light_blue",
+        "value":  "#d1cafe"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "light_grey",
+        "value":  "#56cecece"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "light_grey_color",
+        "value":  "#e6e6e6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "light_red",
+        "value":  "#fcada9"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lightblue",
+        "value":  "#add8e6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lightcolor",
+        "value":  "#00000d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lightcoral",
+        "value":  "#f08080"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lightcyan",
+        "value":  "#e0ffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lightgoldenrodyellow",
+        "value":  "#fafad2"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lightgreen",
+        "value":  "#90ee90"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lightgrey",
+        "value":  "#d3d3d3"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lightgrey_color",
+        "value":  "#eeeeee"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lightpink",
+        "value":  "#ffb6c1"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lightsalmon",
+        "value":  "#ffa07a"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lightseagreen",
+        "value":  "#20b2aa"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lightskyblue",
+        "value":  "#87cefa"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lightslategray",
+        "value":  "#778899"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lightsteelblue",
+        "value":  "#b0c4de"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lightyellow",
+        "value":  "#ffffe0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lime",
+        "value":  "#00ff00"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "limegreen",
+        "value":  "#32cd32"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "linen",
+        "value":  "#faf0e6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "locker_color",
+        "value":  "#00b9cc"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "lris_blue",
+        "value":  "#00a9e0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_black",
+        "value":  "#ff000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_error0",
+        "value":  "#ff000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_error10",
+        "value":  "#ff410e0b"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_error100",
+        "value":  "#ffffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_error20",
+        "value":  "#ff601410"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_error30",
+        "value":  "#ff8c1d18"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_error40",
+        "value":  "#ffb3261e"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_error50",
+        "value":  "#ffdc362e"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_error60",
+        "value":  "#ffe46962"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_error70",
+        "value":  "#ffec928e"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_error80",
+        "value":  "#fff2b8b5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_error90",
+        "value":  "#fff9dedc"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_error95",
+        "value":  "#fffceeee"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_error99",
+        "value":  "#fffffbf9"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral0",
+        "value":  "#ff000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral10",
+        "value":  "#ff1d1b20"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral100",
+        "value":  "#ffffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral12",
+        "value":  "#ff211f26"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral17",
+        "value":  "#ff2b2930"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral20",
+        "value":  "#ff322f35"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral22",
+        "value":  "#ff36343b"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral24",
+        "value":  "#ff3b383e"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral30",
+        "value":  "#ff48464c"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral4",
+        "value":  "#ff0f0d13"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral40",
+        "value":  "#ff605d64"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral50",
+        "value":  "#ff79767d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral6",
+        "value":  "#ff141218"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral60",
+        "value":  "#ff938f96"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral70",
+        "value":  "#ffaea9b1"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral80",
+        "value":  "#ffcac5cd"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral87",
+        "value":  "#ffded8e1"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral90",
+        "value":  "#ffe6e0e9"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral92",
+        "value":  "#ffece6f0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral94",
+        "value":  "#fff3edf7"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral95",
+        "value":  "#fff5eff7"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral96",
+        "value":  "#fff7f2fa"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral98",
+        "value":  "#fffef7ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral99",
+        "value":  "#fffffbff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral_variant0",
+        "value":  "#ff000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral_variant10",
+        "value":  "#ff1d1a22"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral_variant100",
+        "value":  "#ffffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral_variant20",
+        "value":  "#ff322f37"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral_variant30",
+        "value":  "#ff49454f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral_variant40",
+        "value":  "#ff605d66"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral_variant50",
+        "value":  "#ff79747e"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral_variant60",
+        "value":  "#ff938f99"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral_variant70",
+        "value":  "#ffaea9b4"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral_variant80",
+        "value":  "#ffcac4d0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral_variant90",
+        "value":  "#ffe7e0ec"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral_variant95",
+        "value":  "#fff5eefa"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_neutral_variant99",
+        "value":  "#fffffbfe"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_primary0",
+        "value":  "#ff000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_primary10",
+        "value":  "#ff21005d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_primary100",
+        "value":  "#ffffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_primary20",
+        "value":  "#ff381e72"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_primary30",
+        "value":  "#ff4f378b"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_primary40",
+        "value":  "#ff6750a4"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_primary50",
+        "value":  "#ff7f67be"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_primary60",
+        "value":  "#ff9a82db"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_primary70",
+        "value":  "#ffb69df8"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_primary80",
+        "value":  "#ffd0bcff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_primary90",
+        "value":  "#ffeaddff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_primary95",
+        "value":  "#fff6edff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_primary99",
+        "value":  "#fffffbfe"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_secondary0",
+        "value":  "#ff000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_secondary10",
+        "value":  "#ff1d192b"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_secondary100",
+        "value":  "#ffffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_secondary20",
+        "value":  "#ff332d41"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_secondary30",
+        "value":  "#ff4a4458"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_secondary40",
+        "value":  "#ff625b71"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_secondary50",
+        "value":  "#ff7a7289"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_secondary60",
+        "value":  "#ff958da5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_secondary70",
+        "value":  "#ffb0a7c0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_secondary80",
+        "value":  "#ffccc2dc"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_secondary90",
+        "value":  "#ffe8def8"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_secondary95",
+        "value":  "#fff6edff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_secondary99",
+        "value":  "#fffffbfe"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_tertiary0",
+        "value":  "#ff000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_tertiary10",
+        "value":  "#ff31111d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_tertiary100",
+        "value":  "#ffffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_tertiary20",
+        "value":  "#ff492532"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_tertiary30",
+        "value":  "#ff633b48"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_tertiary40",
+        "value":  "#ff7d5260"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_tertiary50",
+        "value":  "#ff986977"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_tertiary60",
+        "value":  "#ffb58392"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_tertiary70",
+        "value":  "#ffd29dac"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_tertiary80",
+        "value":  "#ffefb8c8"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_tertiary90",
+        "value":  "#ffffd8e4"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_tertiary95",
+        "value":  "#ffffecf1"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_tertiary99",
+        "value":  "#fffffbfa"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_ref_palette_white",
+        "value":  "#ffffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_background",
+        "value":  "@color/m3_ref_palette_neutral6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_error",
+        "value":  "@color/m3_ref_palette_error80"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_error_container",
+        "value":  "@color/m3_ref_palette_error30"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_inverse_on_surface",
+        "value":  "@color/m3_ref_palette_neutral20"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_inverse_primary",
+        "value":  "@color/m3_ref_palette_primary40"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_inverse_surface",
+        "value":  "@color/m3_ref_palette_neutral90"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_on_background",
+        "value":  "@color/m3_ref_palette_neutral90"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_on_error",
+        "value":  "@color/m3_ref_palette_error20"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_on_error_container",
+        "value":  "@color/m3_ref_palette_error90"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_on_primary",
+        "value":  "@color/m3_ref_palette_primary20"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_on_primary_container",
+        "value":  "@color/m3_ref_palette_primary90"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_on_secondary",
+        "value":  "@color/m3_ref_palette_secondary20"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_on_secondary_container",
+        "value":  "@color/m3_ref_palette_secondary90"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_on_surface",
+        "value":  "@color/m3_ref_palette_neutral90"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_on_surface_variant",
+        "value":  "@color/m3_ref_palette_neutral_variant80"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_on_tertiary",
+        "value":  "@color/m3_ref_palette_tertiary20"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_on_tertiary_container",
+        "value":  "@color/m3_ref_palette_tertiary90"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_outline",
+        "value":  "@color/m3_ref_palette_neutral_variant60"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_outline_variant",
+        "value":  "@color/m3_ref_palette_neutral_variant30"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_primary",
+        "value":  "@color/m3_ref_palette_primary80"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_primary_container",
+        "value":  "@color/m3_ref_palette_primary30"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_secondary",
+        "value":  "@color/m3_ref_palette_secondary80"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_secondary_container",
+        "value":  "@color/m3_ref_palette_secondary30"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_surface",
+        "value":  "@color/m3_ref_palette_neutral6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_surface_bright",
+        "value":  "@color/m3_ref_palette_neutral24"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_surface_container",
+        "value":  "@color/m3_ref_palette_neutral12"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_surface_container_high",
+        "value":  "@color/m3_ref_palette_neutral17"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_surface_container_highest",
+        "value":  "@color/m3_ref_palette_neutral22"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_surface_container_low",
+        "value":  "@color/m3_ref_palette_neutral10"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_surface_container_lowest",
+        "value":  "@color/m3_ref_palette_neutral4"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_surface_dim",
+        "value":  "@color/m3_ref_palette_neutral6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_surface_variant",
+        "value":  "@color/m3_ref_palette_neutral_variant30"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_tertiary",
+        "value":  "@color/m3_ref_palette_tertiary80"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_dark_tertiary_container",
+        "value":  "@color/m3_ref_palette_tertiary30"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_background",
+        "value":  "@color/m3_ref_palette_neutral98"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_error",
+        "value":  "@color/m3_ref_palette_error40"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_error_container",
+        "value":  "@color/m3_ref_palette_error90"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_inverse_on_surface",
+        "value":  "@color/m3_ref_palette_neutral95"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_inverse_primary",
+        "value":  "@color/m3_ref_palette_primary80"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_inverse_surface",
+        "value":  "@color/m3_ref_palette_neutral20"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_on_background",
+        "value":  "@color/m3_ref_palette_neutral10"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_on_error",
+        "value":  "@color/m3_ref_palette_error100"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_on_error_container",
+        "value":  "@color/m3_ref_palette_error10"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_on_primary",
+        "value":  "@color/m3_ref_palette_primary100"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_on_primary_container",
+        "value":  "@color/m3_ref_palette_primary10"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_on_secondary",
+        "value":  "@color/m3_ref_palette_secondary100"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_on_secondary_container",
+        "value":  "@color/m3_ref_palette_secondary10"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_on_surface",
+        "value":  "@color/m3_ref_palette_neutral10"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_on_surface_variant",
+        "value":  "@color/m3_ref_palette_neutral_variant30"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_on_tertiary",
+        "value":  "@color/m3_ref_palette_tertiary100"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_on_tertiary_container",
+        "value":  "@color/m3_ref_palette_tertiary10"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_outline",
+        "value":  "@color/m3_ref_palette_neutral_variant50"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_outline_variant",
+        "value":  "@color/m3_ref_palette_neutral_variant80"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_primary",
+        "value":  "@color/m3_ref_palette_primary40"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_primary_container",
+        "value":  "@color/m3_ref_palette_primary90"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_secondary",
+        "value":  "@color/m3_ref_palette_secondary40"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_secondary_container",
+        "value":  "@color/m3_ref_palette_secondary90"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_surface",
+        "value":  "@color/m3_ref_palette_neutral98"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_surface_bright",
+        "value":  "@color/m3_ref_palette_neutral98"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_surface_container",
+        "value":  "@color/m3_ref_palette_neutral94"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_surface_container_high",
+        "value":  "@color/m3_ref_palette_neutral92"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_surface_container_highest",
+        "value":  "@color/m3_ref_palette_neutral90"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_surface_container_low",
+        "value":  "@color/m3_ref_palette_neutral96"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_surface_container_lowest",
+        "value":  "@color/m3_ref_palette_neutral100"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_surface_dim",
+        "value":  "@color/m3_ref_palette_neutral87"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_surface_variant",
+        "value":  "@color/m3_ref_palette_neutral_variant90"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_tertiary",
+        "value":  "@color/m3_ref_palette_tertiary40"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_light_tertiary_container",
+        "value":  "@color/m3_ref_palette_tertiary90"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_on_primary_fixed",
+        "value":  "@color/m3_ref_palette_primary10"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_on_primary_fixed_variant",
+        "value":  "@color/m3_ref_palette_primary30"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_on_secondary_fixed",
+        "value":  "@color/m3_ref_palette_secondary10"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_on_secondary_fixed_variant",
+        "value":  "@color/m3_ref_palette_secondary30"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_on_tertiary_fixed",
+        "value":  "@color/m3_ref_palette_tertiary10"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_on_tertiary_fixed_variant",
+        "value":  "@color/m3_ref_palette_tertiary30"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_primary_fixed",
+        "value":  "@color/m3_ref_palette_primary90"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_primary_fixed_dim",
+        "value":  "@color/m3_ref_palette_primary80"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_secondary_fixed",
+        "value":  "@color/m3_ref_palette_secondary90"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_secondary_fixed_dim",
+        "value":  "@color/m3_ref_palette_secondary80"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_tertiary_fixed",
+        "value":  "@color/m3_ref_palette_tertiary90"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "m3_sys_color_tertiary_fixed_dim",
+        "value":  "@color/m3_ref_palette_tertiary80"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "magenta",
+        "value":  "#ff00ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "maroon",
+        "value":  "#800000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_blue_grey_800",
+        "value":  "#ff37474f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_blue_grey_900",
+        "value":  "#ff263238"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_blue_grey_950",
+        "value":  "#ff21272b"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_deep_teal_200",
+        "value":  "#ff80cbc4"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_deep_teal_500",
+        "value":  "#ff008577"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_grey_100",
+        "value":  "#fff5f5f5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_grey_300",
+        "value":  "#ffe0e0e0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_grey_50",
+        "value":  "#fffafafa"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_grey_600",
+        "value":  "#ff757575"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_grey_800",
+        "value":  "#ff424242"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_grey_850",
+        "value":  "#ff303030"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_grey_900",
+        "value":  "#ff212121"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_harmonized_color_error",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_harmonized_color_error_container",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_harmonized_color_on_error",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_harmonized_color_on_error_container",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_background",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_control_activated",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_control_highlight",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_control_normal",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_error",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_error_container",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_on_background",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_on_error",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_on_error_container",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_on_primary",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_on_primary_container",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_on_secondary",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_on_secondary_container",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_on_surface",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_on_surface_inverse",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_on_surface_variant",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_on_tertiary",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_on_tertiary_container",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_outline",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_outline_variant",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_primary",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_primary_container",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_primary_inverse",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_secondary",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_secondary_container",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_surface",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_surface_bright",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_surface_container",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_surface_container_high",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_surface_container_highest",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_surface_container_low",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_surface_container_lowest",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_surface_dim",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_surface_inverse",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_surface_variant",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_tertiary",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_tertiary_container",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_text_hint_foreground_inverse",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_text_primary_inverse",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_text_primary_inverse_disable_only",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_text_secondary_and_tertiary_inverse",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "material_personalized_color_text_secondary_and_tertiary_inverse_disabled",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "mediumaquamarine",
+        "value":  "#66cdaa"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "mediumblue",
+        "value":  "#0000cd"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "mediumorchid",
+        "value":  "#ba55d3"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "mediumpurple",
+        "value":  "#9370db"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "mediumseagreen",
+        "value":  "#3cb371"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "mediumslateblue",
+        "value":  "#7b68ee"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "mediumspringgreen",
+        "value":  "#00fa9a"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "mediumturquoise",
+        "value":  "#48d1cc"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "mediumvioletred",
+        "value":  "#c71585"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "midnightblue",
+        "value":  "#191970"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "milestone_blue",
+        "value":  "#2860e1"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "mintcream",
+        "value":  "#f5fffa"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "mistyrose",
+        "value":  "#ffe4e1"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "moccasin",
+        "value":  "#ffe4b5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ms_primary_color",
+        "value":  "@color/seed"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "mtrl_btn_text_color_disabled",
+        "value":  "#61000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "mtrl_btn_transparent_bg_color",
+        "value":  "#00ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "mtrl_scrim_color",
+        "value":  "#52000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "mtrl_textinput_default_box_stroke_color",
+        "value":  "#6b000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "mtrl_textinput_disabled_color",
+        "value":  "#1f000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "mtrl_textinput_filled_box_default_background_color",
+        "value":  "#0a000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "mtrl_textinput_focused_box_stroke_color",
+        "value":  "#00000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "mtrl_textinput_hovered_box_stroke_color",
+        "value":  "#de000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "navajowhite",
+        "value":  "#ffdead"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "navy",
+        "value":  "#000080"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "notification_action_color_filter",
+        "value":  "@color/androidx_core_secondary_text_default_material_light"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "notification_icon_bg_color",
+        "value":  "#ff9e9e9e"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "notification_material_background_media_default_color",
+        "value":  "#ff424242"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "npci_key_digit_color",
+        "value":  "#1b3281"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "npci_key_digit_color_alpha",
+        "value":  "#601b3281"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "npci_key_digit_color_dark",
+        "value":  "#0a1a53"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "npci_keypad_bg_color",
+        "value":  "#f1f1f1"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "npci_shadow_color",
+        "value":  "#b3000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "npci_snackbar_background",
+        "value":  "#d6d6d6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "npci_snackbar_text_color",
+        "value":  "#d0021b"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "npci_status_bar",
+        "value":  "#e5e6e6e6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "npci_text_color_black",
+        "value":  "#333333"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "npci_text_disabled_light",
+        "value":  "#4dffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "npci_text_primary_dark",
+        "value":  "#de000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "npci_text_primary_light",
+        "value":  "#ffffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "npci_text_red",
+        "value":  "#ff0000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "npci_text_secondary_dark",
+        "value":  "#8a000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "npci_text_secondary_light",
+        "value":  "#b3ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "npci_text_tertiary_dark",
+        "value":  "#61000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "npci_verified_merchant",
+        "value":  "#27bc5c"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nuAppBackgroundColor",
+        "value":  "#f0f0f5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nuColorAccent",
+        "value":  "@color/nu_aqua_blue"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nuColorAccent50",
+        "value":  "@color/nu_brickred_transparent50"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nuColorAccent85",
+        "value":  "@color/nu_brickred"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nuColorContainer",
+        "value":  "@color/nuColorPrimary"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nuColorPrimary",
+        "value":  "@color/nu_purple"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nuColorPrimaryDark",
+        "value":  "@color/nu_purple_dark"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nuColorPrimaryDisable",
+        "value":  "#8165ac"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nuColorToolbarBg",
+        "value":  "@color/nuColorPrimary"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nuColorToolbarInfo",
+        "value":  "@color/nu_white"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nuMenuBackGroundColor",
+        "value":  "@color/nu_white"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nuMenuTextColor",
+        "value":  "@color/black"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nuTabIndicatorColor",
+        "value":  "@color/nuColorPrimary"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nuTabTextColor",
+        "value":  "@color/nuColorPrimary"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_aqua_blue",
+        "value":  "#00b9cc"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_bg_gray",
+        "value":  "#f9f9f9"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_black_60_transparent",
+        "value":  "#9a212121"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_blue",
+        "value":  "#0000ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_brickred",
+        "value":  "#de5245"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_brickred_transparent50",
+        "value":  "#80de5245"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_bus_date_circular_img_bg",
+        "value":  "#ebebeb"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_cyan",
+        "value":  "#00ffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_dark_gray",
+        "value":  "#4a4a4a"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_dialog_background",
+        "value":  "#fafafa"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_green_299A54",
+        "value":  "#299a54"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_green_42c57d",
+        "value":  "#42c57d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_grey",
+        "value":  "#f1f1f1"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_image_selected",
+        "value":  "#00b9cc"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_image_unselected",
+        "value":  "#545454"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_item_key",
+        "value":  "#757f7e"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_item_shimmer_color",
+        "value":  "#f0f0f0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_light_blue",
+        "value":  "#add8e6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_light_gray",
+        "value":  "#e8e8e8"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_light_shadow_grey",
+        "value":  "#70817f7f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_list_seperator",
+        "value":  "#25000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_nationaloity_grey_border",
+        "value":  "#686767"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_network_error",
+        "value":  "#0099ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_purple",
+        "value":  "#60379e"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_purple_dark",
+        "value":  "#4e287c"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_red",
+        "value":  "#ff0000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_shimmer_color",
+        "value":  "#e6e6e6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_soft_yellow",
+        "value":  "#f9f5b2"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_subtle_gray",
+        "value":  "#f5f5f5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_text_black",
+        "value":  "#212121"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_text_color",
+        "value":  "#212121"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_text_color_red",
+        "value":  "#f42121"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_text_light",
+        "value":  "#757f7e"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_text_white",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_transparent",
+        "value":  "@android:color/transparent"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_white",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "nu_white_transparent",
+        "value":  "#80ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_black",
+        "value":  "@android:color/black"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_black_20_transparent",
+        "value":  "#cc212121"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_black_30_transparent",
+        "value":  "#b3212121"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_black_80_transparent",
+        "value":  "#e6212121"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_black_dull",
+        "value":  "#323131"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_black_dull_1",
+        "value":  "#656767"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_dark_white_gradient",
+        "value":  "#404a57"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_golden_brown",
+        "value":  "#dfa033"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_grad_gray",
+        "value":  "#515151"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_gray",
+        "value":  "#808080"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_gray_circle",
+        "value":  "#d2d2d2"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_gray_lighter",
+        "value":  "#f2f2f2"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_green",
+        "value":  "#42c57d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_light_black_gradient",
+        "value":  "#1e2631"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_light_yellow",
+        "value":  "#e7b04c"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_medium_gray",
+        "value":  "#979797"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_normal_green",
+        "value":  "#309957"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_red",
+        "value":  "#ff0000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_subscribed_golden",
+        "value":  "#edb045"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_text_hint",
+        "value":  "#a5a5a5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_transparent",
+        "value":  "@android:color/transparent"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_white",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_white_60_transparent",
+        "value":  "#66ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_white_80_percent_transparent",
+        "value":  "#ccffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_white_80_transparent",
+        "value":  "#d9ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_white_transparent",
+        "value":  "#80ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "od_yellow",
+        "value":  "#ffe97f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "offerAdditionalInfoBg",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "offerCoupontBg",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "offerDetailButtonBg",
+        "value":  "@color/chegGreen"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "offerDetailbg",
+        "value":  "@color/chegBgDark"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "offerFilterBg",
+        "value":  "@color/chegBgDark"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "offerTermsBg",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "offer_detail_header_divider_color",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "offersBg",
+        "value":  "@color/chegBgLight"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "oldlace",
+        "value":  "#fdf5e6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "olive",
+        "value":  "#808000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "olivedrab",
+        "value":  "#6b8e23"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "orange",
+        "value":  "#2c3140"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "orange_light",
+        "value":  "#2c3140"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "orangered",
+        "value":  "#ff4500"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "orangetab",
+        "value":  "#ff5c34"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "orchid",
+        "value":  "#da70d6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "original_blue_trans_20",
+        "value":  "#172d4d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "original_blue_trans_40",
+        "value":  "#101e33"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "original_blue_trans_60",
+        "value":  "#080f1a"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "overflow_menu_color",
+        "value":  "@color/chegPrimaryText"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "palegoldenrod",
+        "value":  "#eee8aa"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "palegreen",
+        "value":  "#98fb98"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "paleturquoise",
+        "value":  "#afeeee"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "palevioletred",
+        "value":  "#db7093"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "papayawhip",
+        "value":  "#ffefd5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "peachpuff",
+        "value":  "#ffdab9"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "peru",
+        "value":  "#cd853f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "pink",
+        "value":  "#ffc0cb"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "placeholder_grey",
+        "value":  "#f1f1f1"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "plan_card_background",
+        "value":  "#efefef"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "plan_card_background1",
+        "value":  "#ebebeb"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "plan_card_stroke",
+        "value":  "#b2b2b2"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "player_overlay_color",
+        "value":  "#00000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "plum",
+        "value":  "#dda0dd"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "popup_sub_text_color",
+        "value":  "#b2080f1a"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "popup_sub_text_color_gl",
+        "value":  "#b2080f1a"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "popup_text_color",
+        "value":  "#080f1a"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "popup_text_color_gl",
+        "value":  "#080f1a"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "powderblue",
+        "value":  "#b0e0e6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "preference_fallback_accent_color",
+        "value":  "#ff008577"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "primaryAccountTextColor",
+        "value":  "#080f1a"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "primary_account_text_color_gl",
+        "value":  "#080f1a"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "primary_black",
+        "value":  "#000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "primary_dark",
+        "value":  "#fff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "primary_dark_material_dark",
+        "value":  "@android:color/black"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "primary_dark_material_light",
+        "value":  "@color/material_grey_600"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "primary_material_dark",
+        "value":  "@color/material_grey_900"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "primary_material_light",
+        "value":  "@color/material_grey_100"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "primary_text_colour",
+        "value":  "#000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "primary_text_default_material_dark",
+        "value":  "#ffffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "primary_text_default_material_light",
+        "value":  "#de000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "primary_text_disabled_material_dark",
+        "value":  "#4dffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "primary_text_disabled_material_light",
+        "value":  "#39000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "primary_trans_100",
+        "value":  "#ff5c34"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "primary_trans_20",
+        "value":  "#ffded6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "primary_trans_40",
+        "value":  "#ffbeae"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "primary_trans_60",
+        "value":  "#ff9d85"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "primary_trans_80",
+        "value":  "#ff7d5d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "profileBg",
+        "value":  "@color/chegBgLight"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "pulsing_dot_color",
+        "value":  "#f5a623"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "purple",
+        "value":  "#800080"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "purple_200",
+        "value":  "#ffbb86fc"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "purple_500",
+        "value":  "#ff6200ee"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "purple_700",
+        "value":  "#ff3700b3"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "rating_b",
+        "value":  "#8dbd78"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "rating_bg",
+        "value":  "#eeeeee"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "red",
+        "value":  "#ff0000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "resedcolor",
+        "value":  "#dc943f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "rewardButtonTextColor",
+        "value":  "@color/chegLibPrimaryColor"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "rewardSelectedTabColor",
+        "value":  "@color/chegPrimaryText"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "rewardTabBG",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "rewardTabIndicatorColor",
+        "value":  "#b71c1c"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "reward_bg",
+        "value":  "#ffe8c3"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "reward_button_bg",
+        "value":  "#ff5c36"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ripple_material_dark",
+        "value":  "#33ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ripple_material_light",
+        "value":  "#1f000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "rosybrown",
+        "value":  "#bc8f8f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "royalblue",
+        "value":  "#4169e1"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sachet_btn_background",
+        "value":  "#e4f3ec"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "saddlebrown",
+        "value":  "#8b4513"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "salmon",
+        "value":  "#fa8072"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sampleAppBlueTextColor",
+        "value":  "#202589"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sandybrown",
+        "value":  "#f4a460"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sbi_blue_corner",
+        "value":  "#c4f1ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "seagreen",
+        "value":  "#2e8b57"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "searchProductButtonBg",
+        "value":  "@color/chegLibPrimaryColor"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "searchProgressColor",
+        "value":  "#ff5c36"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "searchStrokeColor",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "search_hint_color",
+        "value":  "#702f3542"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "search_list_bg",
+        "value":  "#f1f3f5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "search_separator",
+        "value":  "#8027374d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "search_text_item",
+        "value":  "#757575"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "search_text_placeholder",
+        "value":  "#48212121"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "seashell",
+        "value":  "#fff5ee"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "secondaryBlue",
+        "value":  "#61799d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "secondaryLightBlue",
+        "value":  "#a5b0c2"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "secondaryLightVividTangerine",
+        "value":  "#f8d2c9"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "secondarySkyBlue",
+        "value":  "#61c2ed"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "secondaryVividTangerine",
+        "value":  "#ff9d86"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "secondary_text_default_material_dark",
+        "value":  "#b3ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "secondary_text_default_material_light",
+        "value":  "#8a000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "secondary_text_disabled_material_dark",
+        "value":  "#36ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "secondary_text_disabled_material_light",
+        "value":  "#24000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "seeAllTextColor",
+        "value":  "#5027374d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "seed",
+        "value":  "#ff5c34"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "seek_amount_text_color",
+        "value":  "#48111111"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "seekbar_bg_color",
+        "value":  "#c8e6ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "seekbar_progress_color",
+        "value":  "@color/elite_sdk_app_color"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "selectedBannerIndicatorColor",
+        "value":  "@color/chegBgDark"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "selectedTutorialIndicatorColor",
+        "value":  "@color/chegLibPrimaryDarkColor"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "shade_blue",
+        "value":  "#53b8a0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sienna",
+        "value":  "#a0522d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "signupBg",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "signupButtonBg",
+        "value":  "#5e9ed6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "silver",
+        "value":  "#c0c0c0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "silver_gray",
+        "value":  "#ffbebebe"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sky_blue",
+        "value":  "#f3f9ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "skyblue",
+        "value":  "#87ceeb"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "slateblue",
+        "value":  "#6a5acd"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "slategray",
+        "value":  "#708090"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "slectedChipColor",
+        "value":  "@color/chegPrimaryText"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "snow",
+        "value":  "#fffafa"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "splashScreenBg",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "springgreen",
+        "value":  "#00ff7f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "star_bg",
+        "value":  "#fff3ed"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "startshoping",
+        "value":  "#64a42e"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "steelblue",
+        "value":  "#4682b4"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "storeHeaderBg",
+        "value":  "@color/chegBgDark"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "switch_thumb_disabled_material_dark",
+        "value":  "#ff616161"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "switch_thumb_disabled_material_light",
+        "value":  "#ffbdbdbd"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "switch_thumb_normal_material_dark",
+        "value":  "#ffbdbdbd"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "switch_thumb_normal_material_light",
+        "value":  "#fff1f1f1"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "syAppBackGroundColor",
+        "value":  "@color/sy_white"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "syColorAccent",
+        "value":  "@color/sy_aqua_blue"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "syColorAccent50",
+        "value":  "@color/sy_brickred_transparent50"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "syColorAccent85",
+        "value":  "@color/sy_brickred"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "syColorContainer",
+        "value":  "@color/syColorPrimary"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "syColorPrimary",
+        "value":  "@color/sy_red"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "syColorPrimaryDark",
+        "value":  "@color/sy_primary_dark"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "syColorPrimaryDisable",
+        "value":  "#8165ac"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "syColorToolbarBg",
+        "value":  "@color/syColorPrimary"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "syColorToolbarInfo",
+        "value":  "@color/sy_white"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "syMesyBackGroundColor",
+        "value":  "@color/sy_white"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "syMesyTextColor",
+        "value":  "@color/black"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "syTabIndicatorColor",
+        "value":  "@color/syColorPrimary"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "syTabTextColor",
+        "value":  "@color/syColorPrimary"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_aqua_blue",
+        "value":  "#00b9cc"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_bg_gray",
+        "value":  "#f9f9f9"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_black_60_transparent",
+        "value":  "#9a212121"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_blue",
+        "value":  "#0000ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_brickred",
+        "value":  "#de5245"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_brickred_transparent50",
+        "value":  "#80de5245"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_bus_date_circular_img_bg",
+        "value":  "#ebebeb"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_cyan",
+        "value":  "#00ffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_dialog_background",
+        "value":  "#fafafa"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_green_299A54",
+        "value":  "#299a54"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_green_42c57d",
+        "value":  "#42c57d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_grey",
+        "value":  "#f1f1f1"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_image_selected",
+        "value":  "#00b9cc"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_image_unselected",
+        "value":  "#545454"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_item_shimmer_color",
+        "value":  "#f0f0f0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_light_blue",
+        "value":  "#add8e6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_light_gray",
+        "value":  "#e8e8e8"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_light_shadow_grey",
+        "value":  "#70817f7f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_list_seperator",
+        "value":  "#25000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_nationaloity_grey_border",
+        "value":  "#686767"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_network_error",
+        "value":  "#0099ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_primary_dark",
+        "value":  "#8b0000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_purple",
+        "value":  "#60379e"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_red",
+        "value":  "#e94441"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_shimmer_color",
+        "value":  "#e6e6e6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_soft_yellow",
+        "value":  "#f9f5b2"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_subtle_gray",
+        "value":  "#f5f5f5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_text_black",
+        "value":  "#212121"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_text_color",
+        "value":  "#212121"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_text_color_red",
+        "value":  "#f42121"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_text_light",
+        "value":  "#757f7e"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_transparent",
+        "value":  "@android:color/transparent"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_white",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "sy_white_transparent",
+        "value":  "#80ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "tab_selected_color",
+        "value":  "#f9c900"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "tab_unselected_color",
+        "value":  "#a9a9a9"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "tan",
+        "value":  "#d2b48c"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "tcDialogTransparent",
+        "value":  "#66000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "teal",
+        "value":  "#008080"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "teal_200",
+        "value":  "#ff03dac5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "teal_700",
+        "value":  "#ff018786"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "text_color",
+        "value":  "#535863"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "text_color_green",
+        "value":  "#2d9b2d"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "text_color_grey",
+        "value":  "#82868e"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "text_hint",
+        "value":  "#a5a5a5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "theme_accent_secondary",
+        "value":  "#757f7e"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "theme_purple",
+        "value":  "#303f9f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "thistle",
+        "value":  "#d8bfd8"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "tomato",
+        "value":  "#ff6347"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "toolTipColor",
+        "value":  "#56fcdcd5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "tool_tip_color_gl",
+        "value":  "#56fcdcd5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "toolbar_title_color",
+        "value":  "@color/chegWhite"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "tooltip_background_dark",
+        "value":  "#e6616161"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "tooltip_background_light",
+        "value":  "#e6ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "totalsaving",
+        "value":  "#defee6"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "transaction_color",
+        "value":  "#858585"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "transparent",
+        "value":  "#00000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "transparent_color",
+        "value":  "#00000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "transparent_color_gl",
+        "value":  "#00000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "transparent_grey",
+        "value":  "#73000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "travel_color",
+        "value":  "#f5ffe0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "turquoise",
+        "value":  "#40e0d0"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "tutorialSignUpButtonColor",
+        "value":  "@color/signupButtonBg"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_active_aspect_ratio",
+        "value":  "@color/ucrop_color_blaze_orange"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_active_controls_color",
+        "value":  "@color/ucrop_color_blaze_orange"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_black",
+        "value":  "#000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_blaze_orange",
+        "value":  "#ff6300"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_crop_background",
+        "value":  "@color/ucrop_color_black"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_default_crop_frame",
+        "value":  "#ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_default_crop_grid",
+        "value":  "#80ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_default_dimmed",
+        "value":  "#8c000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_default_logo",
+        "value":  "#4f212121"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_ebony_clay",
+        "value":  "#20242f"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_heather",
+        "value":  "#b3bece"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_inactive_aspect_ratio",
+        "value":  "@color/ucrop_color_ebony_clay"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_inactive_controls_color",
+        "value":  "@color/ucrop_color_heather"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_progress_wheel_line",
+        "value":  "@color/ucrop_color_ebony_clay"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_toolbar",
+        "value":  "@color/ucrop_color_white"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_toolbar_widget",
+        "value":  "@color/ucrop_color_black"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_white",
+        "value":  "#fff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_widget",
+        "value":  "@color/ucrop_color_black"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_widget_active",
+        "value":  "@color/ucrop_color_white"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_widget_background",
+        "value":  "@color/ucrop_color_ebony_clay"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_widget_rotate_angle",
+        "value":  "@color/ucrop_color_ebony_clay"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_widget_rotate_mid_line",
+        "value":  "@color/ucrop_color_blaze_orange"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "ucrop_color_widget_text",
+        "value":  "@color/ucrop_color_blaze_orange"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "unselectedTextColor",
+        "value":  "#50021555"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "view_bg",
+        "value":  "#cccccc"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "violet",
+        "value":  "#ee82ee"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "webViewCloseIconColor",
+        "value":  "#ff000000"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "wfx_action_text_color",
+        "value":  "#5b6cff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "wfx_bg",
+        "value":  "#18162a"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "wfx_bg_separator",
+        "value":  "#ececf3"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "wfx_black",
+        "value":  "#0a0b12"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "wfx_color_disable_logs",
+        "value":  "#61e6e0e9"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "wfx_color_enable_logs",
+        "value":  "#d0bcff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "wfx_dialog_overlay",
+        "value":  "#80525066"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "wfx_error_red",
+        "value":  "#e17070"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "wfx_generate_qr_info_color",
+        "value":  "#a7a7aa"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "wfx_icon_mode_bg",
+        "value":  "#1f1f32"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "wfx_icon_mode_disabled",
+        "value":  "#4dfcfcfd"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "wfx_icon_mode_divider",
+        "value":  "#c0becc"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "wfx_icon_mode_enabled",
+        "value":  "#fffcfcfd"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "wfx_purple_bg",
+        "value":  "#5a40ff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "wfx_text_bg",
+        "value":  "#cecce1"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "wfx_warning",
+        "value":  "#e31429"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "wheat",
+        "value":  "#f5deb3"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "wheeler2_color",
+        "value":  "#fffde9"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "wheeler4_color",
+        "value":  "#fce9d4"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "white",
+        "value":  "#ffffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "white3",
+        "value":  "#68ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "white_60_transparent",
+        "value":  "#66ffffff"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "whitesmoke",
+        "value":  "#f5f5f5"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "yellow",
+        "value":  "#ffff00"
+    },
+    {
+        "file":  "work\\base-decoded\\res\\values\\colors.xml",
+        "name":  "yellowgreen",
+        "value":  "#9acd32"
+    }
+]

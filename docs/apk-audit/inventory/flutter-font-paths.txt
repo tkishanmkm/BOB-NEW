@@ -1,0 +1,4 @@
+﻿assets/fonts/Acumin.otf
+assets/fonts/Gabarito-ExtraBold.ttf
+assets/fonts/Gabarito.ttf
+packages/cupertino_icons/assets/CupertinoIcons.ttf
