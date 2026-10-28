@@ -6,8 +6,10 @@ import { money, read, type State, type Tx } from "@/lib/demo";
 
 export default function PaymentSuccessfulPage() {
   const [state, setState] = useState<State | null>(null);
+  const [requestedId, setRequestedId] = useState("");
   useEffect(() => {
     const refresh = () => setState(read());
+    setRequestedId(new URLSearchParams(window.location.search).get("id") || "");
     refresh();
     window.addEventListener("bob-new-state-change", refresh);
     window.addEventListener("storage", refresh);
@@ -17,12 +19,14 @@ export default function PaymentSuccessfulPage() {
     };
   }, []);
 
-  // Array order reflects the order in which the local previews were saved.
-  // Reverse it so two previews made on the same day show the newest one.
-  const latest: Tx | undefined = state?.transactions
-    .slice()
-    .reverse()
-    .find((tx) => tx.description.startsWith("Transfer result for "));
+  // Prefer the exact transaction created by the transfer workflow. When the
+  // page is opened directly, show only the newest pending demo transfer.
+  const latest: Tx | undefined = state?.transactions.find((tx) =>
+    requestedId && tx.id === requestedId && tx.type === "debit" && tx.status === "pending"
+      && tx.description.startsWith("Transfer result for ")
+  ) || state?.transactions.slice().reverse().find((tx) =>
+    tx.type === "debit" && tx.status === "pending" && tx.description.startsWith("Transfer result for ")
+  );
 
   return <Shell>
     <section className="success-panel" aria-labelledby="result-title">
