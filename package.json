@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "smoke-test": "node scripts/smoke-test.mjs",
-    "test:data": "node scripts/data-validation-test.cjs"
+    "test:data": "node scripts/data-validation-test.cjs",
+    "audit:migration": "node scripts/migration-completeness-audit.cjs"
   },
   "dependencies": {
     "next": "15.5.28",
