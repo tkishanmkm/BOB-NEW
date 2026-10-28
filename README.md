@@ -5,7 +5,7 @@ An independent, separately branded finance-workspace prototype. It does not modi
 ## Implemented routes
 - `/` — local sample PIN gate.
 - `/dashboard` — shared sample profile, calculated balance, recent activity.
-- `/passbook` — transaction list.
+- `/passbook` — transaction list.\n- `/statement` — date/type/status-filtered sample statement with posted credit/debit totals and print-to-PDF support; output is explicitly marked as a demo.
 - `/settings` — edit account display, opening balance, sample PIN and transactions; validated JSON import/export.
 - `/transfers` — multi-step sample fund-transfer details, review and completion preview. It never sends funds.
 - `/payees` — add/remove fictional beneficiaries stored in this browser.
