@@ -1,5 +1,6 @@
-"use client";
+﻿"use client";
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import { Shell } from "@/components/app-shell";
 import { read, money, type State } from "@/lib/demo";
 
@@ -37,7 +38,7 @@ export default function Passbook() {
 
   return <Shell>
     <div className="page-heading"><div><h1>Transactions</h1><p className="muted">Search and filter the sample activity saved in this browser.</p></div></div>
-    <div className="notice">SAMPLE WORKSPACE — pending simulation entries are not completed payments. Only posted sample entries contribute to the calculated balance.</div>
+    <div className="notice">SAMPLE WORKSPACE â€” pending simulation entries are not completed payments. Only posted sample entries contribute to the calculated balance.</div>
     <section className="card">
       <div className="grid">
         <label className="field">Search description, date or reference<input value={query} maxLength={120} onChange={e => setQuery(e.target.value)} placeholder="Search transactions" /></label>
@@ -49,9 +50,10 @@ export default function Passbook() {
     </section>
     <section className="card">
       {transactions.length === 0 ? <p className="muted">No transactions match these filters.</p> : transactions.map(tx => <div className="row" key={tx.id}>
-        <span>{tx.description}<small className="muted">{tx.date} · {tx.status === "pending" ? "PENDING SIMULATION — NOT PAID" : "Posted sample entry"} · Ref: {tx.id}</small></span>
-        <b>{tx.type === "credit" ? "+" : "−"}{money(tx.amount)}</b>
+        <span><Link href={`/receipt?id=${encodeURIComponent(tx.id)}`}>{tx.description}</Link><small className="muted">{tx.date} · {tx.status === "pending" ? "PENDING SIMULATION — NOT PAID" : "Posted sample entry"} · Ref: {tx.id} · <Link href={`/receipt?id=${encodeURIComponent(tx.id)}`}>View sample receipt</Link></small></span>
+        <b>{tx.type === "credit" ? "+" : "âˆ’"}{money(tx.amount)}</b>
       </div>)}
     </section>
   </Shell>;
 }
+
