@@ -7,7 +7,7 @@ Verification was run on a local clone of `tkishanmkm/BOB-NEW` after pulling the 
 - `npm run typecheck`: PASS (`tsc --noEmit`).
 - `npm run lint`: PASS (no ESLint errors or warnings after switching local SVGs to `next/image`).
 - `npm run build`: PASS on Next.js 15.5.28; production compilation and static page generation completed.
-- HTTP smoke checks: PASS (HTTP 200) for `/`, `/dashboard`, `/account-details`, `/passbook`, `/statement`, `/transfers`, `/payees`, `/help-support`, `/settings`, `/profile`, `/account-statement`, `/fund-transfer`, `/upi`, `/recharge`, `/cards`, and `/video-call`.
+- HTTP smoke checks: PASS — all 51 source repository routes returned HTTP 200, including `/`, `/dashboard`, `/account-details`, `/passbook`, `/statement`, `/transfers`, `/payees`, `/help-support`, `/settings`, `/profile`, `/account-statement`, `/fund-transfer`, `/upi`, `/recharge`, `/cards`, and `/video-call`.
 
 ## Scope and remaining checks
 - These checks establish type/build and route HTTP availability, not end-to-end proof that every interaction is correct on every device.
