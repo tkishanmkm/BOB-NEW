@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useEffect, useMemo, useState } from "react";
 import { Shell } from "@/components/app-shell";
 import { read, money, type State } from "@/lib/demo";
@@ -38,7 +38,7 @@ export default function StatementPage() {
 
   return <Shell>
     <div className="page-heading"><div><h1>Account statement</h1><p className="muted">Filter sample transactions and print a local report.</p></div><button type="button" onClick={printStatement}>Print / Save PDF</button></div>
-    <div className="notice">DEMO — NOT A BANK-ISSUED STATEMENT. This report is generated from editable sample data in this browser.</div>
+    <div className="notice">DEMO â€” NOT A BANK-ISSUED STATEMENT. This report is generated from editable sample data in this browser.</div>
     <section className="card no-print">
       <div className="grid">
         <label className="field">From date<input type="date" value={from} onChange={e=>setFrom(e.target.value)} /></label>
@@ -54,10 +54,11 @@ export default function StatementPage() {
       <div className="card"><span className="muted">Posted debits</span><h2>{money(debits)}</h2></div>
     </section>
     <section className="card">
-      <div className="statement-header"><h2>{state.accountLabel}</h2><p>{state.name} · {state.maskedId}</p><p>Period: {from || "Any date"} — {to || "Any date"}</p></div>
-      {rows.length === 0 ? <p className="muted">No transactions match these filters.</p> : rows.map(t=><div className="row" key={t.id}><div><b>{t.description}</b><small className="muted">{t.date} · {t.status}</small></div><b>{t.type==="credit"?"+":"−"}{money(t.amount)}</b></div>)}
+      <div className="statement-header"><h2>{state.accountLabel}</h2><p>{state.name} · {state.maskedId}</p><div className="grid"><p>Account number: {state.accountNumber || "Not set in Settings"}</p><p>Customer ID: {state.customerId || "Not set in Settings"}</p><p>Branch: {state.branch || "Not set in Settings"}</p><p>IFSC-format code: {state.ifsc || "Not set in Settings"}</p><p>Mobile: {state.mobile || "Not set in Settings"}</p><p>Email: {state.email || "Not set in Settings"}</p><p>Address: {state.address || "Not set in Settings"}</p></div><p>Period: {from || "Any date"} — {to || "Any date"}</p><p>Opening sample balance: {money(state.openingBalance)} · Calculated sample balance: {money(state.openingBalance + state.transactions.filter(t => t.status === "posted" && (!from || t.date >= from) && (!to || t.date <= to)).reduce((n,t) => n + (t.type === "credit" ? t.amount : -t.amount),0))}</p></div>
+      {rows.length === 0 ? <p className="muted">No transactions match these filters.</p> : rows.map(t=><div className="row" key={t.id}><div><b>{t.description}</b><small className="muted">{t.date} Â· {t.status}</small></div><b>{t.type==="credit"?"+":"âˆ’"}{money(t.amount)}</b></div>)}
       <p className="muted">This is a locally generated sample report. It is not proof of account ownership or payment.</p>
     </section>
     <style jsx global>{`@media print { header, nav, .no-print, button { display:none !important; } body { background:white !important; } .layout,.main { display:block !important; margin:0 !important; padding:0 !important; } .card { break-inside:avoid; box-shadow:none !important; } .notice { border:1px solid #333; color:#111; } }`}</style>
   </Shell>;
 }
+
