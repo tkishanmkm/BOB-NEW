@@ -21,12 +21,12 @@ export default function PaymentSuccessfulPage() {
 
   // Prefer the exact transaction created by the transfer workflow. When the
   // page is opened directly, show only the newest pending demo transfer.
-  const latest: Tx | undefined = state?.transactions.find((tx) =>
-    requestedId && tx.id === requestedId && tx.type === "debit" && tx.status === "pending"
-      && tx.description.startsWith("Transfer result for ")
-  ) || state?.transactions.slice().reverse().find((tx) =>
-    tx.type === "debit" && tx.status === "pending" && tx.description.startsWith("Transfer result for ")
-  );
+  const isTransferResult = (tx: Tx) =>
+    tx.type === "debit" && tx.status === "pending" && tx.description.startsWith("Transfer result for ");
+  // A supplied ID is authoritative. Do not show a different transfer if it is missing.
+  const latest: Tx | undefined = requestedId
+    ? state?.transactions.find((tx) => tx.id === requestedId && isTransferResult(tx))
+    : state?.transactions.slice().reverse().find(isTransferResult);
 
   return <Shell>
     <section className="success-panel" aria-labelledby="result-title">
@@ -42,7 +42,7 @@ export default function PaymentSuccessfulPage() {
         <div className="receipt-row"><span>Amount</span><b>{money(latest.amount)}</b></div><hr /><h2>Sample account details from Settings</h2><div className="receipt-row"><span>Account holder</span><b>{state.name}</b></div><div className="receipt-row"><span>Account</span><b>{state.accountNumber || state.maskedId || "Not set"}</b></div><div className="receipt-row"><span>Customer ID</span><b>{state.customerId || "Not set"}</b></div><div className="receipt-row"><span>Branch / IFSC</span><b>{state.branch || "Not set"} / {state.ifsc || "Not set"}</b></div><div className="receipt-row"><span>Contact</span><b>{state.mobile || "Not set"} · {state.email || "Not set"}</b></div><div className="receipt-row"><span>Address</span><b>{state.address || "Not set"}</b></div>
         <p className="warning">LOCAL RESULT â€” NOT A PAYMENT CONFIRMATION OR BANK RECEIPT</p>
       </>}
-      {state && !latest && <p className="muted">No saved transfer result was found. Start a new transfer to create one.</p>}
+      {state && !latest && <p className="muted" role="alert">{requestedId ? "The requested transfer result was not found in saved browser data. No other transaction has been substituted." : "No saved transfer result was found. Start a new transfer to create one."}</p>}
       <div className="actions no-print"><button type="button" onClick={() => window.print()}>Print / Save sample receipt</button><Link className="btn secondary" href="/statement">View statement</Link><Link className="btn secondary" href={latest ? "/receipt?id="+encodeURIComponent(latest.id) : "/receipt"}>View receipt</Link><Link className="btn secondary" href="/passbook">View transactions</Link><Link className="btn" href="/transfers">Create another transfer</Link><Link className="btn secondary" href="/dashboard">Back to overview</Link></div>
     </section>
     <style jsx global>{`@media print { header, nav, .no-print, .notice { display:none !important; } body { background:white !important; } .layout,.main { display:block !important; margin:0 !important; padding:0 !important; } .success-panel { box-shadow:none !important; border:1px solid #ddd; } }`}</style>  </Shell>;
