@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/elite_sdk_blue_gray" />
+    <corners android:radius="@dimen/elite_sdk_spacing_4dp" />
+</shape>

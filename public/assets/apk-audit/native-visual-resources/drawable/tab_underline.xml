@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="center" android:left="@dimen/elite_sdk_spacing_10dp" android:right="@dimen/elite_sdk_spacing_10dp">
+        <shape>
+            <size android:height="3.0dp" />
+            <corners android:radius="4.0dp" />
+            <solid android:color="@color/elite_sdk_tab_indicator_color" />
+        </shape>
+    </item>
+</layer-list>

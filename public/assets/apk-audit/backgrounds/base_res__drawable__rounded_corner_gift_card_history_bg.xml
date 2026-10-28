@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:startColor="#26374f" android:endColor="#0a1018" android:angle="95.0" android:type="linear" />
+    <corners android:radius="@dimen/card_view_rounded_corners" />
+</shape>

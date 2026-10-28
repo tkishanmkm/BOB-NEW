@@ -1,0 +1,42 @@
+﻿{
+    "source":  "bob-world-ui-audit/assets",
+    "purpose":  "Reference archive for UI migration; not a banking integration",
+    "generatedAt":  "2026-10-28T15:50:25.8481658Z",
+    "totalFiles":  2442,
+    "totalBytes":  63346442,
+    "categories":  [
+                       {
+                           "name":  "backgrounds",
+                           "files":  236
+                       },
+                       {
+                           "name":  "banners",
+                           "files":  9
+                       },
+                       {
+                           "name":  "flutter-ui",
+                           "files":  612
+                       },
+                       {
+                           "name":  "fonts",
+                           "files":  21
+                       },
+                       {
+                           "name":  "illustrations",
+                           "files":  2
+                       },
+                       {
+                           "name":  "launcher-icons",
+                           "files":  26
+                       },
+                       {
+                           "name":  "logos",
+                           "files":  121
+                       },
+                       {
+                           "name":  "native-visual-resources",
+                           "files":  1415
+                       }
+                   ],
+    "note":  "Files are retained for visual/implementation reference. XML/native resources may require translation to web components; this archive alone does not implement native behavior."
+}
