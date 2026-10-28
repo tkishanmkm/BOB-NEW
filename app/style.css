@@ -310,3 +310,28 @@ button:disabled{opacity:.6;cursor:wait;transform:none}
  .passbook-filter-footer .btn{width:100%}
 }
 @media print{.passbook-search-card{display:none!important}}
+
+/* Global accessibility and responsive interaction pass */
+html{scroll-behavior:smooth;scroll-padding-top:16px}
+:where(button,.btn,input,select,textarea,[role="button"],a){-webkit-tap-highlight-color:transparent}
+:where(button,.btn,input,select,textarea){max-width:100%}
+:where(input,select,textarea){color:var(--app-text,#27374d)}
+:where(input,select,textarea)::placeholder{color:#687789;opacity:1}
+:where(button,.btn,a){touch-action:manipulation}
+:where(button,.btn){min-height:42px}
+:where(input,select){min-height:42px}
+:where(a,button,input,select,textarea,[tabindex]):focus-visible{outline:3px solid #b66a00;outline-offset:3px}
+:where(button,.btn):disabled{cursor:not-allowed;opacity:.58;filter:none;transform:none}
+:where(.card,.main,section,article){min-width:0}
+:where(img,svg,video,canvas){max-width:100%}
+:where(p,li,dd,dt,strong,b,small){overflow-wrap:anywhere}
+@media(max-width:650px){
+ header{padding:14px 16px;align-items:center;flex-wrap:wrap}
+ .layout{padding-inline:12px}
+ .actions>*{max-width:100%}
+ .actions .btn,.actions button{min-height:44px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
