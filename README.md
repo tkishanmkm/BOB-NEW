@@ -37,5 +37,5 @@ npm run build
 ## Known limitations
 - The local PIN gate is a navigation convenience, not secure authentication. Do not enter real credentials or financial data.
 - Browser localStorage is not secure storage. This prototype has no server/database.
-- Fund transfer and beneficiary details are fictional UI flows only; no real transfer, account verification, or payment record is created.
+- Fund transfer and beneficiary details are fictional UI flows only; no real transfer, account verification, or external payment record is created; a pending simulation entry is saved locally after a transfer preview.
 - Several source routes currently render a shared saved-state feature page and simulation notice; route coverage does not mean every banking service has full real-world functionality.\n- Not production-ready until dependencies install, lint/typecheck/build, interaction tests, security review, and device testing have passed.\n- See `docs/APK-migration-inventory.md` for the source route list, APK resource counts, asset policy and remaining mapping work.\n- Local verification results are recorded in `docs/verification-2026-10-28.md`.
