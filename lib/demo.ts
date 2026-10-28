@@ -63,3 +63,33 @@ export function write(v:State):boolean{
 }
 export function balance(s:State):number{return s.openingBalance+s.transactions.filter(t=>t.status==="posted").reduce((n,t)=>n+(t.type==="credit"?t.amount:-t.amount),0)}
 export function money(n:number):string{return new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR"}).format(n)}
+
+export async function getLocalRecord<T>(key:string,fallback:T):Promise<T>{
+  const db=await openDB();
+  try{
+    let value=await readRecordById(db,"collection:"+key);
+    if(value===undefined){
+      try{const raw=localStorage.getItem(key);if(raw)value=JSON.parse(raw)}catch{}
+      if(value===undefined)value=fallback;
+      await putRecordById(db,"collection:"+key,value);
+      try{localStorage.removeItem(key)}catch{}
+    }
+    return value as T;
+  }finally{db.close()}
+}
+export async function setLocalRecord<T>(key:string,value:T):Promise<void>{
+  const db=await openDB();
+  try{await putRecordById(db,"collection:"+key,value);try{localStorage.removeItem(key)}catch{}}
+  finally{db.close()}
+}
+export async function deleteLocalRecord(key:string):Promise<void>{
+  const db=await openDB();
+  try{await new Promise<void>((resolve,reject)=>{const tx=db.transaction(STORE,"readwrite");tx.objectStore(STORE).delete("collection:"+key);tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error||new Error("Could not delete local records."))});try{localStorage.removeItem(key)}catch{}}
+  finally{db.close()}
+}
+function readRecordById(db:IDBDatabase,id:string):Promise<unknown>{
+  return new Promise((resolve,reject)=>{const tx=db.transaction(STORE,"readonly");const request=tx.objectStore(STORE).get(id);request.onsuccess=()=>resolve(request.result?.value);request.onerror=()=>reject(request.error||new Error("Could not read local records."))});
+}
+function putRecordById(db:IDBDatabase,id:string,value:unknown):Promise<void>{
+  return new Promise((resolve,reject)=>{const tx=db.transaction(STORE,"readwrite");tx.objectStore(STORE).put({id,value});tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error||new Error("Could not save local records."));tx.onabort=()=>reject(tx.error||new Error("Local save was cancelled."))});
+}
