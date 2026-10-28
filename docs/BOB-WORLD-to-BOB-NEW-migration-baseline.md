@@ -13,11 +13,11 @@ Generated from GitHub main trees on 2026-10-28. This is a migration checklist, n
 - Reference tree SHA: 4cce00fcc2c21b51196febfd1bad4a03b6020869
 - Target tree SHA: 1093706b2c74a2991ba7a7bb68e42c89fcab3523
 - Reference single-segment page files found: 51
-- Reference raster/vector/font/icon assets found in Git tree: 8
+- Reference Git tree contains 8 files with recognizable raster/vector/font/icon extensions; most audit-listed APK assets are extracted/compiled Android resources and must be sourced from the supplied audit archive, not assumed to exist as ordinary files in the source repo.
 - Target has 11 explicit page files plus app/[feature]/page.tsx. A dynamic fallback is not equivalent to a complete implementation of every source feature.
 - Review archive: C:\Users\theki\Downloads\bob-world-ui-audit-review.zip
 - Extracted audit directory: C:\Users\theki\Downloads\bob-world-ui-audit
-- The full binary contents of the archive have not yet been exhaustively compared with target assets.
+- The supplied archive and extracted audit directory were located on the desktop. Their full binary contents have not yet been exhaustively compared with target assets; the extracted audit inventory contains categorized logo, icon, background, banner, font and launcher-icon groups.
 
 ## Route-by-route inventory
 | Reference route | Target status at snapshot | Required review |
