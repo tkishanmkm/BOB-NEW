@@ -1,5 +1,6 @@
 ﻿"use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 
 import { Shell } from "@/components/app-shell";
@@ -28,7 +29,7 @@ export default function ReceiptPage() {
     <div className="notice">INDEPENDENT SAMPLE WORKSPACE â€” this is not a bank-issued receipt, proof of payment, or payment-network confirmation.</div>
     {!tx ? <section className="card"><h2>No transaction selected</h2><p className="muted">Choose a saved transaction below or create a local transfer preview.</p><Link className="btn" href="/passbook">Choose transaction</Link> <Link className="btn secondary" href="/transfers">Open transfer demo</Link></section> : <>
       <section className="card receipt-print">
-        <div className="statement-header"><div className="pill">SAMPLE TRANSACTION RECORD</div><h2>Transaction receipt</h2><p>Reference: <b>{tx.id}</b></p></div>
+        <div className="statement-header"><Image src="/assets/reference/logos/bob-world-logo.svg" width={54} height={40} alt="BOB-WORLD reference logo"/><div className="pill">SAMPLE TRANSACTION RECORD</div><h2>Transaction receipt</h2><p>Reference: <b>{tx.id}</b></p></div>
         <div className="receipt-row"><span>Record status</span><b>{tx.status === "posted" ? "Saved locally (not bank-verified)" : "Pending sample record"}</b></div>
         <div className="receipt-row"><span>Transaction type</span><b>{tx.type === "credit" ? "Credit" : "Debit"}</b></div>
         <div className="receipt-row"><span>Description / recipient</span><b>{tx.description}</b></div>
