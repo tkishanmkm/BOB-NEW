@@ -111,7 +111,7 @@ export async function saveState(v:State):Promise<boolean>{
 export function balance(s:State):number{return s.openingBalance+s.transactions.filter(t=>t.status==="posted").reduce((n,t)=>n+(t.type==="credit"?t.amount:-t.amount),0)}
 export function money(n:number):string{return new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR"}).format(n)}
 
-function validWorkspacePayees(value:unknown):boolean{
+export function validWorkspacePayees(value:unknown):boolean{
   if(!Array.isArray(value)||value.length>500)return false;
   const ids=new Set<string>(),accounts=new Set<string>();
   return value.every((item:unknown)=>{
@@ -121,7 +121,7 @@ function validWorkspacePayees(value:unknown):boolean{
     ids.add(p.id);accounts.add(p.account);return true;
   });
 }
-function validWorkspaceMessages(value:unknown):boolean{
+export function validWorkspaceMessages(value:unknown):boolean{
   if(!Array.isArray(value)||value.length>200)return false;
   const ids=new Set<string>();
   return value.every((item:unknown)=>{
