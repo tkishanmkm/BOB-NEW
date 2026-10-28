@@ -21,6 +21,7 @@ export default function Transfers() {
   const [error, setError] = useState("");
   const [saving, setSaving] = useState(false);
   const [payees, setPayees] = useState<Payee[]>([]);
+  const [payeesLoadError, setPayeesLoadError] = useState(false);
   const [selectedPayee, setSelectedPayee] = useState("");
 
   useEffect(() => {
@@ -28,7 +29,7 @@ export default function Transfers() {
     (async () => { try {
       const saved: unknown = await getLocalRecord<unknown>(PAYEES_KEY, []);
       if (active && Array.isArray(saved)) setPayees(saved.filter((p): p is Payee => !!p && typeof p.id === "string" && typeof p.name === "string" && typeof p.bank === "string" && typeof p.account === "string" && typeof p.code === "string"));
-    } catch { if (active) setPayees([]); } })();
+    } catch { if (active) { setPayees([]); setPayeesLoadError(true); } } })();
     return () => { active = false; };
   }, []);
 
@@ -93,7 +94,7 @@ export default function Transfers() {
     {stage === "details" && <form className="card" onSubmit={review}>
       <h2>Recipient details</h2><p className="muted">Use fictional information only. Do not enter sensitive banking details.</p>
       <Field label="Choose a saved beneficiary"><select value={selectedPayee} onChange={e => choosePayee(e.target.value)}><option value="">Enter details manually</option>{payees.map(p => <option key={p.id} value={p.id}>{p.name} · •••• {p.account.slice(-4)}</option>)}</select></Field>
-      {payees.length === 0 && <p className="muted">No saved beneficiaries yet. Add a recipient on the <Link href="/payees">Beneficiaries page</Link>.</p>}
+      {payeesLoadError ? <p className="error" role="alert">Saved beneficiaries could not be loaded from browser storage. You can retry by reloading this page, or enter fictional placeholder details manually.</p> : payees.length === 0 && <p className="muted">No saved beneficiaries yet. Add a recipient on the <Link href="/payees">Beneficiaries page</Link>.</p>}
       <div className="grid">
         <Field label="Recipient name"><input value={recipient} maxLength={100} onChange={e => setRecipient(e.target.value)} required /></Field>
         <Field label="Institution name"><input value={bank} maxLength={100} onChange={e => setBank(e.target.value)} required /></Field>
