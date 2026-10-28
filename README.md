@@ -12,6 +12,7 @@ An independent, separately branded finance-workspace prototype. It does not modi
 - `/transfers` — multi-step sample fund-transfer details, review and completion preview. It never sends funds.
 - `/payees` — add/remove fictional beneficiaries stored in this browser.
 - `/help-support` — local sample support chat with browser-only history; it does not contact an agent.
+- Dynamic one-segment routes are available for the complete 51-route BOB-WORLD source inventory (including profile, account-statement, fund-transfer, UPI, recharge, cards, help, and service routes). Existing dedicated Next.js pages take precedence; remaining routes use a shared saved-state feature page with simulation-only notices. APK static inventory is separate and cannot confirm every runtime APK screen.
 - `/demo-documents` — printable sample account summary, clearly labelled **DEMO — NOT A BANK-ISSUED DOCUMENT**.
 
 ## Assets and design
