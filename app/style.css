@@ -266,3 +266,35 @@ button:disabled{opacity:.6;cursor:wait;transform:none}
  .transfer-page-heading,.transfer-form,.stepper,.info-banner,.nav,header{display:none!important}
  .transfer-review-card{box-shadow:none!important;border:1px solid #ddd!important}
 }
+
+/* Statement report: responsive data readability and print integrity */
+.statement-document{min-width:0}
+.statement-header{min-width:0}
+.statement-header h2,.statement-header p{overflow-wrap:anywhere}
+.statement-account-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 18px;margin:16px 0}
+.statement-account-meta span{min-width:0;overflow-wrap:anywhere}
+.statement-period,.statement-disclaimer,.statement-footnote{line-height:1.65;overflow-wrap:anywhere}
+.statement-table-wrap{width:100%;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}
+.statement-table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.statement-table th,.statement-table td{padding:10px 9px;text-align:left;vertical-align:top;border-bottom:1px solid var(--app-border)}
+.statement-table th{font-size:11px;color:var(--app-muted);white-space:nowrap}
+.statement-table td{overflow-wrap:anywhere}
+.statement-table td:nth-child(4){text-align:right;white-space:nowrap}
+.statement-table td:nth-child(3){min-width:120px}
+.statement-summary-item{min-width:0}
+.statement-summary-item strong{overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+@media(max-width:650px){
+ .statement-header h2{font-size:18px}
+ .statement-account-meta{grid-template-columns:minmax(0,1fr);gap:7px}
+ .statement-table-wrap{margin-inline:-2px}
+ .statement-table{min-width:650px}
+ .statement-summary-grid{gap:8px}
+}
+@media print{
+ .statement-table-wrap{overflow:visible!important}
+ .statement-table{min-width:0!important;table-layout:fixed;font-size:9px}
+ .statement-table th,.statement-table td{padding:5px 4px;overflow-wrap:anywhere}
+ .statement-table td:nth-child(3){min-width:0}
+ .statement-header,.statement-table tr{break-inside:avoid}
+ .statement-footnote{font-size:9px}
+}
