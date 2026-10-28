@@ -152,7 +152,7 @@ export async function restoreWorkspaceRecords(account:State,payees:unknown,suppo
   saveQueue=operation.then(()=>undefined);
   return operation;
 }
-export async function getLocalRecord<T>(key:string,fallback:T):Promise<T>{
+export async function getLocalRecord<T>(key:string,fallback:T,persistMigration=true):Promise<T>{
   const db=await openDB();
   try{
     let value=await readRecordById(db,"collection:"+key);
@@ -167,7 +167,7 @@ export async function getLocalRecord<T>(key:string,fallback:T):Promise<T>{
       }else{
         value=fallback;
       }
-      await putRecordById(db,"collection:"+key,value);
+      if(persistMigration)await putRecordById(db,"collection:"+key,value);
       // Keep the legacy copy until the caller validates the record's schema.
       // This preserves a recovery source if the migrated value is malformed.
     }
