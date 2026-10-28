@@ -23,11 +23,14 @@ export default function StatementPage() {
   }, []);
 
   const rows = useMemo(() => state.transactions
-    .filter(t => !from || t.date >= from)
-    .filter(t => !to || t.date <= to)
-    .filter(t => type === "all" || t.type === type)
-    .filter(t => status === "all" || t.status === status)
-    .slice().sort((a, b) => b.date.localeCompare(a.date)), [state.transactions, from, to, type, status]);
+    .map((tx, index) => ({ tx, index }))
+    .filter(({ tx }) => !from || tx.date >= from)
+    .filter(({ tx }) => !to || tx.date <= to)
+    .filter(({ tx }) => type === "all" || tx.type === type)
+    .filter(({ tx }) => status === "all" || tx.status === status)
+    // Random transaction IDs are not chronological; use saved order for same-day rows.
+    .sort((a, b) => b.tx.date.localeCompare(a.tx.date) || b.index - a.index)
+    .map(({ tx }) => tx), [state.transactions, from, to, type, status]);
   const credits = rows.filter(t => t.type === "credit" && t.status === "posted").reduce((n,t) => n + t.amount, 0);
   const debits = rows.filter(t => t.type === "debit" && t.status === "posted").reduce((n,t) => n + t.amount, 0);
 
@@ -55,7 +58,7 @@ export default function StatementPage() {
       <div className="card"><span className="muted">Posted debits</span><h2>{money(debits)}</h2></div>
     </section>
     <section className="card">
-      <div className="statement-header"><Image src="/assets/daybook-mark.svg" width={36} height={36} alt="Daybook mark"/><h2>{state.accountLabel}</h2><p>{state.name} · {state.maskedId}</p><div className="grid"><p>Account number: {state.accountNumber || "Not set in Settings"}</p><p>Customer ID: {state.customerId || "Not set in Settings"}</p><p>Branch: {state.branch || "Not set in Settings"}</p><p>IFSC-format code: {state.ifsc || "Not set in Settings"}</p><p>Mobile: {state.mobile || "Not set in Settings"}</p><p>Email: {state.email || "Not set in Settings"}</p><p>Address: {state.address || "Not set in Settings"}</p></div><p>Period: {from || "Any date"} — {to || "Any date"}</p><p>Opening sample balance: {money(state.openingBalance)} · Calculated sample balance: {money(state.openingBalance + state.transactions.filter(t => t.status === "posted" && (!from || t.date >= from) && (!to || t.date <= to)).reduce((n,t) => n + (t.type === "credit" ? t.amount : -t.amount),0))}</p></div>
+      <div className="statement-header"><Image src="/assets/daybook-mark.svg" width={36} height={36} alt="Daybook mark"/><h2>{state.accountLabel}</h2><p>{state.name} · {state.maskedId}</p><div className="grid"><p>Account number: {state.accountNumber || "Not set in Settings"}</p><p>Customer ID: {state.customerId || "Not set in Settings"}</p><p>Branch: {state.branch || "Not set in Settings"}</p><p>IFSC-format code: {state.ifsc || "Not set in Settings"}</p><p>Mobile: {state.mobile || "Not set in Settings"}</p><p>Email: {state.email || "Not set in Settings"}</p><p>Address: {state.address || "Not set in Settings"}</p></div><p>Period: {from || "Any date"} — {to || "Any date"}</p><p>Opening sample balance: {money(state.openingBalance)} · Calculated sample balance as of period end: {money(state.openingBalance + state.transactions.filter(t => t.status === "posted" && (!to || t.date <= to)).reduce((n,t) => n + (t.type === "credit" ? t.amount : -t.amount),0))}</p></div>
       {rows.length === 0 ? <p className="muted">No transactions match these filters.</p> : rows.map(t=><div className="row" key={t.id}><div><b>{t.description}</b><small className="muted">{t.date} Â· {t.status}</small></div><b>{t.type==="credit"?"+":"âˆ’"}{money(t.amount)}</b></div>)}
       <p className="muted">This is a locally generated sample report. It is not proof of account ownership or payment.</p>
     </section>
