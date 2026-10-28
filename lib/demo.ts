@@ -102,6 +102,36 @@ export async function saveState(v:State):Promise<boolean>{
 export function balance(s:State):number{return s.openingBalance+s.transactions.filter(t=>t.status==="posted").reduce((n,t)=>n+(t.type==="credit"?t.amount:-t.amount),0)}
 export function money(n:number):string{return new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR"}).format(n)}
 
+export async function restoreWorkspaceRecords(account:State,payees:unknown,supportMessages:unknown):Promise<boolean>{
+  if(!valid(account)||typeof window==="undefined")return false;
+  const next:State={...account,transactions:account.transactions.map(t=>({...t}))};
+  const operation=saveQueue.then(async()=>{
+    let db:IDBDatabase|undefined;
+    try{
+      if(!hydrated)await hydrate();
+      db=await openDB();
+      await new Promise<void>((resolve,reject)=>{
+        const tx=db!.transaction(STORE,"readwrite");
+        const store=tx.objectStore(STORE);
+        store.put({id:STATE_RECORD,value:next});
+        store.put({id:"collection:bob-new-sample-payees-v1",value:payees});
+        store.put({id:"collection:bob-new-support-messages-v1",value:supportMessages});
+        tx.oncomplete=()=>resolve();
+        tx.onerror=()=>reject(tx.error||new Error("Workspace restore transaction failed."));
+        tx.onabort=()=>reject(tx.error||new Error("Workspace restore was cancelled."));
+      });
+      cache=next;
+      try{localStorage.removeItem(KEY);localStorage.removeItem("bob-new-sample-payees-v1");localStorage.removeItem("bob-new-support-messages-v1")}catch{}
+      window.dispatchEvent(new Event("bob-new-state-change"));
+      return true;
+    }catch{
+      window.dispatchEvent(new CustomEvent("bob-new-storage-error",{detail:"Could not restore workspace backup. Existing records were not confirmed as changed."}));
+      return false;
+    }finally{db?.close()}
+  });
+  saveQueue=operation.then(()=>undefined);
+  return operation;
+}
 export async function getLocalRecord<T>(key:string,fallback:T):Promise<T>{
   const db=await openDB();
   try{
