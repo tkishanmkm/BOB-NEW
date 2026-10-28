@@ -94,8 +94,16 @@ export async function getLocalRecord<T>(key:string,fallback:T):Promise<T>{
   try{
     let value=await readRecordById(db,"collection:"+key);
     if(value===undefined){
-      try{const raw=localStorage.getItem(key);if(raw)value=JSON.parse(raw)}catch{}
-      if(value===undefined)value=fallback;
+      // Do not replace a legacy record if it exists but cannot be read or parsed.
+      // Let the caller show a recovery error rather than silently migrating fallback data.
+      const raw=localStorage.getItem(key);
+      if(raw!==null){
+        try{value=JSON.parse(raw)}catch{
+          throw new Error("Legacy local record is not valid JSON; it was preserved for recovery.");
+        }
+      }else{
+        value=fallback;
+      }
       await putRecordById(db,"collection:"+key,value);
       try{localStorage.removeItem(key)}catch{}
     }
