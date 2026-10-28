@@ -1,16 +1,21 @@
-# BOB-NEW — Independent Finance Workspace
+# BOB-NEW — Daybook finance workspace
 
-This is a separate, independently branded finance-workspace prototype. It does not modify or copy the branded interface of BOB-WORLD and does not connect to real banking or payment systems.
+An independent, separately branded finance-workspace prototype. It does not modify BOB-WORLD and does not connect to real bank/payment systems.
 
-## Current implementation
-- Next.js App Router, React, and TypeScript foundation.
-- Routes: local access gate, overview, transactions, settings, transfer preview, and account-summary preview.
-- One shared browser-local state model for sample profile, account display, opening balance, and transactions.
-- Schema validation for imported JSON, duplicate transaction-ID rejection, and date/amount/type/status checks.
-- Settings supports editing, adding/removing transactions, JSON import, and JSON export.
-- Dashboard balance includes posted transactions only; pending transactions are excluded.
-- Transfer page only previews intent; it does not create or send payments.
-- Printable account summary always displays **DEMO — NOT A BANK-ISSUED DOCUMENT**.
+## Implemented routes
+- `/` — local sample PIN gate.
+- `/dashboard` — shared sample profile, calculated balance, recent activity.
+- `/passbook` — transaction list.
+- `/settings` — edit account display, opening balance, sample PIN and transactions; validated JSON import/export.
+- `/transfers` — multi-step sample fund-transfer details, review and completion preview. It never sends funds.
+- `/payees` — add/remove fictional beneficiaries stored in this browser.
+- `/demo-documents` — printable sample account summary, clearly labelled **DEMO — NOT A BANK-ISSUED DOCUMENT**.
+
+## Assets and design
+- Original SVG Daybook mark, generic institution icon and transfer icon are in `public/assets/`.
+- Responsive CSS, cross-platform system font stack, mobile navigation and keyboard focus styling are included.
+- The APK inventory previously documented 611 Flutter image assets, four font assets and a large resource inventory. That inventory does not itself establish permission to reuse those assets, and static extraction does not prove exact runtime page behavior. Proprietary bank logos, fonts, and branded APK assets have therefore not been copied into this independent app. A permission-cleared asset pack can be mapped after its rights and files are verified.
+- Routes are generic equivalents for common finance-app tasks, not pixel-identical copies of a bank's branded UI.
 
 ## Run locally
 Node.js 20.9+ recommended.
@@ -25,9 +30,8 @@ npm run typecheck
 npm run build
 ```
 
-## Important limitations
-- The local PIN gate is only a navigation convenience, not secure authentication. Do not enter real credentials or financial data.
-- Browser localStorage is not secure storage and this prototype has no server/database.
-- No real banking, identity verification, or payment rails are connected.
-- Not production-ready until dependency installation, lint, typecheck, build, interaction tests, security review, and device testing have passed.
-- UI/assets from the reference APK have not been copied; exact screen-by-screen mapping remains separate work.
+## Known limitations
+- The local PIN gate is a navigation convenience, not secure authentication. Do not enter real credentials or financial data.
+- Browser localStorage is not secure storage. This prototype has no server/database.
+- Fund transfer and beneficiary details are fictional UI flows only; no real transfer, account verification, or payment record is created.
+- Not production-ready until dependencies install, lint/typecheck/build, interaction tests, security review, and device testing have passed.
