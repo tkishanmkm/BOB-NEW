@@ -24,7 +24,7 @@ export default function HelpSupportPage() {
     const text = draft.trim();
     if (!text) return;
     if (text.length > 1000) { setNotice("Please keep messages under 1,000 characters."); return; }
-    const next: Message[] = [...messages, {id:crypto.randomUUID(),text,sender:"you",time:new Date().toLocaleString()}, {id:crypto.randomUUID(),text:"Thanks. This is a demonstration inbox only; no support agent receives this message. For this prototype, use Settings to manage sample data.",sender:"daybook",time:new Date().toLocaleString()}].slice(-200);
+    const next: Message[] = [...messages, {id:crypto.randomUUID(),text,sender:"you" as const,time:new Date().toLocaleString()}, {id:crypto.randomUUID(),text:"Thanks. This is a demonstration inbox only; no support agent receives this message. For this prototype, use Settings to manage sample data.",sender:"daybook" as const,time:new Date().toLocaleString()}].slice(-200);
     try { localStorage.setItem(KEY, JSON.stringify(next)); setMessages(next); setDraft(""); setNotice("Sample conversation saved in this browser only."); }
     catch { setNotice("Could not save the sample conversation in browser storage."); }
   }
