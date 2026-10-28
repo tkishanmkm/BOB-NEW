@@ -1,42 +1,15 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Shell } from "@/components/app-shell";
-
-type Message = { id: string; text: string; sender: "you" | "daybook"; time: string };
-const KEY = "bob-new-support-messages-v1";
-const starter: Message[] = [{id:"welcome",text:"Hello! This is sample support for the Daybook prototype. Do not share passwords, PINs or real financial details.",sender:"daybook",time:"Welcome"}];
-
-export default function HelpSupportPage() {
-  const [messages, setMessages] = useState<Message[]>(starter);
-  const [draft, setDraft] = useState("");
-  const [notice, setNotice] = useState("");
-  useEffect(() => {
-    try {
-      const raw = localStorage.getItem(KEY);
-      if (raw) {
-        const parsed: unknown = JSON.parse(raw);
-        if (Array.isArray(parsed) && parsed.length <= 200 && parsed.every(m => m && typeof m.id === "string" && typeof m.text === "string" && (m.sender === "you" || m.sender === "daybook") && typeof m.time === "string")) setMessages(parsed as Message[]);
-      }
-    } catch { setNotice("Saved sample chat could not be read; a fresh conversation is shown."); }
-  }, []);
-  function send(e: React.FormEvent) {
-    e.preventDefault();
-    const text = draft.trim();
-    if (!text) return;
-    if (text.length > 1000) { setNotice("Please keep messages under 1,000 characters."); return; }
-    const next: Message[] = [...messages, {id:crypto.randomUUID(),text,sender:"you" as const,time:new Date().toLocaleString()}, {id:crypto.randomUUID(),text:"Thanks. This is a demonstration inbox only; no support agent receives this message. For this prototype, use Settings to manage sample data.",sender:"daybook" as const,time:new Date().toLocaleString()}].slice(-200);
-    try { localStorage.setItem(KEY, JSON.stringify(next)); setMessages(next); setDraft(""); setNotice("Sample conversation saved in this browser only."); }
-    catch { setNotice("Could not save the sample conversation in browser storage."); }
-  }
-  function clear() { try { localStorage.removeItem(KEY); setMessages(starter); setNotice("Sample conversation cleared."); } catch { setNotice("Could not clear browser storage."); } }
-  return <Shell>
-    <h1>Help & support</h1>
-    <p className="muted">Local demonstration chat. Messages are not sent to a real support team.</p>
-    <div className="notice">Never enter real banking credentials, PINs, OTPs or account information in this demo.</div>
-    <section className="card" aria-label="Sample support conversation">
-      <div className="chat-list">{messages.map(m=><div className="card" key={m.id}><b>{m.sender==="you"?"You":"Daybook demo assistant"}</b><p>{m.text}</p><small className="muted">{m.time}</small></div>)}</div>
-      <form onSubmit={send} className="no-print"><label className="field">Message<textarea value={draft} maxLength={1000} rows={3} onChange={e=>setDraft(e.target.value)} placeholder="Type a sample message…" required /></label><div className="actions"><button type="submit">Send sample message</button><button type="button" className="secondary" onClick={clear}>Clear chat</button></div></form>
-      {notice && <p role="status" className="muted">{notice}</p>}
-    </section>
-  </Shell>;
+import { getLocalRecord, setLocalRecord, deleteLocalRecord } from "@/lib/demo";
+type Message={id:string;text:string;sender:"you"|"daybook";time:string};
+const KEY="bob-new-support-messages-v1";
+const starter:Message[]=[{id:"welcome",text:"Hello! This is the local support inbox for the prototype. Never share passwords, PINs, one-time codes or sensitive account information.",sender:"daybook",time:"Welcome"}];
+function validMessages(v:unknown):Message[]{return Array.isArray(v)&&v.length<=200&&v.every(m=>m&&typeof m.id==="string"&&typeof m.text==="string"&&m.text.length<=1000&&(m.sender==="you"||m.sender==="daybook")&&typeof m.time==="string")?v as Message[]:starter}
+export default function HelpSupportPage(){
+ const[messages,setMessages]=useState<Message[]>(starter);const[draft,setDraft]=useState("");const[notice,setNotice]=useState("");const[ready,setReady]=useState(false);
+ useEffect(()=>{let active=true;getLocalRecord<unknown>(KEY,starter).then(v=>{if(active){setMessages(validMessages(v));setReady(true)}}).catch(()=>{if(active){setNotice("Could not open the saved conversation. Check browser storage.");setReady(true)}});return()=>{active=false}},[]);
+ async function send(e:React.FormEvent){e.preventDefault();const text=draft.trim();if(!text)return;if(text.length>1000){setNotice("Please keep messages under 1,000 characters.");return}const now=new Date().toLocaleString();const next:Message[]=[...messages,{id:crypto.randomUUID(),text,sender:"you",time:now},{id:crypto.randomUUID(),text:"Your message is saved locally. No support agent receives it because this prototype has no server connection.",sender:"daybook",time:now}].slice(-200);try{await setLocalRecord(KEY,next);setMessages(next);setDraft("");setNotice("Conversation saved on this device.")}catch{setNotice("Could not save the conversation. Check browser storage space.")}}
+ async function clear(){try{await deleteLocalRecord(KEY);setMessages(starter);setNotice("Conversation cleared.")}catch{setNotice("Could not clear saved messages.")}}
+ return <Shell><h1>Help & support</h1><p className="muted">Messages are stored on this device and are not sent to a support team.</p><div className="notice">Do not enter passwords, PINs, one-time codes or sensitive financial information.</div><section className="card" aria-label="Support conversation"><div className="chat-list">{messages.map(m=><div className="card" key={m.id}><b>{m.sender==="you"?"You":"Daybook support"}</b><p>{m.text}</p><small className="muted">{m.time}</small></div>)}</div><form onSubmit={send} className="no-print"><label className="field">Message<textarea value={draft} maxLength={1000} rows={3} onChange={e=>setDraft(e.target.value)} placeholder="Write a message…" required/></label><div className="actions"><button type="submit" disabled={!ready}>Send message</button><button type="button" className="secondary" onClick={()=>void clear()}>Clear conversation</button></div></form>{notice&&<p className="muted" role="status">{notice}</p>}</section></Shell>
 }
