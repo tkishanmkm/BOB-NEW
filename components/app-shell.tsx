@@ -15,7 +15,7 @@ export function Shell({children}:{children:React.ReactNode}) {
   const [storageUnavailable, setStorageUnavailable] = useState(false);
   useEffect(() => {
     let active = true;
-    hydrate().then(() => { if (active) setStorageReady(true); }).catch(() => { if (active) { setStorageError("Local storage could not be opened. The workspace is locked to protect saved records."); setStorageUnavailable(true); setStorageReady(true); } });
+    hydrate().then(() => { if (active) setStorageReady(true); }).catch((error: unknown) => { if (active) { const detail = error instanceof Error ? error.message : "Unknown browser-storage error."; setStorageError(`Saved local data could not be loaded: ${detail} Existing records are preserved and editing remains locked.`); setStorageUnavailable(true); setStorageReady(true); } });
     const onStorageError = (event: Event) => { const detail = (event as CustomEvent<string>).detail; setStorageError(detail || "A local save failed."); };
     window.addEventListener("bob-new-storage-error", onStorageError);
     try {
