@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="25.0dp" android:width="6.0dp" android:viewportWidth="6.0" android:viewportHeight="25.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/elite_sdk_toolbar_icon_color" android:pathData="M0,3.392a3,3.02 0,1 0,6 0a3,3.02 0,1 0,-6 0z" />
+    <path android:fillColor="@color/elite_sdk_toolbar_icon_color" android:pathData="M0,12.451a3,3.02 0,1 0,6 0a3,3.02 0,1 0,-6 0z" />
+    <path android:fillColor="@color/elite_sdk_toolbar_icon_color" android:pathData="M0,21.51a3,3.02 0,1 0,6 0a3,3.02 0,1 0,-6 0z" />
+</vector>

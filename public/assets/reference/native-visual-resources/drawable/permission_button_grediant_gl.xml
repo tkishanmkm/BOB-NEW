@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:startColor="@color/credit_vidya_background_color_gl" android:endColor="@color/credit_vidya_background_color_gl" android:angle="0.0" android:type="linear" android:centerColor="@color/credit_vidya_background_color_gl" />
+    <corners android:radius="5.0dp" />
+</shape>

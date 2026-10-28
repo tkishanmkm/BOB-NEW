@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/elite_sdk_gray_medium"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <stroke android:width="@dimen/elite_sdk_spacing_1dp" android:color="@color/elite_sdk_app_color" />
+            <corners android:radius="@dimen/elite_sdk_spacing_60dp" />
+            <solid android:color="@color/elite_sdk_white" />
+        </shape>
+    </item>
+</ripple>
