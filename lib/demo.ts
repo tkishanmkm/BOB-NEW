@@ -40,14 +40,27 @@ export async function hydrate():Promise<State>{
     try{
       db=await openDB();
       let stored=await readRecord(db);
-      if(!valid(stored)){
-        let legacy:unknown=null;
-        try{const raw=localStorage.getItem(KEY);if(raw)legacy=JSON.parse(raw)}catch{}
-        const initial=valid(legacy)?({...DEFAULT,...legacy} as State):cache;
-        await putRecord(db,initial);
-        stored=initial;
+      if(stored!==undefined&&!valid(stored)){
+        throw new Error("Saved IndexedDB account data is invalid; it was preserved for recovery.");
       }
-      if(valid(stored))cache={...DEFAULT,...stored,transactions:stored.transactions.map(t=>({...t}))};
+      if(stored===undefined){
+        const raw=localStorage.getItem(KEY);
+        let legacy:unknown;
+        if(raw!==null){
+          try{legacy=JSON.parse(raw)}catch{
+            throw new Error("Legacy account data is not valid JSON; it was preserved for recovery.");
+          }
+          if(!valid(legacy)){
+            throw new Error("Legacy account data has an invalid structure; it was preserved for recovery.");
+          }
+          stored={...DEFAULT,...legacy} as State;
+        }else{
+          stored={...DEFAULT,transactions:DEFAULT.transactions.map(t=>({...t}))};
+        }
+        await putRecord(db,stored as State);
+      }
+      if(!valid(stored))throw new Error("Saved account data could not be validated.");
+      cache={...DEFAULT,...stored,transactions:stored.transactions.map(t=>({...t}))};
       try{localStorage.removeItem(KEY)}catch{}
       hydrated=true;
       window.dispatchEvent(new Event("bob-new-state-change"));
