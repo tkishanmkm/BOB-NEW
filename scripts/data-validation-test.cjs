@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports -- CommonJS is intentional for the isolated TypeScript test harness. */
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const vm = require("node:vm");
