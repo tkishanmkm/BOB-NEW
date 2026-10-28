@@ -61,7 +61,7 @@ const links: Record<string,string> = {
 export default function FeaturePage(){
   const params=useParams<{feature:string}>();
   const feature=Array.isArray(params.feature)?params.feature[0]:params.feature;
-  const page=pages[feature]||{title:feature.replaceAll("-"," ").replace(/\b\w/g,c=>c.toUpperCase()),description:"This route is available as a Daybook sample feature page. Functionality is limited to local demonstration data.",actions:["View account details","Open settings"]};
+  const page=pages[feature]||{title:feature.replaceAll("-"," ").replace(/\b\w/g,(c:string)=>c.toUpperCase()),description:"This route is available as a Daybook sample feature page. Functionality is limited to local demonstration data.",actions:["View account details","Open settings"]};
   const [state,setState]=useState<State>(read());
   useEffect(()=>{const refresh=()=>setState(read());refresh();window.addEventListener("bob-new-state-change",refresh);window.addEventListener("storage",refresh);return()=>{window.removeEventListener("bob-new-state-change",refresh);window.removeEventListener("storage",refresh)}},[]);
   return <Shell><h1>{page.title}</h1><p className="muted">{page.description}</p><div className="notice">SAMPLE WORKSPACE — no bank service, real payment, account verification or external submission is performed here.</div>
