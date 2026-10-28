@@ -1,16 +1,13 @@
 ﻿"use client";
-import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
-
+import Image from "next/image";
 import { Shell } from "@/components/app-shell";
-import { money, read, type State, type Tx } from "@/lib/demo";
+import { read, money, type State, type Tx } from "@/lib/demo";
 
 export default function ReceiptPage() {
-  const [requestedId, setRequestedId] = useState("");
   const [state, setState] = useState<State>(read());
+  const [selectedId, setSelectedId] = useState("");
   useEffect(() => {
-    setRequestedId(new URLSearchParams(window.location.search).get("id") || "");
     const refresh = () => setState(read());
     refresh();
     window.addEventListener("bob-new-state-change", refresh);
@@ -20,36 +17,28 @@ export default function ReceiptPage() {
       window.removeEventListener("storage", refresh);
     };
   }, []);
-  const tx = useMemo<Tx | undefined>(() => {
-    if (requestedId) return state.transactions.find(item => item.id === requestedId);
-    return state.transactions.slice().reverse().find(item => item.description.startsWith("Transfer result for ")) || state.transactions[state.transactions.length - 1];
-  }, [state.transactions, requestedId]);
+  const selected = useMemo<Tx | undefined>(() => state.transactions.find(t => t.id === selectedId) ?? state.transactions[0], [state.transactions, selectedId]);
   return <Shell>
-    <div className="page-heading"><div><h1>Transaction receipt</h1><p className="muted">Printable receipt-style record from transaction data saved in this browser.</p></div><button type="button" className="no-print" onClick={() => window.print()} disabled={!tx}>Print / Save PDF</button></div>
-    <div className="notice">INDEPENDENT SAMPLE WORKSPACE â€” this is not a bank-issued receipt, proof of payment, or payment-network confirmation.</div>
-    {!tx ? <section className="card"><h2>No transaction selected</h2><p className="muted">Choose a saved transaction below or create a local transfer preview.</p><Link className="btn" href="/passbook">Choose transaction</Link> <Link className="btn secondary" href="/transfers">Open transfer demo</Link></section> : <>
-      <section className="card receipt-print">
-        <div className="statement-header"><Image src="/assets/reference/logos/bob-world-logo.svg" width={54} height={40} alt="BOB-WORLD reference logo"/><div className="pill">SAMPLE TRANSACTION RECORD</div><h2>Transaction receipt</h2><p>Reference: <b>{tx.id}</b></p></div>
-        <div className="receipt-row"><span>Record status</span><b>{tx.status === "posted" ? "Saved locally (not bank-verified)" : "Pending sample record"}</b></div>
-        <div className="receipt-row"><span>Transaction type</span><b>{tx.type === "credit" ? "Credit" : "Debit"}</b></div>
-        <div className="receipt-row"><span>Description / recipient</span><b>{tx.description}</b></div>
-        <div className="receipt-row"><span>Date</span><b>{tx.date}</b></div>
-        <div className="receipt-row"><span>Amount</span><b>{tx.type === "credit" ? "+" : "âˆ’"}{money(tx.amount)}</b></div>
-        <hr />
-        <h2>Account details saved in Settings</h2>
-        <div className="receipt-row"><span>Account holder</span><b>{state.name || "Not set"}</b></div>
-        <div className="receipt-row"><span>Account label</span><b>{state.accountLabel || "Not set"}</b></div>
-        <div className="receipt-row"><span>Account number</span><b>{state.accountNumber || state.maskedId || "Not set"}</b></div>
-        <div className="receipt-row"><span>Customer ID</span><b>{state.customerId || "Not set"}</b></div>
-        <div className="receipt-row"><span>Branch / IFSC</span><b>{state.branch || "Not set"} / {state.ifsc || "Not set"}</b></div>
-        <div className="receipt-row"><span>Mobile / Email</span><b>{state.mobile || "Not set"} / {state.email || "Not set"}</b></div>
-        <div className="receipt-row"><span>Address</span><b>{state.address || "Not set"}</b></div>
-        <p className="warning">LOCAL SAMPLE ONLY â€” no money was sent, received, or verified by a bank or payment service.</p>
-      </section>
-      <section className="card no-print"><h2>Other saved transactions</h2>{state.transactions.slice().reverse().map(item=><div className="row" key={item.id}><span><Link href={"/receipt?id="+encodeURIComponent(item.id)}>{item.description}</Link><small className="muted">{item.date} Â· {item.status} Â· Ref {item.id}</small></span><b>{item.type==="credit"?"+":"âˆ’"}{money(item.amount)}</b></div>)}</section>
-    </>}
-    <div className="actions no-print"><Link className="btn secondary" href="/passbook">Transactions</Link><Link className="btn secondary" href="/statement">Statement</Link><Link className="btn secondary" href="/settings">Settings</Link></div>
-    <style jsx global>{`@media print { header, nav, .no-print, .notice { display:none !important; } body { background:white !important; } .layout,.main { display:block !important; margin:0 !important; padding:0 !important; } .card,.receipt-print { break-inside:avoid; box-shadow:none !important; border:1px solid #ddd; } .receipt-row { break-inside:avoid; } }`}</style>
+    <div className="page-heading"><div><h1>Transaction receipt</h1><p className="muted">Choose a saved sample transaction to preview or print its receipt.</p></div><button type="button" onClick={() => window.print()} disabled={!selected}>Print / Save PDF</button></div>
+    <div className="notice">SAMPLE RECEIPT ONLY — not a bank-issued receipt, payment confirmation, or proof of funds transfer.</div>
+    <section className="card no-print"><label className="field">Select transaction<select value={selected?.id ?? ""} onChange={e => setSelectedId(e.target.value)}>{state.transactions.length === 0 && <option value="">No transactions saved</option>}{state.transactions.map(t => <option key={t.id} value={t.id}>{t.date} · {t.description} · {money(t.amount)}</option>)}</select></label></section>
+    {selected ? <article className="card receipt-card">
+      <div className="receipt-brand"><Image src="/assets/reference/logos/bob-world-logo.svg" width={54} height={40} alt="BOB-WORLD reference logo"/><div><h2>Daybook transaction receipt</h2><p className="muted">Independent sample workspace</p></div></div>
+      <div className="receipt-amount"><span>{selected.type === "credit" ? "Sample credit" : "Sample debit"}</span><strong>{selected.type === "credit" ? "+" : "−"}{money(selected.amount)}</strong><span className="pill">{selected.status.toUpperCase()}</span></div>
+      <div className="receipt-details">
+        <ReceiptRow label="Transaction description" value={selected.description}/>
+        <ReceiptRow label="Transaction date" value={selected.date}/>
+        <ReceiptRow label="Transaction reference" value={selected.id}/>
+        <ReceiptRow label="Account holder (sample)" value={state.name}/>
+        <ReceiptRow label="Account label" value={state.accountLabel}/>
+        <ReceiptRow label="Account number (sample)" value={state.accountNumber || state.maskedId || "Not set"}/>
+        <ReceiptRow label="Customer ID (sample)" value={state.customerId || "Not set"}/>
+        <ReceiptRow label="Branch (sample)" value={state.branch || "Not set"}/>
+        <ReceiptRow label="IFSC-format code (sample)" value={state.ifsc || "Not set"}/>
+      </div>
+      <p className="receipt-warning">DEMO ONLY · This receipt is generated from editable data stored in this browser. It does not verify that money was sent or received.</p>
+    </article> : <section className="card"><p>No saved transactions are available. Add sample activity or import validated sample data in Settings.</p></section>}
+    <style jsx global>{`@media print { header, nav, .notice, .no-print, button { display:none !important; } body { background:#fff !important; } .layout,.main { display:block !important; margin:0 !important; padding:0 !important; } .receipt-card { box-shadow:none !important; border:1px solid #ccc !important; break-inside:avoid; } } .receipt-brand{display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--border);padding-bottom:16px}.receipt-brand h2{margin:0}.receipt-amount{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:22px 0;border-bottom:1px solid var(--border)}.receipt-amount strong{font-size:1.8rem}.receipt-details{padding-top:12px}.receipt-warning{margin-top:24px;padding:12px;border:1px dashed #a44;font-size:.85rem;color:#8b2929}`}</style>
   </Shell>;
 }
-
+function ReceiptRow({label,value}:{label:string;value:string}) { return <div className="row"><span className="muted">{label}</span><strong>{value}</strong></div>; }
