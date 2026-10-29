@@ -5,6 +5,10 @@ const isWindows = process.platform === "win32";
 const npm = isWindows ? "npm.cmd" : "npm";
 const host = "127.0.0.1";
 const port = Number(process.env.VERIFY_PORT || 3100);
+if (!Number.isInteger(port) || port < 1024 || port > 65535) {
+  console.error(`Invalid VERIFY_PORT: ${process.env.VERIFY_PORT}. Choose an integer from 1024 to 65535.`);
+  process.exit(1);
+}
 const baseUrl = `http://${host}:${port}`;
 const checks = [
   ["data validation", ["run", "test:data"]],
@@ -31,7 +35,7 @@ function runSync(label, args, env = process.env) {
 async function waitForServer(child, timeoutMs = 45000) {
   const started = Date.now();
   while (Date.now() - started < timeoutMs) {
-    if (child.exitCode !== null) throw new Error(`Next.js server exited with code ${child.exitCode}`);
+    if (child.exitCode !== null || child.signalCode !== null) throw new Error(`Next.js server exited${child.exitCode !== null ? ` with code ${child.exitCode}` : ` after signal ${child.signalCode}`}`);
     try {
       const response = await fetch(baseUrl, { signal: AbortSignal.timeout(1500) });
       if (response.ok) return;
@@ -62,8 +66,7 @@ async function main() {
   try {
     await waitForServer(server);
     if (!runSync("route smoke test", ["run", "smoke-test"], { ...process.env, SMOKE_BASE_URL: baseUrl })) {
-      process.exitCode = 1;
-      return;
+      throw new Error("Route smoke test failed.");
     }
   } catch (error) {
     console.error(`FAILED: production server / smoke-test setup: ${error instanceof Error ? error.message : String(error)}`);
@@ -75,7 +78,13 @@ async function main() {
         const timer = setTimeout(resolve, 3000);
         server.once("exit", () => { clearTimeout(timer); resolve(); });
       });
-      if (server.exitCode === null) server.kill("SIGKILL");
+      if (server.exitCode === null && server.signalCode === null) {
+        server.kill("SIGKILL");
+        await new Promise(resolve => {
+          if (server.exitCode !== null || server.signalCode !== null) return resolve();
+          server.once("exit", resolve);
+        });
+      }
     }
   }
 
