@@ -151,5 +151,12 @@ console.log(JSON.stringify({
   detectedReferencesFound: refsFound.length,
   detectedReferencesMissing: refsMissing.length,
   missingManifestSamples: manifestMissing.slice(0, 10).map((x) => x.path),
-  missingReferenceSamples: refsMissing.slice(0, 10)
+  missingReferenceSamples: refsMissing.slice(0, 10),
+  auditDecision: (manifestMissing.length || refsMissing.length || (routeSummary["Needs route implementation"] || 0)) ? "FAIL" : "PASS_STATIC_RECONCILIATION_ONLY"
 }, null, 2));
+if (manifestMissing.length || refsMissing.length || (routeSummary["Needs route implementation"] || 0)) {
+  console.error("Migration completeness audit failed: unresolved manifest assets, literal asset references, or source routes remain. See the generated report.");
+  process.exitCode = 1;
+} else {
+  console.log("Static reconciliation passed; this does not establish APK visual or functional parity.");
+}
