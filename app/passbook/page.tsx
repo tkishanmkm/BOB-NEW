@@ -36,7 +36,7 @@ export default function Passbook() {
     <div className="page-heading apk-page-heading"><ApkAssetIcon asset="passbook" size={30}/><div><p className="eyebrow">ACCOUNT ACTIVITY</p><h1>Passbook</h1><p className="muted">Search and review transaction records saved in this browser.</p></div></div>
     <div className="notice">SAMPLE WORKSPACE — pending simulation entries are not completed payments. Only posted sample entries contribute to the calculated balance.</div>
     <section className="card passbook-summary">
-      <div><span className="muted">Account</span><strong>{state.accountLabel}</strong><small>{state.maskedId}</small></div>
+      <div><span className="muted">Account</span><strong>{state.accountLabel}</strong><small>{(() => { const value = state.accountNumber || state.maskedId; const digits = value.replace(/\D/g, ""); return digits.length >= 4 ? "•••• " + digits.slice(-4) : value ? "••••" : "Not set"; })()}</small></div>
       <div><span className="muted">Posted credits in results</span><strong className="amount-credit">{money(credits)}</strong></div>
       <div><span className="muted">Posted debits in results</span><strong className="amount-debit">{money(debits)}</strong></div>
     </section>
