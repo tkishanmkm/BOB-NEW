@@ -57,10 +57,13 @@ async function main() {
   const server = spawn(process.execPath, [nextCli, "start", "--hostname", host, "--port", String(port)], {
     stdio: "inherit", env: process.env, shell: false,
   });
+  let serverError = null;
+  server.on("error", error => { serverError = error; });
   try {
     const started = Date.now();
     let ready = false;
     while (Date.now() - started < 45000) {
+      if (serverError) throw new Error(`Could not start Next.js server: ${serverError.message}`);
       if (server.exitCode !== null || server.signalCode !== null) throw new Error(`Next.js server exited${server.exitCode !== null ? ` with code ${server.exitCode}` : ` after signal ${server.signalCode}`}`);
       try {
         const response = await fetch(baseUrl, { signal: AbortSignal.timeout(1500) });
@@ -79,7 +82,7 @@ async function main() {
     results.push({ label: "production route smoke test", code: 1 });
     console.error(`FAILED: production server / smoke-test setup: ${error instanceof Error ? error.message : String(error)}`);
   } finally {
-    if (server.exitCode === null && server.signalCode === null) {
+    if (!serverError && server.exitCode === null && server.signalCode === null) {
       server.kill("SIGTERM");
       await new Promise(resolve => { const timer = setTimeout(resolve, 3000); server.once("exit", () => { clearTimeout(timer); resolve(); }); });
       if (server.exitCode === null && server.signalCode === null) {
