@@ -262,6 +262,11 @@ export async function deleteLocalRecord(key:string):Promise<void>{
   const operation=saveQueue.then(async()=>{
     let db:IDBDatabase|undefined;
     try{
+      // Remove the legacy copy first. If it remains after deleting IndexedDB,
+      // a later read could migrate the supposedly deleted record back.
+      try{localStorage.removeItem(key)}catch{
+        throw new Error("Could not remove the legacy local copy; the record was not deleted.");
+      }
       db=await openDB();
       await new Promise<void>((resolve,reject)=>{
         const tx=db!.transaction(STORE,"readwrite");
@@ -270,7 +275,6 @@ export async function deleteLocalRecord(key:string):Promise<void>{
         tx.onerror=()=>reject(tx.error||new Error("Could not delete local records."));
         tx.onabort=()=>reject(tx.error||new Error("Local record deletion was cancelled."));
       });
-      try{localStorage.removeItem(key)}catch{}
     }finally{db?.close()}
   });
   saveQueue=operation.then(()=>undefined,()=>undefined);
