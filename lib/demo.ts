@@ -69,6 +69,27 @@ function readRecord(db:IDBDatabase):Promise<unknown>{
 function putRecord(db:IDBDatabase,value:State):Promise<void>{
   return new Promise((resolve,reject)=>{const tx=db.transaction(STORE,"readwrite");tx.objectStore(STORE).put({id:STATE_RECORD,value});tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error||new Error("Could not save local records."));tx.onabort=()=>reject(tx.error||new Error("Local save was cancelled."))});
 }
+function putRecordIfUnchanged(db:IDBDatabase,value:State,expected:State):Promise<boolean>{
+  return new Promise((resolve,reject)=>{
+    const tx=db.transaction(STORE,"readwrite");
+    const store=tx.objectStore(STORE);
+    const request=store.get(STATE_RECORD);
+    let stale=false;
+    request.onsuccess=()=>{
+      const stored=request.result?.value;
+      if(!valid(stored)||JSON.stringify(stored)!==JSON.stringify(expected)){
+        stale=true;
+        try{tx.abort()}catch{}
+        return;
+      }
+      store.put({id:STATE_RECORD,value});
+    };
+    request.onerror=()=>reject(request.error||new Error("Could not verify the latest saved account state."));
+    tx.oncomplete=()=>resolve(!stale);
+    tx.onerror=()=>{if(stale)resolve(false);else reject(tx.error||new Error("Could not save local records."))};
+    tx.onabort=()=>{if(stale)resolve(false);else reject(tx.error||new Error("Local save was cancelled."))};
+  });
+}
 export async function hydrate():Promise<State>{
   if(typeof window==="undefined")return cache;
   if(hydrationPromise)return hydrationPromise;
@@ -150,7 +171,13 @@ export async function saveState(v:State):Promise<boolean>{
         return false;
       }
       db=await openDB();
-      await putRecord(db,next);
+      // Compare-and-write inside one IndexedDB read/write transaction. A stale tab
+      // must not replace newer data written by another tab.
+      const wrote=await putRecordIfUnchanged(db,next,cache);
+      if(!wrote){
+        window.dispatchEvent(new CustomEvent("bob-new-storage-error",{detail:"Another tab changed the saved account data. Your edit was not saved; refresh this page before retrying."}));
+        return false;
+      }
       cache=next;
       notifyStateChange();
       return true;
