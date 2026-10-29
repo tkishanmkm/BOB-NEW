@@ -574,3 +574,45 @@ img,svg,video,canvas{max-width:100%}
   .statement-table th,.statement-table td{display:table-cell!important;padding:5px 4px!important;border-bottom:1px solid #ddd!important;text-align:left!important}
   .statement-table td::before{content:none!important}
 }
+
+
+/* Step 21 — receipt actions and details optimized for narrow phone screens. */
+@media(max-width:650px){
+  .receipt-page-heading{display:grid;grid-template-columns:38px minmax(0,1fr);align-items:start;gap:10px}
+  .receipt-page-heading>.apk-asset-icon{grid-row:1;grid-column:1}
+  .receipt-page-heading>div{grid-row:1;grid-column:2;min-width:0}
+  .receipt-page-heading .statement-print-button{grid-row:2;grid-column:1 / -1;width:100%;min-height:46px;margin:2px 0 0}
+  .receipt-selector{padding:14px}
+  .receipt-selector .field{display:grid;gap:8px}
+  .receipt-selector select{width:100%;min-width:0;max-width:100%;white-space:normal}
+  .receipt-paper{padding:14px;border-radius:14px}
+  .receipt-brand{align-items:flex-start;gap:9px;padding-bottom:13px}
+  .receipt-brand>img{width:34px;height:34px;flex:0 0 34px}
+  .receipt-brand>div{flex:1 1 auto}
+  .receipt-brand strong{font-size:13px;line-height:1.35;overflow-wrap:anywhere}
+  .receipt-brand small{font-size:10px;line-height:1.4}
+  .receipt-sample-stamp{flex:0 0 auto;margin-left:0;transform:none;padding:4px 5px;font-size:9px;letter-spacing:.04em}
+  .receipt-status{padding:22px 2px 18px}
+  .receipt-status>span{font-size:10px;letter-spacing:.04em}
+  .receipt-status h2{font-size:clamp(25px,8vw,34px);overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+  .receipt-status p{font-size:13px;line-height:1.5}
+  .receipt-section-heading{gap:8px}
+  .receipt-section-heading h2{font-size:18px}
+  .receipt-grid{grid-template-columns:minmax(0,1fr);gap:0}
+  .receipt-field{display:grid;grid-template-columns:minmax(0,40%) minmax(0,1fr);align-items:start;gap:10px;padding:11px 0}
+  .receipt-field span{font-size:11px;line-height:1.45}
+  .receipt-field strong{min-width:0;font-size:12px;line-height:1.5;text-align:right;overflow-wrap:anywhere;word-break:break-word;font-variant-numeric:tabular-nums}
+  .receipt-disclaimer{font-size:10px;line-height:1.6}
+}
+@media(max-width:350px){
+  .receipt-paper{padding:11px}
+  .receipt-brand{flex-wrap:wrap}
+  .receipt-sample-stamp{margin-left:auto}
+  .receipt-field{grid-template-columns:minmax(0,1fr);gap:4px}
+  .receipt-field strong{text-align:left}
+}
+@media print{
+  .receipt-page-heading .statement-print-button{display:none!important}
+  .receipt-paper{width:100%!important;max-width:none!important}
+  .receipt-field{break-inside:avoid}
+}
