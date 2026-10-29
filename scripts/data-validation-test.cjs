@@ -35,6 +35,7 @@ function test(name, fn) {
   console.log("PASS " + name);
 }
 
+test("state saves use an atomic stale-write guard for cross-tab consistency", () => { assert.match(source, /function putRecordIfUnchanged\(/); assert.match(source, /JSON\.stringify\(stored\)!==JSON\.stringify\(expected\)/); assert.match(source, /const expected:State=read\(\)/); assert.match(source, /putRecordIfUnchanged\(db,next,expected\)/); });
 test("accepts the default demo account", () => assert.equal(api.valid(validAccount()), true));
 test("rejects impossible ISO transaction dates", () => {
   const s = validAccount(); s.transactions[0].date = "2026-02-30";
