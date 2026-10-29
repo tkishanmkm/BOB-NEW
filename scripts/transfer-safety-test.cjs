@@ -16,6 +16,14 @@ test("transfer flow is explicitly labelled as a local prototype", () => {
   assert.match(transfer, /No money is moved/i);
 });
 
+test("transfer page hydrates account state before enabling review or finish", () => {
+  assert.match(transfer, /import \{ balance, hydrate,/);
+  assert.match(transfer, /void hydrate\(\)\.then\(/);
+  assert.match(transfer, /if \(saveLock\.current \|\| saving \|\| !stateReady\) return/);
+  assert.match(transfer, /disabled=\{!stateReady \|\| saving\}/);
+  assert.match(transfer, /Saved account data could not be loaded/);
+});
+
 test("transfer amount must be positive and have at most two decimals", () => {
   assert.match(transfer, /amount <= 0/);
   assert.match(transfer, /no more than two decimal places/i);
