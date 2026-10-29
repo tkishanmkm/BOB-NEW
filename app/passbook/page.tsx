@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { Shell } from "@/components/app-shell";
 import { ApkAssetIcon } from "@/components/apk-asset-map";
-import { read, money, maskAccountIdentifier, sortTransactionsNewestFirst, postedTotal, type State } from "@/lib/demo";
+import { hydrate, read, money, maskAccountIdentifier, sortTransactionsNewestFirst, postedTotal, type State } from "@/lib/demo";
 
 type Filter = "all" | "credit" | "debit";
 type StatusFilter = "all" | "posted" | "pending";
@@ -15,12 +15,21 @@ export default function Passbook() {
   const [to, setTo] = useState("");
   const [type, setType] = useState<Filter>("all");
   const [status, setStatus] = useState<StatusFilter>("all");
+  const [stateReady, setStateReady] = useState(false);
+  const [loadError, setLoadError] = useState(false);
   useEffect(() => {
+    let active = true;
     const refresh = () => setState(read());
-    refresh();
+    void hydrate().then(() => {
+      if (!active) return;
+      refresh();
+      setStateReady(true);
+    }).catch(() => {
+      if (active) setLoadError(true);
+    });
     window.addEventListener("bob-new-state-change", refresh);
     window.addEventListener("storage", refresh);
-    return () => { window.removeEventListener("bob-new-state-change", refresh); window.removeEventListener("storage", refresh); };
+    return () => { active = false; window.removeEventListener("bob-new-state-change", refresh); window.removeEventListener("storage", refresh); };
   }, []);
   const invalidRange = Boolean(from && to && from > to);
   const transactions = useMemo(() => sortTransactionsNewestFirst(state.transactions)
@@ -31,6 +40,8 @@ export default function Passbook() {
   const credits = postedTotal(transactions, "credit");
   const debits = postedTotal(transactions, "debit");
   function clearFilters() { setQuery(""); setFrom(""); setTo(""); setType("all"); setStatus("all"); }
+  if (loadError) return <Shell><section className="card"><h1>Passbook unavailable</h1><p className="error" role="alert">Saved account data could not be loaded. The passbook is hidden to avoid displaying unverified default data. Check browser storage, then reload.</p><button type="button" onClick={() => window.location.reload()}>Retry</button></section></Shell>;
+  if (!stateReady) return <Shell><section className="card" role="status"><h1>Loading passbook</h1><p className="muted">Loading saved account and transaction data from this browser…</p></section></Shell>;
   return <Shell>
     <div className="page-heading apk-page-heading"><ApkAssetIcon asset="passbook" size={30}/><div><p className="eyebrow">ACCOUNT ACTIVITY</p><h1>Passbook</h1><p className="muted">Search and review transaction records saved in this browser.</p></div></div>
     <div className="notice">SAMPLE WORKSPACE — pending simulation entries are not completed payments. Only posted sample entries contribute to the calculated balance.</div>
