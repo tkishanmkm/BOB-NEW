@@ -44,6 +44,18 @@ test("rejects duplicate transaction IDs", () => {
   const s = validAccount(); s.transactions[1].id = s.transactions[0].id;
   assert.equal(api.valid(s), false);
 });
+test("rejects empty transaction descriptions", () => {
+  const s = validAccount(); s.transactions[0].description = "   ";
+  assert.equal(api.valid(s), false);
+});
+test("rejects transaction amounts with more than two decimals", () => {
+  const s = validAccount(); s.transactions[0].amount = 1.234;
+  assert.equal(api.valid(s), false);
+});
+test("rejects opening balances with more than two decimals", () => {
+  const s = validAccount(); s.openingBalance = 100.001;
+  assert.equal(api.valid(s), false);
+});
 test("rejects invalid demo PIN shape", () => {
   const s = validAccount(); s.demoPin = "12ab";
   assert.equal(api.valid(s), false);
