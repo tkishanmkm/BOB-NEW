@@ -11,7 +11,7 @@ const routes = [
   "/personal-details", "/personal-loan-info", "/positive-pay", "/profile",
   "/recharge", "/save", "/scan", "/security", "/settings", "/shop-and-pay",
   "/shop", "/statement-analysis", "/switch-to-classic", "/upi", "/video-call",
-  "/watch-demo", "/payees", "/help-support", "/receipt", "/transfers",
+  "/watch-demo", "/payees", "/help-support", "/receipt", "/statement", "/transfers",
   "/account-details", "/demo-documents", "/payment-successful",
 ];
 const requiredContent = new Map([
