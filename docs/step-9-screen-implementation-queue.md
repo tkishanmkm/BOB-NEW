@@ -143,3 +143,11 @@ Implemented in `app/style.css` on `main`:
 - Transaction amount, account details, identifiers, status and long references use compact two-column labeled rows with safe wrapping. Extra-narrow screens switch detail rows to a single column.
 - Print-specific rule hides the on-screen print action and keeps receipt fields from splitting across pages where possible.
 - Static verification to be completed against the committed stylesheet. Real iOS/Android rendering, print pagination and production build remain untested.
+
+## Step 22 — mobile transfer entry and review
+
+- Added a decimal input hint to the amount field so mobile browsers can offer a suitable numeric keyboard.
+- Transfer review and details use phone-width single-column fields, readable step indicators, full-width actions, and wrapping for recipient/account/reference values on narrow devices.
+- Fixed sample transfer date creation to use the device's local calendar date instead of slicing a UTC ISO timestamp, avoiding date shifts near timezone boundaries.
+- Existing validation, pending-demo labeling, and duplicate-submit lock remain in place. This is a local prototype flow and does not send a payment.
+- Static verification only; no production build or real-device browser test has been run.
