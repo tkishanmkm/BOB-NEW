@@ -567,3 +567,28 @@ Observed:
 - [ ] Run production build and route smoke tests.
 
 No runtime code changed in Step 30. Desktop Commander remained offline; no original APK screenshots, browser run, build, or automated tests were available for this step.
+
+
+## Step 31 — transfer, beneficiary, result and receipt static review (2026-10-29)
+
+Reviewed `app/transfers/page.tsx`, `app/payees/page.tsx`, `app/payment-successful/page.tsx`, and `app/receipt/page.tsx`. This is a static source review; it does not establish APK visual parity or successful runtime behavior.
+
+### Findings and action
+
+- **Beneficiary ID browser compatibility:** `/payees` called `crypto.randomUUID()` directly, while the transfer flow already had a fallback for browsers without that API. Updated `app/payees/page.tsx` to use `createLocalId()`, which uses `crypto.randomUUID()` when available and a local fallback otherwise. This avoids a direct API dependency in the beneficiary-add action. This fallback is for local prototype record identity, not security tokens.
+- **Safe saved-data handling:** beneficiary load/validation failures disable edits rather than replacing unreadable records with an empty list. Transfer workflow also validates loaded payees and guards duplicate saves with a lock.
+- **Transfer simulation:** the transfer workflow checks amount format, account/code formats, sample balance and pending sample debits, then records a pending debit locally. Its result page correctly states no payment was made and will not substitute another transaction when an explicit ID is missing.
+- **Receipt selection:** a supplied transaction ID is treated as authoritative; a missing ID does not silently display a different transaction. Without an ID, the receipt page can choose the latest transaction.
+- **Branding consistency:** receipt preview still uses `Daybook · Sample receipt` and `/assets/daybook-mark.svg`, unlike the current BOB-NEW demo application title. Keep the demo clearly independent and non-affiliated; align this only through a deliberate demo-brand decision, not by presenting it as a bank-issued receipt.
+- **Input and visual parity:** the recipient, beneficiary and receipt field order, exact APK labels, button hierarchy, validation messages, confirmation screen, and print/PDF layout remain unverified against original APK screenshots.
+
+### Required verification
+
+- [x] Add a fallback for beneficiary record ID creation when `crypto.randomUUID` is unavailable.
+- [ ] Build and lint the branch; confirm no TypeScript or formatting regressions.
+- [ ] Test adding/removing a beneficiary, reload persistence, corrupt stored data, and repeated submissions.
+- [ ] Test transfer amount boundaries, insufficient sample balance, pending debit reservation, duplicate click prevention and result-ID mismatch.
+- [ ] Print/save receipt on desktop and mobile; verify no shell navigation leaks into output and long values wrap.
+- [ ] Compare transfer, beneficiary, result and receipt screens with authorized APK screenshots at matched mobile dimensions.
+
+No real payment integration was added. All actions remain local demo simulations. Desktop Commander is still unavailable, and no build, browser, device or print test was run during this step.
