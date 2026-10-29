@@ -34,7 +34,40 @@ function collectPageRoutes(directory, segments = []) {
   }
 }
 collectPageRoutes(appRoot);
+
+// The smoke list is a separate source of expected routes. A catch-all page can
+// return HTTP 200 even when the requested feature has no actual configuration.
+const smokeFile = path.join(root, "scripts", "smoke-test.mjs");
+const smokeSource = fs.existsSync(smokeFile) ? fs.readFileSync(smokeFile, "utf8") : "";
+const smokeRoutesBlock = smokeSource.match(/const routes = \[([\\s\\S]*?)\\];/);
+const smokeRoutes = smokeRoutesBlock
+  ? [...smokeRoutesBlock[1].matchAll(/"([^"]+)"/g)].map((m) => m[1])
+  : [];
+const pageKeysBlock = source.match(/const pages: Record<string, \{[\\s\\S]*?\}> = \{([\\s\\S]*?)\\n\};/);
+const configuredFeatures = new Set(
+  pageKeysBlock
+    ? [...pageKeysBlock[1].matchAll(/^\\s*["']?([a-z0-9-]+)["']?\\s*:\\s*\\{/gm)].map((m) => m[1])
+    : []
+);
+const directRoutes = new Set([...appRoutes]);
+const featureRoute = (route) => route !== "/" && configuredFeatures.has(route.replace(/^\\//, ""));
 let failures = 0;
+let genericRoutes = 0;
+for (const route of smokeRoutes) {
+  if (directRoutes.has(route)) {
+    console.log(`PASS smoke route has a direct page: ${route}`);
+  } else if (featureRoute(route)) {
+    genericRoutes++;
+    console.warn(`WARN smoke route is served by generic FeaturePage, not a dedicated screen: ${route}`);
+  } else {
+    failures++;
+    console.error(`FAIL smoke route has no direct page or configured feature: ${route}`);
+  }
+}
+if (!smokeRoutes.length) {
+  failures++;
+  console.error("FAIL could not locate the route list in scripts/smoke-test.mjs.");
+}
 
 for (const action of uniqueActions) {
   const target = links.get(action);
@@ -53,7 +86,7 @@ for (const action of uniqueActions) {
     console.log(`PASS "${action}" -> ${target}`);
   }
 }
-console.log(`Checked ${uniqueActions.length} unique action labels.`);
+console.log(`Checked ${uniqueActions.length} unique action labels and ${smokeRoutes.length} smoke-test routes; ${genericRoutes} use generic feature screens.`);
 if (failures) {
   console.error(`Feature route audit failed: ${failures} issue(s).`);
   process.exit(1);
