@@ -26,7 +26,7 @@ export default function PaymentSuccessfulPage() {
   // A supplied ID is authoritative. Do not show a different transfer if it is missing.
   const latest: Tx | undefined = requestedId
     ? state?.transactions.find((tx) => tx.id === requestedId && isTransferResult(tx))
-    : state?.transactions.slice().reverse().find(isTransferResult);
+    : state?.transactions.map((tx, index) => ({ tx, index })).sort((a, b) => b.tx.date.localeCompare(a.tx.date) || b.index - a.index).map(({ tx }) => tx).find(isTransferResult);
 
   return <Shell>
     <section className="success-panel" aria-labelledby="result-title">
