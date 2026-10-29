@@ -378,3 +378,8 @@ html{scroll-behavior:smooth;scroll-padding-top:16px}
 .login-footnote{margin:18px 0 0;font-size:12px;line-height:1.6}
 .login-card .error{margin:10px 0;font-size:13px}
 @media(max-width:480px){.login-page{padding:16px}.login-card{padding:24px 20px;border-radius:16px}}
+
+/* Prevent intrinsic grid sizing from clipping the login card on narrow screens. */
+.login-page{width:100%;min-width:0;overflow-x:hidden}
+.login-card{width:100%;min-width:0;max-width:440px}
+.login-card p,.login-footnote{overflow-wrap:anywhere}
