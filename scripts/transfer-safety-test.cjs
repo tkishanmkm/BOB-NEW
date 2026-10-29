@@ -21,9 +21,20 @@ test("transfer amount must be positive and have at most two decimals", () => {
   assert.match(transfer, /no more than two decimal places/i);
 });
 
-test("transfer is blocked when sample balance is insufficient", () => {
+test("transfer is blocked when available sample balance is insufficient", () => {
   assert.match(transfer, /value > available/);
-  assert.match(transfer, /Insufficient sample balance/);
+  assert.match(transfer, /Insufficient (?:available )?sample balance/i);
+});
+
+test("pending demo debits are reserved to prevent overspending", () => {
+  assert.match(transfer, /type === "debit" && t\.status === "pending"/);
+  assert.match(transfer, /pending demo debits/i);
+});
+
+test("transfer uses a duplicate-submit lock", () => {
+  assert.match(transfer, /saveLock\.current \|\| saving/);
+  assert.match(transfer, /saveLock\.current = true/);
+  assert.match(transfer, /saveLock\.current = false/);
 });
 
 test("recorded transfer is pending and clearly identified as a demo", () => {
