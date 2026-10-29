@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { Shell } from "@/components/app-shell";
 import { ApkAssetIcon } from "@/components/apk-asset-map";
-import { read, money, sortTransactionsNewestFirst, type State, type Tx } from "@/lib/demo";
+import { read, money, maskAccountIdentifier, sortTransactionsNewestFirst, type State, type Tx } from "@/lib/demo";
 
 export default function ReceiptPage() {
   const [state, setState] = useState<State>(read());
@@ -32,8 +32,7 @@ export default function ReceiptPage() {
   }
   const receiptRef = selected ? selected.id : "—";
   const accountValue = state.accountNumber || state.maskedId || "";
-  const accountDigits = accountValue.replace(/\D/g, "");
-  const maskedAccount = accountDigits.length >= 4 ? `•••• ${accountDigits.slice(-4)}` : accountValue ? "••••" : "Not set in Settings";
+  const maskedAccount = maskAccountIdentifier(accountValue,"Not set in Settings");
   return <Shell>
     <div className="page-heading apk-page-heading receipt-page-heading"><ApkAssetIcon asset="statement" size={30}/><div><p className="eyebrow">TRANSACTION SERVICES</p><h1>Transaction receipt</h1><p className="muted">Print a receipt preview for a saved local sample transaction.</p></div><button type="button" className="statement-print-button" onClick={printReceipt}>Print / Save PDF</button></div>
     <div className="notice">SAMPLE RECEIPT — NOT BANK-ISSUED. This preview uses editable browser data and is not proof of a real transfer or payment.</div>
