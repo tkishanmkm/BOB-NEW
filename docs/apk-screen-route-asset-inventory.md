@@ -456,3 +456,53 @@ No runtime code was changed in Step 27. No build, browser screenshot, or APK run
 - [ ] Run production build and root/splash route smoke tests.
 
 No browser or APK runtime test was performed in this step.
+
+
+## Step 29 — shared header, route navigation and bottom-tab static audit (2026-10-29)
+
+Scope: static inspection of `components/app-shell.tsx` and the mobile-shell rules in `app/style.css`. This step records current behavior and safe acceptance criteria; it does not infer the APK's exact chrome.
+
+### Current implementation observed in source
+
+- The shared header renders a logo, fixed title `BOB World 2.0 · DEMO`, a `LOCAL WORKSPACE` badge on wider screens, and an Exit action.
+- A global prototype disclosure appears beneath the header on every shell page.
+- Desktop navigation renders a long route index; CSS hides it at the mobile breakpoint (650px).
+- The mobile tab bar has five fixed destinations: Dashboard, Transfers, Passbook, Payees and More. Its icons are text glyphs rather than verified APK-matched image/vector assets.
+- The header has no route-aware title or in-shell Back control. Whether the APK uses a back arrow, route-specific title, action icons, or a different header on each screen is unknown.
+- The bottom tab bar is fixed and safe-area-aware; page content receives bottom padding. The current source uses a 650px breakpoint, while other layout rules also use 720px, so cross-breakpoint consistency needs browser verification.
+- Active state is based on exact path or a child path. The root destination is not a tab, and the active tab behavior for nested routes should be checked intentionally rather than treated as APK parity.
+- These are implementation observations only. They do not prove the original app uses these destinations, labels, icons, or a shared header on every route.
+
+### Shell parity register
+
+| Element | Current implementation | Required evidence/check | Status |
+|---|---|---|---|
+| Top safe area | CSS header padding; no explicit APK status-bar model | Cold-start and in-page screenshots on same device/viewport | blocked: APK evidence |
+| Header/logo | Fixed demo title and one logo asset | Confirm per-screen logo/title/back/actions, size, baseline and margins | blocked: APK evidence |
+| Demo disclosure | Persistent prototype notice | Preserve honest non-affiliation disclosure; compare placement without imitating bank-issued UI | implementation requirement |
+| Exit action | Clears demo session and routes to root | Verify keyboard/touch target, confirm no unsaved changes are lost | source test needed |
+| Desktop route list | Long route index, hidden on mobile | Verify target is phone-only and no desktop layout is expected | user requirement; browser test needed |
+| Bottom tabs | Five destinations with glyph icons | Confirm APK tab count, labels, icon assets, selected state and order | blocked: APK evidence |
+| Bottom safe area | `env(safe-area-inset-bottom)` padding | Test iOS Safari/Android Chrome, browser bars and keyboard | device test needed |
+| Route active state | `aria-current` based on pathname | Test direct loads, nested routes and tab-to-page transitions | browser test needed |
+| Content clearance | Body bottom padding on mobile | Check long forms, focused inputs, dialogs and last item visibility above tabs | browser test needed |
+| Accessibility | Skip link, nav labels, focus outlines, active-page semantics | Keyboard navigation, screen reader and visible focus check | browser test needed |
+
+### Safe next implementation sequence
+
+1. Do not change tab destinations, header structure, logo, colors, or icons without a reference screen.
+2. Obtain a cold-start screenshot and one representative in-page screenshot from the original APK at a known viewport, plus a screenshot of the bottom-tab selected state if the APK has tabs.
+3. Compare the same screens in BOB-NEW at the same viewport and state; record measured dimensions and observed assets.
+4. Make one small shell change at a time, keeping the independent-demo disclosure visible and clearly separate from reference branding.
+5. Run route smoke tests and narrow-screen checks after shell changes, then re-check dashboard, transfer, passbook, statement, receipt and settings.
+
+### Exit criteria
+
+- [x] Current header and navigation behavior described from source.
+- [x] Evidence blockers and mobile test cases recorded.
+- [ ] Original APK chrome/screens captured.
+- [ ] Header and bottom-tab assets/metrics verified.
+- [ ] Matching viewport screenshot comparison completed.
+- [ ] Build and route regression tests passed.
+
+No runtime code changed in Step 29. Desktop Commander was offline at the time of this audit; no APK or browser screenshot was captured and no build/test was run.
