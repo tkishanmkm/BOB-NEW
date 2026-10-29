@@ -3,23 +3,32 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { Shell } from "@/components/app-shell";
 import { ApkAssetIcon } from "@/components/apk-asset-map";
-import { read, money, maskAccountIdentifier, sortTransactionsNewestFirst, type State, type Tx } from "@/lib/demo";
+import { hydrate, read, money, maskAccountIdentifier, sortTransactionsNewestFirst, type State, type Tx } from "@/lib/demo";
 
 export default function ReceiptPage() {
   const [state, setState] = useState<State>(read());
   const [selectedId, setSelectedId] = useState("");
   const [requestedId, setRequestedId] = useState<string | null>(null);
   const [message, setMessage] = useState("");
+  const [stateReady, setStateReady] = useState(false);
+  const [loadError, setLoadError] = useState(false);
   useEffect(() => {
+    let active = true;
     const refresh = () => setState(read());
     const queryId = new URLSearchParams(window.location.search).get("id");
     // Normalize a missing query parameter so the page can default to the latest transaction.
     // A supplied but missing ID remains authoritative and must not select a different row.
     setRequestedId(queryId ?? "");
-    refresh();
+    void hydrate().then(() => {
+      if (!active) return;
+      refresh();
+      setStateReady(true);
+    }).catch(() => {
+      if (active) setLoadError(true);
+    });
     window.addEventListener("bob-new-state-change", refresh);
     window.addEventListener("storage", refresh);
-    return () => { window.removeEventListener("bob-new-state-change", refresh); window.removeEventListener("storage", refresh); };
+    return () => { active = false; window.removeEventListener("bob-new-state-change", refresh); window.removeEventListener("storage", refresh); };
   }, []);
   const rows = useMemo(() => sortTransactionsNewestFirst(state.transactions), [state.transactions]);
   const selected: Tx | undefined = requestedId
@@ -33,6 +42,8 @@ export default function ReceiptPage() {
   const receiptRef = selected ? selected.id : "—";
   const accountValue = state.accountNumber || state.maskedId || "";
   const maskedAccount = maskAccountIdentifier(accountValue,"Not set in Settings");
+  if (loadError) return <Shell><section className="card"><h1>Receipt unavailable</h1><p className="error" role="alert">Saved account data could not be loaded. The receipt is hidden to avoid showing unverified default data. Check browser storage, then reload.</p><button type="button" onClick={() => window.location.reload()}>Retry</button></section></Shell>;
+  if (!stateReady) return <Shell><section className="card" role="status"><h1>Loading receipt</h1><p className="muted">Loading saved account and transaction data from this browser…</p></section></Shell>;
   return <Shell>
     <div className="page-heading apk-page-heading receipt-page-heading"><ApkAssetIcon asset="statement" size={30}/><div><p className="eyebrow">TRANSACTION SERVICES</p><h1>Transaction receipt</h1><p className="muted">Print a receipt preview for a saved local sample transaction.</p></div><button type="button" className="statement-print-button" onClick={printReceipt}>Print / Save PDF</button></div>
     <div className="notice">SAMPLE RECEIPT — NOT BANK-ISSUED. This preview uses editable browser data and is not proof of a real transfer or payment.</div>
