@@ -113,7 +113,7 @@ export default function Transfers() {
         {
           id: transferId,
           date: localCalendarDate(),
-          description: "Demo transfer to " + recipient.trim() + (remark.trim() ? " · " + remark.trim() : ""),
+          description: "Demo transfer to " + recipient.trim() + (remark.trim() ? "\\nNote: " + remark.trim() : ""),
           amount: value,
           type: "debit",
           status: "pending",
