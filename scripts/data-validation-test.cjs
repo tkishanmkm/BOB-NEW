@@ -37,6 +37,12 @@ function test(name, fn) {
   console.log("PASS " + name);
 }
 
+test("workspace restore compares account against the baseline captured at preview", () => {
+  assert.match(source, /const expected:State=expectedCollections\?\.account\?\{\.\.\.expectedCollections\.account,transactions:expectedCollections\.account\.transactions\.map\(t=>\(\{\.\.\.t\}\)\)\}:read\(\)/);
+  const settings = fs.readFileSync("app/settings/page.tsx", "utf8");
+  assert.match(settings, /restoreBaseline:\{account:read\(\),payees:currentPayees,supportMessages:currentSupport\}/);
+  assert.match(settings, /restoreWorkspaceRecords\(workspacePreview\.account,workspacePreview\.beneficiaries,workspacePreview\.supportMessages,workspacePreview\.restoreBaseline\?/);
+});
 test("account JSON import retains the Settings baseline for conflict-safe save", () => {
   const settings = fs.readFileSync("app/settings/page.tsx", "utf8");
   assert.match(settings, /const\[pendingImportBaseline,PIB\]=useState<State\|null>\(null\)/);
@@ -45,7 +51,16 @@ test("account JSON import retains the Settings baseline for conflict-safe save",
   assert.match(settings, /if\(pendingImportBaseline\)B\(\{\.\.\.pendingImportBaseline,transactions:pendingImportBaseline\.transactions\.map\(t=>\(\{\.\.\.t\}\)\)\}\)/);
   assert.match(settings, /Saving will still check whether the saved account changed since this import was started/);
 });
-test("Settings saves compare against the account snapshot loaded with the form", () => {\n  const settings = fs.readFileSync("app/settings/page.tsx", "utf8");\n  assert.match(source, /export async function saveState\(v:State,expectedBaseline\?:State\)/);\n  assert.match(source, /expectedBaseline\?\{\.\.\.expectedBaseline,transactions:expectedBaseline\.transactions\.map\(t=>\(\{\.\.\.t\}\)\)\}:expectedCollections\?\.account\?\?read\(\)/);\n  assert.match(settings, /B\(\{\.\.\.loaded,transactions:loaded\.transactions\.map\(t=>\(\{\.\.\.t\}\)\)\}\)/);\n  assert.match(settings, /saveState\(s,baseline\)/);\n  assert.match(settings, /if\(saved\)\{B\(\{\.\.\.s,transactions:s\.transactions\.map\(t=>\(\{\.\.\.t\}\)\)\}\)/);\n  assert.match(settings, /Your form draft is preserved/);\n});\ntest("beneficiary writes compare against the loaded list to prevent stale-tab overwrites", () => {
+test("Settings saves compare against the account snapshot loaded with the form", () => {
+  const settings = fs.readFileSync("app/settings/page.tsx", "utf8");
+  assert.match(source, /export async function saveState\(v:State,expectedBaseline\?:State\)/);
+  assert.match(source, /expectedBaseline\?\{\.\.\.expectedBaseline,transactions:expectedBaseline\.transactions\.map\(t=>\(\{\.\.\.t\}\)\)\}:expectedCollections\?\.account\?\?read\(\)/);
+  assert.match(settings, /B\(\{\.\.\.loaded,transactions:loaded\.transactions\.map\(t=>\(\{\.\.\.t\}\)\)\}\)/);
+  assert.match(settings, /saveState\(s,baseline\)/);
+  assert.match(settings, /if\(saved\)\{B\(\{\.\.\.s,transactions:s\.transactions\.map\(t=>\(\{\.\.\.t\}\)\)\}\)/);
+  assert.match(settings, /Your form draft is preserved/);
+});
+test("beneficiary writes compare against the loaded list to prevent stale-tab overwrites", () => {
   assert.match(source, /export async function setLocalRecord<T>\(key:string,value:T,expected\?:unknown\)/);
   assert.match(source, /Another tab changed this record\. Refresh before retrying\./);
   assert.match(payeesSource, /setLocalRecord\(KEY,next,list\)/);
