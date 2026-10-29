@@ -50,6 +50,8 @@ test("transfer only proceeds to result after local save succeeds", () => {
 
 test("transfer result omits personal contact details, address, and customer identifier", () => { assert.doesNotMatch(result, /state\.(?:mobile|email|address|customerId)/); assert.match(result, /Personal contact details, address and customer identifiers are intentionally omitted/); });
 
+test("transfer result hydrates saved browser state before looking up a transfer", () => { assert.match(result, /import \{ hydrate,/); assert.match(result, /void hydrate\(\)\.then\(/); assert.match(result, /Saved browser data could not be loaded/); });
+
 test("result page disclaims real payment and bank connectivity", () => {
   assert.match(result, /No payment was made/);
   assert.match(result, /No bank, payment network, recipient or account was contacted/);
