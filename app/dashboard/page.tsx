@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Shell } from "@/components/app-shell";
 import { ApkAssetIcon, type AssetKey } from "@/components/apk-asset-map";
-import { read, balance, money, type State } from "@/lib/demo";
+import { read, balance, money, sortTransactionsNewestFirst, type State } from "@/lib/demo";
 
 const primaryActions: { icon: AssetKey; title: string; detail: string; href: string }[] = [
   { icon: "transfer", title: "Fund transfer", detail: "Create and review a transfer", href: "/transfers" },
@@ -37,7 +37,7 @@ export default function Dashboard() {
     };
   }, []);
 
-  const recent = s.transactions.slice().reverse().slice(0, 5);
+  const recent = sortTransactionsNewestFirst(s.transactions).slice(0, 5);
 
   return <Shell>
     <div className="dashboard-brand-strip" aria-label="BOB World original APK brand asset, displayed in a local demo">
