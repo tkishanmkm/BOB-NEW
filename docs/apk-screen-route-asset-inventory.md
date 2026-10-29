@@ -163,3 +163,11 @@ Never mark the migration 100% complete solely because assets are present or a ro
 - Dashboard service icons in components/apk-asset-map.tsx now reference the direct imported Flutter asset tree. The dashboard also uses dashBoard/bobWorldNTitle.svg as an APK-derived brand reference, with the demo label retained.
 - Static folder grouping highlights: bank_logo_with_bank_code (214), bankLogo (77), dashBoard (50), mySpace (38), activateUpi (33), sendMoney (22), vpaExist (21), pay (19), upi_circle (18), and accountManagement (17).
 - These groupings are purpose hints, not a verified screen map. Exact placement/use still needs runtime screenshot evidence. Assets are kept under their original manifest-relative paths so later page mapping can reuse them without flattening or renaming.
+
+
+## Visual review — dashboard asset correction (2026-10-29)
+
+- Visually inspected `assets/images/dashBoard/bob_bg.png`: it depicts a successful-transfer confirmation on a phone with two people, so it is **not a general dashboard hero/banner**. It should not be presented as dashboard artwork without route evidence. The dashboard now uses its local demo banner copy without this mismatched illustration.
+- `assets/images/dashBoard/bobWorld.svg` is a compact orange BOB World wordmark; `bobWorldNTitle.svg` is the larger branded variant. These are **likely branding assets** based on their visible contents, but their exact on-screen placements remain unconfirmed without an original-app runtime capture.
+- Visually inspected `res/drawable-mdpi-v4/src_assets_newui_splashscreen.png` and `res/drawable/launch_screen.png`; both render as plain white images in the extracted resources. Do not use them as a branded splash artwork.
+- Confidence: `bob_bg.png` meaning = **confirmed by visual contents**; dashboard/splash exact placement = **unknown** until runtime screenshot evidence is available.

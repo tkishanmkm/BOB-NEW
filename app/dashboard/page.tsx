@@ -49,15 +49,7 @@ export default function Dashboard() {
       <Link className="btn dashboard-outline" href="/account-details">View account details →</Link>
     </div>
 
-    <section className="dashboard-source-banner" aria-label="Dashboard visual using an extracted APK asset">
-      <Image
-        className="dashboard-source-banner-art"
-        src="/assets/bob-world/original-assets/assets/images/dashBoard/bob_bg.png"
-        alt=""
-        width={960}
-        height={360}
-        priority
-      />
+    <section className="dashboard-source-banner" aria-label="Local demo account workspace banner">
       <div className="dashboard-source-banner-copy">
         <p className="eyebrow">ACCOUNT WORKSPACE · DEMO</p>
         <h2>Your accounts, activity and services</h2>
