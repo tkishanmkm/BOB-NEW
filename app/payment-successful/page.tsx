@@ -2,18 +2,28 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Shell } from "@/components/app-shell";
-import { money, read, maskAccountIdentifier, sortTransactionsNewestFirst, type State, type Tx } from "@/lib/demo";
+import { hydrate, money, read, maskAccountIdentifier, sortTransactionsNewestFirst, type State, type Tx } from "@/lib/demo";
 
 export default function PaymentSuccessfulPage() {
   const [state, setState] = useState<State | null>(null);
   const [requestedId, setRequestedId] = useState("");
+  const [loadError, setLoadError] = useState(false);
   useEffect(() => {
-    const refresh = () => setState(read());
+    let active = true;
+    let hydrated = false;
+    const refresh = () => { if (hydrated) setState(read()); };
     setRequestedId(new URLSearchParams(window.location.search).get("id") || "");
-    refresh();
     window.addEventListener("bob-new-state-change", refresh);
     window.addEventListener("storage", refresh);
+    void hydrate().then(() => {
+      if (!active) return;
+      hydrated = true;
+      setState(read());
+    }).catch(() => {
+      if (active) setLoadError(true);
+    });
     return () => {
+      active = false;
       window.removeEventListener("bob-new-state-change", refresh);
       window.removeEventListener("storage", refresh);
     };
@@ -34,7 +44,8 @@ export default function PaymentSuccessfulPage() {
       <div className="pill">LOCAL WORKSPACE</div>
       <h1 id="result-title">Transfer result</h1>
       <p><strong>No payment was made.</strong> This is a locally recorded result, not a successful bank transfer. No bank, payment network, recipient or account was contacted.</p>
-      {!state && <p className="muted">Loading saved transfer result…</p>}
+      {!state && !loadError && <p className="muted">Loading saved transfer result…</p>}
+      {loadError && <p className="error" role="alert">Saved browser data could not be loaded. The result has not been verified; check browser storage and reload this page.</p>}
       {state && latest && <>
         <div className="receipt-row"><span>Result</span><b>Pending — not processed</b></div>
         <div className="receipt-row"><span>Reference</span><b>{latest.id}</b></div>
