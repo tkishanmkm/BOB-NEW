@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { Shell } from "@/components/app-shell";
 import { ApkAssetIcon } from "@/components/apk-asset-map";
-import { read, money, type State } from "@/lib/demo";
+import { read, money, sortTransactionsNewestFirst, type State } from "@/lib/demo";
 
 export default function StatementPage() {
   const [state, setState] = useState<State>(read());
@@ -19,10 +19,9 @@ export default function StatementPage() {
     window.addEventListener("storage", refresh);
     return () => { window.removeEventListener("bob-new-state-change", refresh); window.removeEventListener("storage", refresh); };
   }, []);
-  const rows = useMemo(() => state.transactions.map((tx, index) => ({ tx, index }))
-    .filter(({ tx }) => !(from && to && from > to) && (!from || tx.date >= from)).filter(({ tx }) => !to || tx.date <= to)
-    .filter(({ tx }) => type === "all" || tx.type === type).filter(({ tx }) => status === "all" || tx.status === status)
-    .sort((a, b) => b.tx.date.localeCompare(a.tx.date) || b.index - a.index).map(({ tx }) => tx), [state.transactions, from, to, type, status]);
+  const rows = useMemo(() => sortTransactionsNewestFirst(state.transactions)
+    .filter(tx => !(from && to && from > to) && (!from || tx.date >= from)).filter(tx => !to || tx.date <= to)
+    .filter(tx => type === "all" || tx.type === type).filter(tx => status === "all" || tx.status === status), [state.transactions, from, to, type, status]);
   const credits = rows.filter(t => t.type === "credit" && t.status === "posted").reduce((n,t) => n + t.amount, 0);
   const debits = rows.filter(t => t.type === "debit" && t.status === "posted").reduce((n,t) => n + t.amount, 0);
   const closing = state.openingBalance + state.transactions.filter(t => t.status === "posted" && (!to || t.date <= to)).reduce((n,t) => n + (t.type === "credit" ? t.amount : -t.amount),0);
