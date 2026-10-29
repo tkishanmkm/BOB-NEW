@@ -2,12 +2,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { hydrate } from "@/lib/demo";
 
 const DEMO_SESSION_KEY = "bob-new-demo-session-v1";
 export function Shell({children}:{children:React.ReactNode}) {
   const router = useRouter();
+  const pathname = usePathname();
   const [gateChecked, setGateChecked] = useState(false);
   const [allowed, setAllowed] = useState(false);
   const [storageReady, setStorageReady] = useState(false);
@@ -26,15 +27,14 @@ export function Shell({children}:{children:React.ReactNode}) {
     }
     return () => { active = false; window.removeEventListener("bob-new-storage-error", onStorageError); };
   }, [router]);
-  if (!gateChecked || !allowed || !storageReady) return <main className="main" aria-live="polite"><p className="muted">Opening your local account workspaceâ€¦</p></main>;
+  if (!gateChecked || !allowed || !storageReady) return <main className="main" aria-live="polite"><p className="muted">Opening your local account workspace…</p></main>;
   if (storageUnavailable) return <main className="main" role="alert"><section className="card"><h1>Local storage unavailable</h1><p>{storageError}</p><p>Check browser storage availability and retry. If the message reports invalid saved data, do not reset or clear this site’s data; recoverable records may still be present. Account changes remain disabled until the issue is resolved.</p><button type="button" onClick={() => window.location.reload()}>Retry storage</button><button type="button" className="secondary" onClick={() => { try { sessionStorage.removeItem(DEMO_SESSION_KEY); } finally { router.replace("/"); } }}>Exit workspace</button></section></main>;
-  const routes = [["/dashboard","Overview"],["/account-details","Account Details"],["/passbook","Transactions"],["/statement","Statement"],["/receipt","Transaction Receipt"],["/transfers","Fund Transfer"],["/payees","Beneficiaries"],["/help-support","Help & Support"],["/demo-documents","Account Summary"],["/settings","Settings"],["/about","About"],["/account-actions","Account Actions"],["/account-statement","Account Statement"],["/agent-live-chat","Agent Live Chat"],["/ai-assistant-chat","AI Assistant Chat"],["/alerts","Alerts"],["/all-accounts","All Accounts"],["/app-settings","App Settings"],["/bill-pay","Bill Pay"],["/borrow","Borrow"],["/bus-tickets","Bus Tickets"],["/cards","Cards"],["/change-login-pin","Change Login PIN"],["/change-transaction-pin","Change Transaction PIN"],["/cheque-book-request","Cheque Book Request"],["/complaints","Complaints"],["/contact-details","Contact Details"],["/contact-us-help","Contact Us Help"],["/credit-card-apply","Credit Card Apply"],["/current-account-details","Current Account Details"],["/digital-loan","Digital Loan"],["/digital-planner","Digital Planner"],["/faqs","FAQs"],["/fixed-deposit","Fixed Deposit"],["/fund-transfer","Fund Transfer (legacy path)"],["/help","Help"],["/invest","Invest"],["/kyc-details","KYC Details"],["/link-bank","Link Bank"],["/more","More"],["/need-help","Need Help"],["/nominee-registration","Nominee Registration"],["/offers","Offers"],["/personal-details","Personal Details"],["/personal-loan-info","Personal Loan Info"],["/positive-pay","Positive Pay"],["/profile","Profile"],["/recharge","Recharge"],["/save","Save"],["/scan","Scan"],["/security","Security"],["/shop-and-pay","Shop And Pay"],["/shop","Shop"],["/statement-analysis","Statement Analysis"],["/switch-to-classic","Switch To Classic"],["/upi","UPI"],["/video-call","Video Call"],["/watch-demo","Watch Demo"]];
+  const routes = [["/dashboard","Overview"],["/account-details","Account Details"],["/passbook","Transactions"],["/statement","Statement"],["/receipt","Transaction Receipt"],["/transfers","Fund Transfer"],["/payees","Beneficiaries"],["/help-support","Help & Support"],["/demo-documents","Account Summary"],["/settings","Settings"],["/about","About"],["/account-actions","Account Actions"],["/account-statement","Account Statement"],["/agent-live-chat","Agent Live Chat"],["/ai-assistant-chat","AI Assistant Chat"],["/alerts","Alerts"],["/all-accounts","All Accounts"],["/app-settings","App Settings"],["/bill-pay","Bill Pay"],["/borrow","Borrow"],["/bus-tickets","Bus Tickets"],["/cards","Cards"],["/change-login-pin","Change Login PIN"],["/change-transaction-pin","Change Transaction PIN"],["/cheque-book-request","Cheque Book Request"],["/complaints","Complaints"],["/contact-details","Contact Details"],["/contact-us-help","Contact Us Help"],["/credit-card-apply","Credit Card Apply"],["/current-account-details","Current Account Details"],["/digital-loan","Digital Loan"],["/digital-planner","Digital Planner"],["/faqs","FAQs"],["/fixed-deposit","Fixed Deposit"],["/fund-transfer","Fund Transfer (legacy path)"],["/help","Help"],["/invest","Invest"],["/kyc-details","KYC Details"],["/link-bank","Link Bank"],["/more","More"],["/need-help","Need Help"],["/nominee-registration","Nominee Registration"],["/offers","Offers"],["/personal-details","Personal Details"],["/personal-loan-info","Personal Loan Info"],["/positive-pay","Positive Pay"],["/profile","Profile"],["/recharge","Recharge"],["/save","Save"],["/scan","Scan"],["/security","Security"],["/shop-and-pay","Shop And Pay"],["/shop","Shop"],["/statement-analysis","Statement Analysis"],["/switch-to-classic","Switch To Classic"],["/upi","UPI"],["/video-call","Video Call"],["/watch-demo","Watch Demo"]] as const;
   return <>
+    <a className="skip-link" href="#main-content">Skip to page content</a>
     <header><Link className="brand brand-row" href="/dashboard"><Image src="/assets/daybook-mark.svg" width={30} height={30} alt="Daybook mark"/><span>Daybook · DEMO</span></Link><div className="actions"><span className="pill">LOCAL WORKSPACE</span><button type="button" className="secondary" onClick={() => { try { sessionStorage.removeItem(DEMO_SESSION_KEY); } finally { setAllowed(false); router.replace("/"); } }}>Exit</button></div></header>
-    <div className="notice">LOCAL PROTOTYPE â€” records are saved on this device; no bank or payment server is connected.</div>
-    <div className="layout"><nav className="nav" aria-label="Main navigation">{routes.map(([u,l])=><Link href={u} key={u}>{l}</Link>)}</nav><main className="main">{storageError && <div className="info-banner" role="alert">{storageError}</div>}{children}</main></div>
+    <div className="notice">LOCAL PROTOTYPE — records are saved on this device; no bank or payment server is connected.</div>
+    <div className="layout"><nav className="nav" aria-label="Main navigation">{routes.map(([u,l])=><Link href={u} key={u} aria-current={pathname === u || pathname.startsWith(u + "/") ? "page" : undefined}>{l}</Link>)}</nav><main id="main-content" tabIndex={-1} className="main">{storageError && <div className="info-banner" role="alert">{storageError}</div>}{children}</main></div>
   </>;
 }
-
-
 

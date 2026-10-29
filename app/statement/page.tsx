@@ -41,7 +41,7 @@ export default function StatementPage() {
         <label className="field">Transaction type<select value={type} onChange={e=>setType(e.target.value as typeof type)}><option value="all">All types</option><option value="credit">Credits</option><option value="debit">Debits</option></select></label>
         <label className="field">Status<select value={status} onChange={e=>setStatus(e.target.value as typeof status)}><option value="all">All statuses</option><option value="posted">Posted sample entries</option><option value="pending">Pending simulations</option></select></label>
       </div>
-      {message && <p role="alert" className="error">{message}</p>}<p className="muted" aria-live="polite">{rows.length} matching transaction(s).</p>
+      {from && to && from > to && <p role="alert" className="error">Start date must be on or before end date.</p>}{message && <p role="alert" className="error">{message}</p>}<p className="muted" aria-live="polite">{rows.length} matching transaction(s).</p>
     </section>
     <section className="statement-summary-grid">
       <div className="card statement-summary-item"><span>Posted credits in results</span><strong className="amount-credit">{money(credits)}</strong></div>

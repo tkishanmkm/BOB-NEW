@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Shell } from "@/components/app-shell";
@@ -19,10 +19,10 @@ export default function PaymentSuccessfulPage() {
     };
   }, []);
 
-  // Prefer the exact transaction created by the transfer workflow. When the
-  // page is opened directly, show only the newest pending demo transfer.
+  // Prefer the exact posted demo debit created by the transfer workflow.
+  // This is a local simulation and is not a bank payment confirmation.
   const isTransferResult = (tx: Tx) =>
-    tx.type === "debit" && tx.status === "pending" && tx.description.startsWith("Transfer result for ");
+    tx.type === "debit" && tx.status === "posted" && tx.description.startsWith("Demo transfer to ");
   // A supplied ID is authoritative. Do not show a different transfer if it is missing.
   const latest: Tx | undefined = requestedId
     ? state?.transactions.find((tx) => tx.id === requestedId && isTransferResult(tx))

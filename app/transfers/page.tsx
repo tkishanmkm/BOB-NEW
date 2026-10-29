@@ -5,11 +5,17 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Shell } from "@/components/app-shell";
 import { ApkAssetIcon } from "@/components/apk-asset-map";
-import { money, read, saveState, getLocalRecord, type State } from "@/lib/demo";
+import { balance, money, read, saveState, getLocalRecord, type State } from "@/lib/demo";
 
 type Stage = "details" | "review";
 type Payee = { id: string; name: string; bank: string; account: string; code: string };
 const PAYEES_KEY = "bob-new-sample-payees-v1";
+function parseAmount(value: string): number | null {
+  if (!/^(?:0|[1-9][0-9]*)(?:\.[0-9]{1,2})?$/.test(value)) return null;
+  const amount = Number(value);
+  if (!Number.isFinite(amount) || amount <= 0 || !Number.isSafeInteger(Math.round(amount * 100))) return null;
+  return Math.round(amount * 100) / 100;
+}
 function validPayees(value: unknown): Payee[] | null {
   if (!Array.isArray(value) || value.length > 500) return null;
   const ids = new Set<string>();
@@ -62,9 +68,9 @@ export default function Transfers() {
 
   async function finish() {
     if (saving) return;
-    const value = Number(amount);
-    if (!Number.isFinite(value) || value <= 0 || !Number.isFinite(Math.round(value * 100) / 100)) {
-      setError("Enter a valid positive amount.");
+    const value = parseAmount(amount);
+    if (value === null) {
+      setError("Enter a positive amount with no more than two decimal places.");
       setStage("details");
       return;
     }
@@ -74,6 +80,16 @@ export default function Transfers() {
       return;
     }
     const current = read();
+    const available = balance(current);
+    if (!Number.isFinite(available) || available < 0) {
+      setError("The saved sample balance is invalid. Review account settings before continuing.");
+      return;
+    }
+    if (value > available) {
+      setError("Insufficient sample balance. Reduce the transfer amount or update the sample account in Settings.");
+      setStage("details");
+      return;
+    }
     if (current.transactions.length >= 5000) {
       setError("The local transaction history has reached its 5,000-entry limit. No result was recorded.");
       return;
@@ -86,10 +102,10 @@ export default function Transfers() {
         {
           id: transferId,
           date: new Date().toISOString().slice(0, 10),
-          description: "Transfer result for " + recipient.trim() + (remark.trim() ? " · " + remark.trim() : ""),
+          description: "Demo transfer to " + recipient.trim() + (remark.trim() ? " · " + remark.trim() : ""),
           amount: value,
           type: "debit",
-          status: "pending",
+          status: "posted",
         },
       ],
     };
@@ -111,9 +127,9 @@ export default function Transfers() {
 
   function review(e: React.FormEvent) {
     e.preventDefault();
-    const n = Number(amount);
-    if (!recipient.trim() || !bank.trim() || !/^[A-Za-z]{4}0[A-Za-z0-9]{6}$/.test(ifsc) || !/^[0-9]{6,18}$/.test(account) || !Number.isFinite(n) || n <= 0) {
-      setError("Check recipient, account number, code and positive amount.");
+    const n = parseAmount(amount);
+    if (!recipient.trim() || !bank.trim() || !/^[A-Za-z]{4}0[A-Za-z0-9]{6}$/.test(ifsc) || !/^[0-9]{6,18}$/.test(account) || n === null) {
+      setError("Check recipient and account details; enter a positive amount with no more than two decimal places.");
       return;
     }
     setError("");

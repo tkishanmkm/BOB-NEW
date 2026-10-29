@@ -64,4 +64,43 @@ test("rejects unknown support sender", () => {
   const m = message(); m.sender = "admin";
   assert.equal(api.validWorkspaceMessages([m]), false);
 });
+test("rejects beneficiary lists above the supported limit", () => {
+  assert.equal(api.validWorkspacePayees(Array.from({ length: 501 }, (_, i) => ({ ...payee(), id: `p${i}`, account: String(100000000000 + i) }))), false);
+});
+test("rejects support histories above the supported limit", () => {
+  assert.equal(api.validWorkspaceMessages(Array.from({ length: 201 }, (_, i) => ({ ...message(), id: `m${i}` }))), false);
+});
+test("rejects oversized transaction histories", () => {
+  const s = validAccount();
+  s.transactions = Array.from({ length: 5001 }, (_, i) => ({ id: `t${i}`, date: "2026-10-25", description: "Test", amount: 1, type: "debit", status: "posted" }));
+  assert.equal(api.valid(s), false);
+});
+test("rejects malformed account email", () => {
+  const s = validAccount(); s.email = "not-an-email";
+  assert.equal(api.valid(s), false);
+});
+test("rejects unsupported account schema versions", () => {
+  const s = validAccount(); s.schemaVersion = 99;
+  assert.equal(api.valid(s), false);
+});
+test("rejects non-finite transaction amounts", () => {
+  const s = validAccount(); s.transactions[0].amount = Number.POSITIVE_INFINITY;
+  assert.equal(api.valid(s), false);
+});
+test("rejects transaction descriptions over the limit", () => {
+  const s = validAccount(); s.transactions[0].description = "x".repeat(301);
+  assert.equal(api.valid(s), false);
+});
+test("posted transfer debits reduce the calculated sample balance", () => {
+  const s = validAccount();
+  const before = api.balance(s);
+  s.transactions.push({ id: "transfer-test", date: "2026-10-29", description: "Demo transfer to Test", amount: 125.50, type: "debit", status: "posted" });
+  assert.equal(Math.round((before - api.balance(s)) * 100) / 100, 125.50);
+});
+test("pending transfer simulations do not change the calculated sample balance", () => {
+  const s = validAccount();
+  const before = api.balance(s);
+  s.transactions.push({ id: "pending-transfer-test", date: "2026-10-29", description: "Pending demo transfer", amount: 125.50, type: "debit", status: "pending" });
+  assert.equal(api.balance(s), before);
+});
 console.log(`Data validation tests passed: ${count}/${count}`);

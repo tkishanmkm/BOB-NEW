@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { notFound, useParams } from "next/navigation";
@@ -56,7 +56,7 @@ const pages: Record<string, {title:string;description:string;actions:string[]}> 
   "watch-demo":{title:"Watch demo",description:"This workspace is a local prototype; explore the routes from the navigation.",actions:["View overview","Open settings"]}
 };
 const links: Record<string,string> = {
-  "Review sample account details":"/account-details","Open settings":"/settings","Open statement":"/statement","Open sample support":"/help-support","Review saved sample chat":"/help-support","Open help and support":"/help-support","View transactions":"/passbook","View account details":"/account-details","Edit account settings":"/settings","Export sample data":"/settings","Open sample transfer flow":"/transfers","Start sample transfer":"/transfers","Manage beneficiaries":"/payees","Return to overview":"/dashboard","View sample account":"/account-details","Filter transactions":"/statement","Print sample statement":"/statement","Open sample transfer":"/transfers","View overview":"/dashboard"
+  "Review sample account details":"/account-details","Open settings":"/settings","Open account details":"/account-details","Open statement":"/statement","Open sample support":"/help-support","Review saved sample chat":"/help-support","Review pending transactions":"/passbook","Review transactions":"/passbook","Open help and support":"/help-support","View transactions":"/passbook","View account details":"/account-details","Edit account settings":"/settings","Export sample data":"/settings","Open sample transfer flow":"/transfers","Start sample transfer":"/transfers","Manage beneficiaries":"/payees","Return to overview":"/dashboard","View sample account":"/account-details","Filter transactions":"/statement","Print sample statement":"/statement","Open sample transfer":"/transfers","View overview":"/dashboard"
 };
 export default function FeaturePage(){
   const params=useParams<{feature:string}>();

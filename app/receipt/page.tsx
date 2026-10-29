@@ -13,7 +13,9 @@ export default function ReceiptPage() {
   useEffect(() => {
     const refresh = () => setState(read());
     const queryId = new URLSearchParams(window.location.search).get("id");
-    setRequestedId(queryId);
+    // Normalize a missing query parameter so the page can default to the latest transaction.
+    // A supplied but missing ID remains authoritative and must not select a different row.
+    setRequestedId(queryId ?? "");
     refresh();
     window.addEventListener("bob-new-state-change", refresh);
     window.addEventListener("storage", refresh);
