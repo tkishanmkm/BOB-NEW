@@ -57,7 +57,7 @@ export default function StatementPage() {
         <p className="statement-period">Period: {from || "Any date"} — {to || "Any date"}</p><p className="statement-disclaimer">Opening sample balance: {money(state.openingBalance)} · Calculated sample balance through selected end date: {money(closing)}</p>
       </div>
       <div className="statement-table-wrap"><table className="statement-table"><thead><tr><th>Date</th><th>Remarks</th><th>Reference</th><th>Amount (INR)</th><th>Status</th></tr></thead><tbody>
-        {rows.map(t=><tr key={t.id}><td>{t.date}</td><td>{t.description}</td><td>{t.id}</td><td className={t.type === "credit" ? "amount-credit" : "amount-debit"}>{t.type==="credit"?"+":"−"}{money(t.amount)}</td><td><span className={"status-chip " + t.status}>{t.status === "pending" ? "Pending simulation" : "Posted sample"}</span></td></tr>)}
+        {rows.map(t=><tr key={t.id}><td data-label="Date">{t.date}</td><td data-label="Remarks">{t.description}</td><td data-label="Reference">{t.id}</td><td data-label="Amount (INR)" className={t.type === "credit" ? "amount-credit" : "amount-debit"}>{t.type==="credit"?"+":"−"}{money(t.amount)}</td><td data-label="Status"><span className={"status-chip " + t.status}>{t.status === "pending" ? "Pending simulation" : "Posted sample"}</span></td></tr>)}
       </tbody></table>{rows.length === 0 && <p className="muted">No transactions match these filters.</p>}</div>
       <p className="statement-footnote">This is a locally generated sample report. It is not proof of account ownership, a real payment, or bank authorization.</p>
     </section>
