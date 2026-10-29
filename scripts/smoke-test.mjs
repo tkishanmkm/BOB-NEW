@@ -32,11 +32,11 @@ for (const route of routes) {
     const response = await fetch(new URL(route, base), { redirect: "manual" });
     const type = response.headers.get("content-type") || "";
     const html = await response.text();
-    const normalizedHtml = html.replace(/<script[\\s\\S]*?<\\/script>/gi, " ").replace(/<style[\\s\\S]*?<\\/style>/gi, " ");
+    const normalizedHtml = html.replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ");
     const routeFailures = [];
     if (response.status !== 200) routeFailures.push(`status=${response.status}`);
     if (!type.includes("text/html")) routeFailures.push(`content-type=${type || "missing"}`);
-    if (html.length < 500 || !/<html[\\s>]/i.test(html) || !/<body[\\s>]/i.test(html)) routeFailures.push("response is not a substantial HTML document");
+    if (html.length < 500 || !/<html[\s>]/i.test(html) || !/<body[\s>]/i.test(html)) routeFailures.push("response is not a substantial HTML document");
     if (/This page could not be found|404: NOT_FOUND|Application error: a client-side exception has occurred/i.test(normalizedHtml)) routeFailures.push("response contains a not-found or application-error marker");
     const expected = requiredContent.get(route) || [];
     for (const marker of expected) if (!normalizedHtml.toLowerCase().includes(marker.toLowerCase())) routeFailures.push(`missing expected page marker: ${marker}`);
