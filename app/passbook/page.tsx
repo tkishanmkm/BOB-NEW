@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { Shell } from "@/components/app-shell";
 import { ApkAssetIcon } from "@/components/apk-asset-map";
-import { read, money, maskAccountIdentifier, sortTransactionsNewestFirst, type State } from "@/lib/demo";
+import { read, money, maskAccountIdentifier, sortTransactionsNewestFirst, postedTotal, type State } from "@/lib/demo";
 
 type Filter = "all" | "credit" | "debit";
 type StatusFilter = "all" | "posted" | "pending";
@@ -28,8 +28,8 @@ export default function Passbook() {
     .filter(tx => type === "all" || tx.type === type)
     .filter(tx => status === "all" || tx.status === status)
     .filter(tx => !query.trim() || tx.description.toLowerCase().includes(query.trim().toLowerCase()) || tx.date.includes(query.trim()) || tx.id.toLowerCase().includes(query.trim().toLowerCase())), [state.transactions, query, from, to, type, status, invalidRange]);
-  const credits = transactions.filter(tx => tx.type === "credit" && tx.status === "posted").reduce((sum, tx) => sum + tx.amount, 0);
-  const debits = transactions.filter(tx => tx.type === "debit" && tx.status === "posted").reduce((sum, tx) => sum + tx.amount, 0);
+  const credits = postedTotal(transactions, "credit");
+  const debits = postedTotal(transactions, "debit");
   function clearFilters() { setQuery(""); setFrom(""); setTo(""); setType("all"); setStatus("all"); }
   return <Shell>
     <div className="page-heading apk-page-heading"><ApkAssetIcon asset="passbook" size={30}/><div><p className="eyebrow">ACCOUNT ACTIVITY</p><h1>Passbook</h1><p className="muted">Search and review transaction records saved in this browser.</p></div></div>
