@@ -249,7 +249,6 @@ export async function restoreWorkspaceRecords(account:State,payees:unknown,suppo
       await new Promise<void>((resolve,reject)=>{
         const tx=db!.transaction(STORE,"readwrite");
         const store=tx.objectStore(STORE);
-        let stale=false;
         const request=store.get(STATE_RECORD);
         const payeesRequest=store.get("collection:bob-new-sample-payees-v1");
         const supportRequest=store.get("collection:bob-new-support-messages-v1");
