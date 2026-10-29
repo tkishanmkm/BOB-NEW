@@ -51,10 +51,13 @@ async function main() {
   }
 
   console.log("\n=== Start production server for route smoke test ===");
-  const server = spawn(npm, ["run", "start", "--", "--hostname", host, "--port", String(port)], {
+  // Launch Next.js directly rather than through npm so shutdown targets the
+  // actual server process and does not leave an npm child running on Windows.
+  const nextCli = require.resolve("next/dist/bin/next");
+  const server = spawn(process.execPath, [nextCli, "start", "--hostname", host, "--port", String(port)], {
     stdio: "inherit",
     env: process.env,
-    shell: isWindows,
+    shell: false,
   });
   try {
     await waitForServer(server);
