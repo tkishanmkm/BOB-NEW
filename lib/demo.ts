@@ -158,12 +158,12 @@ export function valid(v:unknown):v is State{if(!v||typeof v!=="object")return fa
 function isValidISODate(value:string):boolean{if(!/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(value))return false;const d=new Date(value+"T00:00:00Z");return !Number.isNaN(d.getTime())&&d.toISOString().slice(0,10)===value}
 export function read():State{return {...cache,transactions:cache.transactions.map(t=>({...t}))}}
 let saveQueue:Promise<void>=Promise.resolve();
-export async function saveState(v:State):Promise<boolean>{
+export async function saveState(v:State,expectedBaseline?:State):Promise<boolean>{
   if(!valid(v)||typeof window==="undefined")return false;
   const next:State={...v,transactions:v.transactions.map(t=>({...t}))};
   // Capture the caller-visible baseline before waiting in the queue, so a stale
   // full-state object cannot overwrite a newer state while it waits to be saved.
-  const expected:State=expectedCollections?.account??read();
+  const expected:State=expectedBaseline?{...expectedBaseline,transactions:expectedBaseline.transactions.map(t=>({...t}))}:expectedCollections?.account??read();
   const operation=saveQueue.then(async()=>{
     let db:IDBDatabase|undefined;
     try{
