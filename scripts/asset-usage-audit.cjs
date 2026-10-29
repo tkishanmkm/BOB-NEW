@@ -87,6 +87,9 @@ const rows = all.map(p=>{
 });
 const rowsByUrl = new Map(rows.map(r=>[r.url,r]));
 const missingManifest = manifest.filter(m=>{const pth=manifestPathOf(m);return !pth || !filesByUrl.has(pth.toLowerCase());});
+const manifestPathCounts = new Map();
+for (const item of manifest) { const pth = manifestPathOf(item).toLowerCase(); if (pth) manifestPathCounts.set(pth, (manifestPathCounts.get(pth) || 0) + 1); }
+const duplicateManifestPaths = [...manifestPathCounts].filter(([,count]) => count > 1).map(([pth,count]) => ({ path: pth, count }));
 const unmanifested = rows.filter(r=>r.manifest==='no');
 const used = rows.filter(r=>r.usage.startsWith('STATICALLY')).length;
 const cats = {}; const exts={}; for(const r of rows){cats[r.category]=(cats[r.category]||0)+1;exts[r.extension||'[none]']=(exts[r.extension||'[none]']||0)+1;}
@@ -115,6 +118,7 @@ const lines=[
  `- Unique manifest paths: **${new Set(manifest.map(manifestPathOf).filter(Boolean).map(p=>p.toLowerCase())).size}**`,
  `- Manifest entries without a path: **${manifest.filter(m=>!manifestPathOf(m)).length}**`,
  `- Manifest paths missing from public/: **${missingManifest.length}**`,
+ `- Duplicate manifest target paths: **${duplicateManifestPaths.length}**`,
  `- Public files not present in manifest: **${unmanifested.length}** (the separate APK-audit copy plus generic demo assets and README)`,
  `- Files referenced by exact URL in app/components/lib source scan: **${used}**`,
  `- Route files with an explicit APK asset component import: **${routeAssetKeys.size}**`,
@@ -131,6 +135,7 @@ const lines=[
  '- APK-to-web pixel identity cannot be established from asset presence or filenames. It needs authorized source screenshots/runtime captures and side-by-side responsive comparison.',
  '- Do not blindly place every APK file on the web app: SDK, platform, duplicate density variants, obsolete resources and unrelated assets must be classified separately. Map only evidenced first-party screen assets.',
  '', '## Missing manifest paths', '', ...(missingManifest.length?missingManifest.map(m=>`- ${m.path}`):['- None detected.']),
+ '', '## Duplicate manifest target paths', '', ...(duplicateManifestPaths.length?duplicateManifestPaths.map(m=>`- ${m.path} (${m.count} manifest records)`):['- None detected.']),
  '', '## Exact duplicate-content groups', '', ...(dupGroups.length?dupGroups.slice(0,100).map(g=>`- ${g.length} files share SHA-256 ${rowsByUrl.get(g[0])?.sha256}: ${g.join(', ')}`):['- None detected.']),
  '', '## Full per-file inventory', '', 'The companion CSV ' + path.relative(root,outCsv).replace(/\\/g,'/') + ' contains one row for every file under public/, including exact public URL, source-manifest path, category, file size, whether it is in the manifest, static usage status, source files that reference it, browser-format suitability, and SHA-256.',
  '', '## Current decision', '',
@@ -143,4 +148,10 @@ const lines=[
  '5. Compare screenshots and run route-by-route mobile interaction tests before marking any screen visually identical.', ''
 ];
 fs.writeFileSync(outMd,lines.join('\n'),'utf8');
-console.log(JSON.stringify({report:rel(outMd),csv:rel(outCsv),publicFiles:all.length,publicMiB:+(rows.reduce((s,r)=>s+r.bytes,0)/1048576).toFixed(2),manifestEntries:manifest.length,missingManifest:missingManifest.length,unmanifested:unmanifested.length,staticReferenced:used,notStaticallyReferenced:rows.length-used,duplicateGroups:dupGroups.length,categories:cats},null,2));
+console.log(JSON.stringify({report:rel(outMd),csv:rel(outCsv),publicFiles:all.length,publicMiB:+(rows.reduce((s,r)=>s+r.bytes,0)/1048576).toFixed(2),manifestEntries:manifest.length,missingManifest:missingManifest.length,duplicateManifestPaths:duplicateManifestPaths.length,unmanifested:unmanifested.length,staticReferenced:used,notStaticallyReferenced:rows.length-used,duplicateGroups:dupGroups.length,categories:cats,auditDecision:(missingManifest.length||duplicateManifestPaths.length)?"FAIL":"PASS_STATIC_RECONCILIATION_ONLY"},null,2));
+if (missingManifest.length || duplicateManifestPaths.length) {
+ console.error("Asset usage audit failed: manifest targets are missing or duplicate. See the generated report.");
+ process.exitCode = 1;
+} else {
+ console.log("Static asset reconciliation passed; visual placement remains unverified.");
+}
