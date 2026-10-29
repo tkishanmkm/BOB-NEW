@@ -49,6 +49,20 @@ test("support message save and clear compare against the loaded conversation", (
   assert.match(supportSource, /refresh before retrying/i);
   assert.match(supportSource, /conversation was not confirmed cleared/i);
 });
+test("account migration validates and commits legacy data before cleanup", () => {
+  const hydration = source.slice(source.indexOf("export async function hydrate"), source.indexOf("export function isHydrated"));
+  assert.ok(hydration.indexOf("await putRecord(db,stored as State)") < hydration.indexOf("localStorage.removeItem(KEY)"));
+  assert.match(hydration, /Legacy account data is not valid JSON; it was preserved for recovery/);
+  assert.match(hydration, /Legacy account data has an invalid structure; it was preserved for recovery/);
+  assert.match(hydration, /Saved IndexedDB account data is invalid; it was preserved for recovery/);
+  assert.match(hydration, /hydrationPromise=null/);
+});
+test("collection migration preserves legacy source until its IndexedDB write completes", () => {
+  const migration = source.slice(source.indexOf("export async function getLocalRecord"), source.indexOf("export async function setLocalRecord"));
+  assert.ok(migration.indexOf("await putRecordById(db,\"collection:\"+key,value)") < migration.indexOf("return value as T"));
+  assert.match(migration, /Legacy local record is not valid JSON; it was preserved for recovery/);
+  assert.doesNotMatch(migration, /localStorage\.removeItem\(key\)/);
+});
 test("legacy records are not removed before IndexedDB deletion succeeds", () => {
   const deletion = source.slice(source.indexOf("export async function deleteLocalRecord"), source.indexOf("function readRecordById"));
   assert.ok(deletion.indexOf("const db=await openDB()") < deletion.indexOf("localStorage.removeItem(key)"));
