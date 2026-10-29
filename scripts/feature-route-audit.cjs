@@ -17,7 +17,23 @@ const links = new Map([...linksBlock[1].matchAll(/"([^"]+)"\s*:\s*"([^"]+)"/g)].
 const actions = [...source.matchAll(/actions:\s*\[([^\]]*)\]/g)].flatMap((m) => [...m[1].matchAll(/"([^"]+)"/g)].map((x) => x[1]));
 const uniqueActions = [...new Set(actions)];
 const navRoutes = new Set([...shell.matchAll(/\["(\/[^"]+)","[^"]+"\]/g)].map((m) => m[1]));
-const dedicatedRoutes = new Set(["/", "/splash", "/statement", "/settings", "/transfers", "/receipt", "/account-details", "/payees", "/help-support", "/demo-documents", "/payment-successful", "/dashboard", "/passbook"]);
+
+// Derive dedicated routes from app/**/page.* instead of maintaining a stale hard-coded list.
+const appRoot = path.join(root, "app");
+const appRoutes = new Set();
+function collectPageRoutes(directory, segments = []) {
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+    if (entry.name.startsWith(".")) continue;
+    const absolute = path.join(directory, entry.name);
+    if (entry.isDirectory()) {
+      collectPageRoutes(absolute, [...segments, entry.name]);
+    } else if (/^page\.(tsx|ts|jsx|js)$/.test(entry.name)) {
+      const routeSegments = segments.filter((segment) => !/^\(.*\)$/.test(segment) && !/^\[.*\]$/.test(segment));
+      appRoutes.add(routeSegments.length ? "/" + routeSegments.join("/") : "/");
+    }
+  }
+}
+collectPageRoutes(appRoot);
 let failures = 0;
 
 for (const action of uniqueActions) {
@@ -27,7 +43,7 @@ for (const action of uniqueActions) {
     failures++;
     continue;
   }
-  const routeExists = navRoutes.has(target) || dedicatedRoutes.has(target);
+  const routeExists = navRoutes.has(target) || appRoutes.has(target);
   const feature = target.replace(/^\//, "");
   const featureExists = source.includes(`  "${feature}":{`) || source.includes(`  ${feature}:{`);
   if (!routeExists && !featureExists) {
