@@ -79,6 +79,14 @@ test("rejects malformed account email", () => {
   const s = validAccount(); s.email = "not-an-email";
   assert.equal(api.valid(s), false);
 });
+test("rejects malformed account IFSC", () => {
+  const s = validAccount(); s.ifsc = "INVALID";
+  assert.equal(api.valid(s), false);
+});
+test("accepts the configured sample IFSC", () => {
+  const s = validAccount();
+  assert.equal(api.valid(s), true);
+});
 test("rejects unsupported account schema versions", () => {
   const s = validAccount(); s.schemaVersion = 99;
   assert.equal(api.valid(s), false);
