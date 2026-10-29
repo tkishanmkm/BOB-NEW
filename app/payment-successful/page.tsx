@@ -25,7 +25,7 @@ export default function PaymentSuccessfulPage() {
     tx.type === "debit" && tx.status === "pending" && tx.description.startsWith("Demo transfer to ");
   // Results should not repeat a full account identifier when a masked value is sufficient.
   const maskedAccount = (value: string) => {
-    const digits = value.replace(/\\D/g, "");
+    const digits = value.replace(/\D/g, "");
     return digits.length >= 4 ? `•••• ${digits.slice(-4)}` : "Not set";
   };
   // A supplied ID is authoritative. Do not show a different transfer if it is missing.
