@@ -1,6 +1,6 @@
 # BOB-NEW exhaustive asset usage audit
 
-Generated: 2026-10-29T03:29:04.103Z. Static filesystem/source scan only; it does not claim screenshot or runtime verification.
+Generated: 2026-10-29T03:32:02.266Z. Static filesystem/source scan only; it does not claim screenshot or runtime verification.
 
 ## Summary
 
@@ -12,7 +12,7 @@ Generated: 2026-10-29T03:29:04.103Z. Static filesystem/source scan only; it does
 - Manifest paths missing from public/: **0**
 - Public files not present in manifest: **2446** (the separate APK-audit copy plus generic demo assets and README)
 - Files referenced by exact URL in app/components/lib source scan: **27**
-- Route files with an explicit APK asset component import: **7**
+- Route files with an explicit APK asset component import: **22**
 - Files not found in static source scan: **7305**
 - Exact duplicate-content groups (SHA-256): **1993**
 
@@ -40,7 +40,7 @@ Generated: 2026-10-29T03:29:04.103Z. Static filesystem/source scan only; it does
 | /statement | app/statement/page.tsx | statement, passbook | mapped to heading/filter icons; screenshot not verified |
 | /receipt | app/receipt/page.tsx | statement, passbook | mapped to receipt heading/detail icons; screenshot not verified |
 | /bus-tickets tile | app/more/page.tsx + components/apk-asset-map.tsx | bus uses text fallback; no source image mapped | no image asset assigned |
-| 33 generic feature routes | app/[feature]/page.tsx | no dedicated APK asset mapping confirmed per route | generic feature pages; not visually identical |
+| 33 generic feature routes | app/[feature]/page.tsx + featureAssets registry | one semantic header icon mapped per feature route | generic page body remains a placeholder; screenshot parity not verified |
 | other dedicated routes | app route files | no per-route asset mapping confirmed by source scan | needs individual screen review |
 
 ## Important findings

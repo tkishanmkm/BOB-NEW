@@ -43,6 +43,13 @@ for (const file of sourceFiles.filter(p=>p.startsWith(path.join(root,'app')) && 
  const text=fs.readFileSync(file,'utf8');
  if (!text.includes('apk-asset-map')) continue;
  const routePart=path.relative(path.join(root,'app'),path.dirname(file)).replace(/\\/g,'/');
+ if (routePart === '[feature]') {
+   const mapMatch=text.match(/const featureAssets:[^{]+\{([\s\S]*?)\n\};/);
+   if (mapMatch) for (const item of mapMatch[1].matchAll(/^[\s\"]*([a-z0-9-]+)[\"]*\s*:\s*[\"]([A-Za-z][A-Za-z0-9]*)[\"]/gm)) {
+     if (assetKeyToUrl.has(item[2])) routeAssetKeys.set('/'+item[1],new Set([item[2]]));
+   }
+   continue;
+ }
  const route=routePart==='.'?'/':'/'+routePart;
  const keys=new Set();
  for (const token of text.matchAll(/[\"']([A-Za-z][A-Za-z0-9]*)[\"']/g)) if(assetKeyToUrl.has(token[1])) keys.add(token[1]);
@@ -95,7 +102,7 @@ const directMappings=[
  ['/statement','app/statement/page.tsx','statement, passbook','mapped to heading/filter icons; screenshot not verified'],
  ['/receipt','app/receipt/page.tsx','statement, passbook','mapped to receipt heading/detail icons; screenshot not verified'],
  ['/bus-tickets tile','app/more/page.tsx + components/apk-asset-map.tsx','bus uses text fallback; no source image mapped','no image asset assigned'],
- ['33 generic feature routes','app/[feature]/page.tsx','no dedicated APK asset mapping confirmed per route','generic feature pages; not visually identical'],
+ ['33 generic feature routes','app/[feature]/page.tsx + featureAssets registry','one semantic header icon mapped per feature route','generic page body remains a placeholder; screenshot parity not verified'],
  ['other dedicated routes','app route files','no per-route asset mapping confirmed by source scan','needs individual screen review']
 ];
 const lines=[

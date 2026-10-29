@@ -1,9 +1,10 @@
-﻿"use client";
+"use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { notFound, useParams } from "next/navigation";
 import { Shell } from "@/components/app-shell";
 import { read, balance, money, type State } from "@/lib/demo";
+import { ApkAssetIcon, type AssetKey } from "@/components/apk-asset-map";
 
 const pages: Record<string, {title:string;description:string;actions:string[]}> = {
   about:{title:"About Daybook",description:"Learn about this independent sample finance workspace.",actions:["Review sample account details","Open settings"]},
@@ -55,6 +56,22 @@ const pages: Record<string, {title:string;description:string;actions:string[]}> 
   "video-call":{title:"Video call",description:"Video calling is not connected in this prototype.",actions:["Open help and support"]},
   "watch-demo":{title:"Watch demo",description:"This workspace is a local prototype; explore the routes from the navigation.",actions:["View overview","Open settings"]}
 };
+const featureAssets: Record<string, AssetKey> = {
+  about: "help", "account-actions": "settings", "account-statement": "statement",
+  "agent-live-chat": "help", "ai-assistant-chat": "help", alerts: "alerts",
+  "all-accounts": "account", "app-settings": "settings", "bill-pay": "billPay",
+  borrow: "loan", "bus-tickets": "bus", cards: "cards", "change-login-pin": "security",
+  "change-transaction-pin": "security", "cheque-book-request": "account", complaints: "complaints",
+  "contact-details": "profile", "contact-us-help": "help", "credit-card-apply": "cards",
+  "current-account-details": "account", "digital-loan": "loan", "digital-planner": "offers",
+  faqs: "faq", "fixed-deposit": "fixedDeposit", "fund-transfer": "transfer", help: "help",
+  invest: "offers", "kyc-details": "security", "link-bank": "account", more: "help",
+  "need-help": "help", "nominee-registration": "profile", offers: "offers",
+  "personal-details": "profile", "personal-loan-info": "loan", "positive-pay": "statement",
+  profile: "profile", recharge: "recharge", save: "account", scan: "scan", security: "security",
+  "shop-and-pay": "shop", shop: "shop", "statement-analysis": "statement",
+  "switch-to-classic": "settings", upi: "upi", "video-call": "video", "watch-demo": "help"
+};
 const links: Record<string,string> = {
   "Review sample account details":"/account-details","Open settings":"/settings","Open account details":"/account-details","Open statement":"/statement","Open sample support":"/help-support","Review saved sample chat":"/help-support","Review pending transactions":"/passbook","Review transactions":"/passbook","Open help and support":"/help-support","View transactions":"/passbook","View account details":"/account-details","Edit account settings":"/settings","Export sample data":"/settings","Open sample transfer flow":"/transfers","Start sample transfer":"/transfers","Manage beneficiaries":"/payees","Return to overview":"/dashboard","View sample account":"/account-details","Filter transactions":"/statement","Print sample statement":"/statement","Open sample transfer":"/transfers","View overview":"/dashboard"
 };
@@ -65,7 +82,7 @@ export default function FeaturePage(){
   if (!page) notFound();
   const [state,setState]=useState<State>(read());
   useEffect(()=>{const refresh=()=>setState(read());refresh();window.addEventListener("bob-new-state-change",refresh);window.addEventListener("storage",refresh);return()=>{window.removeEventListener("bob-new-state-change",refresh);window.removeEventListener("storage",refresh)}},[]);
-  return <Shell><h1>{page.title}</h1><p className="muted">{page.description}</p><div className="notice">SAMPLE WORKSPACE — no bank service, real payment, account verification or external submission is performed here.</div>
+  return <Shell><div className="page-heading apk-page-heading feature-page-heading"><ApkAssetIcon asset={featureAssets[feature] ?? "help"} size={30}/><div><h1>{page.title}</h1><p className="muted">{page.description}</p></div></div><div className="notice">SAMPLE WORKSPACE — no bank service, real payment, account verification or external submission is performed here.</div>
     <section className="card"><h2>Saved account snapshot</h2><div className="grid"><Info label="Profile" value={state.name}/><Info label="Account label" value={state.accountLabel}/><Info label="Sample account" value={state.maskedId}/><Info label="Mobile" value={state.mobile||"Not set"}/><Info label="Email" value={state.email||"Not set"}/><Info label="Branch" value={state.branch||"Not set"}/><Info label="Customer ID" value={state.customerId||"Not set"}/><Info label="Account number" value={state.accountNumber||"Not set"}/><Info label="IFSC-format code" value={state.ifsc||"Not set"}/><Info label="Address" value={state.address||"Not set"}/><Info label="Date of birth" value={state.dob||"Not set"}/><Info label="Calculated balance" value={money(balance(state))}/><Info label="Transactions" value={String(state.transactions.length)}/></div>
       <div className="actions">{page.actions.map(action=><Link key={action} className="btn secondary" href={links[action]||"/settings"}>{action}</Link>)}</div>
     </section>
