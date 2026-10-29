@@ -48,6 +48,13 @@ test("workspace restore compares account against the baseline captured at previe
   assert.match(settings, /restoreBaseline:\{account:read\(\),payees:currentPayees,supportMessages:currentSupport\}/);
   assert.match(settings, /restoreWorkspaceRecords\(workspacePreview\.account,workspacePreview\.beneficiaries,workspacePreview\.supportMessages,workspacePreview\.restoreBaseline\?/);
 });
+test("Settings hydration fails closed on invalid account state and clears pending restore actions", () => {
+  const settings = fs.readFileSync("app/settings/page.tsx", "utf8");
+  assert.match(settings, /if\(!valid\(loaded\)\)throw new Error\("Loaded account state failed validation\."\)/);
+  assert.match(settings, /R\(false\);PAI\(null\);PIB\(null\);WP\(null\)/);
+  assert.match(settings, /Settings, imports, exports and backup restore remain disabled/);
+  assert.match(settings, /if\(!valid\(s\)\|\|!valid\(baseline\)\)/);
+});
 test("account JSON import retains the Settings baseline for conflict-safe save", () => {
   const settings = fs.readFileSync("app/settings/page.tsx", "utf8");
   assert.match(settings, /const\[pendingImportBaseline,PIB\]=useState<State\|null>\(null\)/);
