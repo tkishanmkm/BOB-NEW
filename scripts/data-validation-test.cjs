@@ -136,4 +136,21 @@ test("posted credits and debits are reflected in the sample balance", () => {
   assert.equal(api.balance(s), 1085);
 });
 
+
+test("date-bounded balance includes posted transactions through the inclusive end date", () => {
+  const s = validAccount();
+  s.openingBalance = 1000;
+  s.transactions = [
+    { id: "before", date: "2026-10-01", description: "Before range", amount: 100, type: "credit", status: "posted" },
+    { id: "on-end", date: "2026-10-10", description: "End date", amount: 40, type: "debit", status: "posted" },
+    { id: "pending", date: "2026-10-10", description: "Pending", amount: 500, type: "debit", status: "pending" },
+    { id: "after", date: "2026-10-11", description: "After range", amount: 25, type: "credit", status: "posted" },
+  ];
+  assert.equal(api.balanceThroughDate(s, "2026-10-10"), 1060);
+});
+test("date-bounded balance equals full balance when no end date is supplied", () => {
+  const s = validAccount();
+  assert.equal(api.balanceThroughDate(s), api.balance(s));
+});
+
 console.log(`Data validation tests passed: ${count}/${count}`);
