@@ -134,6 +134,8 @@ The source manifest is compared against actual files under public/. A present fi
 
 The shared dynamic feature route now renders a dashboard/settings fallback for unknown feature keys instead of returning a blank screen. This is defensive routing behavior, not evidence of original APK parity.
 
+The feature-action route audit now discovers dedicated Next.js routes by scanning `app/**/page.*` instead of relying on a manually maintained route allowlist, reducing stale route-check entries as pages are added.
+
 **NOT COMPLETE / NOT VISUALLY VERIFIED.** Route coverage is not the same as screen parity. Some routes are served by the generic feature page, and this static scan cannot verify original APK layout geometry, navigation, animations, responsive behavior, or native/SDK screens. Each route still needs comparison with authorized screenshots/runtime captures, and each asset needs a page mapping with confidence (confirmed/likely/unknown).
 
 ## Required next work
