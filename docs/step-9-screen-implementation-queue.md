@@ -158,3 +158,24 @@ Implemented in `app/style.css` on `main`:
 - Account number uses a numeric input hint and a 6–18 digit pattern. IFSC-format input uses an 11-character pattern and uppercase normalization; these are format checks only, not bank verification.
 - Add and remove actions remain disabled while saved records are being loaded or a save is in progress. Existing local-storage recovery protection remains unchanged.
 - Static source/style checks only; production build and real-device tests remain outstanding.
+
+## APK-first fidelity rule — required for all subsequent steps
+
+**Source of truth:** the extracted BOB World APK and authorized runtime screen evidence, not generic banking-app conventions or developer assumptions. The phone-only layout is a viewport requirement, not permission to invent UI.
+
+Implementation order for the first-launch journey:
+1. Splash / launch state.
+2. Language selection (only reproduce options and interactions supported by APK evidence).
+3. Login / PIN and any preceding onboarding or permission screens evidenced by the APK.
+4. Dashboard and its actual header, navigation, service layout, banners and interactions.
+5. Shared components and remaining routes, mapped back to source evidence.
+
+Before changing a screen:
+- Inspect the relevant APK asset group and manifest paths in `docs/bob-apk-resource-map.json`.
+- Check the screen/route evidence and confidence in `docs/apk-screen-route-asset-inventory.md`; static asset names alone do not prove a screen's appearance or behavior.
+- Reuse original APK assets only when their visual contents and intended placement are supported. Do not use a mismatched illustration as a placeholder.
+- Compare against an authorized APK screenshot/runtime walkthrough whenever exact geometry, wording, state transitions or behavior cannot be established from the resources.
+- Mark each detail as **confirmed**, **likely**, or **unknown**. Do not label guessed details as APK-matched.
+- Preserve the current prototype's explicit demo-only safeguards; APK-style UI does not imply a real bank connection.
+
+Current evidence limitation: the repository has the extracted Flutter asset manifest and static resource inventory, but that alone does not establish exact language-selection UI, login states, dashboard geometry, header/footer behavior or transition timing. Those need screen captures or a runtime walkthrough before claiming exact parity. Until then, implement only what the available evidence supports and keep unresolved details documented.
