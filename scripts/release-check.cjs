@@ -62,7 +62,7 @@ if (results.length === checks.length && results.every(item => item.code === 0)) 
     const smoke = spawnSync(npm, ["run", "smoke-test"], { stdio: "inherit", env: { ...process.env, SMOKE_BASE_URL: baseUrl }, shell: isWindows });
     const code = smoke.error ? 1 : (smoke.status ?? 1);
     results.push({ label: "production route smoke test", code });
-    if (!smokePassed) console.error(`FAILED: production route smoke test (exit ${code})`);
+    if (code !== 0) console.error(`FAILED: production route smoke test (exit ${code})`);
     else console.log("PASSED: production route smoke test");
   } catch (error) {
     results.push({ label: "production route smoke test", code: 1 });
