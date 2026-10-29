@@ -171,3 +171,26 @@ Never mark the migration 100% complete solely because assets are present or a ro
 - `assets/images/dashBoard/bobWorld.svg` is a compact orange BOB World wordmark; `bobWorldNTitle.svg` is the larger branded variant. These are **likely branding assets** based on their visible contents, but their exact on-screen placements remain unconfirmed without an original-app runtime capture.
 - Visually inspected `res/drawable-mdpi-v4/src_assets_newui_splashscreen.png` and `res/drawable/launch_screen.png`; both render as plain white images in the extracted resources. Do not use them as a branded splash artwork.
 - Confidence: `bob_bg.png` meaning = **confirmed by visual contents**; dashboard/splash exact placement = **unknown** until runtime screenshot evidence is available.
+
+## First-launch journey audit — splash, language, login, dashboard
+
+This is the required first implementation batch because the app must match the APK's actual startup journey, not merely contain separately reachable pages.
+
+| Journey stage | Evidence currently in repository | Confidence / current gap | Next implementation rule |
+|---|---|---|---|
+| Android launch / splash | Resource inventory lists `base_res__drawable-mdpi__src_assets_newui_splashscreen.png`, `base_res__drawable-mdpi__src_assets_newui_splashscreenend.png`, and `base_assets__splash_screen.mp4`. Earlier visual inspection found the two named PNGs appear plain white. | Resource existence is confirmed; exact runtime splash, duration, animation, and transition are **unknown**. | Inspect the video and all density variants visually, then compare with an APK runtime capture. Do not infer splash artwork from filenames. |
+| Language selection | Asset manifest includes `assets/images/mySpace/change_app_language_icon.svg`. | This proves a language-change icon exists, **not** that there is a language-selection screen during first launch, what languages are offered, or how selection works. | Find the relevant APK screen/runtime evidence before adding or changing first-launch language UI. Do not invent a list of languages or layout. |
+| Login / PIN | Target currently has a local demo PIN gate in `app/page.tsx`. | The current implementation is a prototype access gate; the extracted static asset inventory does not prove it matches the APK login screen, login steps, PIN pad, fields, or authentication transitions. | Capture/inspect the APK login journey and map each visible component/state before changing the Next.js login UI. Keep prototype/demo disclosure and never represent the local gate as real authentication. |
+| Dashboard | Direct APK asset groups include `assets/images/dashBoard/`, including `bobWorld.svg`, `bobWorldNTitle.svg`, and dashboard feature icons. | Asset purpose can often be inferred, but exact placement, header structure, footer/navigation, tile order, banners, dimensions, and interactions are **not confirmed** by asset names alone. | Compare an APK dashboard screenshot/runtime capture; map each used asset and component to visible evidence before adjusting the Next.js dashboard. |
+| Shared header / bottom navigation | Static resource groupings and current Next.js shell exist. | Exact labels, icon order, visibility by route, dimensions, selected state, and navigation behavior are **unknown** without screenshots or runtime walkthrough. | Build a route-by-route component matrix from the APK evidence. Do not assume the current generic bottom navigation is the APK's design. |
+
+### First-launch acceptance criteria
+
+- [ ] Obtain or inspect authorized APK runtime captures for launch/splash, any language-selection step, login, and dashboard.
+- [ ] Record each screen's visible text, exact asset path where identifiable, component bounds/order, actions, and transition destination.
+- [ ] Label each observation **confirmed**, **likely**, or **unknown**.
+- [ ] Implement only confirmed details first; preserve unresolved gaps in this table.
+- [ ] Verify the Next.js phone-width rendering against the corresponding APK captures at matching viewport dimensions.
+- [ ] Do not claim exact APK parity until the first-launch screens and shared navigation have been visually compared.
+
+**Current status:** this repository contains a static resource inventory and imported assets, but no cited APK runtime screenshot evidence for the complete splash → language → login → dashboard sequence. Therefore the current Next.js splash and login are not yet certified as APK-matched. This is an evidence gap, not permission to fill in missing behavior by convention.
