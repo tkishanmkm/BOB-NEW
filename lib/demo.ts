@@ -355,18 +355,36 @@ export async function setLocalRecord<T>(key:string,value:T,expected?:unknown):Pr
 export async function deleteLocalRecord(key:string,expected?:unknown):Promise<void>{
   const operation=saveQueue.then(async()=>{
     let db:IDBDatabase|undefined;
+    let previous:unknown;
+    let hadPrevious=false;
     try{
-      // Remove the legacy copy first. If it remains after deleting IndexedDB,
-      // a later read could migrate the supposedly deleted record back.
-      try{localStorage.removeItem(key)}catch{
-        throw new Error("Could not remove the legacy local copy; the record was not deleted.");
-      }
       db=await openDB();
+      // Preserve legacy-only data until it is safely represented in IndexedDB.
+      const id="collection:"+key;
+      const existing=await readRecordById(db,id);
+      if(existing===undefined){
+        let raw:string|null;
+        try{raw=localStorage.getItem(key)}catch{
+          throw new Error("Could not inspect the legacy local copy; the record was not deleted.");
+        }
+        if(raw!==null){
+          try{previous=JSON.parse(raw)}catch{
+            throw new Error("Legacy local record is not valid JSON; it was preserved for recovery.");
+          }
+          hadPrevious=true;
+          await putRecordById(db,id,previous);
+        }else{
+          previous=existing;
+        }
+      }else{
+        previous=existing;
+        hadPrevious=true;
+      }
       await new Promise<void>((resolve,reject)=>{
         const tx=db!.transaction(STORE,"readwrite");
         const store=tx.objectStore(STORE);
         if(expected!==undefined){
-          const request=store.get("collection:"+key);
+          const request=store.get(id);
           let stale=false;
           request.onsuccess=()=>{
             if(JSON.stringify(request.result?.value)!==JSON.stringify(expected)){
@@ -374,19 +392,27 @@ export async function deleteLocalRecord(key:string,expected?:unknown):Promise<vo
               try{tx.abort()}catch{}
               return;
             }
-            store.delete("collection:"+key);
+            store.delete(id);
           };
           request.onerror=()=>reject(request.error||new Error("Could not verify the latest local record before deletion."));
           tx.oncomplete=()=>resolve();
           tx.onerror=()=>{if(stale)reject(new Error("Another tab changed this record. Refresh before retrying."));else reject(tx.error||new Error("Could not delete local records."))};
           tx.onabort=()=>{if(stale)reject(new Error("Another tab changed this record. Refresh before retrying."));else reject(tx.error||new Error("Local record deletion was cancelled."))};
         }else{
-          store.delete("collection:"+key);
+          store.delete(id);
           tx.oncomplete=()=>resolve();
           tx.onerror=()=>reject(tx.error||new Error("Could not delete local records."));
           tx.onabort=()=>reject(tx.error||new Error("Local record deletion was cancelled."));
         }
       });
+      try{
+        localStorage.removeItem(key);
+      }catch{
+        // If the old copy cannot be removed, restore the deleted IndexedDB
+        // value so a later migration cannot resurrect stale data unexpectedly.
+        if(hadPrevious)await putRecordById(db,id,previous);
+        throw new Error("Could not remove the legacy local copy. The saved record was preserved; retry deletion.");
+      }
     }finally{db?.close()}
   });
   saveQueue=operation.then(()=>undefined,()=>undefined);
