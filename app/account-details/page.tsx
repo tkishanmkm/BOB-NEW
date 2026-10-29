@@ -3,19 +3,30 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Shell } from "@/components/app-shell";
 import { ApkAssetIcon } from "@/components/apk-asset-map";
-import { read, balance, money, maskAccountIdentifier, type State } from "@/lib/demo";
+import { hydrate, read, balance, money, maskAccountIdentifier, type State } from "@/lib/demo";
 
 export default function AccountDetailsPage() {
   const [state, setState] = useState<State>(read());
+  const [stateReady, setStateReady] = useState(false);
+  const [loadError, setLoadError] = useState(false);
   useEffect(() => {
+    let active = true;
     const refresh = () => setState(read());
-    refresh();
+    void hydrate().then(() => {
+      if (!active) return;
+      refresh();
+      setStateReady(true);
+    }).catch(() => {
+      if (active) setLoadError(true);
+    });
     window.addEventListener("bob-new-state-change", refresh);
     window.addEventListener("storage", refresh);
-    return () => { window.removeEventListener("bob-new-state-change", refresh); window.removeEventListener("storage", refresh); };
+    return () => { active = false; window.removeEventListener("bob-new-state-change", refresh); window.removeEventListener("storage", refresh); };
   }, []);
   const posted = state.transactions.filter(t => t.status === "posted").length;
   const pending = state.transactions.filter(t => t.status === "pending").length;
+  if (loadError) return <Shell><section className="card"><h1>Account details unavailable</h1><p className="error" role="alert">Saved account data could not be loaded. Account information is hidden to avoid showing unverified defaults. Check browser storage, then reload.</p><button type="button" onClick={() => window.location.reload()}>Retry</button></section></Shell>;
+  if (!stateReady) return <Shell><section className="card" role="status"><h1>Loading account details</h1><p className="muted">Loading saved account data from this browser…</p></section></Shell>;
   return <Shell>
     <div className="page-heading apk-page-heading"><ApkAssetIcon asset="account" size={30}/><div><p className="eyebrow">MY ACCOUNTS</p><h1>Account details</h1><p className="muted">Review the profile values stored in this browser workspace.</p></div></div>
     <div className="notice">SAMPLE ACCOUNT ONLY — these details are fictional and are not verified by a financial institution.</div>
