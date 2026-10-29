@@ -35,6 +35,7 @@ export function Shell({children}:{children:React.ReactNode}) {
     <header><Link className="brand brand-row" href="/dashboard"><Image src="/assets/daybook-mark.svg" width={30} height={30} alt="Daybook mark"/><span>Daybook · DEMO</span></Link><div className="actions"><span className="pill">LOCAL WORKSPACE</span><button type="button" className="secondary" onClick={() => { try { sessionStorage.removeItem(DEMO_SESSION_KEY); } finally { setAllowed(false); router.replace("/"); } }}>Exit</button></div></header>
     <div className="notice">LOCAL PROTOTYPE — records are saved on this device; no bank or payment server is connected.</div>
     <div className="layout"><nav className="nav" aria-label="Main navigation">{routes.map(([u,l])=><Link href={u} key={u} aria-current={pathname === u || pathname.startsWith(u + "/") ? "page" : undefined}>{l}</Link>)}</nav><main id="main-content" tabIndex={-1} className="main">{storageError && <div className="info-banner" role="alert">{storageError}</div>}{children}</main></div>
+    <nav className="mobile-tabbar" aria-label="Primary mobile navigation">{[["/dashboard","⌂","Home"],["/transfers","⇄","Transfer"],["/passbook","▤","Passbook"],["/payees","♙","Payees"],["/more","⋯","More"]].map(([href,icon,label])=><Link key={href} href={href} aria-current={pathname===href || (href!=="/dashboard" && pathname.startsWith(href+"/")) ? "page" : undefined}><span className="mobile-tab-icon" aria-hidden="true">{icon}</span><span>{label}</span></Link>)}</nav>
   </>;
 }
 
