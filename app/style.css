@@ -550,3 +550,27 @@ img,svg,video,canvas{max-width:100%}
   .actions>*{flex:1 1 100%}
 }
 @media(prefers-reduced-motion:reduce){.mobile-tabbar{scroll-behavior:auto}}
+
+
+/* Step 20 — statement transactions become readable cards on narrow phones. */
+@media(max-width:650px){
+  .statement-table-wrap{overflow:visible;margin:0}
+  .statement-table{display:block;width:100%;min-width:0;table-layout:auto;font-size:12px}
+  .statement-table thead{display:none}
+  .statement-table tbody{display:grid;gap:10px}
+  .statement-table tr{display:block;min-width:0;padding:9px 12px;border:1px solid var(--app-border);border-radius:12px;background:var(--app-surface);box-shadow:0 3px 12px rgba(31,60,102,.04)}
+  .statement-table td{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;min-width:0;padding:7px 0;border:0;border-bottom:1px solid #edf0f5;text-align:right;overflow-wrap:anywhere;word-break:break-word}
+  .statement-table td:last-child{border-bottom:0}
+  .statement-table td::before{content:attr(data-label);flex:0 0 82px;color:var(--app-muted);font-size:11px;font-weight:700;text-align:left}
+  .statement-table td:nth-child(2),.statement-table td:nth-child(3){overflow-wrap:anywhere;word-break:break-word}
+  .statement-table td .status-chip{max-width:calc(100% - 94px);white-space:normal;text-align:right}
+}
+@media print{
+  .statement-table-wrap{overflow:visible!important}
+  .statement-table{display:table!important;width:100%!important;min-width:0!important;table-layout:fixed!important;font-size:9px!important}
+  .statement-table thead{display:table-header-group!important}
+  .statement-table tbody{display:table-row-group!important}
+  .statement-table tr{display:table-row!important;padding:0!important;border:0!important;box-shadow:none!important;background:transparent!important}
+  .statement-table th,.statement-table td{display:table-cell!important;padding:5px 4px!important;border-bottom:1px solid #ddd!important;text-align:left!important}
+  .statement-table td::before{content:none!important}
+}
