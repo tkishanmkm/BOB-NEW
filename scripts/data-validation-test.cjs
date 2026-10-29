@@ -37,7 +37,7 @@ function test(name, fn) {
   console.log("PASS " + name);
 }
 
-test("beneficiary writes compare against the loaded list to prevent stale-tab overwrites", () => {
+test("Settings saves compare against the account snapshot loaded with the form", () => {\n  const settings = fs.readFileSync("app/settings/page.tsx", "utf8");\n  assert.match(source, /export async function saveState\(v:State,expectedBaseline\?:State\)/);\n  assert.match(source, /expectedBaseline\?\{\.\.\.expectedBaseline,transactions:expectedBaseline\.transactions\.map\(t=>\(\{\.\.\.t\}\)\)\}:expectedCollections\?\.account\?\?read\(\)/);\n  assert.match(settings, /B\(\{\.\.\.loaded,transactions:loaded\.transactions\.map\(t=>\(\{\.\.\.t\}\)\)\}\)/);\n  assert.match(settings, /saveState\(s,baseline\)/);\n  assert.match(settings, /if\(saved\)\{B\(\{\.\.\.s,transactions:s\.transactions\.map\(t=>\(\{\.\.\.t\}\)\)\}\)/);\n  assert.match(settings, /Your form draft is preserved/);\n});\ntest("beneficiary writes compare against the loaded list to prevent stale-tab overwrites", () => {
   assert.match(source, /export async function setLocalRecord<T>\(key:string,value:T,expected\?:unknown\)/);
   assert.match(source, /Another tab changed this record\. Refresh before retrying\./);
   assert.match(payeesSource, /setLocalRecord\(KEY,next,list\)/);
