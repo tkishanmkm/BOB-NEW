@@ -166,6 +166,12 @@ export async function saveState(v:State):Promise<boolean>{
 // A synchronous writer could report success before durable storage finishes.
 export function balanceThroughDate(s:State,endDate?:string):number{return s.openingBalance+s.transactions.filter(t=>t.status==="posted"&&(!endDate||t.date<=endDate)).reduce((n,t)=>n+(t.type==="credit"?t.amount:-t.amount),0)}
 export function balance(s:State):number{return balanceThroughDate(s)}
+// Sum currency in integer paise so repeated decimal additions do not accumulate
+// binary floating-point fractions in statement/passbook totals.
+export function postedTotal(transactions:Tx[],type:"credit"|"debit"):number{
+  const paise=transactions.filter(t=>t.status==="posted"&&t.type===type).reduce((sum,t)=>sum+Math.round(t.amount*100),0);
+  return paise/100;
+}
 export function maskAccountIdentifier(value:string,emptyLabel="Not set"):string{const digits=value.replace(/\D/g,"");return digits.length>=4?"•••• "+digits.slice(-4):value.trim()?"••••":emptyLabel}
 
 // Shared ordering rule: newest ISO date first; for same-day entries, later stored entries first.
