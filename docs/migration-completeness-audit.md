@@ -6,8 +6,8 @@
 
 - Source routes listed in inventory: **52**
 - Next.js page files (including dynamic route file): **62**
-- Source routes with dedicated route file: **15**
-- Source routes served by generic feature page: **24**
+- Source routes with dedicated route file: **16**
+- Source routes served by generic feature page: **23**
 - Source routes that alias another page: **13**
 - Source routes without direct or dynamic configuration: **0**
 - Manifest records: **6913**
@@ -31,7 +31,7 @@
 | `/alerts` | Alerts | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
 | `/all-accounts` | All accounts | Shared page alias | Route re-exports another page component; not an independent screen |
 | `/app-settings` | App settings | Shared page alias | Route re-exports another page component; not an independent screen |
-| `/bill-pay` | Bill payment | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/bill-pay` | Bill payment | Dedicated page file | Local-only utility bill draft and preview; no bill fetch or payment submission; visual/functional APK parity remains unverified |
 | `/borrow` | Borrow | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
 | `/bus-tickets` | Bus tickets | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
 | `/cards` | Cards | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
