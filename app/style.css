@@ -205,7 +205,7 @@ button:active,.btn:active{transform:translateY(1px)}
  .apk-page-heading>.apk-asset-icon{width:42px;height:42px;flex-basis:42px}
 }
 @media print{
- header,.notice,.nav,.no-print,button{display:none!important}
+ header,.notice,.nav,.mobile-tabbar,.no-print,button{display:none!important}
  body{background:#fff!important}
  .layout,.main{display:block!important;margin:0!important;padding:0!important}
  .card{box-shadow:none!important;break-inside:avoid}
