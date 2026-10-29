@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Shell } from "@/components/app-shell";
 import { ApkAssetIcon, type AssetKey } from "@/components/apk-asset-map";
-import { read, balance, money, sortTransactionsNewestFirst, type State } from "@/lib/demo";
+import { read, balance, money, maskAccountIdentifier, sortTransactionsNewestFirst, type State } from "@/lib/demo";
 
 const primaryActions: { icon: AssetKey; title: string; detail: string; href: string }[] = [
   { icon: "transfer", title: "Fund transfer", detail: "Create and review a transfer", href: "/transfers" },
@@ -67,7 +67,7 @@ export default function Dashboard() {
     </section>
 
     <section className="card balance dashboard-balance" aria-label="Available sample balance">
-      <div className="balance-top"><div><p className="balance-caption">Available sample balance</p><h2>{money(balance(s))}</h2><p className="balance-account">{s.accountLabel} <span>·</span> {(() => { const value = s.accountNumber || s.maskedId; const digits = value.replace(/\D/g, ""); return digits.length >= 4 ? "•••• " + digits.slice(-4) : value ? "••••" : "Not set"; })()}</p></div><span className="balance-mark" aria-hidden="true">◈</span></div>
+      <div className="balance-top"><div><p className="balance-caption">Available sample balance</p><h2>{money(balance(s))}</h2><p className="balance-account">{s.accountLabel} <span>·</span> {maskAccountIdentifier(s.accountNumber || s.maskedId)}</p></div><span className="balance-mark" aria-hidden="true">◈</span></div>
       <div className="balance-foot"><span>● Stored on this device</span><Link href="/statement">View statement ↗</Link></div>
     </section>
 
