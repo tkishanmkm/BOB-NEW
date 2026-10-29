@@ -16,7 +16,7 @@ function notifyStateChange(){
   if(typeof BroadcastChannel!=="undefined"){
     try{
       stateChannel??=new BroadcastChannel("bob-new-state-sync-v1");
-      stateChannel.onmessage=()=>notifyStateChange();
+      stateChannel.onmessage=()=>window.dispatchEvent(new Event("bob-new-state-change"));
       stateChannel.postMessage({type:"state-changed"});
     }catch{}
   }
