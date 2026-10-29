@@ -32,7 +32,7 @@ export default function ReceiptPage() {
   }
   const receiptRef = selected ? "SAMPLE-" + selected.id.replace(/[^a-zA-Z0-9-]/g, "").slice(0, 32) : "—";
   const accountValue = state.accountNumber || state.maskedId || "";
-  const accountDigits = accountValue.replace(/\\D/g, "");
+  const accountDigits = accountValue.replace(/\D/g, "");
   const maskedAccount = accountDigits.length >= 4 ? `•••• ${accountDigits.slice(-4)}` : accountValue ? "••••" : "Not set in Settings";
   return <Shell>
     <div className="page-heading apk-page-heading receipt-page-heading"><ApkAssetIcon asset="statement" size={30}/><div><p className="eyebrow">TRANSACTION SERVICES</p><h1>Transaction receipt</h1><p className="muted">Print a receipt preview for a saved local sample transaction.</p></div><button type="button" className="statement-print-button" onClick={printReceipt}>Print / Save PDF</button></div>
