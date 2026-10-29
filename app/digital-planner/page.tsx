@@ -77,7 +77,7 @@ export default function DigitalPlannerPage() {
 
   const completed = items.filter(item => item.done).length;
   return <Shell>
-    <div className="page-heading apk-page-heading"><ApkAssetIcon asset="digital-planner" size={30}/><div><p className="eyebrow">PLAN AHEAD</p><h1>Digital planner</h1><p className="muted">Keep simple reminders and personal goals in this browser.</p></div></div>
+    <div className="page-heading apk-page-heading"><ApkAssetIcon asset="alerts" size={30}/><div><p className="eyebrow">PLAN AHEAD</p><h1>Digital planner</h1><p className="muted">Keep simple reminders and personal goals in this browser.</p></div></div>
     <div className="notice"><strong>LOCAL DEMO ONLY.</strong> Plans are stored in this browser and are not synced with Bank of Baroda or sent to any bank service. Do not enter account numbers, PINs, passwords, or other sensitive information.</div>
     <section className="card">
       <div className="section-title"><div><h2>Add a plan</h2><p className="muted">Use this as a personal reminder list, not as an official bank reminder service.</p></div><ApkAssetIcon asset="alerts" size={24}/></div>
