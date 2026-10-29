@@ -87,3 +87,6 @@ if (results.length !== checks.length + (results.some(item => item.label === "pro
 } else {
   console.log("All configured static, build and route smoke checks passed. Browser visual walkthrough and live deployment verification remain separate required checks.");
 }
+}
+
+main().catch(error => { console.error(error); process.exitCode = 1; });
