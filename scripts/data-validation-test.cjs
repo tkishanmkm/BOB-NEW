@@ -50,7 +50,7 @@ test("support message save and clear compare against the loaded conversation", (
   assert.match(supportSource, /conversation was not confirmed cleared/i);
 });
 test("state saves use an atomic stale-write guard for cross-tab consistency", () => { assert.match(source, /function putRecordIfUnchanged\(/); assert.match(source, /JSON\.stringify\(stored\)!==JSON\.stringify\(expected\)/); assert.match(source, /const expected:State=read\(\)/); assert.match(source, /putRecordIfUnchanged\(db,next,expected\)/); });
-test("workspace restore checks current account state before replacing all records", () => { assert.match(source, /export async function restoreWorkspaceRecords/); assert.match(source, /const expected:State=read\(\)/); assert.match(source, /const request=store\.get\(STATE_RECORD\)/); assert.match(source, /Workspace restore was cancelled; refresh before retrying/); });
+test("workspace restore checks account, beneficiary, and support snapshots before replacing records", () => { assert.match(source, /export async function restoreWorkspaceRecords/); assert.match(source, /const expected:State=read\(\)/); assert.match(source, /const request=store\.get\(STATE_RECORD\)/); assert.match(source, /const payeesRequest=store\.get\("collection:bob-new-sample-payees-v1"\)/); assert.match(source, /const supportRequest=store\.get\("collection:bob-new-support-messages-v1"\)/); assert.match(source, /expectedCollections\.payees/); assert.match(source, /expectedCollections\.supportMessages/); assert.match(source, /Workspace restore was cancelled; refresh before retrying/); });
 
 test("accepts the default demo account", () => assert.equal(api.valid(validAccount()), true));
 test("rejects impossible ISO transaction dates", () => {
