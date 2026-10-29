@@ -69,6 +69,32 @@ if (!smokeRoutes.length) {
   console.error("FAIL could not locate the route list in scripts/smoke-test.mjs.");
 }
 
+// Navigation links should never lead to a route that has neither a direct page
+// nor a configured feature screen. This is separate from HTTP smoke testing.
+for (const route of navRoutes) {
+  if (directRoutes.has(route)) {
+    console.log(`PASS navigation route has a direct page: ${route}`);
+  } else if (featureRoute(route)) {
+    console.warn(`WARN navigation route uses generic FeaturePage: ${route}`);
+    if (!smokeRoutes.includes(route)) {
+      console.warn(`WARN navigation route is missing from smoke-test list: ${route}`);
+    }
+  } else {
+    failures++;
+    console.error(`FAIL navigation route has no direct page or configured feature: ${route}`);
+  }
+}
+
+// Every configured generic feature should be explicitly represented in the
+// smoke list so a typo or forgotten route cannot silently escape coverage.
+for (const feature of configuredFeatures) {
+  const route = `/${feature}`;
+  if (!smokeRoutes.includes(route) && !directRoutes.has(route)) {
+    failures++;
+    console.error(`FAIL configured feature is absent from smoke-test list and direct pages: ${route}`);
+  }
+}
+
 for (const action of uniqueActions) {
   const target = links.get(action);
   if (!target) {
@@ -86,7 +112,7 @@ for (const action of uniqueActions) {
     console.log(`PASS "${action}" -> ${target}`);
   }
 }
-console.log(`Checked ${uniqueActions.length} unique action labels and ${smokeRoutes.length} smoke-test routes; ${genericRoutes} use generic feature screens.`);
+console.log(`Checked ${uniqueActions.length} unique action labels, ${smokeRoutes.length} smoke-test routes, ${navRoutes.size} navigation routes and ${configuredFeatures.size} configured features; ${genericRoutes} smoke routes use generic feature screens.`);
 if (failures) {
   console.error(`Feature route audit failed: ${failures} issue(s).`);
   process.exit(1);
