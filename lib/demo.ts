@@ -229,7 +229,7 @@ export function validWorkspaceMessages(value:unknown):boolean{
   });
 }
 export async function restoreWorkspaceRecords(account:State,payees:unknown,supportMessages:unknown,expectedCollections?:{account?:State;payees:unknown;supportMessages:unknown}):Promise<boolean|"cleanup-pending">{
-  if(!valid(account)||!validWorkspacePayees(payees)||!validWorkspaceMessages(supportMessages)||typeof window==="undefined")return false;
+  if(!valid(account)||!validWorkspacePayees(payees)||!validWorkspaceMessages(supportMessages)||typeof window==="undefined"||!expectedCollections||!valid(expectedCollections.account)||!validWorkspacePayees(expectedCollections.payees)||!validWorkspaceMessages(expectedCollections.supportMessages))return false;
   // Backups are untrusted input: persist only the documented schema, not
   // unexpected fields that happen to pass structural validation.
   const normalized=normalizeImportedState(account);
@@ -259,7 +259,8 @@ export async function restoreWorkspaceRecords(account:State,payees:unknown,suppo
           const currentPayees=payeesRequest.result?.value;
           const currentSupport=supportRequest.result?.value;
           if(!valid(stored)||JSON.stringify(stored)!==JSON.stringify(expected)||
-             expectedCollections&&(JSON.stringify(currentPayees)!==JSON.stringify(expectedCollections.payees)||JSON.stringify(currentSupport)!==JSON.stringify(expectedCollections.supportMessages))){
+             !validWorkspacePayees(currentPayees)||!validWorkspaceMessages(currentSupport)||
+             JSON.stringify(currentPayees)!==JSON.stringify(expectedCollections.payees)||JSON.stringify(currentSupport)!==JSON.stringify(expectedCollections.supportMessages)){
             stale=true;
             try{tx.abort()}catch{}
             return;
