@@ -383,3 +383,8 @@ html{scroll-behavior:smooth;scroll-padding-top:16px}
 .login-page{width:100%;min-width:0;overflow-x:hidden}
 .login-card{width:100%;min-width:0;max-width:440px}
 .login-card p,.login-footnote{overflow-wrap:anywhere}
+
+/* Ensure the login grid track itself can shrink below long-content intrinsic width. */
+.login-page{grid-template-columns:minmax(0,1fr)}
+.login-card{justify-self:center;max-width:440px}
+.login-card>*{min-width:0}
