@@ -138,6 +138,7 @@ export async function saveState(v:State):Promise<boolean>{
 // Persist state only through saveState(), which resolves after IndexedDB commits.
 // A synchronous writer could report success before durable storage finishes.
 export function balance(s:State):number{return s.openingBalance+s.transactions.filter(t=>t.status==="posted").reduce((n,t)=>n+(t.type==="credit"?t.amount:-t.amount),0)}
+export function maskAccountIdentifier(value:string,emptyLabel="Not set"):string{const digits=value.replace(/\D/g,"");return digits.length>=4?"•••• "+digits.slice(-4):value.trim()?"••••":emptyLabel}
 
 // Shared ordering rule: newest ISO date first; for same-day entries, later stored entries first.
 export function sortTransactionsNewestFirst(transactions:Tx[]):Tx[]{return transactions.map((tx,index)=>({tx,index})).sort((a,b)=>b.tx.date.localeCompare(a.tx.date)||b.index-a.index).map(({tx})=>tx)}
