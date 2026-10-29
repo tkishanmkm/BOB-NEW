@@ -113,6 +113,10 @@ for (const action of uniqueActions) {
   }
 }
 console.log(`Checked ${uniqueActions.length} unique action labels, ${smokeRoutes.length} smoke-test routes, ${navRoutes.size} navigation routes and ${configuredFeatures.size} configured features; ${genericRoutes} smoke routes use generic feature screens.`);
+if (genericRoutes > 0) {
+  failures++;
+  console.error(`BLOCKED: ${genericRoutes} configured smoke routes still use the shared generic FeaturePage. Replace them with dedicated, APK-evidence-based screens or explicitly document and approve each route as a non-APK prototype extra before release.`);
+}
 if (failures) {
   console.error(`Feature route audit failed: ${failures} issue(s).`);
   process.exit(1);
