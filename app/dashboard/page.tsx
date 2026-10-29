@@ -67,7 +67,7 @@ export default function Dashboard() {
     </section>
 
     <section className="card balance dashboard-balance" aria-label="Available sample balance">
-      <div className="balance-top"><div><p className="balance-caption">Available sample balance</p><h2>{money(balance(s))}</h2><p className="balance-account">{s.accountLabel} <span>·</span> {s.maskedId}</p></div><span className="balance-mark" aria-hidden="true">◈</span></div>
+      <div className="balance-top"><div><p className="balance-caption">Available sample balance</p><h2>{money(balance(s))}</h2><p className="balance-account">{s.accountLabel} <span>·</span> {(() => { const value = s.accountNumber || s.maskedId; const digits = value.replace(/\D/g, ""); return digits.length >= 4 ? "•••• " + digits.slice(-4) : value ? "••••" : "Not set"; })()}</p></div><span className="balance-mark" aria-hidden="true">◈</span></div>
       <div className="balance-foot"><span>● Stored on this device</span><Link href="/statement">View statement ↗</Link></div>
     </section>
 
