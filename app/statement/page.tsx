@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { Shell } from "@/components/app-shell";
 import { ApkAssetIcon } from "@/components/apk-asset-map";
-import { read, money, maskAccountIdentifier, sortTransactionsNewestFirst, balanceThroughDate, type State } from "@/lib/demo";
+import { read, money, maskAccountIdentifier, sortTransactionsNewestFirst, balanceThroughDate, postedTotal, type State } from "@/lib/demo";
 
 export default function StatementPage() {
   const [state, setState] = useState<State>(read());
@@ -22,8 +22,8 @@ export default function StatementPage() {
   const rows = useMemo(() => sortTransactionsNewestFirst(state.transactions)
     .filter(tx => !(from && to && from > to) && (!from || tx.date >= from)).filter(tx => !to || tx.date <= to)
     .filter(tx => type === "all" || tx.type === type).filter(tx => status === "all" || tx.status === status), [state.transactions, from, to, type, status]);
-  const credits = rows.filter(t => t.type === "credit" && t.status === "posted").reduce((n,t) => n + t.amount, 0);
-  const debits = rows.filter(t => t.type === "debit" && t.status === "posted").reduce((n,t) => n + t.amount, 0);
+  const credits = postedTotal(rows, "credit");
+  const debits = postedTotal(rows, "debit");
   const closing = balanceThroughDate(state, to || undefined);
   function clearFilters() { setFrom(""); setTo(""); setType("all"); setStatus("all"); setMessage(""); }
   function printStatement() {
