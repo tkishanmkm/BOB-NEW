@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Shell } from "@/components/app-shell";
 import { ApkAssetIcon, type AssetKey } from "@/components/apk-asset-map";
@@ -43,6 +44,22 @@ export default function Dashboard() {
       <div><p className="eyebrow">YOUR ACCOUNT OVERVIEW</p><h1>Hello, {s.name}</h1><p className="muted">Review your account information, balances and recent activity.</p></div>
       <Link className="btn dashboard-outline" href="/account-details">View account details →</Link>
     </div>
+
+    <section className="dashboard-source-banner" aria-label="Dashboard visual using an extracted APK asset">
+      <Image
+        className="dashboard-source-banner-art"
+        src="/assets/reference/flutter-ui/assets/images/dashBoard/bob_bg.png"
+        alt=""
+        width={960}
+        height={360}
+        priority
+      />
+      <div className="dashboard-source-banner-copy">
+        <p className="eyebrow">ACCOUNT WORKSPACE · DEMO</p>
+        <h2>Your accounts, activity and services</h2>
+        <p>Explore this local prototype. No bank connection or real payments.</p>
+      </div>
+    </section>
 
     <section className="card balance dashboard-balance" aria-label="Available sample balance">
       <div className="balance-top"><div><p className="balance-caption">Available sample balance</p><h2>{money(balance(s))}</h2><p className="balance-account">{s.accountLabel} <span>·</span> {s.maskedId}</p></div><span className="balance-mark" aria-hidden="true">◈</span></div>
