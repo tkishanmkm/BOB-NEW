@@ -194,7 +194,13 @@ export function validWorkspaceMessages(value:unknown):boolean{
 }
 export async function restoreWorkspaceRecords(account:State,payees:unknown,supportMessages:unknown):Promise<boolean>{
   if(!valid(account)||!validWorkspacePayees(payees)||!validWorkspaceMessages(supportMessages)||typeof window==="undefined")return false;
-  const next:State={...account,transactions:account.transactions.map(t=>({...t}))};
+  // Backups are untrusted input: persist only the documented schema, not
+  // unexpected fields that happen to pass structural validation.
+  const normalized=normalizeImportedState(account);
+  if(!normalized)return false;
+  const next:State=normalized;
+  const safePayees=(payees as Array<{id:string;name:string;bank:string;account:string;code:string}>).map(p=>({id:p.id,name:p.name,bank:p.bank,account:p.account,code:p.code}));
+  const safeMessages=(supportMessages as Array<{id:string;text:string;sender:"you"|"daybook";time:string}>).map(m=>({id:m.id,text:m.text,sender:m.sender,time:m.time}));
   const operation=saveQueue.then(async()=>{
     let db:IDBDatabase|undefined;
     try{
@@ -204,8 +210,8 @@ export async function restoreWorkspaceRecords(account:State,payees:unknown,suppo
         const tx=db!.transaction(STORE,"readwrite");
         const store=tx.objectStore(STORE);
         store.put({id:STATE_RECORD,value:next});
-        store.put({id:"collection:bob-new-sample-payees-v1",value:payees});
-        store.put({id:"collection:bob-new-support-messages-v1",value:supportMessages});
+        store.put({id:"collection:bob-new-sample-payees-v1",value:safePayees});
+        store.put({id:"collection:bob-new-support-messages-v1",value:safeMessages});
         tx.oncomplete=()=>resolve();
         tx.onerror=()=>reject(tx.error||new Error("Workspace restore transaction failed."));
         tx.onabort=()=>reject(tx.error||new Error("Workspace restore was cancelled."));
