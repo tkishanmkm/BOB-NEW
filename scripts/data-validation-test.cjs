@@ -125,6 +125,7 @@ test("rejects transaction descriptions over the limit", () => {
   const s = validAccount(); s.transactions[0].description = "x".repeat(301);
   assert.equal(api.valid(s), false);
 });
+test("posted totals use integer paise and ignore pending entries", () => { const tx = [{id:"a",date:"2026-10-01",description:"a",amount:0.1,type:"credit",status:"posted"},{id:"b",date:"2026-10-02",description:"b",amount:0.2,type:"credit",status:"posted"},{id:"c",date:"2026-10-03",description:"c",amount:100,type:"credit",status:"pending"}]; assert.equal(api.postedTotal(tx,"credit"),0.3); assert.equal(api.postedTotal(tx,"debit"),0); });
 test("posted transfer debits reduce the calculated sample balance", () => {
   const s = validAccount();
   const before = api.balance(s);
