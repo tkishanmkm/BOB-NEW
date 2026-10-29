@@ -74,6 +74,12 @@ test("legacy records are not removed before IndexedDB deletion succeeds", () => 
 test("state saves use an atomic stale-write guard for cross-tab consistency", () => { assert.match(source, /function putRecordIfUnchanged\(/); assert.match(source, /JSON\.stringify\(stored\)!==JSON\.stringify\(expected\)/); assert.match(source, /const expected:State=read\(\)/); assert.match(source, /putRecordIfUnchanged\(db,next,expected\)/); });
 test("workspace restore checks account, beneficiary, and support snapshots before replacing records", () => { assert.match(source, /export async function restoreWorkspaceRecords/); assert.match(source, /const expected:State=expectedCollections\?\.account\?\?read\(\)/); assert.match(source, /const request=store\.get\(STATE_RECORD\)/); assert.match(source, /const payeesRequest=store\.get\("collection:bob-new-sample-payees-v1"\)/); assert.match(source, /const supportRequest=store\.get\("collection:bob-new-support-messages-v1"\)/); assert.match(source, /expectedCollections\.account\?\?read\(\)/); assert.match(source, /expectedCollections\.payees/); assert.match(source, /expectedCollections\.supportMessages/); assert.match(source, /Workspace restore was cancelled; refresh before retrying/); });
 
+test("workspace restore reports when legacy browser cleanup is incomplete", () => {
+  assert.match(source, /return "cleanup-pending"/);
+  assert.match(source, /Workspace restore succeeded in IndexedDB, but one or more legacy browser copies could not be removed/);
+  assert.match(fs.readFileSync("app/settings/page.tsx", "utf8"), /Workspace restored and saved, but legacy browser copies could not all be removed/);
+});
+
 test("accepts the default demo account", () => assert.equal(api.valid(validAccount()), true));
 test("rejects impossible ISO transaction dates", () => {
   const s = validAccount(); s.transactions[0].date = "2026-02-30";
