@@ -235,6 +235,9 @@ export async function restoreWorkspaceRecords(account:State,payees:unknown,suppo
   const normalized=normalizeImportedState(account);
   if(!normalized)return false;
   const next:State=normalized;
+  // Preserve the current account baseline while this multi-record restore waits
+  // in the local save queue, so a stale backup cannot replace newer account data.
+  const expected:State=read();
   const safePayees=(payees as Array<{id:string;name:string;bank:string;account:string;code:string}>).map(p=>({id:p.id,name:p.name,bank:p.bank,account:p.account,code:p.code}));
   const safeMessages=(supportMessages as Array<{id:string;text:string;sender:"you"|"daybook";time:string}>).map(m=>({id:m.id,text:m.text,sender:m.sender,time:m.time}));
   const operation=saveQueue.then(async()=>{
@@ -242,16 +245,32 @@ export async function restoreWorkspaceRecords(account:State,payees:unknown,suppo
     try{
       if(!hydrated)await hydrate();
       db=await openDB();
+      let stale=false;
       await new Promise<void>((resolve,reject)=>{
         const tx=db!.transaction(STORE,"readwrite");
         const store=tx.objectStore(STORE);
-        store.put({id:STATE_RECORD,value:next});
-        store.put({id:"collection:bob-new-sample-payees-v1",value:safePayees});
-        store.put({id:"collection:bob-new-support-messages-v1",value:safeMessages});
+        let stale=false;
+        const request=store.get(STATE_RECORD);
+        request.onsuccess=()=>{
+          const stored=request.result?.value;
+          if(!valid(stored)||JSON.stringify(stored)!==JSON.stringify(expected)){
+            stale=true;
+            try{tx.abort()}catch{}
+            return;
+          }
+          store.put({id:STATE_RECORD,value:next});
+          store.put({id:"collection:bob-new-sample-payees-v1",value:safePayees});
+          store.put({id:"collection:bob-new-support-messages-v1",value:safeMessages});
+        };
+        request.onerror=()=>reject(request.error||new Error("Could not verify the latest account data before restoring."));
         tx.oncomplete=()=>resolve();
-        tx.onerror=()=>reject(tx.error||new Error("Workspace restore transaction failed."));
-        tx.onabort=()=>reject(tx.error||new Error("Workspace restore was cancelled."));
+        tx.onerror=()=>{if(stale)resolve();else reject(tx.error||new Error("Workspace restore transaction failed."))};
+        tx.onabort=()=>{if(stale)resolve();else reject(tx.error||new Error("Workspace restore was cancelled."))};
       });
+      if(stale){
+        window.dispatchEvent(new CustomEvent("bob-new-storage-error",{detail:"Another tab changed the saved account data. Workspace restore was cancelled; refresh before retrying."}));
+        return false;
+      }
       cache=next;
       try{localStorage.removeItem(KEY);localStorage.removeItem("bob-new-sample-payees-v1");localStorage.removeItem("bob-new-support-messages-v1")}catch{}
       notifyStateChange();
