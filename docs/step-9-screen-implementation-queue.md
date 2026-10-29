@@ -135,3 +135,11 @@ Implemented in `app/style.css` on `main`:
 - Added print-specific overrides so printing restores a conventional table with its column headings.
 - Fetched both committed source files from `main` and statically verified mobile card rules, labels, hidden mobile header, zero minimum table width, and print table restoration.
 - Real-device layout, print output, and production build remain untested.
+
+## Step 21 — mobile receipt layout
+
+- Updated `app/style.css` so the receipt page heading and Print / Save PDF action fit a phone viewport; the action becomes full-width on narrow screens.
+- Receipt selector and receipt paper use reduced mobile padding, and the sample stamp no longer rotates on narrow screens.
+- Transaction amount, account details, identifiers, status and long references use compact two-column labeled rows with safe wrapping. Extra-narrow screens switch detail rows to a single column.
+- Print-specific rule hides the on-screen print action and keeps receipt fields from splitting across pages where possible.
+- Static verification to be completed against the committed stylesheet. Real iOS/Android rendering, print pagination and production build remain untested.
