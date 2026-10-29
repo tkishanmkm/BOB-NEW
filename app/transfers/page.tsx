@@ -45,6 +45,7 @@ export default function Transfers() {
   const [error, setError] = useState("");
   const [saving, setSaving] = useState(false);
   const saveLock = useRef(false);
+
   const [payees, setPayees] = useState<Payee[]>([]);
   const [payeesLoadError, setPayeesLoadError] = useState(false);
   const [selectedPayee, setSelectedPayee] = useState("");
@@ -95,7 +96,9 @@ export default function Transfers() {
       setError("The local transaction history has reached its 5,000-entry limit. No result was recorded.");
       return;
     }
-    const transferId = crypto.randomUUID();
+    const transferId = typeof crypto !== "undefined" && typeof crypto.randomUUID === "function"
+      ? crypto.randomUUID()
+      : "demo-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 12);
     const next: State = {
       ...current,
       transactions: [
