@@ -128,3 +128,10 @@ Implemented in `app/style.css` on `main`:
 - Static source verification confirmed the phone-width shell, bottom tabs, safe-area padding, touch targets, form sizing, overflow safeguards and narrow Passbook filter layout.
 - Not yet verified in a real mobile browser or via production build. Follow-up acceptance: test iOS Safari and Android Chrome at 320px, 360px, 390px and 430px widths, plus safe-area and keyboard behavior.
 
+## Step 20 — mobile statement transaction cards
+
+- Added explicit data labels to each sample statement transaction cell in `app/statement/page.tsx`.
+- On narrow screens (650px and below), the statement's wide five-column table is replaced by stacked transaction cards with visible Date, Remarks, Reference, Amount, and Status labels. Long descriptions and references wrap instead of requiring sideways scrolling.
+- Added print-specific overrides so printing restores a conventional table with its column headings.
+- Fetched both committed source files from `main` and statically verified mobile card rules, labels, hidden mobile header, zero minimum table width, and print table restoration.
+- Real-device layout, print output, and production build remain untested.
