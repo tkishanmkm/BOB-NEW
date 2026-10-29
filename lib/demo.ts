@@ -163,7 +163,7 @@ export async function saveState(v:State):Promise<boolean>{
   const next:State={...v,transactions:v.transactions.map(t=>({...t}))};
   // Capture the caller-visible baseline before waiting in the queue, so a stale
   // full-state object cannot overwrite a newer state while it waits to be saved.
-  const expected:State=read();
+  const expected:State=expectedCollections?.account??read();
   const operation=saveQueue.then(async()=>{
     let db:IDBDatabase|undefined;
     try{
@@ -228,7 +228,7 @@ export function validWorkspaceMessages(value:unknown):boolean{
     ids.add(m.id);return true;
   });
 }
-export async function restoreWorkspaceRecords(account:State,payees:unknown,supportMessages:unknown,expectedCollections?:{payees:unknown;supportMessages:unknown}):Promise<boolean>{
+export async function restoreWorkspaceRecords(account:State,payees:unknown,supportMessages:unknown,expectedCollections?:{account?:State;payees:unknown;supportMessages:unknown}):Promise<boolean>{
   if(!valid(account)||!validWorkspacePayees(payees)||!validWorkspaceMessages(supportMessages)||typeof window==="undefined")return false;
   // Backups are untrusted input: persist only the documented schema, not
   // unexpected fields that happen to pass structural validation.
