@@ -30,7 +30,7 @@ export default function ReceiptPage() {
     setMessage("");
     window.print();
   }
-  const receiptRef = selected ? "SAMPLE-" + selected.id.replace(/[^a-zA-Z0-9-]/g, "").slice(0, 32) : "—";
+  const receiptRef = selected ? selected.id : "—";
   const accountValue = state.accountNumber || state.maskedId || "";
   const accountDigits = accountValue.replace(/\D/g, "");
   const maskedAccount = accountDigits.length >= 4 ? `•••• ${accountDigits.slice(-4)}` : accountValue ? "••••" : "Not set in Settings";
@@ -48,7 +48,7 @@ export default function ReceiptPage() {
       <div className="receipt-status"><span>{selected.status==="posted"?"SAMPLE POSTED STATUS":"SAMPLE PENDING STATUS"}</span><h2>{selected.type==="credit"?"+":"−"}{money(selected.amount)}</h2><p>{selected.description}</p></div>
       <div className="receipt-section-heading"><h2>Transaction details</h2><ApkAssetIcon asset="passbook" size={22}/></div>
       <div className="receipt-grid">
-        <ReceiptField label="Receipt reference (local)" value={receiptRef}/>
+        <ReceiptField label="Transaction reference (local)" value={receiptRef}/>
         <ReceiptField label="Transaction date" value={selected.date}/>
         <ReceiptField label="Transaction type" value={selected.type==="credit"?"Credit (sample)":"Debit (sample)"}/>
         <ReceiptField label="Status" value={selected.status==="posted"?"Posted in local sample data":"Pending in local sample data"}/>
