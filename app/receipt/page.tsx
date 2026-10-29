@@ -21,7 +21,7 @@ export default function ReceiptPage() {
     window.addEventListener("storage", refresh);
     return () => { window.removeEventListener("bob-new-state-change", refresh); window.removeEventListener("storage", refresh); };
   }, []);
-  const rows = useMemo(() => state.transactions.slice().reverse(), [state.transactions]);
+  const rows = useMemo(() => state.transactions.map((tx, index) => ({ tx, index })).sort((a, b) => b.tx.date.localeCompare(a.tx.date) || b.index - a.index).map(({ tx }) => tx), [state.transactions]);
   const selected: Tx | undefined = requestedId
     ? rows.find(t => t.id === requestedId)
     : requestedId === "" ? (rows.find(t => t.id === selectedId) || rows[0]) : undefined;
