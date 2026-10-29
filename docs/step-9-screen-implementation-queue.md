@@ -115,3 +115,16 @@ Scope inspected: `app/transfers/page.tsx`, `app/payees/page.tsx`, `lib/demo.ts`,
 - [ ] Add deterministic tests for amount parsing, pending-debit reservation, and duplicate-submit behavior.
 - [ ] Verify transfer result, balance, Passbook, statement and receipt consistency in a browser.
 - [ ] Run the production build and route smoke tests; none are claimed by this static audit.
+
+
+## Step 19 — mobile-device-only presentation
+
+Implemented in `app/style.css` on `main`:
+
+- Constrains the app shell to a 520px phone-width viewport, including desktop previews; removes the desktop sidebar from the active UI and keeps the five-destination bottom tab bar visible.
+- Adds safe-area-aware bottom navigation padding, a sticky compact header, thumb-sized 44px controls, and 16px form control text to reduce unwanted mobile browser zoom.
+- Uses single-column layouts for forms, filters, service tiles and transaction rows; wraps long identifiers/content and clips accidental horizontal page overflow.
+- Keeps statement/document styles and the local-prototype disclosure; this is a responsive presentation change, not APK pixel-parity proof.
+- Static source verification confirmed the phone-width shell, bottom tabs, safe-area padding, touch targets, form sizing, overflow safeguards and narrow Passbook filter layout.
+- Not yet verified in a real mobile browser or via production build. Follow-up acceptance: test iOS Safari and Android Chrome at 320px, 360px, 390px and 430px widths, plus safe-area and keyboard behavior.
+
