@@ -47,7 +47,7 @@ export default function StatementPage() {
     <section className="statement-summary-grid">
       <div className="card statement-summary-item"><span>Posted credits in results</span><strong className="amount-credit">{money(credits)}</strong></div>
       <div className="card statement-summary-item"><span>Posted debits in results</span><strong className="amount-debit">{money(debits)}</strong></div>
-      <div className="card statement-summary-item"><span>Calculated sample balance</span><strong>{money(closing)}</strong></div>
+      <div className="card statement-summary-item"><span>Account balance through end date</span><strong>{money(closing)}</strong></div>
     </section>
     <section className="card statement-document">
       <div className="statement-header">
