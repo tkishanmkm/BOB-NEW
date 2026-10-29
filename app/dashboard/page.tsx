@@ -52,7 +52,7 @@ export default function Dashboard() {
     <section className="dashboard-source-banner" aria-label="Dashboard visual using an extracted APK asset">
       <Image
         className="dashboard-source-banner-art"
-        src="/assets/reference/flutter-ui/assets/images/dashBoard/bob_bg.png"
+        src="/assets/bob-world/original-assets/assets/images/dashBoard/bob_bg.png"
         alt=""
         width={960}
         height={360}
