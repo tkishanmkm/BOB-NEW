@@ -123,4 +123,17 @@ test("pending transfer simulations do not change the calculated sample balance",
   s.transactions.push({ id: "pending-transfer-test", date: "2026-10-29", description: "Pending demo transfer", amount: 125.50, type: "debit", status: "pending" });
   assert.equal(api.balance(s), before);
 });
+
+test("posted credits and debits are reflected in the sample balance", () => {
+  const s = validAccount();
+  s.openingBalance = 1000;
+  s.transactions = [
+    { id: "before", date: "2026-10-01", description: "Before range", amount: 100, type: "credit", status: "posted" },
+    { id: "on-end", date: "2026-10-10", description: "End date", amount: 40, type: "debit", status: "posted" },
+    { id: "pending", date: "2026-10-10", description: "Pending", amount: 500, type: "debit", status: "pending" },
+    { id: "after", date: "2026-10-11", description: "After range", amount: 25, type: "credit", status: "posted" },
+  ];
+  assert.equal(api.balance(s), 1085);
+});
+
 console.log(`Data validation tests passed: ${count}/${count}`);
