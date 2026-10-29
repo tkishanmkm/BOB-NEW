@@ -388,3 +388,9 @@ html{scroll-behavior:smooth;scroll-padding-top:16px}
 .login-page{grid-template-columns:minmax(0,1fr)}
 .login-card{justify-self:center;max-width:440px}
 .login-card>*{min-width:0}
+
+/* Final mobile overflow fix: make declared widths include padding and borders. */
+.login-page,.login-page *{box-sizing:border-box}
+.login-page{width:100%;max-width:100vw;padding-inline:16px}
+.login-card{width:100%;max-width:440px}
+.login-card .field,.login-card form,.login-card .field input{width:100%;max-width:100%}
