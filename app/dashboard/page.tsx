@@ -50,6 +50,15 @@ export default function Dashboard() {
     </div>
 
     <section className="dashboard-source-banner" aria-label="Local demo account workspace banner">
+      <Image
+        className="dashboard-source-banner-art"
+        src="/assets/bob-world/original-assets/assets/images/dashBoard/bob_bg.png"
+        alt=""
+        aria-hidden="true"
+        width={1200}
+        height={420}
+        sizes="(max-width: 650px) 100vw, 1100px"
+      />
       <div className="dashboard-source-banner-copy">
         <p className="eyebrow">ACCOUNT WORKSPACE · DEMO</p>
         <h2>Your accounts, activity and services</h2>
