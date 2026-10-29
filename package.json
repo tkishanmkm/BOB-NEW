@@ -14,7 +14,8 @@
     "test:data": "node scripts/data-validation-test.cjs",
     "test:transfer-safety": "node scripts/transfer-safety-test.cjs",
     "audit:migration": "node scripts/migration-completeness-audit.cjs",
-    "audit:assets": "node scripts/asset-usage-audit.cjs"
+    "audit:assets": "node scripts/asset-usage-audit.cjs",
+    "verify:local": "npm run test:data && npm run test:transfer-safety && npm run audit:routes && npm run audit:migration && npm run audit:assets && npm run smoke-test && npm run typecheck && npm run lint && npm run build"
   },
   "dependencies": {
     "next": "15.5.28",
