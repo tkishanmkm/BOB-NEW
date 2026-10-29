@@ -49,6 +49,14 @@ test("support message save and clear compare against the loaded conversation", (
   assert.match(supportSource, /refresh before retrying/i);
   assert.match(supportSource, /conversation was not confirmed cleared/i);
 });
+test("legacy records are not removed before IndexedDB deletion succeeds", () => {
+  const deletion = source.slice(source.indexOf("export async function deleteLocalRecord"), source.indexOf("function readRecordById"));
+  assert.ok(deletion.indexOf("const db=await openDB()") < deletion.indexOf("localStorage.removeItem(key)"));
+  assert.ok(deletion.indexOf("await new Promise<void>") < deletion.indexOf("localStorage.removeItem(key)"));
+  assert.match(deletion, /Legacy local record is not valid JSON; it was preserved for recovery/);
+  assert.match(deletion, /if\(hadPrevious\)await putRecordById\(db,id,previous\)/);
+  assert.match(deletion, /The saved record was preserved; retry deletion/);
+});
 test("state saves use an atomic stale-write guard for cross-tab consistency", () => { assert.match(source, /function putRecordIfUnchanged\(/); assert.match(source, /JSON\.stringify\(stored\)!==JSON\.stringify\(expected\)/); assert.match(source, /const expected:State=read\(\)/); assert.match(source, /putRecordIfUnchanged\(db,next,expected\)/); });
 test("workspace restore checks account, beneficiary, and support snapshots before replacing records", () => { assert.match(source, /export async function restoreWorkspaceRecords/); assert.match(source, /const expected:State=read\(\)/); assert.match(source, /const request=store\.get\(STATE_RECORD\)/); assert.match(source, /const payeesRequest=store\.get\("collection:bob-new-sample-payees-v1"\)/); assert.match(source, /const supportRequest=store\.get\("collection:bob-new-support-messages-v1"\)/); assert.match(source, /expectedCollections\.payees/); assert.match(source, /expectedCollections\.supportMessages/); assert.match(source, /Workspace restore was cancelled; refresh before retrying/); });
 
