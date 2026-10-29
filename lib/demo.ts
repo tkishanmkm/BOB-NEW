@@ -143,7 +143,12 @@ export async function saveState(v:State):Promise<boolean>{
   const operation=saveQueue.then(async()=>{
     let db:IDBDatabase|undefined;
     try{
-      if(!hydrated)await hydrate();
+      // A write created before hydration may contain the default/stale cache.
+      // Hydrate first, then require the caller to retry with freshly loaded state.
+      if(!hydrated){
+        await hydrate();
+        return false;
+      }
       db=await openDB();
       await putRecord(db,next);
       cache=next;
