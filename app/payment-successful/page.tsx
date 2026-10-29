@@ -23,6 +23,11 @@ export default function PaymentSuccessfulPage() {
   // This is a local simulation and is not a bank payment confirmation.
   const isTransferResult = (tx: Tx) =>
     tx.type === "debit" && tx.status === "pending" && tx.description.startsWith("Demo transfer to ");
+  // Results should not repeat a full account identifier when a masked value is sufficient.
+  const maskedAccount = (value: string) => {
+    const digits = value.replace(/\\D/g, "");
+    return digits.length >= 4 ? `•••• ${digits.slice(-4)}` : "Not set";
+  };
   // A supplied ID is authoritative. Do not show a different transfer if it is missing.
   const latest: Tx | undefined = requestedId
     ? state?.transactions.find((tx) => tx.id === requestedId && isTransferResult(tx))
@@ -39,7 +44,7 @@ export default function PaymentSuccessfulPage() {
         <div className="receipt-row"><span>Reference</span><b>{latest.id}</b></div>
         <div className="receipt-row"><span>Date</span><b>{latest.date}</b></div>
         <div className="receipt-row"><span>Recipient</span><b>{latest.description.replace("Demo transfer to ", "").split(" · ")[0]}</b></div>
-        <div className="receipt-row"><span>Amount</span><b>{money(latest.amount)}</b></div><hr /><h2>Sample account details from Settings</h2><div className="receipt-row"><span>Account holder</span><b>{state.name}</b></div><div className="receipt-row"><span>Account</span><b>{state.accountNumber || state.maskedId || "Not set"}</b></div><div className="receipt-row"><span>Customer ID</span><b>{state.customerId || "Not set"}</b></div><div className="receipt-row"><span>Branch / IFSC</span><b>{state.branch || "Not set"} / {state.ifsc || "Not set"}</b></div><div className="receipt-row"><span>Contact</span><b>{state.mobile || "Not set"} · {state.email || "Not set"}</b></div><div className="receipt-row"><span>Address</span><b>{state.address || "Not set"}</b></div>
+        <div className="receipt-row"><span>Amount</span><b>{money(latest.amount)}</b></div><hr /><h2>Sample account details from Settings</h2><div className="receipt-row"><span>Account holder</span><b>{state.name}</b></div><div className="receipt-row"><span>Account (masked)</span><b>{maskedAccount(state.accountNumber || state.maskedId || "")}</b></div><div className="receipt-row"><span>Customer ID</span><b>{state.customerId || "Not set"}</b></div><div className="receipt-row"><span>Branch / IFSC</span><b>{state.branch || "Not set"} / {state.ifsc || "Not set"}</b></div><div className="receipt-row"><span>Contact</span><b>{state.mobile || "Not set"} · {state.email || "Not set"}</b></div><div className="receipt-row"><span>Address</span><b>{state.address || "Not set"}</b></div>
         <p className="warning">LOCAL RESULT — NOT A PAYMENT CONFIRMATION OR BANK RECEIPT</p>
       </>}
       {state && !latest && <p className="muted" role="alert">{requestedId ? "The requested transfer result was not found in saved browser data. No other transaction has been substituted." : "No saved transfer result was found. Start a new transfer to create one."}</p>}
