@@ -237,7 +237,7 @@ export async function restoreWorkspaceRecords(account:State,payees:unknown,suppo
   const next:State=normalized;
   // Preserve the current account baseline while this multi-record restore waits
   // in the local save queue, so a stale backup cannot replace newer account data.
-  const expected:State=read();
+  const expected:State=expectedCollections?.account?{...expectedCollections.account,transactions:expectedCollections.account.transactions.map(t=>({...t}))}:read();
   const safePayees=(payees as Array<{id:string;name:string;bank:string;account:string;code:string}>).map(p=>({id:p.id,name:p.name,bank:p.bank,account:p.account,code:p.code}));
   const safeMessages=(supportMessages as Array<{id:string;text:string;sender:"you"|"daybook";time:string}>).map(m=>({id:m.id,text:m.text,sender:m.sender,time:m.time}));
   const operation=saveQueue.then(async()=>{
