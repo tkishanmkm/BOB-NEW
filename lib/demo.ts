@@ -161,6 +161,9 @@ let saveQueue:Promise<void>=Promise.resolve();
 export async function saveState(v:State):Promise<boolean>{
   if(!valid(v)||typeof window==="undefined")return false;
   const next:State={...v,transactions:v.transactions.map(t=>({...t}))};
+  // Capture the caller-visible baseline before waiting in the queue, so a stale
+  // full-state object cannot overwrite a newer state while it waits to be saved.
+  const expected:State=read();
   const operation=saveQueue.then(async()=>{
     let db:IDBDatabase|undefined;
     try{
@@ -173,7 +176,7 @@ export async function saveState(v:State):Promise<boolean>{
       db=await openDB();
       // Compare-and-write inside one IndexedDB read/write transaction. A stale tab
       // must not replace newer data written by another tab.
-      const wrote=await putRecordIfUnchanged(db,next,cache);
+      const wrote=await putRecordIfUnchanged(db,next,expected);
       if(!wrote){
         window.dispatchEvent(new CustomEvent("bob-new-storage-error",{detail:"Another tab changed the saved account data. Your edit was not saved; refresh this page before retrying."}));
         return false;
