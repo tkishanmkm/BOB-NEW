@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Shell } from "@/components/app-shell";
-import { money, read, type State, type Tx } from "@/lib/demo";
+import { money, read, sortTransactionsNewestFirst, type State, type Tx } from "@/lib/demo";
 
 export default function PaymentSuccessfulPage() {
   const [state, setState] = useState<State | null>(null);
@@ -31,7 +31,7 @@ export default function PaymentSuccessfulPage() {
   // A supplied ID is authoritative. Do not show a different transfer if it is missing.
   const latest: Tx | undefined = requestedId
     ? state?.transactions.find((tx) => tx.id === requestedId && isTransferResult(tx))
-    : state?.transactions.map((tx, index) => ({ tx, index })).sort((a, b) => b.tx.date.localeCompare(a.tx.date) || b.index - a.index).map(({ tx }) => tx).find(isTransferResult);
+    : (state ? sortTransactionsNewestFirst(state.transactions).find(isTransferResult) : undefined);
 
   return <Shell>
     <section className="success-panel" aria-labelledby="result-title">
