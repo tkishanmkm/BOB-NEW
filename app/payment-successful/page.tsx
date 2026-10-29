@@ -43,7 +43,7 @@ export default function PaymentSuccessfulPage() {
         <div className="receipt-row"><span>Result</span><b>Pending — not processed</b></div>
         <div className="receipt-row"><span>Reference</span><b>{latest.id}</b></div>
         <div className="receipt-row"><span>Date</span><b>{latest.date}</b></div>
-        <div className="receipt-row"><span>Recipient</span><b>{latest.description.replace("Demo transfer to ", "").split(" · ")[0]}</b></div>
+        <div className="receipt-row"><span>Recipient</span><b>{latest.description.replace("Demo transfer to ", "").split("\\nNote: ")[0]}</b></div>
         <div className="receipt-row"><span>Amount</span><b>{money(latest.amount)}</b></div><hr /><h2>Sample account details from Settings</h2><div className="receipt-row"><span>Account holder</span><b>{state.name}</b></div><div className="receipt-row"><span>Account (masked)</span><b>{maskedAccount(state.accountNumber || state.maskedId || "")}</b></div><div className="receipt-row"><span>Customer ID</span><b>{state.customerId || "Not set"}</b></div><div className="receipt-row"><span>Branch / IFSC</span><b>{state.branch || "Not set"} / {state.ifsc || "Not set"}</b></div><div className="receipt-row"><span>Contact</span><b>{state.mobile || "Not set"} · {state.email || "Not set"}</b></div><div className="receipt-row"><span>Address</span><b>{state.address || "Not set"}</b></div>
         <p className="warning">LOCAL RESULT — NOT A PAYMENT CONFIRMATION OR BANK RECEIPT</p>
       </>}
