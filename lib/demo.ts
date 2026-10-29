@@ -9,6 +9,18 @@ export const DEFAULT:State={schemaVersion:1,name:"Account Holder",accountLabel:"
 let cache:State={...DEFAULT,transactions:DEFAULT.transactions.map(t=>({...t}))};
 let hydrated=false;
 let hydrationPromise:Promise<State>|null=null;
+let stateChannel:BroadcastChannel|undefined;
+function notifyStateChange(){
+  if(typeof window==="undefined")return;
+  window.dispatchEvent(new Event("bob-new-state-change"));
+  if(typeof BroadcastChannel!=="undefined"){
+    try{
+      stateChannel??=new BroadcastChannel("bob-new-state-sync-v1");
+      stateChannel.onmessage=()=>notifyStateChange();
+      stateChannel.postMessage({type:"state-changed"});
+    }catch{}
+  }
+}
 function openDB():Promise<IDBDatabase>{
   return new Promise((resolve,reject)=>{
     if(typeof indexedDB==="undefined"){reject(new Error("IndexedDB is unavailable in this browser."));return}
@@ -72,7 +84,7 @@ export async function hydrate():Promise<State>{
       cache={...DEFAULT,...stored,transactions:stored.transactions.map(t=>({...t}))};
       try{localStorage.removeItem(KEY)}catch{}
       hydrated=true;
-      window.dispatchEvent(new Event("bob-new-state-change"));
+      notifyStateChange();
       return cache;
     }catch(error){
       hydrationPromise=null;
@@ -97,7 +109,7 @@ export async function saveState(v:State):Promise<boolean>{
       db=await openDB();
       await putRecord(db,next);
       cache=next;
-      window.dispatchEvent(new Event("bob-new-state-change"));
+      notifyStateChange();
       return true;
     }catch{
       window.dispatchEvent(new CustomEvent("bob-new-storage-error",{detail:"Could not save to IndexedDB. Check browser storage availability."}));
@@ -155,7 +167,7 @@ export async function restoreWorkspaceRecords(account:State,payees:unknown,suppo
       });
       cache=next;
       try{localStorage.removeItem(KEY);localStorage.removeItem("bob-new-sample-payees-v1");localStorage.removeItem("bob-new-support-messages-v1")}catch{}
-      window.dispatchEvent(new Event("bob-new-state-change"));
+      notifyStateChange();
       return true;
     }catch{
       window.dispatchEvent(new CustomEvent("bob-new-storage-error",{detail:"Could not restore workspace backup. Existing records were not confirmed as changed."}));
