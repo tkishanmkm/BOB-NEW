@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { Shell } from "@/components/app-shell";
 import { ApkAssetIcon } from "@/components/apk-asset-map";
-import { read, money, type State, type Tx } from "@/lib/demo";
+import { read, money, sortTransactionsNewestFirst, type State, type Tx } from "@/lib/demo";
 
 export default function ReceiptPage() {
   const [state, setState] = useState<State>(read());
@@ -21,7 +21,7 @@ export default function ReceiptPage() {
     window.addEventListener("storage", refresh);
     return () => { window.removeEventListener("bob-new-state-change", refresh); window.removeEventListener("storage", refresh); };
   }, []);
-  const rows = useMemo(() => state.transactions.map((tx, index) => ({ tx, index })).sort((a, b) => b.tx.date.localeCompare(a.tx.date) || b.index - a.index).map(({ tx }) => tx), [state.transactions]);
+  const rows = useMemo(() => sortTransactionsNewestFirst(state.transactions), [state.transactions]);
   const selected: Tx | undefined = requestedId
     ? rows.find(t => t.id === requestedId)
     : requestedId === "" ? (rows.find(t => t.id === selectedId) || rows[0]) : undefined;
