@@ -10,6 +10,12 @@ import { balance, money, read, saveState, getLocalRecord, type State } from "@/l
 type Stage = "details" | "review";
 type Payee = { id: string; name: string; bank: string; account: string; code: string };
 const PAYEES_KEY = "bob-new-sample-payees-v1";
+function localCalendarDate(date = new Date()): string {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
 function parseAmount(value: string): number | null {
   if (!/^(?:0|[1-9][0-9]*)(?:\.[0-9]{1,2})?$/.test(value)) return null;
   const amount = Number(value);
@@ -106,7 +112,7 @@ export default function Transfers() {
         ...current.transactions,
         {
           id: transferId,
-          date: new Date().toISOString().slice(0, 10),
+          date: localCalendarDate(),
           description: "Demo transfer to " + recipient.trim() + (remark.trim() ? " · " + remark.trim() : ""),
           amount: value,
           type: "debit",
@@ -156,7 +162,7 @@ export default function Transfers() {
         <Field label="Institution name"><input value={bank} maxLength={100} onChange={e => setBank(e.target.value)} required /></Field>
         <Field label="Account number"><input inputMode="numeric" value={account} maxLength={18} onChange={e => setAccount(e.target.value.replace(/[^0-9]/g, ""))} required /><small>Use placeholder details only</small></Field>
         <Field label="IFSC-format code"><input value={ifsc} maxLength={11} onChange={e => setIfsc(e.target.value.toUpperCase())} required /></Field>
-        <Field label="Amount (₹)"><input type="number" min="0.01" step="0.01" value={amount} onChange={e => setAmount(e.target.value)} required /></Field>
+        <Field label="Amount (₹)"><input type="number" inputMode="decimal" min="0.01" step="0.01" value={amount} onChange={e => setAmount(e.target.value)} required /></Field>
         <Field label="Note (optional)"><input value={remark} maxLength={120} onChange={e => setRemark(e.target.value)} /></Field>
       </div>
       {error && <p className="error" role="alert">{error}</p>}<button type="submit">Review transfer</button>
