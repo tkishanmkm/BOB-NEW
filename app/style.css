@@ -364,6 +364,11 @@ html{scroll-behavior:smooth;scroll-padding-top:16px}
 @media(prefers-reduced-motion:reduce){.skip-link{transition:none}}
 
 
+/* APK-derived BOB World branding assets; prototype disclaimer remains visible. */
+@font-face{font-family:BobGabarito;src:url("/assets/bob-world/Gabarito.ttf") format("truetype");font-weight:400 700;font-display:swap}
+@font-face{font-family:BobGabarito;src:url("/assets/bob-world/Gabarito-ExtraBold.ttf") format("truetype");font-weight:800 900;font-display:swap}
+.bob-world-logo{display:block;object-fit:contain;flex-shrink:0}.splash-logo{margin:0 auto 1rem}.prototype-tag{display:inline-block;margin-left:5px;padding:3px 6px;border-radius:5px;background:#fff0c9;color:#74510b;font:800 10px/1.2 BobGabarito,Arial,sans-serif;letter-spacing:.08em;vertical-align:middle}
+.login-brand h1,.splash-card h1,header .brand{font-family:BobGabarito,Gabarito,Arial,sans-serif}
 /* Focused login layout correction: keep the prototype access gate compact and readable. */
 .login-page{min-height:100svh;display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse at 50% 15%,#e8eef8 0%,var(--app-canvas,#f5f7fa) 58%,#edf1f7 100%)}
 .login-card{width:min(100%,440px);margin:auto;padding:clamp(24px,5vw,36px);background:var(--app-surface,#fff);border:1px solid var(--app-border,#dfe5ec);border-radius:20px;box-shadow:0 20px 60px rgba(31,60,102,.12)}
