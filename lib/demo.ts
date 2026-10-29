@@ -10,13 +10,29 @@ let cache:State={...DEFAULT,transactions:DEFAULT.transactions.map(t=>({...t}))};
 let hydrated=false;
 let hydrationPromise:Promise<State>|null=null;
 let stateChannel:BroadcastChannel|undefined;
+async function syncStateFromDatabase(){
+  if(typeof window==="undefined")return;
+  let db:IDBDatabase|undefined;
+  try{
+    db=await openDB();
+    const stored=await readRecord(db);
+    if(stored!==undefined){
+      if(!valid(stored))throw new Error("Saved account data from another tab failed validation.");
+      cache={...DEFAULT,...stored,transactions:stored.transactions.map(t=>({...t}))};
+      hydrated=true;
+      window.dispatchEvent(new Event("bob-new-state-change"));
+    }
+  }catch{
+    window.dispatchEvent(new CustomEvent("bob-new-storage-error",{detail:"Could not refresh saved data from another tab. Reload this page before editing."}));
+  }finally{db?.close()}
+}
 function notifyStateChange(){
   if(typeof window==="undefined")return;
   window.dispatchEvent(new Event("bob-new-state-change"));
   if(typeof BroadcastChannel!=="undefined"){
     try{
       stateChannel??=new BroadcastChannel("bob-new-state-sync-v1");
-      stateChannel.onmessage=()=>window.dispatchEvent(new Event("bob-new-state-change"));
+      stateChannel.onmessage=()=>{void syncStateFromDatabase()};
       stateChannel.postMessage({type:"state-changed"});
     }catch{}
   }
