@@ -5,6 +5,8 @@ const vm = require("node:vm");
 const ts = require("typescript");
 
 const source = fs.readFileSync("lib/demo.ts", "utf8");
+const payeesSource = fs.readFileSync("app/payees/page.tsx", "utf8");
+const supportSource = fs.readFileSync("app/help-support/page.tsx", "utf8");
 const compiled = ts.transpileModule(source, {
   compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
 }).outputText;
@@ -35,6 +37,18 @@ function test(name, fn) {
   console.log("PASS " + name);
 }
 
+test("beneficiary writes compare against the loaded list to prevent stale-tab overwrites", () => {
+  assert.match(source, /export async function setLocalRecord<T>\(key:string,value:T,expected\?:unknown\)/);
+  assert.match(source, /Another tab changed this record\. Refresh before retrying\./);
+  assert.match(payeesSource, /setLocalRecord\(KEY,next,list\)/);
+  assert.match(payeesSource, /The displayed list was not changed/);
+});
+test("support message save and clear compare against the loaded conversation", () => {
+  assert.match(supportSource, /setLocalRecord\(KEY,next,messages\)/);
+  assert.match(supportSource, /deleteLocalRecord\(KEY,messages\)/);
+  assert.match(supportSource, /refresh before retrying/i);
+  assert.match(supportSource, /conversation was not confirmed cleared/i);
+});
 test("state saves use an atomic stale-write guard for cross-tab consistency", () => { assert.match(source, /function putRecordIfUnchanged\(/); assert.match(source, /JSON\.stringify\(stored\)!==JSON\.stringify\(expected\)/); assert.match(source, /const expected:State=read\(\)/); assert.match(source, /putRecordIfUnchanged\(db,next,expected\)/); });
 test("workspace restore checks current account state before replacing all records", () => { assert.match(source, /export async function restoreWorkspaceRecords/); assert.match(source, /const expected:State=read\(\)/); assert.match(source, /const request=store\.get\(STATE_RECORD\)/); assert.match(source, /Workspace restore was cancelled; refresh before retrying/); });
 
