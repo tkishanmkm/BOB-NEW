@@ -461,3 +461,12 @@ html{scroll-behavior:smooth;scroll-padding-top:16px}
 @media(max-width:650px){.dashboard-section{margin-bottom:18px}.dashboard-action-grid,.dashboard-explore-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.dashboard-action{min-height:74px;padding:10px;gap:8px}.dashboard-action .dashboard-action-icon{width:36px;height:36px;flex-basis:36px}.dashboard-action .dashboard-action-icon img{max-width:23px;max-height:23px}.dashboard-action-copy strong{font-size:12px}.dashboard-action-copy small{font-size:10px}.dashboard-explore{gap:7px;padding:9px}.dashboard-explore .apk-asset-icon{width:32px;height:32px;flex-basis:32px}.dashboard-explore .apk-asset-icon img{max-width:23px;max-height:23px}.dashboard-explore strong{font-size:11px}.dashboard-transaction{grid-template-columns:30px minmax(0,1fr) auto;gap:8px}.transaction-symbol{width:28px;height:28px}.dashboard-transaction>b{font-size:12px}.balance-foot{align-items:flex-start;flex-wrap:wrap}.dashboard-recent .section-heading{align-items:flex-start}}
 @media(max-width:380px){.dashboard-action-grid,.dashboard-explore-grid{grid-template-columns:minmax(0,1fr)}.dashboard-action{min-height:68px}.dashboard-transaction{grid-template-columns:28px minmax(0,1fr)}.dashboard-transaction>b{grid-column:2;text-align:left}.balance-top{gap:10px}.balance-mark{flex-basis:38px;width:38px;height:38px}}
 @media(prefers-reduced-motion:reduce){.dashboard-action{transition:none}}
+
+/* Passbook transaction metadata: distinguish simulated pending items and keep amounts legible. */
+.passbook-row-meta{line-height:1.45}
+.passbook-status-chip{display:inline-block;width:fit-content;margin-left:3px;padding:2px 6px;border-radius:5px;font-size:10px;font-weight:750;line-height:1.35;vertical-align:baseline}
+.passbook-status-chip.posted{background:#e7f6ee;color:#176b43}
+.passbook-status-chip.pending{background:#fff1d8;color:#7a4a00}
+.passbook-reference{overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.passbook-row>strong{font-variant-numeric:tabular-nums}
+@media(max-width:380px){.passbook-row{grid-template-columns:28px minmax(0,1fr);gap:8px}.passbook-transaction-symbol{width:27px;height:27px;font-size:17px}.passbook-row>strong{grid-column:2;justify-self:start;text-align:left}.passbook-status-chip{margin-left:0}}
