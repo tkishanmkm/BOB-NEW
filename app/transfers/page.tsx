@@ -82,13 +82,14 @@ export default function Transfers() {
       return;
     }
     const current = read();
-    const available = balance(current);
+    // Reserve pending demo debits too, so repeated pending transfers cannot overspend the sample balance.
+    const available = balance(current) - current.transactions.filter(t => t.type === "debit" && t.status === "pending").reduce((total, t) => total + t.amount, 0);
     if (!Number.isFinite(available) || available < 0) {
       setError("The saved sample balance is invalid. Review account settings before continuing.");
       return;
     }
     if (value > available) {
-      setError("Insufficient sample balance. Reduce the transfer amount or update the sample account in Settings.");
+      setError("Insufficient available sample balance. Posted debits and pending demo debits are accounted for; reduce the amount or review sample account data in Settings.");
       setStage("details");
       return;
     }
