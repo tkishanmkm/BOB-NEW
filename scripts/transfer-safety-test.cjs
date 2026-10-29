@@ -48,6 +48,8 @@ test("transfer only proceeds to result after local save succeeds", () => {
   assert.match(transfer, /router\.push\("\/payment-successful\?id="/);
 });
 
+test("transfer result omits personal contact details, address, and customer identifier", () => { assert.doesNotMatch(result, /state\.(?:mobile|email|address|customerId)/); assert.match(result, /Personal contact details, address and customer identifiers are intentionally omitted/); });
+
 test("result page disclaims real payment and bank connectivity", () => {
   assert.match(result, /No payment was made/);
   assert.match(result, /No bank, payment network, recipient or account was contacted/);
