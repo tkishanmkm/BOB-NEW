@@ -6,8 +6,8 @@
 
 - Source routes listed in inventory: **52**
 - Next.js page files (including dynamic route file): **62**
-- Source routes with dedicated route file: **14**
-- Source routes served by generic feature page: **25**
+- Source routes with dedicated route file: **15**
+- Source routes served by generic feature page: **24**
 - Source routes that alias another page: **13**
 - Source routes without direct or dynamic configuration: **0**
 - Manifest records: **6913**
@@ -61,7 +61,7 @@
 | `/personal-loan-info` | Personal loan information | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
 | `/positive-pay` | Positive pay | Dedicated page file | Local-only cheque-detail draft and preview; no bank submission; visual/functional APK parity remains unverified |
 | `/profile` | Profile | Shared page alias | Route re-exports another page component; not an independent screen |
-| `/recharge` | Recharge | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/recharge` | Recharge | Dedicated page file | Local-only recharge preview with validation; no payment or operator submission; visual/functional APK parity remains unverified |
 | `/save` | Savings | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
 | `/scan` | Scan / QR | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
 | `/security` | Security settings | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
