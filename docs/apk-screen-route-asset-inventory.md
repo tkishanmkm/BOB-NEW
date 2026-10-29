@@ -506,3 +506,64 @@ Scope: static inspection of `components/app-shell.tsx` and the mobile-shell rule
 - [ ] Build and route regression tests passed.
 
 No runtime code changed in Step 29. Desktop Commander was offline at the time of this audit; no APK or browser screenshot was captured and no build/test was run.
+
+
+## Step 30 — dashboard, account details, Passbook and statement static review (2026-10-29)
+
+This is a source-level content and structure audit of `app/dashboard/page.tsx`, `app/account-details/page.tsx`, `app/passbook/page.tsx`, and `app/statement/page.tsx`. It is not a screenshot comparison, browser test, or certification of APK parity.
+
+### Dashboard (`/dashboard`)
+
+Observed:
+- Has a separate branding strip, greeting, call-to-action, background-art banner, sample balance card, six quick actions, six explore-service links, recent activity and an explicit local-demo disclaimer.
+- Balance and transaction data come from the shared `lib/demo` state; refresh listens to the app's custom state event and browser storage event.
+- The source uses a dashboard-specific background and title asset plus a reusable APK asset icon map.
+- Its hierarchy and amount of content are prototype decisions until verified against the original APK. The two branding elements (shared shell and dashboard strip), banner text, balance treatment, action grid, and recent activity placement all need side-by-side visual review.
+- Recent activity uses the last five array entries in reverse order; unlike Passbook's date sort, this assumes array order is the desired recency order. Confirm whether transaction insertion order is guaranteed and whether this should share one sorting helper.
+
+### Account details (`/account-details`)
+
+Observed:
+- Displays account label, name, masked identifier, calculated sample balance, posted/pending counts, profile/account fields and links to Settings, statement and Passbook.
+- It clearly marks values as fictional/local and avoids claiming account verification.
+- The screen is information-dense and currently uses a multi-field detail grid. Exact field order, labels, card count, and navigation actions need APK evidence.
+- Posted and pending counts are based on status; balance uses the shared helper. Verify these definitions remain consistent with dashboard, Passbook, and statement.
+
+### Passbook (`/passbook`)
+
+Observed:
+- Supports search by description/date/reference, date range, transaction type, status, clear filters, result count, and transaction-to-receipt links.
+- Results sort by transaction date descending, then by original array order descending for equal dates.
+- Credit/debit summaries count posted records within the current filtered result set, not the full account history; UI labels currently indicate “in results”.
+- The screen is feature-rich for a demo. The original APK must be checked to determine which filters, summary totals, icons, row layout, and receipt links belong on the actual passbook screen versus being prototype enhancements.
+
+### Account statement (`/statement`)
+
+Observed:
+- Includes date/type/status filters, print/save-PDF, summary totals, account metadata, a transaction table and explicit demo disclaimer.
+- The printed report header still uses “Daybook · Sample statement” and `/assets/daybook-mark.svg`, while application metadata now says “BOB-NEW | Independent Demo”. This is a branding inconsistency to resolve with an intentional non-affiliating demo identity; do not replace it with an official-looking bank-issued mark.
+- The closing sample balance is computed from opening balance plus posted transactions through the selected end date, independent of the selected transaction type/status filters. This is reasonable for an account balance but should be labeled/verified as the account balance through the end date, not as a balance of filtered rows.
+- Date validation blocks reversed ranges in the UI. Print pagination, mobile card rendering, and print table restoration still require real browser verification.
+- Confirm the actual APK statement entry point, header fields, order, period label, transaction columns, quarterly/average balance sections if present, and print/export behavior before calling it matched.
+
+### Cross-screen checks
+
+| Check | Current source-level finding | Required validation |
+|---|---|---|
+| Shared data | Dashboard, account details, Passbook and statement read `lib/demo` state | Edit profile/account/transactions in Settings and verify all four pages refresh consistently |
+| Balance | Uses shared balance helper on dashboard/account details; statement calculates through an end date | Deterministic test for posted credits/debits, pending items, and end-date boundaries |
+| Ordering | Passbook and statement sort by date; dashboard reverses array insertion order | Add mixed-date transactions and confirm all screens present the intended order |
+| Labels | Screens explicitly call values sample/demo | Check all states, empty results, and print output preserve disclosures |
+| Responsive layout | CSS has mobile layouts and statement-specific print rules | Browser screenshots at 320, 360, 390 and 430 CSS px; print-to-PDF check |
+| APK fidelity | No same-state reference screenshots attached | Blocked until original APK evidence is available |
+
+### Acceptance status
+
+- [x] Four core screens inspected statically.
+- [x] Cross-screen data, ordering, labels and branding checks recorded.
+- [ ] Compare all four screens with original APK at matched viewport and state.
+- [ ] Test shared-data updates and date/balance edge cases.
+- [ ] Verify mobile layout, keyboard behavior and print output.
+- [ ] Run production build and route smoke tests.
+
+No runtime code changed in Step 30. Desktop Commander remained offline; no original APK screenshots, browser run, build, or automated tests were available for this step.
