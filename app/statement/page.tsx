@@ -52,7 +52,7 @@ export default function StatementPage() {
     <section className="card statement-document">
       <div className="statement-header">
         <div className="statement-brand"><Image src="/assets/daybook-mark.svg" width={38} height={38} alt="Daybook mark"/><div><strong>Daybook · Sample statement</strong><small>Independent demonstration workspace</small></div></div>
-        <h2>{state.accountLabel}</h2><p>{state.name} · {state.maskedId}</p>
+        <h2>{state.accountLabel}</h2><p>{state.name} · {(() => { const value = state.accountNumber || state.maskedId; const digits = value.replace(/\D/g, ""); return digits.length >= 4 ? "•••• " + digits.slice(-4) : value ? "••••" : "Not set"; })()}</p>
         <div className="statement-account-meta"><span>Account no. (masked): {(() => { const digits = (state.accountNumber || "").replace(/\D/g, ""); return digits.length >= 4 ? "•••• " + digits.slice(-4) : state.accountNumber ? "••••" : "Not set in Settings"; })()}</span><span>Customer ID: {state.customerId || "Not set in Settings"}</span><span>Branch: {state.branch || "Not set in Settings"}</span><span>IFSC-format code: {state.ifsc || "Not set in Settings"}</span><span>Mobile: {state.mobile || "Not set in Settings"}</span><span>Email: {state.email || "Not set in Settings"}</span><span>Address: {state.address || "Not set in Settings"}</span></div>
         <p className="statement-period">Period: {from || "Any date"} — {to || "Any date"}</p><p className="statement-disclaimer">Opening sample balance: {money(state.openingBalance)} · Calculated sample balance through selected end date: {money(closing)}</p>
       </div>
