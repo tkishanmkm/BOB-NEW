@@ -616,3 +616,35 @@ img,svg,video,canvas{max-width:100%}
   .receipt-paper{width:100%!important;max-width:none!important}
   .receipt-field{break-inside:avoid}
 }
+
+
+/* Step 22 — phone-first transfer entry and review. */
+@media(max-width:650px){
+  .transfer-page-heading{display:flex;align-items:flex-start;gap:10px}
+  .transfer-page-heading>.apk-asset-icon{flex:0 0 38px}
+  .transfer-page-heading>div{min-width:0}
+  .info-banner{align-items:flex-start;gap:10px;padding:13px}
+  .info-banner>div{min-width:0;overflow-wrap:anywhere}
+  .stepper{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:0;margin:14px 0}
+  .stepper>span{min-width:0;padding:9px 5px;text-align:center;font-size:11px;line-height:1.35;overflow-wrap:anywhere}
+  .transfer-form,.transfer-review-card{width:100%;min-width:0;padding:16px}
+  .transfer-form .grid{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+  .transfer-form .field{display:grid;grid-template-columns:minmax(0,1fr);gap:7px;min-width:0;margin:12px 0}
+  .transfer-form input,.transfer-form select{box-sizing:border-box;width:100%;max-width:100%;min-width:0;min-height:46px;font-size:16px}
+  .transfer-form input[type=number]{font-variant-numeric:tabular-nums}
+  .transfer-form button[type=submit],.transfer-review-card .actions button{min-height:46px;width:100%;font-size:15px}
+  .transfer-review-heading{align-items:flex-start;gap:10px}
+  .transfer-review-heading>div{min-width:0}
+  .transfer-review-card .receipt-row{display:grid;grid-template-columns:minmax(0,40%) minmax(0,1fr);align-items:start;gap:10px;padding:11px 0}
+  .transfer-review-card .receipt-row span{min-width:0;flex:initial;line-height:1.45}
+  .transfer-review-card .receipt-row b{min-width:0;text-align:right;overflow-wrap:anywhere;word-break:break-word;font-variant-numeric:tabular-nums}
+  .transfer-review-card .warning{padding:12px;font-size:11px;line-height:1.5;overflow-wrap:anywhere}
+  .transfer-review-card .actions{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+}
+@media(max-width:350px){
+  .transfer-form,.transfer-review-card{padding:12px}
+  .stepper{gap:3px}
+  .stepper>span{font-size:10px;padding-inline:3px}
+  .transfer-review-card .receipt-row{grid-template-columns:minmax(0,1fr);gap:4px}
+  .transfer-review-card .receipt-row b{text-align:left}
+}
