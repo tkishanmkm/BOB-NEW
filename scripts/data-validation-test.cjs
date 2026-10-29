@@ -37,6 +37,11 @@ function test(name, fn) {
   console.log("PASS " + name);
 }
 
+test("workspace restore requires and validates all preview baselines before replacing records", () => {
+  assert.match(source, /!expectedCollections\|\|!valid\(expectedCollections\.account\)\|\|!validWorkspacePayees\(expectedCollections\.payees\)\|\|!validWorkspaceMessages\(expectedCollections\.supportMessages\)/);
+  assert.match(source, /!validWorkspacePayees\(currentPayees\)\|\|!validWorkspaceMessages\(currentSupport\)/);
+  assert.match(source, /JSON\.stringify\(currentPayees\)!==JSON\.stringify\(expectedCollections\.payees\)\|\|JSON\.stringify\(currentSupport\)!==JSON\.stringify\(expectedCollections\.supportMessages\)/);
+});
 test("workspace restore compares account against the baseline captured at preview", () => {
   assert.match(source, /const expected:State=expectedCollections\?\.account\?\{\.\.\.expectedCollections\.account,transactions:expectedCollections\.account\.transactions\.map\(t=>\(\{\.\.\.t\}\)\)\}:read\(\)/);
   const settings = fs.readFileSync("app/settings/page.tsx", "utf8");
