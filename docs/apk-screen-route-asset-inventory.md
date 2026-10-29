@@ -286,3 +286,64 @@ This pass inspected repository text and existing static audit reports. The Deskt
 - Header, bottom navigation/footer, typography, color palette, spacing, icons, and interactive states are visually compared.
 - Navigation and forms are walked through on mobile; regressions and browser console/build errors are recorded.
 - Final report separates verified parity from remaining gaps. A successful build or existing asset inventory alone does not satisfy visual parity.
+
+### H. Explicit route-by-route visual audit register
+
+The following register carries forward the current static route classification and adds the visual-evidence verdict. It is deliberately conservative: **every route remains “not visually verified”** until a matching APK screen or recorded walkthrough is reviewed. This avoids incorrectly certifying aliases or generic pages as identical.
+
+| Route | Current page/flow classification | Static migration status | APK visual verdict |
+|---|---|---|---|
+| `/` | App entry / splash / sign-in | Dedicated page file | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/dashboard` | Dashboard | Dedicated page file | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/about` | About | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/account-actions` | Account actions | Shared page alias | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/account-statement` | Account statement | Shared page alias | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/agent-live-chat` | Agent chat | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/ai-assistant-chat` | Assistant chat | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/alerts` | Alerts | Dedicated page file | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/all-accounts` | All accounts | Shared page alias | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/app-settings` | App settings | Shared page alias | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/bill-pay` | Bill payment | Dedicated page file | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/borrow` | Borrow | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/bus-tickets` | Bus tickets | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/cards` | Cards | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/change-login-pin` | Change login PIN | Shared page alias | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/change-transaction-pin` | Change transaction PIN | Shared page alias | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/cheque-book-request` | Cheque book request | Dedicated page file | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/complaints` | Complaints | Dedicated page file | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/contact-details` | Contact details | Shared page alias | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/contact-us-help` | Contact/help | Shared page alias | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/credit-card-apply` | Credit card application | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/current-account-details` | Current account details | Shared page alias | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/digital-loan` | Digital loan | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/digital-planner` | Digital planner | Dedicated page file | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/faqs` | FAQs | Dedicated page file | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/fixed-deposit` | Fixed deposit | Dedicated page file | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/fund-transfer` | Fund transfer | Shared page alias | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/help` | Help | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/invest` | Investments | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/kyc-details` | KYC details | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/link-bank` | Link bank | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/more` | More services | Dedicated page file | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/need-help` | Need help | Shared page alias | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/nominee-registration` | Nominee registration | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/offers` | Offers | Dedicated page file | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/passbook` | Passbook / transactions | Dedicated page file | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/personal-details` | Personal details | Shared page alias | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/personal-loan-info` | Personal loan information | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/positive-pay` | Positive pay | Dedicated page file | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/profile` | Profile | Shared page alias | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/recharge` | Recharge | Dedicated page file | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/save` | Savings | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/scan` | Scan / QR | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/security` | Security settings | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/settings` | Settings | Dedicated page file | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/shop-and-pay` | Shop and pay | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/shop` | Shop | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/statement-analysis` | Statement analysis | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/switch-to-classic` | Classic layout | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/upi` | UPI | Dedicated page file | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/video-call` | Video call | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+| `/watch-demo` | Watch demo | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
+
+Route rows in this register: **52**. Reconcile any count difference with the migration script before release; route aliases and dynamic routes must be included in regression navigation checks.
