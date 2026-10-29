@@ -347,3 +347,84 @@ The following register carries forward the current static route classification a
 | `/watch-demo` | Watch demo | Generic feature page | Not visually verified; needs original APK screenshot/runtime comparison |
 
 Route rows in this register: **52**. Reconcile any count difference with the migration script before release; route aliases and dynamic routes must be included in regression navigation checks.
+
+
+## Step 27 — generic-route and alias remediation plan (2026-10-29)
+
+Scope: static route architecture review after the 52-route visual audit. This step does not claim APK visual parity and does not change any runtime page.
+
+### Generic feature route remediation register
+
+All routes below currently need an evidence decision before their generic page can be accepted as a screen-specific migration. “Evidence required” means an authorized APK screenshot/walkthrough or trustworthy extracted first-party layout evidence that can be mapped to the route; asset names alone are not enough.
+
+| Route | Required next action | Priority | Acceptance evidence |
+|---|---|---:|---|
+| `/agent-live-chat` | Determine whether the APK has a first-party support-chat screen or opens a provider SDK. | P1 | Screenshot of entry and conversation states; identify first-party vs SDK boundary. |
+| `/help` | Compare with `/need-help` and `/contact-us-help`; decide if these are distinct destinations. | P1 | Screenshots and entry actions for each help entry point. |
+| `/scan` | Verify scan landing, permission prompt and camera/QR states; keep all payment actions simulated. | P1 | APK screenshots for pre-permission and camera states; no live payment behavior. |
+| `/security` | Map actual security menu items and destinations; do not infer PIN flows from route names. | P1 | Security screen and each accessible child-flow screenshot. |
+| `/cards` | Verify card overview and whether card controls are first-party or external. | P2 | Card screen and accessible detail/control states. |
+| `/kyc-details` | Verify whether this is a view-only details screen or a provider flow. | P2 | Screen evidence plus confirmed SDK handoff, if any. |
+| `/link-bank` | Determine if the APK has a first-party screen or a third-party handoff. | P2 | Entry screen and handoff boundary; no collection of real credentials. |
+| `/credit-card-apply` | Identify the actual application entry and disclosure screens. | P2 | Screenshots and visible navigation destinations. |
+| `/digital-loan` | Compare against `/personal-loan-info` and `/borrow` to prevent invented duplicate screens. | P2 | Separate route entry screenshots and destination behavior. |
+| `/borrow` | Verify if this is an actual APK destination or a web-only extra. | P2 | APK navigation evidence or explicit “not present” decision. |
+| `/personal-loan-info` | Verify actual information hierarchy and its relationship to loan application. | P2 | Screen and tap-through evidence. |
+| `/bus-tickets` | Confirm availability in the APK and whether it belongs to a partner service. | P3 | APK entry point and handoff evidence, or mark extra. |
+| `/invest` | Confirm whether an investment service exists in this APK version. | P3 | APK entry point and screen evidence, or mark extra. |
+| `/save` | Identify the exact savings destination; compare with dashboard/account routes. | P2 | Entry point and screen evidence. |
+| `/shop-and-pay` | Verify service catalogue and relationship to `/shop` and `/offers`. | P3 | Navigation and destination screenshots. |
+| `/shop` | Verify whether separate from `/shop-and-pay` or an alias/extra. | P3 | Distinct route evidence or consolidation decision. |
+| `/statement-analysis` | Confirm that analysis exists in the APK and identify source data and chart layout. | P2 | Screenshot plus source-data behavior evidence. |
+| `/nominee-registration` | Verify form fields, validation and success state; local demo only. | P2 | Form/error/success screenshots. |
+| `/ai-assistant-chat` | Determine whether present in this APK version or an added prototype feature. | P3 | APK entry evidence or mark web-only extra. |
+| `/about` | Confirm actual app information page and branding content. | P3 | Screen screenshot and asset mapping. |
+| `/switch-to-classic` | Determine whether the APK supports a layout switch and what changes. | P3 | Before/after evidence or mark not present. |
+| `/video-call` | Verify whether a real APK route exists or is only an SDK/placeholder route. | P3 | Entry/handoff evidence or mark not present. |
+| `/watch-demo` | Verify whether this route exists in the APK or is only a prototype convenience. | P3 | APK entry evidence or mark web-only extra. |
+
+Priority means migration order, not proof of business criticality. P1 = core navigation/security/support paths; P2 = account/service paths; P3 = likely optional, partner, or prototype paths. Reprioritize only when APK evidence shows a different user journey.
+
+### Alias remediation register
+
+Aliases must be tested as navigation destinations, not automatically converted into separate pages:
+
+| Alias route | Compare with | Required decision |
+|---|---|---|
+| `/account-actions` | Account details and dashboard actions | Same screen with different entry point, or dedicated action menu? |
+| `/account-statement` | `/statement` | Same statement flow, a distinct account statement page, or legacy alias? |
+| `/all-accounts` | `/account-details`, `/current-account-details` | Account list vs selected-account details. |
+| `/app-settings` | `/settings` | Separate app preferences or same settings destination? |
+| `/change-login-pin` | `/security` | Dedicated PIN change flow, if present in APK. |
+| `/change-transaction-pin` | `/security` | Dedicated transaction-PIN flow, if present in APK. |
+| `/contact-details` | `/personal-details`, `/profile` | Contact-only view or shared profile screen? |
+| `/contact-us-help` | `/help`, `/need-help` | Contact directory vs help index vs support entry. |
+| `/current-account-details` | `/account-details`, `/all-accounts` | Distinct current-account detail screen or unsupported route? |
+| `/fund-transfer` | `/transfers` | Legacy deep-link alias or a distinct transfer entry. |
+| `/need-help` | `/help`, `/help-support` | Help landing vs support hub. |
+| `/personal-details` | `/profile`, `/contact-details` | Personal profile fields vs contact details. |
+| `/profile` | `/personal-details`, `/account-details` | Profile landing or duplicate route? |
+
+### Shared shell blockers
+
+Before changing header, logo, footer/bottom tabs, color tokens, font, or icons, record the same viewport and app state from the APK. Then compare:
+1. top safe-area/status-bar and app-bar height;
+2. logo asset, size, baseline and horizontal padding;
+3. title/subtitle and back/action affordances per route;
+4. background, surfaces, borders, elevation/shadows and text hierarchy;
+5. bottom navigation destinations, labels, selected state and safe-area inset;
+6. scroll behavior, keyboard resize, dialogs, loading, empty and error states.
+
+Current BOB-NEW shell includes explicit demo labels, a local-workspace badge, Exit action, a global prototype notice, desktop route list, and a five-item glyph-based mobile tab bar. These are implementation facts only. Do not remove demo disclosures or replace icons/colors with guessed APK styling. For an accurate visual match, create a separate approved demo identity and preserve a visible non-affiliation/local-simulation disclosure.
+
+### Exit criteria for this audit phase
+
+- [x] Generic routes grouped into explicit evidence-based decisions.
+- [x] Alias routes mapped to their competing destinations.
+- [x] Shared shell comparison checklist documented.
+- [ ] APK screen evidence attached/mapped for each route.
+- [ ] Screen-specific UI changes implemented only after evidence is available.
+- [ ] Browser screenshots compared at matching viewport/state.
+- [ ] Production build and route smoke tests run.
+
+No runtime code was changed in Step 27. No build, browser screenshot, or APK runtime test was run.
