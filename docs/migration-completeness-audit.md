@@ -6,8 +6,8 @@
 
 - Source routes listed in inventory: **52**
 - Next.js page files (including dynamic route file): **62**
-- Source routes with dedicated route file: **12**
-- Source routes served by generic feature page: **27**
+- Source routes with dedicated route file: **13**
+- Source routes served by generic feature page: **26**
 - Source routes that alias another page: **13**
 - Source routes without direct or dynamic configuration: **0**
 - Manifest records: **6913**
@@ -44,7 +44,7 @@
 | `/credit-card-apply` | Credit card application | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
 | `/current-account-details` | Current account details | Shared page alias | Route re-exports another page component; not an independent screen |
 | `/digital-loan` | Digital loan | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
-| `/digital-planner` | Digital planner | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/digital-planner` | Digital planner | Dedicated page file | Local-only personal reminder planner; data remains in browser storage; visual/functional APK parity remains unverified |
 | `/faqs` | FAQs | Dedicated page file | Interactive prototype FAQ; visual/functional APK parity remains unverified |
 | `/fixed-deposit` | Fixed deposit | Dedicated page file | Illustrative maturity calculator; no deposit is opened; visual/functional APK parity remains unverified |
 | `/fund-transfer` | Fund transfer | Shared page alias | Route re-exports another page component; not an independent screen |
