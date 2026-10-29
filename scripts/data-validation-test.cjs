@@ -7,6 +7,8 @@ const ts = require("typescript");
 const source = fs.readFileSync("lib/demo.ts", "utf8");
 const payeesSource = fs.readFileSync("app/payees/page.tsx", "utf8");
 const supportSource = fs.readFileSync("app/help-support/page.tsx", "utf8");
+const loginPinSource = fs.readFileSync("app/change-login-pin/page.tsx", "utf8");
+const transactionPinSource = fs.readFileSync("app/change-transaction-pin/page.tsx", "utf8");
 const compiled = ts.transpileModule(source, {
   compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
 }).outputText;
@@ -246,6 +248,32 @@ test("date-bounded balance includes posted transactions through the inclusive en
 test("date-bounded balance equals full balance when no end date is supplied", () => {
   const s = validAccount();
   assert.equal(api.balanceThroughDate(s), api.balance(s));
+});
+
+test("login PIN screen validates current PIN, new PIN shape, confirmation, and stale-state save", () => {
+  assert.match(loginPinSource, /currentPin !== baseline\.demoPin/);
+  assert.match(loginPinSource, /\^\[0-9\]\{4,6\}\$/);
+  assert.match(loginPinSource, /newPin !== confirmPin/);
+  assert.match(loginPinSource, /saveState\(next, baseline\)/);
+  assert.match(loginPinSource, /if \(!saved\)/);
+  assert.match(loginPinSource, /not bank authentication/i);
+});
+test("transaction PIN screen validates saved record and current PIN before changing it", () => {
+  assert.match(transactionPinSource, /const TRANSACTION_PIN_KEY = "bob-new-local-transaction-pin-v1"/);
+  assert.match(transactionPinSource, /function validRecord\(value: unknown\)/);
+  assert.match(transactionPinSource, /baseline\.configured && currentPin !== baseline\.pin/);
+  assert.match(transactionPinSource, /newPin !== confirmPin/);
+  assert.match(transactionPinSource, /setLocalRecord\(TRANSACTION_PIN_KEY, next, baseline\)/);
+  assert.match(transactionPinSource, /does not authorize transfers/i);
+});
+test("PIN screens fail closed while saved data is unavailable and do not submit PINs over the network", () => {
+  assert.match(loginPinSource, /PIN changes are disabled/);
+  assert.match(transactionPinSource, /Changes are disabled/);
+  for (const [label, screen] of [["login PIN", loginPinSource], ["transaction PIN", transactionPinSource]]) {
+    assert.doesNotMatch(screen, /\bfetch\s*\(/);
+    assert.doesNotMatch(screen, /XMLHttpRequest/);
+    assert.doesNotMatch(screen, /navigator\.sendBeacon/);
+  }
 });
 
 console.log(`Data validation tests passed: ${count}/${count}`);
