@@ -214,3 +214,75 @@ These are source assets, but their names alone do not establish which startup sc
 Recover/copy the missing native splash binaries from the original APK extraction into the repository and verify their visual contents and dimensions before wiring them into the startup UI. The Desktop Commander machine was offline during this check, so the original local extraction could not be accessed. Do not substitute a dashboard or UPI logo for the missing splash artwork.
 
 **Scope of this check:** repository-path availability only. No image-rendering or runtime screenshot comparison was completed.
+
+## Step 26 — whole-app UI/layout/color parity audit (static source review)
+
+Audit date: 2026-10-29. Target: `tkishanmkm/BOB-NEW`, branch `main`. No other project is in scope.
+
+### A. Coverage baseline
+
+The current static migration report lists 52 source routes and 62 Next.js page files (including a dynamic route file): 16 dedicated route files, 23 routes delegated to a generic feature page, and 13 aliases. All 52 known routes have a direct or dynamic route configuration, but this is **route coverage only**, not screen parity.
+
+The asset report lists 6,913 manifest records, 4,886 unique manifest paths, and zero missing manifest paths in the audited public directory. It also reports only 27 distinct literal asset URLs in app/components/lib source scans. The scan reports 18 route files with an explicit APK asset component import. This is a warning that most imported assets are not yet explicitly mapped to a screen; the large asset archive alone does not make a screen identical.
+
+### B. Shared layout / header / footer findings
+
+| Area | Current implementation evidence | Audit status / required work |
+|---|---|---|
+| Global page shell | `app/layout.tsx` imports one large global stylesheet and sets metadata/icon to Daybook branding | **Mismatch risk:** metadata still says `Daybook | BOB-NEW` and uses `/assets/daybook-mark.svg`; verify against the intended app identity and APK. |
+| Desktop/header navigation | `components/app-shell.tsx` renders a BOB World logo, “BOB World 2.0 · DEMO”, local-workspace pill, Exit button, and a local-prototype notice | **Static-only, not APK-identical:** no runtime capture has established this header, wording, sizing, colors, or button placement against the APK. |
+| Main navigation | Shell contains a long vertical route list for many pages | **Likely structural mismatch for a mobile-only APK recreation:** the menu is a web-oriented navigation system unless the APK evidence confirms it. |
+| Mobile bottom navigation | Five tabs use text glyphs (`⌂`, `⇄`, `▤`, `♙`, `⋯`) for Home, Transfer, Passbook, Payees, More | **Unverified and likely mismatch risk:** glyphs are not mapped to the actual APK icons; labels, order, active state, dimensions, and visibility need screenshot evidence. |
+| Footer | No separate APK-matched persistent footer is established by the reviewed shell; the mobile tab bar acts as primary mobile navigation | **Unknown:** confirm from runtime evidence whether the APK has a bottom navigation bar, footer, or both, and which pages show them. |
+| Authentication gate | Local sessionStorage PIN gate and local browser store guard protected pages | Functional prototype guard, not real bank authentication; exact APK onboarding/login flow remains unverified. |
+| Responsive shell | Global CSS includes desktop two-column layout plus narrow-screen media queries and phone-specific rules | **Not pixel-verified:** the CSS breakpoint alone does not establish original APK screen dimensions or behavior. |
+
+### C. Global color / typography / component findings
+
+The opening global CSS currently defines `body` background `#f3f6fb`, text `#202b3d`, link/button blue `#315da8`, borders `#e0e6ef`, muted text `#6b7789`, and a yellow/amber notice style. The stylesheet uses Inter/system fonts as the global stack. The imported APK inventory includes Acumin and Gabarito fonts, but the reviewed global declaration does not establish those as the actual application font stack.
+
+**Conclusion:** these are confirmed BOB-NEW CSS values, not confirmed APK design tokens. Do not call the colors, font, border radii, shadows, card spacing, header height, icon sizes, or touch targets identical until they have been sampled from APK screenshots/runtime and compared at the same viewport size.
+
+Shared component audit must explicitly record:
+- screen background and surface colors (including gradients);
+- font family, weight, size, line height, letter spacing;
+- top safe area/status bar and app-bar height;
+- logo/icon source, rendered size, stroke/fill, and alignment;
+- page horizontal gutters, section spacing, card radius, border/shadow;
+- primary/secondary/disabled/error/success states;
+- keyboard, focus, pressed, loading, empty, error, and confirmation states;
+- fixed bottom navigation visibility, active state, and device safe-area inset;
+- scrolling, overflow, and keyboard-resize behavior.
+
+### D. Route-by-route audit decision
+
+All 52 routes from the static migration inventory remain **not visually verified** until each has an APK reference screen or recorded walkthrough. Route types from the current report:
+
+1. **Dedicated pages (16):** source code exists, but layout and behavior still require APK comparison.
+2. **Generic feature routes (23):** must not be treated as identical independent pages. Each needs evidence-led page structure, text, controls, assets, and interactions rather than a shared placeholder.
+3. **Aliases (13):** must be checked against source-app navigation. An alias is acceptable only if the original APK truly uses the same screen/flow; otherwise it needs its own route-specific screen.
+
+For every route, record: APK screen ID, how it is reached, screenshot/device viewport, header/footer presence, color/font measurements, asset paths, Next.js component, interaction outcomes, differences, and evidence status. Unknown items remain explicitly marked unknown.
+
+### E. Highest-priority remediation order
+
+1. **Entry and session flow:** splash, any evidenced language/onboarding steps, login/PIN, error/loading states, dashboard entry.
+2. **Shared chrome:** status-bar/safe-area treatment, header/app bar, logo, navigation, footer/bottom bar, typography and color tokens.
+3. **Dashboard:** source banner/background, account summary, service tiles, carousel/banner behavior, icons and click destinations.
+4. **Primary user journeys:** account details, transfer/beneficiary/review/result, passbook, statement, receipt.
+5. **Remaining route families:** settings/profile/security, support/chat, bill pay/recharge, cards/loans/deposits, UPI, scan, and all remaining source routes.
+6. **Regression pass:** every route on phone viewport, scroll/keyboard states, links, local-data safety, print/PDF, accessibility, and production build.
+
+### F. Evidence and environment limitation
+
+This pass inspected repository text and existing static audit reports. The Desktop Commander device was reported offline, and no authorized runtime screenshot set or recording was available in the current task. Therefore, this pass did not run the APK, render a Next.js browser session, or perform pixel-difference testing. No screen is certified as identical.
+
+### G. Acceptance criteria for final parity
+
+- Every source route has an explicit route-to-screen mapping and route-specific verdict.
+- Every shared component has a reference screenshot and a measured comparison at a matching viewport.
+- No placeholder/generic route is marked identical without screen-specific evidence.
+- Every used APK asset is mapped to the correct screen and its source/hash is recorded.
+- Header, bottom navigation/footer, typography, color palette, spacing, icons, and interactive states are visually compared.
+- Navigation and forms are walked through on mobile; regressions and browser console/build errors are recorded.
+- Final report separates verified parity from remaining gaps. A successful build or existing asset inventory alone does not satisfy visual parity.
