@@ -305,12 +305,34 @@ export async function getLocalRecord<T>(key:string,fallback:T,persistMigration=t
     return value as T;
   }finally{db.close()}
 }
-export async function setLocalRecord<T>(key:string,value:T):Promise<void>{
+export async function setLocalRecord<T>(key:string,value:T,expected?:unknown):Promise<void>{
   const operation=saveQueue.then(async()=>{
     let db:IDBDatabase|undefined;
     try{
       db=await openDB();
-      await putRecordById(db,"collection:"+key,value);
+      if(arguments.length>0&&expected!==undefined){
+        await new Promise<void>((resolve,reject)=>{
+          const tx=db!.transaction(STORE,"readwrite");
+          const store=tx.objectStore(STORE);
+          const request=store.get("collection:"+key);
+          let stale=false;
+          request.onsuccess=()=>{
+            const stored=request.result?.value;
+            if(JSON.stringify(stored)!==JSON.stringify(expected)){
+              stale=true;
+              try{tx.abort()}catch{}
+              return;
+            }
+            store.put({id:"collection:"+key,value});
+          };
+          request.onerror=()=>reject(request.error||new Error("Could not verify the latest local record."));
+          tx.oncomplete=()=>resolve();
+          tx.onerror=()=>{if(stale)reject(new Error("Another tab changed this record. Refresh before retrying."));else reject(tx.error||new Error("Could not save local records."))};
+          tx.onabort=()=>{if(stale)reject(new Error("Another tab changed this record. Refresh before retrying."));else reject(tx.error||new Error("Local record save was cancelled."))};
+        });
+      }else{
+        await putRecordById(db,"collection:"+key,value);
+      }
       try{localStorage.removeItem(key)}catch{}
     }finally{db?.close()}
   });
@@ -319,7 +341,7 @@ export async function setLocalRecord<T>(key:string,value:T):Promise<void>{
   saveQueue=operation.then(()=>undefined,()=>undefined);
   return operation;
 }
-export async function deleteLocalRecord(key:string):Promise<void>{
+export async function deleteLocalRecord(key:string,expected?:unknown):Promise<void>{
   const operation=saveQueue.then(async()=>{
     let db:IDBDatabase|undefined;
     try{
@@ -331,10 +353,28 @@ export async function deleteLocalRecord(key:string):Promise<void>{
       db=await openDB();
       await new Promise<void>((resolve,reject)=>{
         const tx=db!.transaction(STORE,"readwrite");
-        tx.objectStore(STORE).delete("collection:"+key);
-        tx.oncomplete=()=>resolve();
-        tx.onerror=()=>reject(tx.error||new Error("Could not delete local records."));
-        tx.onabort=()=>reject(tx.error||new Error("Local record deletion was cancelled."));
+        const store=tx.objectStore(STORE);
+        if(expected!==undefined){
+          const request=store.get("collection:"+key);
+          let stale=false;
+          request.onsuccess=()=>{
+            if(JSON.stringify(request.result?.value)!==JSON.stringify(expected)){
+              stale=true;
+              try{tx.abort()}catch{}
+              return;
+            }
+            store.delete("collection:"+key);
+          };
+          request.onerror=()=>reject(request.error||new Error("Could not verify the latest local record before deletion."));
+          tx.oncomplete=()=>resolve();
+          tx.onerror=()=>{if(stale)reject(new Error("Another tab changed this record. Refresh before retrying."));else reject(tx.error||new Error("Could not delete local records."))};
+          tx.onabort=()=>{if(stale)reject(new Error("Another tab changed this record. Refresh before retrying."));else reject(tx.error||new Error("Local record deletion was cancelled."))};
+        }else{
+          store.delete("collection:"+key);
+          tx.oncomplete=()=>resolve();
+          tx.onerror=()=>reject(tx.error||new Error("Could not delete local records."));
+          tx.onabort=()=>reject(tx.error||new Error("Local record deletion was cancelled."));
+        }
       });
     }finally{db?.close()}
   });
