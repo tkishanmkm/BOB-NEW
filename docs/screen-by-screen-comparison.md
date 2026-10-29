@@ -87,3 +87,13 @@ Legend: **Route = PASS** means the route file exists. **Visual = BLOCKED** means
 For each route, compare a source APK screenshot and BOB-NEW screenshot at the same viewport, device scale, orientation, and state. Check header/status/navigation bars, typography, dimensions, margins, colors, iconography, banners, scrolling, dialogs, validation errors, empty states, and button destinations. Save both images and a per-screen diff/notes. Repeat for loading, empty, populated, validation, and confirmation states.
 
 **Required evidence still missing:** launchable authorized APK runtime or user-provided screenshots/video of each screen. The archive's native XML and Flutter asset gallery cannot substitute for actual Flutter screenshots. Once that evidence exists, change each Visual parity value from BLOCKED to PASS only after comparison.
+
+## Runtime validation update — 2026-10-29
+
+- Android 15 / API 35 x86_64 AVD `BOBWorld_API35` was created and reached the launcher.
+- The original app bundle package `com.bankofbaroda.bobworlddmb` installed from `base.apk` plus the `arm64-v8a`, `hdpi`, and `en` split APKs. Package presence was confirmed with ADB.
+- Launch attempt using `com.bankofbaroda.bobworlddmb/com.digitalmobileapp.MainActivity` returned to the Android launcher; a screenshot was saved at `C:\Users\theki\Downloads\BOB-NEW-SCREENSHOTS\original-apk-launch.png` and shows the launcher, not an app screen.
+- The installed native split includes `lib/arm64-v8a/libapp.so`, `libreactnative.so`, `libhermesvm.so`, and `libappmodules.so`. The current AVD reports `x86_64`; this is a concrete architecture compatibility concern, but the launch failure has not yet been conclusively attributed to it.
+- No original APK screen has been verified at runtime. Pixel parity remains **BLOCKED**. Do not use the launcher screenshot as an original-app screen reference.
+- Next runtime route: use a physical ARM64 Android device with authorized debugging, or obtain a compatible ARM64 emulator image; then capture the startup and representative screens before changing parity claims.
+- BOB-NEW implementation source was not changed by this validation update. PNB and Paxones were not accessed or modified.
