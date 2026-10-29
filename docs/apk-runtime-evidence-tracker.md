@@ -64,3 +64,10 @@ The existing Android 15 emulator is x86_64. The original bundle includes ARM64 n
 - [ ] Each target route reviewed for dedicated UI versus generic placeholder.
 - [ ] Changes validated with typecheck, data tests, build, and route smoke tests.
 
+
+
+## Public onboarding flow from official documentation
+
+The official Bank of Baroda bob World public help page describes this pre-authentication sequence: launch the app; grant required permissions when prompted; choose a language and review informational screens; tap Login on the welcome screen; complete the app's required phone/SMS verification and OTP flow. This is documentation-derived flow evidence, not a runtime capture of version 1.0.1. Do not automate or bypass phone verification, OTP, PIN, or device checks.
+
+Reference: https://bobworld.bankofbaroda.bank.in/ (official bob World website; onboarding and active-user FAQs). For public product-level features and service groupings, see https://bobworld.bankofbaroda.bank.in/about-bob-world. These references supplement but do not replace APK runtime screenshots.
