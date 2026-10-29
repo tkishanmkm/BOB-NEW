@@ -3,7 +3,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const root = process.cwd();
-const pageFile = path.join(root, "app", "[feature]", "page.tsx");
+const pageFile = path.join(root, "components", "feature-page.tsx");
 const shellFile = path.join(root, "components", "app-shell.tsx");
 const source = fs.readFileSync(pageFile, "utf8");
 const shell = fs.readFileSync(shellFile, "utf8");

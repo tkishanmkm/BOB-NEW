@@ -5,9 +5,9 @@
 ## Summary
 
 - Source routes listed in inventory: **52**
-- Next.js page files (including dynamic route file): **29**
-- Source routes with dedicated route file: **19**
-- Source routes served by generic feature page: **33**
+- Next.js page files (including dynamic route file): **62**
+- Source routes with dedicated route file: **52**
+- Source routes served by generic feature page: **0**
 - Source routes without direct or dynamic configuration: **0**
 - Manifest records: **6913**
 - Manifest asset paths missing from public/: **0**
@@ -22,56 +22,56 @@
 |---|---|---|---|
 | `/` | App entry / splash / sign-in | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 | `/dashboard` | Dashboard | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/about` | About | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
+| `/about` | About | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 | `/account-actions` | Account actions | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 | `/account-statement` | Account statement | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/agent-live-chat` | Agent chat | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/ai-assistant-chat` | Assistant chat | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
+| `/agent-live-chat` | Agent chat | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/ai-assistant-chat` | Assistant chat | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 | `/alerts` | Alerts | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 | `/all-accounts` | All accounts | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 | `/app-settings` | App settings | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/bill-pay` | Bill payment | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/borrow` | Borrow | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/bus-tickets` | Bus tickets | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/cards` | Cards | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
+| `/bill-pay` | Bill payment | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/borrow` | Borrow | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/bus-tickets` | Bus tickets | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/cards` | Cards | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 | `/change-login-pin` | Change login PIN | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 | `/change-transaction-pin` | Change transaction PIN | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/cheque-book-request` | Cheque book request | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/complaints` | Complaints | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
+| `/cheque-book-request` | Cheque book request | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/complaints` | Complaints | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 | `/contact-details` | Contact details | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 | `/contact-us-help` | Contact/help | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/credit-card-apply` | Credit card application | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
+| `/credit-card-apply` | Credit card application | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 | `/current-account-details` | Current account details | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/digital-loan` | Digital loan | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/digital-planner` | Digital planner | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/faqs` | FAQs | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/fixed-deposit` | Fixed deposit | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
+| `/digital-loan` | Digital loan | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/digital-planner` | Digital planner | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/faqs` | FAQs | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/fixed-deposit` | Fixed deposit | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 | `/fund-transfer` | Fund transfer | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/help` | Help | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/invest` | Investments | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/kyc-details` | KYC details | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/link-bank` | Link bank | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
+| `/help` | Help | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/invest` | Investments | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/kyc-details` | KYC details | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/link-bank` | Link bank | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 | `/more` | More services | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 | `/need-help` | Need help | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/nominee-registration` | Nominee registration | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/offers` | Offers | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
+| `/nominee-registration` | Nominee registration | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/offers` | Offers | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 | `/passbook` | Passbook / transactions | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 | `/personal-details` | Personal details | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/personal-loan-info` | Personal loan information | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/positive-pay` | Positive pay | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
+| `/personal-loan-info` | Personal loan information | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/positive-pay` | Positive pay | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 | `/profile` | Profile | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/recharge` | Recharge | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/save` | Savings | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/scan` | Scan / QR | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/security` | Security settings | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
+| `/recharge` | Recharge | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/save` | Savings | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/scan` | Scan / QR | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/security` | Security settings | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 | `/settings` | Settings | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/shop-and-pay` | Shop and pay | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/shop` | Shop | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/statement-analysis` | Statement analysis | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/switch-to-classic` | Classic layout | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/upi` | UPI | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/video-call` | Video call | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
-| `/watch-demo` | Watch demo | Generic feature page | Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout |
+| `/shop-and-pay` | Shop and pay | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/shop` | Shop | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/statement-analysis` | Statement analysis | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/switch-to-classic` | Classic layout | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/upi` | UPI | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/video-call` | Video call | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/watch-demo` | Watch demo | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
 
 ## Public asset inventory by extension
 

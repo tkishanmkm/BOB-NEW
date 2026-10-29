@@ -1,6 +1,6 @@
 # BOB-NEW exhaustive asset usage audit
 
-Generated: 2026-10-29T03:32:02.266Z. Static filesystem/source scan only; it does not claim screenshot or runtime verification.
+Generated: 2026-10-29T03:44:47.448Z. Static filesystem/source scan only; it does not claim screenshot or runtime verification.
 
 ## Summary
 
@@ -12,7 +12,7 @@ Generated: 2026-10-29T03:32:02.266Z. Static filesystem/source scan only; it does
 - Manifest paths missing from public/: **0**
 - Public files not present in manifest: **2446** (the separate APK-audit copy plus generic demo assets and README)
 - Files referenced by exact URL in app/components/lib source scan: **27**
-- Route files with an explicit APK asset component import: **22**
+- Route files with an explicit APK asset component import: **8**
 - Files not found in static source scan: **7305**
 - Exact duplicate-content groups (SHA-256): **1993**
 
