@@ -1,8 +1,20 @@
 /* eslint-disable @typescript-eslint/no-require-imports -- CommonJS is intentional for the release-check runner. */
 const { spawn, spawnSync } = require("node:child_process");
+const fs = require("node:fs");
+const path = require("node:path");
 
 const isWindows = process.platform === "win32";
 const npm = isWindows ? "npm.cmd" : "npm";
+const packagePath = path.join(process.cwd(), "package.json");
+let packageConfig;
+try { packageConfig = JSON.parse(fs.readFileSync(packagePath, "utf8")); }
+catch (error) { console.error(`Cannot read package.json: ${error instanceof Error ? error.message : String(error)}`); process.exit(1); }
+const requiredScripts = ["typecheck", "lint", "test:data", "test:transfer-safety", "audit:routes", "audit:migration", "audit:assets", "build", "smoke-test"];
+const missingScripts = requiredScripts.filter(name => typeof packageConfig.scripts?.[name] !== "string" || !packageConfig.scripts[name].trim());
+if (missingScripts.length) {
+  console.error(`Release check configuration is incomplete. Missing npm scripts: ${missingScripts.join(", ")}`);
+  process.exit(1);
+}
 const checks = [
   ["typecheck", ["run", "typecheck"]],
   ["lint", ["run", "lint"]],
@@ -23,7 +35,7 @@ if (!Number.isInteger(port) || port < 1024 || port > 65535) {
 const baseUrl = `http://${host}:${port}`;
 const results = [];
 async function main() {
-for (const [label, args] of checks) {
+  for (const [label, args] of checks) {
   console.log(`\n=== ${label} ===`);
   const result = spawnSync(npm, args, {
     stdio: "inherit",
@@ -39,8 +51,7 @@ for (const [label, args] of checks) {
   console.log(`PASSED: ${label}`);
 }
 
-
-if (results.length === checks.length && results.every(item => item.code === 0)) {
+  if (results.length === checks.length && results.every(item => item.code === 0)) {
   console.log("\n=== Production server route smoke test ===");
   const nextCli = require.resolve("next/dist/bin/next");
   const server = spawn(process.execPath, [nextCli, "start", "--hostname", host, "--port", String(port)], {
@@ -77,16 +88,16 @@ if (results.length === checks.length && results.every(item => item.code === 0)) 
       }
     }
   }
-}
+  }
 
-console.log("\n=== Release check summary ===");
-for (const item of results) console.log(`${item.code === 0 ? "PASS" : "FAIL"}  ${item.label}`);
-if (results.length !== checks.length + (results.some(item => item.label === "production route smoke test") ? 1 : 0) || results.some(item => item.code !== 0)) {
-  console.error("Release checks did not all pass. Do not treat this run as release approval.");
-  process.exitCode = 1;
-} else {
-  console.log("All configured static, build and route smoke checks passed. Browser visual walkthrough and live deployment verification remain separate required checks.");
-}
+  console.log("\n=== Release check summary ===");
+  for (const item of results) console.log(`${item.code === 0 ? "PASS" : "FAIL"}  ${item.label}`);
+  if (results.length !== checks.length + (results.some(item => item.label === "production route smoke test") ? 1 : 0) || results.some(item => item.code !== 0)) {
+    console.error("Release checks did not all pass. Do not treat this run as release approval.");
+    process.exitCode = 1;
+  } else {
+    console.log("All configured static, build and route smoke checks passed. Browser visual walkthrough and live deployment verification remain separate required checks.");
+  }
 }
 
 main().catch(error => { console.error(error); process.exitCode = 1; });
