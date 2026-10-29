@@ -428,3 +428,31 @@ Current BOB-NEW shell includes explicit demo labels, a local-workspace badge, Ex
 - [ ] Production build and route smoke tests run.
 
 No runtime code was changed in Step 27. No build, browser screenshot, or APK runtime test was run.
+
+
+## Step 28 — startup and document metadata audit (2026-10-29)
+
+### Static findings
+
+- `app/page.tsx` is the actual root login gate and uses a locally stored demo PIN; it does not show the optional splash page first.
+- `app/splash/page.tsx` is a separate route with a 450 ms timer and Continue link back to `/`. It is not currently a unified startup state with the root login page.
+- `app/layout.tsx` previously advertised the unrelated title `Daybook | BOB-NEW`, which was inconsistent with the product label and independent-demo disclosure shown in the UI.
+- The shared shell uses the BOB World name/logo in an independent demo, while the favicon remains `/assets/daybook-mark.svg`. The title inconsistency was safe to correct; the favicon and visual identity need a deliberate branding decision and must not be silently replaced with an official-looking bank icon.
+- The splash/login appearance, route order, timing, and asset placement remain unverified against the original APK. This audit does not certify either page as visually identical.
+
+### Change committed
+
+- Updated `app/layout.tsx` metadata title to `BOB-NEW | Independent Demo`.
+- Expanded the description to make local sample data, non-affiliation, and absence of banking/payment connectivity explicit.
+- Preserved the existing favicon rather than making an unverified asset substitution.
+
+### Startup parity acceptance still outstanding
+
+- [ ] Establish the APK's actual cold-start sequence and any language-selection step.
+- [ ] Record whether splash transitions automatically or waits for user input.
+- [ ] Compare login fields, labels, keyboard type, button states, error state, spacing, background and logo at the same phone viewport.
+- [ ] Decide whether `/splash` should become the canonical entry state or remain an explicit preview route, based on APK evidence.
+- [ ] Confirm the chosen non-affiliating demo icon and consistent browser-tab metadata.
+- [ ] Run production build and root/splash route smoke tests.
+
+No browser or APK runtime test was performed in this step.
