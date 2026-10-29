@@ -194,3 +194,23 @@ This is the required first implementation batch because the app must match the A
 - [ ] Do not claim exact APK parity until the first-launch screens and shared navigation have been visually compared.
 
 **Current status:** this repository contains a static resource inventory and imported assets, but no cited APK runtime screenshot evidence for the complete splash → language → login → dashboard sequence. Therefore the current Next.js splash and login are not yet certified as APK-matched. This is an evidence gap, not permission to fill in missing behavior by convention.
+
+## Step 25 — startup asset availability check (static repository check)
+
+Checked the current `main` branch for the expected imported native splash resources at:
+- `public/assets/bob-world/original-assets/base_res__drawable-mdpi__src_assets_newui_splashscreen.png`
+- `public/assets/bob-world/original-assets/base_res__drawable-mdpi__src_assets_newui_splashscreenend.png`
+
+Both exact paths return **not found** from the repository contents API. A search for `splash_screen.mp4` also did not return a repository file. This means their presence in an earlier source inventory must not be treated as proof that the binary resources are currently available to the Next.js app at those paths.
+
+Confirmed available Flutter asset paths include:
+- `public/assets/bob-world/original-assets/assets/images/activateUpi/bob_world_logo.svg`
+- `public/assets/bob-world/original-assets/assets/images/dashBoard/bobWorldNTitle.svg`
+- `public/assets/bob-world/original-assets/assets/images/dashBoard/bob_bg.png`
+
+These are source assets, but their names alone do not establish which startup screen uses them or their exact placement. The current splash page uses the `activateUpi/bob_world_logo.svg` asset; that is confirmed as an existing Flutter asset, but **not confirmed as the original splash-screen artwork**.
+
+### Required next action
+Recover/copy the missing native splash binaries from the original APK extraction into the repository and verify their visual contents and dimensions before wiring them into the startup UI. The Desktop Commander machine was offline during this check, so the original local extraction could not be accessed. Do not substitute a dashboard or UPI logo for the missing splash artwork.
+
+**Scope of this check:** repository-path availability only. No image-rendering or runtime screenshot comparison was completed.
