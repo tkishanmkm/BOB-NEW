@@ -31,6 +31,9 @@ export default function ReceiptPage() {
     window.print();
   }
   const receiptRef = selected ? "SAMPLE-" + selected.id.replace(/[^a-zA-Z0-9-]/g, "").slice(0, 32) : "—";
+  const accountValue = state.accountNumber || state.maskedId || "";
+  const accountDigits = accountValue.replace(/\\D/g, "");
+  const maskedAccount = accountDigits.length >= 4 ? `•••• ${accountDigits.slice(-4)}` : accountValue ? "••••" : "Not set in Settings";
   return <Shell>
     <div className="page-heading apk-page-heading receipt-page-heading"><ApkAssetIcon asset="statement" size={30}/><div><p className="eyebrow">TRANSACTION SERVICES</p><h1>Transaction receipt</h1><p className="muted">Print a receipt preview for a saved local sample transaction.</p></div><button type="button" className="statement-print-button" onClick={printReceipt}>Print / Save PDF</button></div>
     <div className="notice">SAMPLE RECEIPT — NOT BANK-ISSUED. This preview uses editable browser data and is not proof of a real transfer or payment.</div>
@@ -51,7 +54,7 @@ export default function ReceiptPage() {
         <ReceiptField label="Status" value={selected.status==="posted"?"Posted in local sample data":"Pending in local sample data"}/>
         <ReceiptField label="Account holder" value={state.name||"Not set in Settings"}/>
         <ReceiptField label="Account label" value={state.accountLabel||"Not set in Settings"}/>
-        <ReceiptField label="Account number (sample)" value={state.accountNumber||state.maskedId||"Not set in Settings"}/>
+        <ReceiptField label="Account number (masked sample)" value={maskedAccount}/>
         <ReceiptField label="Customer ID (sample)" value={state.customerId||"Not set in Settings"}/>
         <ReceiptField label="Branch (sample)" value={state.branch||"Not set in Settings"}/>
         <ReceiptField label="IFSC-format code (sample)" value={state.ifsc||"Not set in Settings"}/>
