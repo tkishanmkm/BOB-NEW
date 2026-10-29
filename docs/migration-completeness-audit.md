@@ -102,7 +102,6 @@ The source manifest is compared against actual files under public/. A present fi
 - /assets/reference/flutter-ui/assets/images/activateUpi/mobile_icon.svg
 - /assets/reference/flutter-ui/assets/images/activateUpi/scanner_icon.svg
 - /assets/reference/flutter-ui/assets/images/activateUpi/shop_icon.svg
-- /assets/reference/flutter-ui/assets/images/activateUpi/transaction_history_icon.svg
 - /assets/reference/flutter-ui/assets/images/bbps_raise_complaint/complaint_info_icon.svg
 - /assets/reference/flutter-ui/assets/images/cardDetails/bob_card_icon.svg
 - /assets/reference/flutter-ui/assets/images/dashBoard/alerts.svg
@@ -112,6 +111,7 @@ The source manifest is compared against actual files under public/. A present fi
 - /assets/reference/flutter-ui/assets/images/dashBoard/contact.svg
 - /assets/reference/flutter-ui/assets/images/dashBoard/needHelp.svg
 - /assets/reference/flutter-ui/assets/images/dashBoard/transcationHistory.svg
+- /assets/reference/flutter-ui/assets/images/dashBoard/upi.svg
 - /assets/reference/flutter-ui/assets/images/mySpace/accountManagement.svg
 - /assets/reference/flutter-ui/assets/images/mySpace/earn.svg
 - /assets/reference/flutter-ui/assets/images/mySpace/personalDetails.svg

@@ -1,0 +1,11 @@
+﻿screen,source_evidence,confidence,runtime_capture,status,next_action
+App launch / splash,base_res__drawable-mdpi__src_assets_newui_splashscreen.png; base_assets__splash_screen.mp4,Likely,Not captured,Blocked by ARM64 runtime on x86_64 host,Use compatible ARM64 device/host
+Welcome / onboarding,src_assets_introcarousel.png and startup resources,Unknown,Not captured,Unverified,Inspect startup sequence on supported runtime
+Login / sign-in,login_screen_background and login portal resources,Likely,Not captured,Unverified,Verify full layout from supported runtime
+Dashboard / home,Flutter assets/images/dashBoard/,Likely,Not captured,Restricted until runtime evidence,Confirm auth gate and capture only public state
+UPI activation,Flutter assets/images/activateUpi/,Likely,Not captured,Unverified,Inspect entry point after authorised test access
+Account management,Flutter assets/images/accountManagement/,Likely,Not captured,Unverified,Map assets to visible screens
+Statements / upload,native statement-related layout and drawable resources,Likely,Not captured,Unverified,Identify owning activity/SDK and visible flow
+QR / scanner,scanner-related icons and manifest activity declarations,Likely,Not captured,Unverified,Confirm permission and entry point
+Offers / rewards,resource groups and native activity declarations,Unknown,Not captured,Unverified,Determine first-party vs embedded SDK
+Embedded web / SDK,manifest activity declarations and native layouts,Unknown,Not captured,Unverified,Identify owning SDK and reachable entry point
