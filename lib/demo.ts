@@ -228,7 +228,7 @@ export function validWorkspaceMessages(value:unknown):boolean{
     ids.add(m.id);return true;
   });
 }
-export async function restoreWorkspaceRecords(account:State,payees:unknown,supportMessages:unknown):Promise<boolean>{
+export async function restoreWorkspaceRecords(account:State,payees:unknown,supportMessages:unknown,expectedCollections?:{payees:unknown;supportMessages:unknown}):Promise<boolean>{
   if(!valid(account)||!validWorkspacePayees(payees)||!validWorkspaceMessages(supportMessages)||typeof window==="undefined")return false;
   // Backups are untrusted input: persist only the documented schema, not
   // unexpected fields that happen to pass structural validation.
@@ -251,9 +251,16 @@ export async function restoreWorkspaceRecords(account:State,payees:unknown,suppo
         const store=tx.objectStore(STORE);
         let stale=false;
         const request=store.get(STATE_RECORD);
-        request.onsuccess=()=>{
+        const payeesRequest=store.get("collection:bob-new-sample-payees-v1");
+        const supportRequest=store.get("collection:bob-new-support-messages-v1");
+        let accountReady=false,payeesReady=!expectedCollections,supportReady=!expectedCollections;
+        const maybeRestore=()=>{
+          if(!accountReady||!payeesReady||!supportReady)return;
           const stored=request.result?.value;
-          if(!valid(stored)||JSON.stringify(stored)!==JSON.stringify(expected)){
+          const currentPayees=payeesRequest.result?.value;
+          const currentSupport=supportRequest.result?.value;
+          if(!valid(stored)||JSON.stringify(stored)!==JSON.stringify(expected)||
+             expectedCollections&&(JSON.stringify(currentPayees)!==JSON.stringify(expectedCollections.payees)||JSON.stringify(currentSupport)!==JSON.stringify(expectedCollections.supportMessages))){
             stale=true;
             try{tx.abort()}catch{}
             return;
@@ -262,13 +269,18 @@ export async function restoreWorkspaceRecords(account:State,payees:unknown,suppo
           store.put({id:"collection:bob-new-sample-payees-v1",value:safePayees});
           store.put({id:"collection:bob-new-support-messages-v1",value:safeMessages});
         };
+        request.onsuccess=()=>{accountReady=true;maybeRestore()};
+        payeesRequest.onsuccess=()=>{payeesReady=true;maybeRestore()};
+        supportRequest.onsuccess=()=>{supportReady=true;maybeRestore()};
         request.onerror=()=>reject(request.error||new Error("Could not verify the latest account data before restoring."));
+        payeesRequest.onerror=()=>reject(payeesRequest.error||new Error("Could not verify beneficiaries before restoring."));
+        supportRequest.onerror=()=>reject(supportRequest.error||new Error("Could not verify support messages before restoring."));
         tx.oncomplete=()=>resolve();
         tx.onerror=()=>{if(stale)resolve();else reject(tx.error||new Error("Workspace restore transaction failed."))};
         tx.onabort=()=>{if(stale)resolve();else reject(tx.error||new Error("Workspace restore was cancelled."))};
       });
       if(stale){
-        window.dispatchEvent(new CustomEvent("bob-new-storage-error",{detail:"Another tab changed the saved account data. Workspace restore was cancelled; refresh before retrying."}));
+        window.dispatchEvent(new CustomEvent("bob-new-storage-error",{detail:"Another tab changed the saved account, beneficiary, or support data. Workspace restore was cancelled; refresh before retrying."}));
         return false;
       }
       cache=next;
