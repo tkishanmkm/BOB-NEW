@@ -11,7 +11,8 @@
     "smoke-test": "node scripts/smoke-test.mjs",
     "audit:routes": "node scripts/feature-route-audit.cjs",
     "test:data": "node scripts/data-validation-test.cjs",
-    "audit:migration": "node scripts/migration-completeness-audit.cjs"
+    "audit:migration": "node scripts/migration-completeness-audit.cjs",
+    "audit:assets": "node scripts/asset-usage-audit.cjs"
   },
   "dependencies": {
     "next": "15.5.28",

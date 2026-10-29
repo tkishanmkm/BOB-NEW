@@ -103,6 +103,9 @@ The audit identifies the following categories. The current BOB-NEW asset import 
 | Total original resource inventory | 3,746 records | Inventory records can overlap categories and include non-visual resources |
 
 Asset audit artifacts:
+- `docs/asset-usage-audit.md` ? complete public-file inventory, manifest reconciliation, hash duplicate analysis, static usage scan and inferred route placement.
+- `docs/asset-usage-audit.csv` ? one row per public file with URL, category, source path, size, hash, static usage and inferred route placement.
+- `scripts/asset-usage-audit.cjs` ? reproducible asset audit (`npm run audit:assets`).
 - `docs/bob-world-asset-manifest.json` — asset manifest already added to BOB-NEW.
 - Source audit gallery: `gallery/flutter-assets.html` and `gallery/native-layouts.html` under the local audit folder.
 - Path lists: `inventory/flutter-asset-paths.txt`, `inventory/flutter-image-paths.txt`, `inventory/flutter-font-paths.txt`.
@@ -133,7 +136,7 @@ Settings is the editable source of truth. Dashboard, account details, passbook, 
 - [x] Known source route list captured from audit notes (52 paths).
 - [x] Splash/static resource evidence documented.
 - [x] Asset types, counts and source inventory artifacts documented.
-- [ ] Reconcile all imported target assets against source manifest and hash/file counts.
+- [x] Reconcile all imported target assets against source manifest and SHA-256/file counts (`docs/asset-usage-audit.md` and `docs/asset-usage-audit.csv`).
 - [ ] Map each asset to a page with confidence (confirmed / likely / unknown).
 - [ ] Inspect every BOB-NEW route and record implemented / partial / placeholder / missing.
 - [ ] Implement one shared validated local demo store.
