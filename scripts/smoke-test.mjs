@@ -37,7 +37,7 @@ for (const route of routes) {
     if (response.status !== 200) routeFailures.push(`status=${response.status}`);
     if (!type.includes("text/html")) routeFailures.push(`content-type=${type || "missing"}`);
     if (html.length < 500 || !/<html[\s>]/i.test(html) || !/<body[\s>]/i.test(html)) routeFailures.push("response is not a substantial HTML document");
-    if (/This page could not be found|404: NOT_FOUND|Application error: a client-side exception has occurred/i.test(normalizedHtml)) routeFailures.push("response contains a not-found or application-error marker");
+    if (/This page could not be found|Page not found|This route is not mapped to a supported prototype screen|404: NOT_FOUND|Application error: a client-side exception has occurred/i.test(normalizedHtml)) routeFailures.push("response contains a not-found, unsupported-route, or application-error marker");
     const expected = requiredContent.get(route) || [];
     for (const marker of expected) if (!normalizedHtml.toLowerCase().includes(marker.toLowerCase())) routeFailures.push(`missing expected page marker: ${marker}`);
     if (routeFailures.length) {
