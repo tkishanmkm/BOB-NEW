@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { Shell } from "@/components/app-shell";
 import { ApkAssetIcon } from "@/components/apk-asset-map";
-import { read, money, maskAccountIdentifier, sortTransactionsNewestFirst, balanceThroughDate, postedTotal, type State } from "@/lib/demo";
+import { hydrate, read, money, maskAccountIdentifier, sortTransactionsNewestFirst, balanceThroughDate, postedTotal, type State } from "@/lib/demo";
 
 export default function StatementPage() {
   const [state, setState] = useState<State>(read());
@@ -12,12 +12,21 @@ export default function StatementPage() {
   const [type, setType] = useState<"all" | "credit" | "debit">("all");
   const [status, setStatus] = useState<"all" | "posted" | "pending">("all");
   const [message, setMessage] = useState("");
+  const [stateReady, setStateReady] = useState(false);
+  const [loadError, setLoadError] = useState(false);
   useEffect(() => {
+    let active = true;
     const refresh = () => setState(read());
-    refresh();
+    void hydrate().then(() => {
+      if (!active) return;
+      refresh();
+      setStateReady(true);
+    }).catch(() => {
+      if (active) setLoadError(true);
+    });
     window.addEventListener("bob-new-state-change", refresh);
     window.addEventListener("storage", refresh);
-    return () => { window.removeEventListener("bob-new-state-change", refresh); window.removeEventListener("storage", refresh); };
+    return () => { active = false; window.removeEventListener("bob-new-state-change", refresh); window.removeEventListener("storage", refresh); };
   }, []);
   const rows = useMemo(() => sortTransactionsNewestFirst(state.transactions)
     .filter(tx => !(from && to && from > to) && (!from || tx.date >= from)).filter(tx => !to || tx.date <= to)
@@ -31,6 +40,8 @@ export default function StatementPage() {
     setMessage("");
     window.print();
   }
+  if (loadError) return <Shell><section className="card"><h1>Statement unavailable</h1><p className="error" role="alert">Saved account data could not be loaded. The statement is hidden to avoid showing unverified default data. Check browser storage, then reload.</p><button type="button" onClick={() => window.location.reload()}>Retry</button></section></Shell>;
+  if (!stateReady) return <Shell><section className="card" role="status"><h1>Loading statement</h1><p className="muted">Loading saved account and transaction data from this browser…</p></section></Shell>;
   return <Shell>
     <div className="page-heading apk-page-heading"><ApkAssetIcon asset="statement" size={30}/><div><p className="eyebrow">ACCOUNT SERVICES</p><h1>Account statement</h1><p className="muted">Filter activity and print a local sample report.</p></div><button type="button" className="statement-print-button" onClick={printStatement} disabled={Boolean(from && to && from > to)}>Print / Save PDF</button></div>
     <div className="notice">DEMO — NOT A BANK-ISSUED STATEMENT. This report is generated from editable sample data in this browser.</div>
