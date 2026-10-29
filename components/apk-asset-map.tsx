@@ -14,7 +14,7 @@ const assets: Record<AssetKey, AssetEntry> = {
   settings: { src: "/assets/reference/flutter-ui/assets/images/mySpace/accountManagement.svg" },
   billPay: { src: "/assets/reference/flutter-ui/assets/images/dashBoard/billPayment.svg" },
   cards: { src: "/assets/reference/flutter-ui/assets/images/cardDetails/bob_card_icon.svg" },
-  upi: { src: "/assets/reference/flutter-ui/assets/images/activateUpi/transaction_history_icon.svg" },
+  upi: { src: "/assets/reference/flutter-ui/assets/images/dashBoard/upi.svg" },
   fixedDeposit: { src: "/assets/reference/flutter-ui/assets/images/mySpace/save.svg" },
   offers: { src: "/assets/reference/flutter-ui/assets/images/mySpace/earn.svg" },
   help: { src: "/assets/reference/flutter-ui/assets/images/dashBoard/needHelp.svg" },
