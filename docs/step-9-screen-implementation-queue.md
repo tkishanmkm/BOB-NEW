@@ -151,3 +151,10 @@ Implemented in `app/style.css` on `main`:
 - Fixed sample transfer date creation to use the device's local calendar date instead of slicing a UTC ISO timestamp, avoiding date shifts near timezone boundaries.
 - Existing validation, pending-demo labeling, and duplicate-submit lock remain in place. This is a local prototype flow and does not send a payment.
 - Static verification only; no production build or real-device browser test has been run.
+
+## Step 23 — mobile beneficiaries
+
+- Added beneficiary-specific form/list classes and compact phone-first card styles; form fields stack on phones and saved recipient details wrap rather than overflow.
+- Account number uses a numeric input hint and a 6–18 digit pattern. IFSC-format input uses an 11-character pattern and uppercase normalization; these are format checks only, not bank verification.
+- Add and remove actions remain disabled while saved records are being loaded or a save is in progress. Existing local-storage recovery protection remains unchanged.
+- Static source/style checks only; production build and real-device tests remain outstanding.
