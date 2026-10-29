@@ -6,8 +6,9 @@
 
 - Source routes listed in inventory: **52**
 - Next.js page files (including dynamic route file): **62**
-- Source routes with dedicated route file: **52**
-- Source routes served by generic feature page: **0**
+- Source routes with dedicated route file: **7**
+- Source routes served by generic feature page: **32**
+- Source routes that alias another page: **13**
 - Source routes without direct or dynamic configuration: **0**
 - Manifest records: **6913**
 - Manifest asset paths missing from public/: **0**
@@ -20,58 +21,58 @@
 
 | Source route | Page / flow | Current static status | What this means |
 |---|---|---|---|
-| `/` | App entry / splash / sign-in | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/dashboard` | Dashboard | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/about` | About | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/account-actions` | Account actions | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/account-statement` | Account statement | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/agent-live-chat` | Agent chat | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/ai-assistant-chat` | Assistant chat | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/alerts` | Alerts | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/all-accounts` | All accounts | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/app-settings` | App settings | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/bill-pay` | Bill payment | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/borrow` | Borrow | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/bus-tickets` | Bus tickets | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/cards` | Cards | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/change-login-pin` | Change login PIN | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/change-transaction-pin` | Change transaction PIN | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/cheque-book-request` | Cheque book request | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/complaints` | Complaints | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/contact-details` | Contact details | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/contact-us-help` | Contact/help | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/credit-card-apply` | Credit card application | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/current-account-details` | Current account details | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/digital-loan` | Digital loan | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/digital-planner` | Digital planner | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/faqs` | FAQs | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/fixed-deposit` | Fixed deposit | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/fund-transfer` | Fund transfer | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/help` | Help | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/invest` | Investments | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/kyc-details` | KYC details | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/link-bank` | Link bank | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/more` | More services | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/need-help` | Need help | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/nominee-registration` | Nominee registration | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/offers` | Offers | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/passbook` | Passbook / transactions | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/personal-details` | Personal details | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/personal-loan-info` | Personal loan information | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/positive-pay` | Positive pay | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/profile` | Profile | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/recharge` | Recharge | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/save` | Savings | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/scan` | Scan / QR | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/security` | Security settings | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/settings` | Settings | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/shop-and-pay` | Shop and pay | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/shop` | Shop | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/statement-analysis` | Statement analysis | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/switch-to-classic` | Classic layout | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/upi` | UPI | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/video-call` | Video call | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
-| `/watch-demo` | Watch demo | Dedicated page file | Direct route file exists; visual/functional parity not yet proven |
+| `/` | App entry / splash / sign-in | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
+| `/dashboard` | Dashboard | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
+| `/about` | About | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/account-actions` | Account actions | Shared page alias | Route re-exports another page component; not an independent screen |
+| `/account-statement` | Account statement | Shared page alias | Route re-exports another page component; not an independent screen |
+| `/agent-live-chat` | Agent chat | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/ai-assistant-chat` | Assistant chat | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/alerts` | Alerts | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
+| `/all-accounts` | All accounts | Shared page alias | Route re-exports another page component; not an independent screen |
+| `/app-settings` | App settings | Shared page alias | Route re-exports another page component; not an independent screen |
+| `/bill-pay` | Bill payment | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/borrow` | Borrow | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/bus-tickets` | Bus tickets | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/cards` | Cards | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/change-login-pin` | Change login PIN | Shared page alias | Route re-exports another page component; not an independent screen |
+| `/change-transaction-pin` | Change transaction PIN | Shared page alias | Route re-exports another page component; not an independent screen |
+| `/cheque-book-request` | Cheque book request | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/complaints` | Complaints | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/contact-details` | Contact details | Shared page alias | Route re-exports another page component; not an independent screen |
+| `/contact-us-help` | Contact/help | Shared page alias | Route re-exports another page component; not an independent screen |
+| `/credit-card-apply` | Credit card application | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/current-account-details` | Current account details | Shared page alias | Route re-exports another page component; not an independent screen |
+| `/digital-loan` | Digital loan | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/digital-planner` | Digital planner | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/faqs` | FAQs | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/fixed-deposit` | Fixed deposit | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/fund-transfer` | Fund transfer | Shared page alias | Route re-exports another page component; not an independent screen |
+| `/help` | Help | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/invest` | Investments | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/kyc-details` | KYC details | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/link-bank` | Link bank | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/more` | More services | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
+| `/need-help` | Need help | Shared page alias | Route re-exports another page component; not an independent screen |
+| `/nominee-registration` | Nominee registration | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/offers` | Offers | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/passbook` | Passbook / transactions | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
+| `/personal-details` | Personal details | Shared page alias | Route re-exports another page component; not an independent screen |
+| `/personal-loan-info` | Personal loan information | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/positive-pay` | Positive pay | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/profile` | Profile | Shared page alias | Route re-exports another page component; not an independent screen |
+| `/recharge` | Recharge | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/save` | Savings | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/scan` | Scan / QR | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/security` | Security settings | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/settings` | Settings | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
+| `/shop-and-pay` | Shop and pay | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/shop` | Shop | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/statement-analysis` | Statement analysis | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/switch-to-classic` | Classic layout | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/upi` | UPI | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
+| `/video-call` | Video call | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/watch-demo` | Watch demo | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
 
 ## Public asset inventory by extension
 

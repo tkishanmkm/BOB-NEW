@@ -20,28 +20,29 @@ export default function StatementPage() {
     return () => { window.removeEventListener("bob-new-state-change", refresh); window.removeEventListener("storage", refresh); };
   }, []);
   const rows = useMemo(() => state.transactions.map((tx, index) => ({ tx, index }))
-    .filter(({ tx }) => !from || tx.date >= from).filter(({ tx }) => !to || tx.date <= to)
+    .filter(({ tx }) => !(from && to && from > to) && (!from || tx.date >= from)).filter(({ tx }) => !to || tx.date <= to)
     .filter(({ tx }) => type === "all" || tx.type === type).filter(({ tx }) => status === "all" || tx.status === status)
     .sort((a, b) => b.tx.date.localeCompare(a.tx.date) || b.index - a.index).map(({ tx }) => tx), [state.transactions, from, to, type, status]);
   const credits = rows.filter(t => t.type === "credit" && t.status === "posted").reduce((n,t) => n + t.amount, 0);
   const debits = rows.filter(t => t.type === "debit" && t.status === "posted").reduce((n,t) => n + t.amount, 0);
   const closing = state.openingBalance + state.transactions.filter(t => t.status === "posted" && (!to || t.date <= to)).reduce((n,t) => n + (t.type === "credit" ? t.amount : -t.amount),0);
+  function clearFilters() { setFrom(""); setTo(""); setType("all"); setStatus("all"); setMessage(""); }
   function printStatement() {
     if (from && to && from > to) { setMessage("Start date must be on or before end date."); return; }
     setMessage("");
     window.print();
   }
   return <Shell>
-    <div className="page-heading apk-page-heading"><ApkAssetIcon asset="statement" size={30}/><div><p className="eyebrow">ACCOUNT SERVICES</p><h1>Account statement</h1><p className="muted">Filter activity and print a local sample report.</p></div><button type="button" className="statement-print-button" onClick={printStatement}>Print / Save PDF</button></div>
+    <div className="page-heading apk-page-heading"><ApkAssetIcon asset="statement" size={30}/><div><p className="eyebrow">ACCOUNT SERVICES</p><h1>Account statement</h1><p className="muted">Filter activity and print a local sample report.</p></div><button type="button" className="statement-print-button" onClick={printStatement} disabled={Boolean(from && to && from > to)}>Print / Save PDF</button></div>
     <div className="notice">DEMO — NOT A BANK-ISSUED STATEMENT. This report is generated from editable sample data in this browser.</div>
     <section className="card no-print statement-filters"><div className="section-title"><div><h2>Search transactions</h2><p className="muted">Choose a date range and transaction filters.</p></div><ApkAssetIcon asset="passbook" size={24}/></div>
       <div className="passbook-filter-grid">
-        <label className="field">From date<input type="date" value={from} onChange={e=>setFrom(e.target.value)}/></label>
-        <label className="field">To date<input type="date" value={to} onChange={e=>setTo(e.target.value)}/></label>
+        <label className="field">From date<input type="date" max={to || undefined} value={from} onChange={e=>setFrom(e.target.value)}/></label>
+        <label className="field">To date<input type="date" min={from || undefined} value={to} onChange={e=>setTo(e.target.value)}/></label>
         <label className="field">Transaction type<select value={type} onChange={e=>setType(e.target.value as typeof type)}><option value="all">All types</option><option value="credit">Credits</option><option value="debit">Debits</option></select></label>
         <label className="field">Status<select value={status} onChange={e=>setStatus(e.target.value as typeof status)}><option value="all">All statuses</option><option value="posted">Posted sample entries</option><option value="pending">Pending simulations</option></select></label>
       </div>
-      {from && to && from > to && <p role="alert" className="error">Start date must be on or before end date.</p>}{message && <p role="alert" className="error">{message}</p>}<p className="muted" aria-live="polite">{rows.length} matching transaction(s).</p>
+      {from && to && from > to && <p role="alert" className="error">Start date must be on or before end date.</p>}{message && <p role="alert" className="error">{message}</p>}<div className="passbook-filter-footer"><p className="muted" aria-live="polite">{from && to && from > to ? "Correct the date range to view results." : `${rows.length} matching transaction(s).`}</p><button type="button" className="btn secondary" onClick={clearFilters}>Clear filters</button></div>
     </section>
     <section className="statement-summary-grid">
       <div className="card statement-summary-item"><span>Posted credits in results</span><strong className="amount-credit">{money(credits)}</strong></div>

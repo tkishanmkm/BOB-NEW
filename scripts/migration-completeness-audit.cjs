@@ -34,10 +34,6 @@ const manifestMissing = manifest.filter((item) => {
 const refsFound = [...referencedPaths].filter((p) => fs.existsSync(path.join(publicDir, p.replace(/^\//, "").replace(/\//g, path.sep))));
 const refsMissing = [...referencedPaths].filter((p) => !fs.existsSync(path.join(publicDir, p.replace(/^\//, "").replace(/\//g, path.sep))));
 const pageFiles = walk(path.join(root, "app")).filter((p) => path.basename(p) === "page.tsx");
-const exactRoutes = new Set(pageFiles.map((p) => {
-  let route = path.relative(path.join(root, "app"), path.dirname(p)).replace(/\\/g, "/");
-  return route === "." ? "/" : "/" + route;
-}));
 const featureFile = path.join(root, "app", "[feature]", "page.tsx");
 const featureText = fs.existsSync(featureFile) ? fs.readFileSync(featureFile, "utf8") : "";
 const featureKeys = new Set([...featureText.matchAll(/^\s{2}["']?([a-z0-9-]+)["']?\s*:\s*\{/gm)].map((m) => m[1]));
@@ -53,11 +49,22 @@ for (const file of allPublicFiles) {
 }
 const routeRows = sourceRoutes.map(({ route, title }) => {
   const feature = route.slice(1);
+  const pageFile = pageFiles.find((p) => {
+    const relRoute = path.relative(path.join(root, "app"), path.dirname(p)).replace(/\\/g, "/");
+    return (relRoute === "." ? "/" : "/" + relRoute) === route;
+  });
+  const pageText = pageFile ? fs.readFileSync(pageFile, "utf8").replace(/^\uFEFF/, "") : "";
   let status;
   let resolution;
-  if (exactRoutes.has(route)) {
+  if (pageFile && /<FeaturePage\s+feature=/.test(pageText)) {
+    status = "Generic feature page";
+    resolution = "Route file delegates to the shared FeaturePage component; not an independent APK-matched screen";
+  } else if (pageFile && /^\s*(?:["']use client["'];?\s*)?export\s*\{\s*default\s*\}\s*from\s*["'][^"']+["'];?\s*$/s.test(pageText)) {
+    status = "Shared page alias";
+    resolution = "Route re-exports another page component; not an independent screen";
+  } else if (pageFile) {
     status = "Dedicated page file";
-    resolution = "Direct route file exists; visual/functional parity not yet proven";
+    resolution = "Direct page component exists; visual/functional parity still requires verification";
   } else if (featureKeys.has(feature)) {
     status = "Generic feature page";
     resolution = "Route handled by app/[feature]/page.tsx; not a faithful standalone APK layout";
@@ -79,6 +86,7 @@ const lines = [
   `- Next.js page files (including dynamic route file): **${pageFiles.length}**`,
   `- Source routes with dedicated route file: **${routeSummary["Dedicated page file"] || 0}**`,
   `- Source routes served by generic feature page: **${routeSummary["Generic feature page"] || 0}**`,
+  `- Source routes that alias another page: **${routeSummary["Shared page alias"] || 0}**`,
   `- Source routes without direct or dynamic configuration: **${routeSummary["Needs route implementation"] || 0}**`,
   `- Manifest records: **${manifest.length}**`,
   `- Manifest asset paths missing from public/: **${manifestMissing.length}**`,

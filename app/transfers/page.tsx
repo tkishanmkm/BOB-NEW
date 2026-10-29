@@ -105,7 +105,7 @@ export default function Transfers() {
           description: "Demo transfer to " + recipient.trim() + (remark.trim() ? " · " + remark.trim() : ""),
           amount: value,
           type: "debit",
-          status: "posted",
+          status: "pending",
         },
       ],
     };
