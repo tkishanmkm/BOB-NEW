@@ -6,8 +6,8 @@
 
 - Source routes listed in inventory: **52**
 - Next.js page files (including dynamic route file): **62**
-- Source routes with dedicated route file: **8**
-- Source routes served by generic feature page: **31**
+- Source routes with dedicated route file: **12**
+- Source routes served by generic feature page: **27**
 - Source routes that alias another page: **13**
 - Source routes without direct or dynamic configuration: **0**
 - Manifest records: **6913**
@@ -37,7 +37,7 @@
 | `/cards` | Cards | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
 | `/change-login-pin` | Change login PIN | Shared page alias | Route re-exports another page component; not an independent screen |
 | `/change-transaction-pin` | Change transaction PIN | Shared page alias | Route re-exports another page component; not an independent screen |
-| `/cheque-book-request` | Cheque book request | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/cheque-book-request` | Cheque book request | Dedicated page file | Local-only sample request draft and preview; no bank submission; visual/functional APK parity remains unverified |
 | `/complaints` | Complaints | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
 | `/contact-details` | Contact details | Shared page alias | Route re-exports another page component; not an independent screen |
 | `/contact-us-help` | Contact/help | Shared page alias | Route re-exports another page component; not an independent screen |
@@ -45,8 +45,8 @@
 | `/current-account-details` | Current account details | Shared page alias | Route re-exports another page component; not an independent screen |
 | `/digital-loan` | Digital loan | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
 | `/digital-planner` | Digital planner | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
-| `/faqs` | FAQs | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
-| `/fixed-deposit` | Fixed deposit | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/faqs` | FAQs | Dedicated page file | Interactive prototype FAQ; visual/functional APK parity remains unverified |
+| `/fixed-deposit` | Fixed deposit | Dedicated page file | Illustrative maturity calculator; no deposit is opened; visual/functional APK parity remains unverified |
 | `/fund-transfer` | Fund transfer | Shared page alias | Route re-exports another page component; not an independent screen |
 | `/help` | Help | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
 | `/invest` | Investments | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
@@ -55,7 +55,7 @@
 | `/more` | More services | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
 | `/need-help` | Need help | Shared page alias | Route re-exports another page component; not an independent screen |
 | `/nominee-registration` | Nominee registration | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
-| `/offers` | Offers | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
+| `/offers` | Offers | Dedicated page file | Searchable category-filtered sample cards; not live offers; visual/functional APK parity remains unverified |
 | `/passbook` | Passbook / transactions | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
 | `/personal-details` | Personal details | Shared page alias | Route re-exports another page component; not an independent screen |
 | `/personal-loan-info` | Personal loan information | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
