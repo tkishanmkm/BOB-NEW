@@ -53,7 +53,7 @@ export default function Passbook() {
     <section className="card passbook-transactions"><div className="section-title"><div><h2>Transaction history</h2><p className="muted">Newest dates first · sample records only</p></div><ApkAssetIcon asset="statement" size={24}/></div>
       {transactions.length === 0 ? <p className="muted">{invalidRange ? "Adjust the date range to continue." : "No transactions match these filters."}</p> : transactions.map(tx => <div className="passbook-row" key={tx.id}>
         <span className={"passbook-transaction-symbol " + (tx.type === "credit" ? "credit" : "debit")}>{tx.type === "credit" ? "↓" : "↑"}</span>
-        <span className="passbook-transaction-copy"><Link href={"/receipt?id=" + encodeURIComponent(tx.id)}>{tx.description}</Link><small>{tx.date} · {tx.status === "pending" ? "PENDING SIMULATION — NOT PAID" : "Posted sample entry"}</small><small>Ref: {tx.id} · <Link href={"/receipt?id=" + encodeURIComponent(tx.id)}>View sample receipt</Link></small></span>
+        <span className="passbook-transaction-copy"><Link href={"/receipt?id=" + encodeURIComponent(tx.id)}>{tx.description}</Link><small className="passbook-row-meta">{tx.date} · <span className={"passbook-status-chip " + tx.status}>{tx.status === "pending" ? "Pending simulation · not paid" : "Posted sample entry"}</span></small><small className="passbook-row-meta">Ref: <span className="passbook-reference">{tx.id}</span> · <Link href={"/receipt?id=" + encodeURIComponent(tx.id)}>View sample receipt</Link></small></span>
         <strong className={tx.type === "credit" ? "amount-credit" : "amount-debit"}>{tx.type === "credit" ? "+" : "−"}{money(tx.amount)}</strong>
       </div>)}
     </section>
