@@ -22,7 +22,8 @@ if (!Number.isInteger(port) || port < 1024 || port > 65535) {
 }
 const baseUrl = `http://${host}:${port}`;
 const results = [];
-async function main() {\nfor (const [label, args] of checks) {
+async function main() {
+for (const [label, args] of checks) {
   console.log(`\n=== ${label} ===`);
   const result = spawnSync(npm, args, {
     stdio: "inherit",
@@ -40,12 +41,11 @@ async function main() {\nfor (const [label, args] of checks) {
 
 
 if (results.length === checks.length && results.every(item => item.code === 0)) {
-  console.log("\\n=== Production server route smoke test ===");
+  console.log("\n=== Production server route smoke test ===");
   const nextCli = require.resolve("next/dist/bin/next");
   const server = spawn(process.execPath, [nextCli, "start", "--hostname", host, "--port", String(port)], {
     stdio: "inherit", env: process.env, shell: false,
   });
-  let smokePassed = false;
   try {
     const started = Date.now();
     let ready = false;
@@ -58,11 +58,10 @@ if (results.length === checks.length && results.every(item => item.code === 0)) 
       await new Promise(resolve => setTimeout(resolve, 500));
     }
     if (!ready) throw new Error(`Next.js server did not become ready at ${baseUrl} within 45000ms`);
-    console.log(`\\n=== Route smoke test (${baseUrl}) ===`);
+    console.log(`\n=== Route smoke test (${baseUrl}) ===`);
     const smoke = spawnSync(npm, ["run", "smoke-test"], { stdio: "inherit", env: { ...process.env, SMOKE_BASE_URL: baseUrl }, shell: isWindows });
     const code = smoke.error ? 1 : (smoke.status ?? 1);
     results.push({ label: "production route smoke test", code });
-    smokePassed = code === 0;
     if (!smokePassed) console.error(`FAILED: production route smoke test (exit ${code})`);
     else console.log("PASSED: production route smoke test");
   } catch (error) {
@@ -80,7 +79,7 @@ if (results.length === checks.length && results.every(item => item.code === 0)) 
   }
 }
 
-console.log("\\n=== Release check summary ===");
+console.log("\n=== Release check summary ===");
 for (const item of results) console.log(`${item.code === 0 ? "PASS" : "FAIL"}  ${item.label}`);
 if (results.length !== checks.length + (results.some(item => item.label === "production route smoke test") ? 1 : 0) || results.some(item => item.code !== 0)) {
   console.error("Release checks did not all pass. Do not treat this run as release approval.");
