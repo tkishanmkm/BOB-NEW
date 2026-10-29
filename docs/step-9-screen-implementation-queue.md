@@ -95,3 +95,23 @@ An alias may be acceptable when the APK intentionally opens the same screen for 
 ## Next implementation unit
 
 Start with the first high-priority user journey for which reference evidence is available. Do not batch-convert all generic routes in one change: that makes visual review and regression isolation harder. If reference screenshots or APK source files are not accessible from the current workspace, collect those artifacts before claiming exact parity.
+
+## Step 16 — transfer-flow static audit (2026-10-29)
+
+Scope inspected: `app/transfers/page.tsx`, `app/payees/page.tsx`, `lib/demo.ts`, and the Settings transaction editor. This is a source inspection only; no build, browser run, or bank integration test was performed.
+
+### Findings
+
+- Transfer amounts are parsed as positive decimal values with at most two fractional digits; malformed values are rejected.
+- Recipient account and IFSC-format fields are validated before review and again before recording the result.
+- A synchronous ref lock prevents duplicate finish submissions while a save is in progress.
+- The available sample balance subtracts existing pending debit simulations, and the recorded transfer remains `pending`; no network payment is sent.
+- The transfer's date is currently derived from `new Date().toISOString().slice(0, 10)`. This is a UTC date, not necessarily the browser's local calendar date. It can appear one day off in local statement/passbook views around timezone boundaries. Follow-up fix should use a local calendar-date helper and add a deterministic test around a timezone-boundary instant.
+- Beneficiary persistence validates the saved list and disables editing if saved data cannot be loaded or validated.
+
+### Acceptance work still outstanding
+
+- [ ] Change simulated transfer date generation to the intended local calendar date.
+- [ ] Add deterministic tests for amount parsing, pending-debit reservation, and duplicate-submit behavior.
+- [ ] Verify transfer result, balance, Passbook, statement and receipt consistency in a browser.
+- [ ] Run the production build and route smoke tests; none are claimed by this static audit.
