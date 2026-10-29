@@ -40,6 +40,10 @@ export default function Dashboard() {
   const recent = s.transactions.slice().reverse().slice(0, 5);
 
   return <Shell>
+    <div className="dashboard-brand-strip" aria-label="BOB World original APK brand asset, displayed in a local demo">
+      <Image src="/assets/bob-world/original-assets/assets/images/dashBoard/bobWorldNTitle.svg" alt="BOB World branding reference" width={200} height={40} priority />
+      <span className="prototype-tag">DEMO</span>
+    </div>
     <div className="dashboard-heading">
       <div><p className="eyebrow">YOUR ACCOUNT OVERVIEW</p><h1>Hello, {s.name}</h1><p className="muted">Review your account information, balances and recent activity.</p></div>
       <Link className="btn dashboard-outline" href="/account-details">View account details →</Link>

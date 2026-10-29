@@ -153,3 +153,13 @@ Settings is the editable source of truth. Dashboard, account details, passbook, 
 - **Unknown** — static evidence cannot establish purpose or use.
 
 Never mark the migration 100% complete solely because assets are present or a route file exists.
+
+
+## Direct APK Flutter asset import — 2026-10-29
+
+- Parsed base/assets/flutter_assets/AssetManifest.json: **622 manifest keys**.
+- Copied **617 available manifest-backed files (24.01 MiB)** into public/assets/bob-world/original-assets/, retaining the Flutter asset-relative path under assets/. The two SSL certificate manifest entries are intentionally not published as web assets; missing/non-file manifest entries are not silently represented as copied.
+- Wrote a per-file SHA-256-prefix inventory to docs/bob-apk-resource-map.json.
+- Dashboard service icons in components/apk-asset-map.tsx now reference the direct imported Flutter asset tree. The dashboard also uses dashBoard/bobWorldNTitle.svg as an APK-derived brand reference, with the demo label retained.
+- Static folder grouping highlights: bank_logo_with_bank_code (214), bankLogo (77), dashBoard (50), mySpace (38), activateUpi (33), sendMoney (22), vpaExist (21), pay (19), upi_circle (18), and accountManagement (17).
+- These groupings are purpose hints, not a verified screen map. Exact placement/use still needs runtime screenshot evidence. Assets are kept under their original manifest-relative paths so later page mapping can reuse them without flattening or renaming.

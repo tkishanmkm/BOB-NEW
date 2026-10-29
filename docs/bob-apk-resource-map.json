@@ -1,0 +1,3094 @@
+{
+  "source": "BOB World APK extracted Flutter assets",
+  "manifestEntries": 622,
+  "copiedFiles": 617,
+  "skippedMissing": 3,
+  "totalBytes": 25180940,
+  "assets": [
+    {
+      "path": "assets/fonts/Acumin.otf",
+      "bytes": 81988,
+      "sha256": "3f05ab8d12586c0b"
+    },
+    {
+      "path": "assets/fonts/Gabarito-ExtraBold.ttf",
+      "bytes": 102308,
+      "sha256": "dcd6a656e11f150a"
+    },
+    {
+      "path": "assets/fonts/Gabarito.ttf",
+      "bytes": 101996,
+      "sha256": "7c922564e558ede6"
+    },
+    {
+      "path": "assets/images/accountManagement/Subtract.svg",
+      "bytes": 4199,
+      "sha256": "916dedeffdb7e3a2"
+    },
+    {
+      "path": "assets/images/accountManagement/activateFIR.svg",
+      "bytes": 995,
+      "sha256": "c89a987c64f8ca0c"
+    },
+    {
+      "path": "assets/images/accountManagement/activateGlobal.svg",
+      "bytes": 2222,
+      "sha256": "5854499e2fb8bdda"
+    },
+    {
+      "path": "assets/images/accountManagement/addBalance.svg",
+      "bytes": 2095,
+      "sha256": "9c72c52d6d3c076b"
+    },
+    {
+      "path": "assets/images/accountManagement/calender.svg",
+      "bytes": 4436,
+      "sha256": "6ffca05cd94f34e1"
+    },
+    {
+      "path": "assets/images/accountManagement/creditCardIcon.svg",
+      "bytes": 890,
+      "sha256": "0ea9478b8d877eed"
+    },
+    {
+      "path": "assets/images/accountManagement/delAccount.svg",
+      "bytes": 1415,
+      "sha256": "90d38d04aaa78aec"
+    },
+    {
+      "path": "assets/images/accountManagement/ifsc_No_Account.svg",
+      "bytes": 81542,
+      "sha256": "345cbf3f8f1a022a"
+    },
+    {
+      "path": "assets/images/accountManagement/more_option.svg",
+      "bytes": 1073,
+      "sha256": "41884b0e0f31e56d"
+    },
+    {
+      "path": "assets/images/accountManagement/sendSelf.svg",
+      "bytes": 1684,
+      "sha256": "4376915a35e3040a"
+    },
+    {
+      "path": "assets/images/accountManagement/setDefault.svg",
+      "bytes": 995,
+      "sha256": "c89a987c64f8ca0c"
+    },
+    {
+      "path": "assets/images/accountManagement/set_upi_lock.svg",
+      "bytes": 7448,
+      "sha256": "689455e589c3c046"
+    },
+    {
+      "path": "assets/images/accountManagement/success_background.svg",
+      "bytes": 1463,
+      "sha256": "15cf755d769e3c34"
+    },
+    {
+      "path": "assets/images/accountManagement/success_icon.svg",
+      "bytes": 60749,
+      "sha256": "d8ab76ceaf7d254d"
+    },
+    {
+      "path": "assets/images/accountManagement/upiNumberManagementBackGround.svg",
+      "bytes": 65116,
+      "sha256": "2e02d72c2e88d877"
+    },
+    {
+      "path": "assets/images/accountManagement/viewBal.svg",
+      "bytes": 2405,
+      "sha256": "5ab3d74af667b497"
+    },
+    {
+      "path": "assets/images/accountManagement/warning.svg",
+      "bytes": 499,
+      "sha256": "556c09cf040e5cda"
+    },
+    {
+      "path": "assets/images/activateUpi/bob_world_logo.svg",
+      "bytes": 4311,
+      "sha256": "3cb3c910892a3847"
+    },
+    {
+      "path": "assets/images/activateUpi/check_balance_icon.svg",
+      "bytes": 523,
+      "sha256": "4b8f9bcb8dab94cb"
+    },
+    {
+      "path": "assets/images/activateUpi/dispute_icon.svg",
+      "bytes": 2486,
+      "sha256": "e11216eb8cf65a8e"
+    },
+    {
+      "path": "assets/images/activateUpi/dth_cable_tv_icon.svg",
+      "bytes": 669,
+      "sha256": "25b3eccfc07ce0e9"
+    },
+    {
+      "path": "assets/images/activateUpi/electricity_icon.svg",
+      "bytes": 1380,
+      "sha256": "5f5671bcb78c3ed6"
+    },
+    {
+      "path": "assets/images/activateUpi/explore_rewards_icon.svg",
+      "bytes": 5085,
+      "sha256": "38f33df0e5844db3"
+    },
+    {
+      "path": "assets/images/activateUpi/home_icon.svg",
+      "bytes": 355,
+      "sha256": "dfa0fdaa6c97c085"
+    },
+    {
+      "path": "assets/images/activateUpi/international_transfer_icon.svg",
+      "bytes": 2192,
+      "sha256": "74b0d2fd6978346d"
+    },
+    {
+      "path": "assets/images/activateUpi/manage_bene_icon.svg",
+      "bytes": 2864,
+      "sha256": "ab4e974abf543f89"
+    },
+    {
+      "path": "assets/images/activateUpi/manage_mandate_icon.svg",
+      "bytes": 819,
+      "sha256": "a113959fceb9a2f3"
+    },
+    {
+      "path": "assets/images/activateUpi/me_icon.svg",
+      "bytes": 1713,
+      "sha256": "65f1edf4f6f428e8"
+    },
+    {
+      "path": "assets/images/activateUpi/mobile_icon.svg",
+      "bytes": 618,
+      "sha256": "95d4d5616083115a"
+    },
+    {
+      "path": "assets/images/activateUpi/more_down_icon.svg",
+      "bytes": 375,
+      "sha256": "f2963579e3ead43d"
+    },
+    {
+      "path": "assets/images/activateUpi/mutual-fund.svg",
+      "bytes": 1670,
+      "sha256": "8539648232d1b5bb"
+    },
+    {
+      "path": "assets/images/activateUpi/notification_icon.svg",
+      "bytes": 985,
+      "sha256": "9178095b1d296ea8"
+    },
+    {
+      "path": "assets/images/activateUpi/receive_money_down_icon.svg",
+      "bytes": 292,
+      "sha256": "a2fa76c3d103354b"
+    },
+    {
+      "path": "assets/images/activateUpi/recharge_bills_icon.svg",
+      "bytes": 1038,
+      "sha256": "4a934f7b3f7e3770"
+    },
+    {
+      "path": "assets/images/activateUpi/refer_a_friend.png",
+      "bytes": 20525,
+      "sha256": "97f0ccdd8464aa81"
+    },
+    {
+      "path": "assets/images/activateUpi/rewards_icon.png",
+      "bytes": 5312,
+      "sha256": "e1148c9921733b45"
+    },
+    {
+      "path": "assets/images/activateUpi/rewards_icon.svg",
+      "bytes": 4567,
+      "sha256": "035f80d3023fe82d"
+    },
+    {
+      "path": "assets/images/activateUpi/rupay_credit_card_icon.svg",
+      "bytes": 866,
+      "sha256": "e305671e3242f4cb"
+    },
+    {
+      "path": "assets/images/activateUpi/rupay_image.png",
+      "bytes": 2510,
+      "sha256": "8c102ec3bffe79bd"
+    },
+    {
+      "path": "assets/images/activateUpi/rupay_image.svg",
+      "bytes": 168452,
+      "sha256": "9eb2d81a324a25cd"
+    },
+    {
+      "path": "assets/images/activateUpi/rupay_yellow_icon.svg",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c14"
+    },
+    {
+      "path": "assets/images/activateUpi/scanner_icon.svg",
+      "bytes": 1085,
+      "sha256": "81e7987475017c31"
+    },
+    {
+      "path": "assets/images/activateUpi/send_money_up_icon.svg",
+      "bytes": 477,
+      "sha256": "078051504c832744"
+    },
+    {
+      "path": "assets/images/activateUpi/shop_icon.svg",
+      "bytes": 1428,
+      "sha256": "4fae374ed1638dc3"
+    },
+    {
+      "path": "assets/images/activateUpi/tap_and_pay_icon.svg",
+      "bytes": 1081,
+      "sha256": "eda91d23975dc11d"
+    },
+    {
+      "path": "assets/images/activateUpi/transaction_history_icon.svg",
+      "bytes": 1097,
+      "sha256": "76b99e181685fe07"
+    },
+    {
+      "path": "assets/images/activateUpi/upiLite_icon.svg",
+      "bytes": 982,
+      "sha256": "c0b35e0fd40d2ffd"
+    },
+    {
+      "path": "assets/images/activateUpi/upi_copy_icon.svg",
+      "bytes": 561,
+      "sha256": "3cf158b1b478ab35"
+    },
+    {
+      "path": "assets/images/activateUpi/upi_lite_icon.svg",
+      "bytes": 12539,
+      "sha256": "75d2d3523632f5ab"
+    },
+    {
+      "path": "assets/images/activateUpi/upi_number_icon.svg",
+      "bytes": 375,
+      "sha256": "3b5594d602ccc7b5"
+    },
+    {
+      "path": "assets/images/bankIcon/axisBank.svg",
+      "bytes": 1247,
+      "sha256": "e9dce8006d6b4946"
+    },
+    {
+      "path": "assets/images/bankIcon/bobBank.svg",
+      "bytes": 9058,
+      "sha256": "513948b70aeabd9d"
+    },
+    {
+      "path": "assets/images/bankIcon/hdfcBank.svg",
+      "bytes": 4480,
+      "sha256": "758991cc458343f8"
+    },
+    {
+      "path": "assets/images/bankIcon/ic_launcher_foreground.png",
+      "bytes": 13674,
+      "sha256": "bfe1a997c14748cd"
+    },
+    {
+      "path": "assets/images/bankIcon/icicbank.xml",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c14"
+    },
+    {
+      "path": "assets/images/bankIcon/iciciBank.svg",
+      "bytes": 83939,
+      "sha256": "6962dc900d5c0665"
+    },
+    {
+      "path": "assets/images/bankIcon/pnbBank.svg",
+      "bytes": 1929,
+      "sha256": "731f49a214ec36bb"
+    },
+    {
+      "path": "assets/images/bankIcon/sbiBank.svg",
+      "bytes": 1488,
+      "sha256": "deffbabb174f2336"
+    },
+    {
+      "path": "assets/images/bankLogo/ABHY.png",
+      "bytes": 71742,
+      "sha256": "586f3af050d5343a"
+    },
+    {
+      "path": "assets/images/bankLogo/ABNAMRO.svg",
+      "bytes": 279,
+      "sha256": "ba2bf9776045d933"
+    },
+    {
+      "path": "assets/images/bankLogo/AUSmallFinanceBank.svg",
+      "bytes": 1466,
+      "sha256": "f0990ffb675ef541"
+    },
+    {
+      "path": "assets/images/bankLogo/AbuDhabiCommercialBank.svg",
+      "bytes": 17210,
+      "sha256": "b16e116d86feba9b"
+    },
+    {
+      "path": "assets/images/bankLogo/AirtelPaymentsBank.svg",
+      "bytes": 15076,
+      "sha256": "c77997dc785f1d43"
+    },
+    {
+      "path": "assets/images/bankLogo/AmericanExpress.svg",
+      "bytes": 1649,
+      "sha256": "165b3d85830c76e7"
+    },
+    {
+      "path": "assets/images/bankLogo/AustraliaNewZealandBankingGroup.svg",
+      "bytes": 1846,
+      "sha256": "ee75deca1e26cd37"
+    },
+    {
+      "path": "assets/images/bankLogo/AxisBank.svg",
+      "bytes": 1065,
+      "sha256": "98422383d98faca9"
+    },
+    {
+      "path": "assets/images/bankLogo/BNPParibas.svg",
+      "bytes": 7052,
+      "sha256": "65cb2c0d9bdc89fa"
+    },
+    {
+      "path": "assets/images/bankLogo/BandhanBank.svg",
+      "bytes": 2146,
+      "sha256": "dbcfda06741ee912"
+    },
+    {
+      "path": "assets/images/bankLogo/BankAmerica.svg",
+      "bytes": 1483,
+      "sha256": "0998bb75a1a90145"
+    },
+    {
+      "path": "assets/images/bankLogo/BankBahrainKuwait.svg",
+      "bytes": 2653,
+      "sha256": "6d9aa98fce2ceddb"
+    },
+    {
+      "path": "assets/images/bankLogo/BankMaybankIndonesia.svg",
+      "bytes": 7258,
+      "sha256": "45638341fdfbb1f0"
+    },
+    {
+      "path": "assets/images/bankLogo/BankofBaroda.svg",
+      "bytes": 7696,
+      "sha256": "9e17a3344c7238f8"
+    },
+    {
+      "path": "assets/images/bankLogo/BankofCeylon.svg",
+      "bytes": 43844,
+      "sha256": "a9fb26b79c2b6039"
+    },
+    {
+      "path": "assets/images/bankLogo/BankofChina.svg",
+      "bytes": 1476,
+      "sha256": "ea35f38cc0003a52"
+    },
+    {
+      "path": "assets/images/bankLogo/BankofIndia.svg",
+      "bytes": 86649,
+      "sha256": "e8c1f77a890aebca"
+    },
+    {
+      "path": "assets/images/bankLogo/BankofMaharastra.svg",
+      "bytes": 28778,
+      "sha256": "51c66ba672e3c882"
+    },
+    {
+      "path": "assets/images/bankLogo/BarclaysBank.svg",
+      "bytes": 3089,
+      "sha256": "1f8d64f92fa932c4"
+    },
+    {
+      "path": "assets/images/bankLogo/CSBBank.svg",
+      "bytes": 2828,
+      "sha256": "8a5b4936923bb3e9"
+    },
+    {
+      "path": "assets/images/bankLogo/CanaraBank.svg",
+      "bytes": 1260,
+      "sha256": "2740e4a810d2306a"
+    },
+    {
+      "path": "assets/images/bankLogo/CentralBankofIndia.svg",
+      "bytes": 1679,
+      "sha256": "ebb217d88dc8f720"
+    },
+    {
+      "path": "assets/images/bankLogo/CitiBank.svg",
+      "bytes": 1545,
+      "sha256": "d36d06bb50507a57"
+    },
+    {
+      "path": "assets/images/bankLogo/CityUnionBank.svg",
+      "bytes": 18799,
+      "sha256": "9db9560f590cca18"
+    },
+    {
+      "path": "assets/images/bankLogo/CreditSuisse.svg",
+      "bytes": 2187,
+      "sha256": "ddaebb107078966f"
+    },
+    {
+      "path": "assets/images/bankLogo/DBSBank.svg",
+      "bytes": 2212,
+      "sha256": "1418f69159eea3a2"
+    },
+    {
+      "path": "assets/images/bankLogo/DCBBank.svg",
+      "bytes": 5442,
+      "sha256": "3e68f1e79de21f06"
+    },
+    {
+      "path": "assets/images/bankLogo/DeutscheBank.svg",
+      "bytes": 472,
+      "sha256": "ffaeb78a68e0e63e"
+    },
+    {
+      "path": "assets/images/bankLogo/DhanlaxmiBank.svg",
+      "bytes": 7956,
+      "sha256": "8bafd9af09037e4d"
+    },
+    {
+      "path": "assets/images/bankLogo/DohaBank.svg",
+      "bytes": 931,
+      "sha256": "6a0cb26607ed5391"
+    },
+    {
+      "path": "assets/images/bankLogo/ESAFSmallFinanceBankLtd.svg",
+      "bytes": 621,
+      "sha256": "d0f2401557699d99"
+    },
+    {
+      "path": "assets/images/bankLogo/EmiratesNBD.svg",
+      "bytes": 1619,
+      "sha256": "04fec760fd88c26d"
+    },
+    {
+      "path": "assets/images/bankLogo/FINOPaymentsBank.svg",
+      "bytes": 13785,
+      "sha256": "cd9a5da496b42f61"
+    },
+    {
+      "path": "assets/images/bankLogo/FirstAbuDhabiBank.svg",
+      "bytes": 21931,
+      "sha256": "b16bd7ea82ca953d"
+    },
+    {
+      "path": "assets/images/bankLogo/FirstRandBank.svg",
+      "bytes": 7454,
+      "sha256": "55b652950b168126"
+    },
+    {
+      "path": "assets/images/bankLogo/HDFCBank.svg",
+      "bytes": 570,
+      "sha256": "0fd4278ded1e5fe0"
+    },
+    {
+      "path": "assets/images/bankLogo/HSBCBank.svg",
+      "bytes": 646,
+      "sha256": "4f56f50f736dcf0b"
+    },
+    {
+      "path": "assets/images/bankLogo/ICICIBank.svg",
+      "bytes": 1556,
+      "sha256": "d7a4bf3e7c63097c"
+    },
+    {
+      "path": "assets/images/bankLogo/IDBIBank.svg",
+      "bytes": 5435,
+      "sha256": "2c655459334ee1b8"
+    },
+    {
+      "path": "assets/images/bankLogo/IDFCBank.svg",
+      "bytes": 605,
+      "sha256": "836345ce1fa0941b"
+    },
+    {
+      "path": "assets/images/bankLogo/IndiaPostPaymentsBank.svg",
+      "bytes": 3169,
+      "sha256": "3326545144568e6d"
+    },
+    {
+      "path": "assets/images/bankLogo/IndianBank.svg",
+      "bytes": 1607,
+      "sha256": "a71751f8220e5446"
+    },
+    {
+      "path": "assets/images/bankLogo/IndianOverseasBank.svg",
+      "bytes": 5789,
+      "sha256": "30554f3b38bb6a38"
+    },
+    {
+      "path": "assets/images/bankLogo/InduslndBank.svg",
+      "bytes": 4919,
+      "sha256": "e14cf29cd79bfaa3"
+    },
+    {
+      "path": "assets/images/bankLogo/IndustrialBankofKorea.svg",
+      "bytes": 1906,
+      "sha256": "6cec64d820c6f872"
+    },
+    {
+      "path": "assets/images/bankLogo/JPMorganChase.svg",
+      "bytes": 744,
+      "sha256": "af42b7bee99bc518"
+    },
+    {
+      "path": "assets/images/bankLogo/Jammu&KashmirBank.svg",
+      "bytes": 2111,
+      "sha256": "1406efca5d1bc3c6"
+    },
+    {
+      "path": "assets/images/bankLogo/JioPaymentsBank.svg",
+      "bytes": 1564,
+      "sha256": "5bf328353f507c89"
+    },
+    {
+      "path": "assets/images/bankLogo/KEBHanaBank.svg",
+      "bytes": 2324,
+      "sha256": "601e7237ef4c0aa4"
+    },
+    {
+      "path": "assets/images/bankLogo/KarnatakaBank.svg",
+      "bytes": 1563,
+      "sha256": "04d02842a2736345"
+    },
+    {
+      "path": "assets/images/bankLogo/KookminBank.svg",
+      "bytes": 4638,
+      "sha256": "3a32eaa1129c0bc2"
+    },
+    {
+      "path": "assets/images/bankLogo/KotakMahindraBank.svg",
+      "bytes": 1453,
+      "sha256": "4a83518512dfadbb"
+    },
+    {
+      "path": "assets/images/bankLogo/KrungThaiBank.svg",
+      "bytes": 6726,
+      "sha256": "fc979bc3fe5ba71d"
+    },
+    {
+      "path": "assets/images/bankLogo/MUFGBank.svg",
+      "bytes": 911,
+      "sha256": "c410340cb7dfbee5"
+    },
+    {
+      "path": "assets/images/bankLogo/MizuhoCorporateBank.svg",
+      "bytes": 785,
+      "sha256": "a77b5a54281c4529"
+    },
+    {
+      "path": "assets/images/bankLogo/NatWestBank.svg",
+      "bytes": 6537,
+      "sha256": "08c52d2ede70a2ed"
+    },
+    {
+      "path": "assets/images/bankLogo/PaytmPaymentsBank.svg",
+      "bytes": 8424,
+      "sha256": "578262c5877162f4"
+    },
+    {
+      "path": "assets/images/bankLogo/Punjab&SindBank.svg",
+      "bytes": 12694,
+      "sha256": "e29fbba911dbc135"
+    },
+    {
+      "path": "assets/images/bankLogo/PunjabNationalBank.svg",
+      "bytes": 1615,
+      "sha256": "67551a573941f024"
+    },
+    {
+      "path": "assets/images/bankLogo/QatarNationalBank.svg",
+      "bytes": 2100,
+      "sha256": "b937178043b28623"
+    },
+    {
+      "path": "assets/images/bankLogo/RBLBank.svg",
+      "bytes": 978,
+      "sha256": "0aa7a0e85999cfd4"
+    },
+    {
+      "path": "assets/images/bankLogo/Sberbank.svg",
+      "bytes": 4457,
+      "sha256": "cc7ad0ee275e85f5"
+    },
+    {
+      "path": "assets/images/bankLogo/ScotiaBank.svg",
+      "bytes": 2162,
+      "sha256": "17bd61ac35aaa170"
+    },
+    {
+      "path": "assets/images/bankLogo/ShinhanBank.svg",
+      "bytes": 4633,
+      "sha256": "90b4fdf525e3503e"
+    },
+    {
+      "path": "assets/images/bankLogo/SocieteGenerale.svg",
+      "bytes": 438,
+      "sha256": "9a29dfa7cbb7cfed"
+    },
+    {
+      "path": "assets/images/bankLogo/SouthIndianBank.svg",
+      "bytes": 4498,
+      "sha256": "0d84a356c1f90e02"
+    },
+    {
+      "path": "assets/images/bankLogo/StandardCharteredBank.svg",
+      "bytes": 1955,
+      "sha256": "f7728cef0bff05ad"
+    },
+    {
+      "path": "assets/images/bankLogo/StateBankofIndia.svg",
+      "bytes": 659,
+      "sha256": "888beb75abf694b0"
+    },
+    {
+      "path": "assets/images/bankLogo/SumitomoMitsuiBankingCorporation.svg",
+      "bytes": 12312,
+      "sha256": "de8e125ea8d95fa2"
+    },
+    {
+      "path": "assets/images/bankLogo/TamilnadMercantileBank.svg",
+      "bytes": 2619,
+      "sha256": "7ead0e5a86ed1320"
+    },
+    {
+      "path": "assets/images/bankLogo/UCOBank.svg",
+      "bytes": 1851,
+      "sha256": "df8ff1287f425778"
+    },
+    {
+      "path": "assets/images/bankLogo/UjjivanSmallFinanceBank.svg",
+      "bytes": 1566,
+      "sha256": "4ef4cd5a69038bed"
+    },
+    {
+      "path": "assets/images/bankLogo/UnionBank.svg",
+      "bytes": 2275,
+      "sha256": "edf116aca15d22e6"
+    },
+    {
+      "path": "assets/images/bankLogo/UnitedOverseasBank.svg",
+      "bytes": 1489,
+      "sha256": "7eccf664b59f744d"
+    },
+    {
+      "path": "assets/images/bankLogo/Westpac.svg",
+      "bytes": 680,
+      "sha256": "cecd02fa6ad86476"
+    },
+    {
+      "path": "assets/images/bankLogo/WooriBank.svg",
+      "bytes": 23390,
+      "sha256": "c05309f399135196"
+    },
+    {
+      "path": "assets/images/bankLogo/YesBank.svg",
+      "bytes": 1231,
+      "sha256": "2117cc4825c88c84"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/ABHY.png",
+      "bytes": 71742,
+      "sha256": "586f3af050d5343a"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/ADCC.png",
+      "bytes": 41455,
+      "sha256": "158898297756d8f7"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/AIRP.png",
+      "bytes": 18126,
+      "sha256": "8b3a8985a843aaf9"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/AMCB.png",
+      "bytes": 45602,
+      "sha256": "e65213a3b486d989"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/ANDB.png",
+      "bytes": 18887,
+      "sha256": "feae46e318e8daef"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/ANDB0CGGBHO.png",
+      "bytes": 50542,
+      "sha256": "f971ffd275b25dfb"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/APBL.png",
+      "bytes": 12989,
+      "sha256": "94913b06e544966d"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/APGB.png",
+      "bytes": 65414,
+      "sha256": "ed21c5ce7b2c0f85"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/APGV.png",
+      "bytes": 23856,
+      "sha256": "2aceb13ef624dbd1"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/APMC.png",
+      "bytes": 33413,
+      "sha256": "31badf9849ef6c0b"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/ASBL.png",
+      "bytes": 27794,
+      "sha256": "eca44d326ae85bd5"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/AUBL.png",
+      "bytes": 13509,
+      "sha256": "d3fc30f6f4088291"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/BACB.png",
+      "bytes": 15474,
+      "sha256": "a25bb19bf15efa12"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/BARA.png",
+      "bytes": 6494,
+      "sha256": "d71b5433807239cb"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/BARB.png",
+      "bytes": 22376,
+      "sha256": "af14f59d1a1b568b"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/BARB0BGGBXX.png",
+      "bytes": 33704,
+      "sha256": "7792b3afc9776294"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/BARB0BRGBXX.png",
+      "bytes": 40285,
+      "sha256": "078bdd9fbff99e13"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/BARB0BUPGBX.png",
+      "bytes": 37293,
+      "sha256": "03e206dadd33ae11"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/BCBM.png",
+      "bytes": 34660,
+      "sha256": "f2c787e78d7f20a2"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/BDBL.png",
+      "bytes": 36426,
+      "sha256": "a486bdc284529fd3"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/BKDN0700000.png",
+      "bytes": 65632,
+      "sha256": "99b4676d592a0c79"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/BKID.png",
+      "bytes": 16713,
+      "sha256": "504413f2fd948c35"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/BOFA.png",
+      "bytes": 12508,
+      "sha256": "defaf7c77899ffc2"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/CBIN.png",
+      "bytes": 20459,
+      "sha256": "dfdbd9c6c6746ce3"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/CBIN0MPABAA.png",
+      "bytes": 37843,
+      "sha256": "2b27ffad879a34e0"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/CITI.png",
+      "bytes": 9614,
+      "sha256": "91faa05b57c382fa"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/CIUB.png",
+      "bytes": 19524,
+      "sha256": "34f24a1aa7f6261f"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/CLBL.png",
+      "bytes": 34142,
+      "sha256": "e055335fce5fe82f"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/CNRB.png",
+      "bytes": 22813,
+      "sha256": "794d9058bd289a62"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/COSB.png",
+      "bytes": 13680,
+      "sha256": "2b3dfe967ba36a13"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/CRUB.png",
+      "bytes": 57544,
+      "sha256": "41e21add487a975b"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/CSBK.png",
+      "bytes": 14803,
+      "sha256": "85bdf20daffc2022"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/DBSS.png",
+      "bytes": 14392,
+      "sha256": "0cb3aeffa15bc08a"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/DCBL.png",
+      "bytes": 14890,
+      "sha256": "cdc7a6780bb02fac"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/DEUT0784PBC.png",
+      "bytes": 12719,
+      "sha256": "2533b5bba35e8840"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/DLXB.png",
+      "bytes": 30025,
+      "sha256": "38e172a1c2354ac1"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/DNSB.png",
+      "bytes": 28335,
+      "sha256": "87f28a7183f38d63"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/ESFB.png",
+      "bytes": 14164,
+      "sha256": "1cda48ae80fccad3"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/ESMF.png",
+      "bytes": 14863,
+      "sha256": "e06edf28a0d07412"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/FDRL.png",
+      "bytes": 12233,
+      "sha256": "5344872cd595a177"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/FINO.png",
+      "bytes": 36450,
+      "sha256": "c0b0eb23d0241274"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/FSFB.png",
+      "bytes": 14571,
+      "sha256": "1ce3b9b7143a004c"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/GDCB.png",
+      "bytes": 62473,
+      "sha256": "d104854eef184c3b"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/GSCB.png",
+      "bytes": 67973,
+      "sha256": "3cdbd5f829ac38bb"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/GSCB0ADC001.png",
+      "bytes": 14211,
+      "sha256": "be76d49d61de6000"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/GSCB0ASCB02.png",
+      "bytes": 53053,
+      "sha256": "b20248fe6adfdd73"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/GSCB0BKD001.png",
+      "bytes": 64568,
+      "sha256": "29bb33d013af7747"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/GSCB0BRD001.png",
+      "bytes": 54370,
+      "sha256": "3560817e113a5dc4"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/GSCB0RJT001.png",
+      "bytes": 55726,
+      "sha256": "8734ee82a875c69e"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/GSCB0SKB001.png",
+      "bytes": 20991,
+      "sha256": "eab8ac2839005305"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/GSCB0UPATAN.png",
+      "bytes": 26990,
+      "sha256": "611be5339f7c1666"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/GSCB0UVVCCB.png",
+      "bytes": 92807,
+      "sha256": "cfd9957d9b2ff513"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HCBL.png",
+      "bytes": 21050,
+      "sha256": "2c20d0db37598e96"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC.png",
+      "bytes": 12208,
+      "sha256": "fdb7ad03877fd1a2"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CADARS.png",
+      "bytes": 35041,
+      "sha256": "b679a09b230cdc08"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CAMCBK.png",
+      "bytes": 74371,
+      "sha256": "66adb872d245fdff"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CBHLUB.png",
+      "bytes": 53030,
+      "sha256": "36fab05ce13cebaf"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CBNBNK.png",
+      "bytes": 13941,
+      "sha256": "0c9187c1b19f3b9d"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CCBL06.png",
+      "bytes": 14888,
+      "sha256": "5471bb6135781ae0"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CDUCBL.png",
+      "bytes": 21914,
+      "sha256": "f0b92f02d234126e"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CJMCBL.png",
+      "bytes": 84462,
+      "sha256": "19580167fbf16aef"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CKBS01.png",
+      "bytes": 59425,
+      "sha256": "aa28d2e9ea3644cc"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CMALAD.png",
+      "bytes": 13808,
+      "sha256": "752c401354089cd3"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CMBANK.png",
+      "bytes": 49250,
+      "sha256": "2be9a1590a4fb6c5"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CMPSSB.png",
+      "bytes": 42191,
+      "sha256": "2198e11910251b5f"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CMUCBL.png",
+      "bytes": 28174,
+      "sha256": "86317b3720417ab6"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CNSBMV.png",
+      "bytes": 86001,
+      "sha256": "160f304f4e6da7f9"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CNUCBL.png",
+      "bytes": 77334,
+      "sha256": "81891020cffface6"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CPCSBL.png",
+      "bytes": 37371,
+      "sha256": "1845d0441cedd8cf"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CPCUBL.png",
+      "bytes": 42301,
+      "sha256": "54d0c0db37e579e9"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CPUB03.png",
+      "bytes": 54703,
+      "sha256": "8af590bda029e326"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CSMSSB.png",
+      "bytes": 48834,
+      "sha256": "1d875f97851a31d5"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CSRCBL.png",
+      "bytes": 6794,
+      "sha256": "807f72b1ba120e0c"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CSTUCB.png",
+      "bytes": 77312,
+      "sha256": "8a60a52b3d65052b"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CSUCOB.png",
+      "bytes": 59747,
+      "sha256": "7a7c191272196e4a"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CSUVRN.png",
+      "bytes": 34384,
+      "sha256": "b7f601034dcc9bda"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CSVCBA.png",
+      "bytes": 7584,
+      "sha256": "2c32cb830b0bc8ee"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CTBMCB.png",
+      "bytes": 33694,
+      "sha256": "4c51e940aae9de7c"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CTGCUB.png",
+      "bytes": 70824,
+      "sha256": "50029ee15fcd4677"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CTUCBL.png",
+      "bytes": 42858,
+      "sha256": "63569d9642089d18"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HDFC0CTVCBL.png",
+      "bytes": 44855,
+      "sha256": "efb10ae97b5efaa2"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HPSC0000438.png",
+      "bytes": 13184,
+      "sha256": "4f06f01858bd95ed"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/HSBC.png",
+      "bytes": 20621,
+      "sha256": "3c8369d26c64470a"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/IBKL.png",
+      "bytes": 15296,
+      "sha256": "3841fd2e4dc88c55"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/IBKL0031VCB.png",
+      "bytes": 71248,
+      "sha256": "b2e3bdd22ace07e9"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/IBKL0041SCB.png",
+      "bytes": 19760,
+      "sha256": "487d6f74afc35eb5"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/IBKL0101BZR.png",
+      "bytes": 34979,
+      "sha256": "bb2c3958e5142d11"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/IBKL0101MCB.png",
+      "bytes": 47860,
+      "sha256": "9a6d28eb8bfa1d75"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/IBKL0123NMC.png",
+      "bytes": 27570,
+      "sha256": "0c64f8fc2586aad7"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/IBKL0150KMC.png",
+      "bytes": 63079,
+      "sha256": "3753cbc6adf6874c"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/IBKL01642SD.png",
+      "bytes": 30956,
+      "sha256": "95776055913bf3b6"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/IBKL0443SCC.png",
+      "bytes": 29406,
+      "sha256": "3fc9eb24c25d1430"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/IBKL0463KDC.png",
+      "bytes": 75017,
+      "sha256": "2c14d1413696cba5"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/IBKL0776SPS.png",
+      "bytes": 11831,
+      "sha256": "16ed71ace3a5d515"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/IBKL0JIVAN1.png",
+      "bytes": 44991,
+      "sha256": "00499d4b891dbfca"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/ICIC00ADRSH.png",
+      "bytes": 40905,
+      "sha256": "3804ff2d2d43b77c"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/ICIC00ARIHT.png",
+      "bytes": 10559,
+      "sha256": "d8c149e723b4c106"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/ICIC00HSBLW.png",
+      "bytes": 8307,
+      "sha256": "358348a3e1eb99fd"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/ICIC00INPRS.png",
+      "bytes": 57467,
+      "sha256": "b9deee833072c383"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/ICIC00KAIRA.png",
+      "bytes": 31297,
+      "sha256": "640fd1b9e5f3b47f"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/ICIC00SBSBN.png",
+      "bytes": 64881,
+      "sha256": "c90f5bd1ee6386e8"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/ICIC00TUCBD.png",
+      "bytes": 7926,
+      "sha256": "71f77669cc16d9d2"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/ICIC00UMUCB.png",
+      "bytes": 62518,
+      "sha256": "b277a3622fd8665c"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/ICIC00VSCBL.png",
+      "bytes": 24877,
+      "sha256": "e0ff09363b6db334"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/ICICI-Bank.png",
+      "bytes": 14729,
+      "sha256": "cd3d19b2ca032403"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/IDFB.png",
+      "bytes": 24643,
+      "sha256": "f5e0d1d7b9505b7d"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/IDIB.png",
+      "bytes": 34924,
+      "sha256": "27bd42a84759f693"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/INDB.png",
+      "bytes": 8524,
+      "sha256": "658565ba810c4328"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/IOBA.png",
+      "bytes": 12636,
+      "sha256": "65849cbf780a07a1"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/IPOS.png",
+      "bytes": 14182,
+      "sha256": "4c5a14d315dd1244"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/ITBL0000001.png",
+      "bytes": 68087,
+      "sha256": "b4d508cec07a07fb"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/JAKA.png",
+      "bytes": 15273,
+      "sha256": "98b4b8dbfcb920f8"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/JAKA0GRAMEN.png",
+      "bytes": 21832,
+      "sha256": "c82709983ff5dfbb"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/JANA.png",
+      "bytes": 18881,
+      "sha256": "b2a6916e15833ef3"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/JIOP.png",
+      "bytes": 11449,
+      "sha256": "0c4e3c39b1bc6a5f"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/JJSB.png",
+      "bytes": 56256,
+      "sha256": "be4a57bd780434a6"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/JPCB0000001.png",
+      "bytes": 18296,
+      "sha256": "52fd831da97c51a7"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/JSBL.png",
+      "bytes": 28574,
+      "sha256": "812dfbe2aa34283c"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/JSBP.png",
+      "bytes": 40558,
+      "sha256": "2c99f9178d9df1ba"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/JSFB.png",
+      "bytes": 26853,
+      "sha256": "72b7a3dca3a934db"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/KAIJ.png",
+      "bytes": 89351,
+      "sha256": "604fdc907d685499"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/KARB.png",
+      "bytes": 23855,
+      "sha256": "16d407195416a298"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/KCCB.png",
+      "bytes": 19170,
+      "sha256": "63ebadf790b591aa"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/KJSB.png",
+      "bytes": 55321,
+      "sha256": "ea78da096f32cf27"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/KKBK.png",
+      "bytes": 24809,
+      "sha256": "8ff276664d51aebb"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/KKBK0KMCB02.png",
+      "bytes": 24732,
+      "sha256": "d0333a79caf3ba00"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/KKBK0MNSB01.png",
+      "bytes": 33227,
+      "sha256": "6f344b39b3537657"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/KKBK0PNSB01.png",
+      "bytes": 49617,
+      "sha256": "3abb4804a5da59f6"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/KKBK0SMSB01.png",
+      "bytes": 55364,
+      "sha256": "b1fabb7195123285"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/KLGB.png",
+      "bytes": 19308,
+      "sha256": "8c8ac340c6843c8d"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/KVBL.png",
+      "bytes": 52100,
+      "sha256": "f48433d3275f08d2"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/KVGB.png",
+      "bytes": 39990,
+      "sha256": "d8969c37e0fdf425"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/LAVB.png",
+      "bytes": 42839,
+      "sha256": "604ebf84c921927e"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/MAHB.png",
+      "bytes": 55302,
+      "sha256": "01940a212c21b847"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/MAHB000CB01.png",
+      "bytes": 30536,
+      "sha256": "56778ed3bcda8604"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/MAHG.png",
+      "bytes": 71076,
+      "sha256": "5cbb2d998820777e"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/MCBL.png",
+      "bytes": 20028,
+      "sha256": "093dc59fe474bd51"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/MDBK.png",
+      "bytes": 17368,
+      "sha256": "ad5a53260091875c"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/MSCI.png",
+      "bytes": 54332,
+      "sha256": "a196085ebd7d9684"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/MSLM.png",
+      "bytes": 12287,
+      "sha256": "bb9522ff28bb2f79"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/MSNU.png",
+      "bytes": 65585,
+      "sha256": "91ac58f4522d842b"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/MUBL.png",
+      "bytes": 39010,
+      "sha256": "c64d7bf0c7ab40cc"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/NESF.png",
+      "bytes": 20571,
+      "sha256": "fbceda6980c54a43"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/NKGS.png",
+      "bytes": 14087,
+      "sha256": "11e9e1376dabad4f"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/NNSB.png",
+      "bytes": 53832,
+      "sha256": "61381e50de98c2a2"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/NSPB.png",
+      "bytes": 11986,
+      "sha256": "1020040b60ac719b"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/NTBL.png",
+      "bytes": 58770,
+      "sha256": "404b20873289195e"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/PJSB.png",
+      "bytes": 15423,
+      "sha256": "40d051f1c48babad"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/PKGB.png",
+      "bytes": 46869,
+      "sha256": "a95dc7f641fc1712"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/PMEC0000001.png",
+      "bytes": 31858,
+      "sha256": "03128b99a7045d7f"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/PSIB.png",
+      "bytes": 10938,
+      "sha256": "a14ddb715f544797"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/PUNB.png",
+      "bytes": 10807,
+      "sha256": "e8aad97aa40eee97"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/PUNB0HGB001.png",
+      "bytes": 73352,
+      "sha256": "6e54f37a3f8916a5"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/PUNB0HPGB04.png",
+      "bytes": 69424,
+      "sha256": "d1cc0732784e6d39"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/PUNB0MBGB06.png",
+      "bytes": 71731,
+      "sha256": "0b9ff7e3149a0deb"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/PUNB0PGB003.png",
+      "bytes": 79194,
+      "sha256": "9b53f8e6f9f59d16"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/PUNB0RRBMRB.png",
+      "bytes": 66489,
+      "sha256": "7807a2d89f724cca"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/PUNB0RRBTGB.png",
+      "bytes": 97291,
+      "sha256": "d96b1a86640dd3be"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/PUNB0SUPGB5.png",
+      "bytes": 71731,
+      "sha256": "0b9ff7e3149a0deb"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/PYTM.png",
+      "bytes": 11887,
+      "sha256": "10120c328f9e8385"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/RBL.png",
+      "bytes": 14977,
+      "sha256": "ba78b7d8f82cffbd"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/RMGB.png",
+      "bytes": 59261,
+      "sha256": "519171485746fee2"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/RNSB.png",
+      "bytes": 11082,
+      "sha256": "6f9bde3a4c8fc3fd"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/RSBL.png",
+      "bytes": 40727,
+      "sha256": "1e7ba9618b9c2ab6"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SBIN.png",
+      "bytes": 9022,
+      "sha256": "0a53d7fd890a7594"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SBIN0999999.png",
+      "bytes": 9917,
+      "sha256": "ef6b6a4107956cf4"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SBIN0RRCHGB.png",
+      "bytes": 16212,
+      "sha256": "3d42d960d34b932e"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SBIN0RRDCGB.png",
+      "bytes": 62348,
+      "sha256": "91f69eba22a5dfd6"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SBIN0RRMEGB.png",
+      "bytes": 33546,
+      "sha256": "b981ed4c6a3db133"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SBIN0RRMIGB.png",
+      "bytes": 24649,
+      "sha256": "d35facf1761a82b9"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SBIN0RRPUGB.png",
+      "bytes": 49006,
+      "sha256": "272dfde0345ad132"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SBIN0RRSRGB.png",
+      "bytes": 64935,
+      "sha256": "c2ca2a26ff3efc9b"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SBIN0RRUTGB.png",
+      "bytes": 50463,
+      "sha256": "dc19129ec1e317f9"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SBIN0RRVCGB.png",
+      "bytes": 15864,
+      "sha256": "14f6fa8230c39433"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SBLS0000001.png",
+      "bytes": 30820,
+      "sha256": "c4f3dcc3ff51ffe8"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SCBL.png",
+      "bytes": 14048,
+      "sha256": "760641134cdfc68a"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SDCB.png",
+      "bytes": 60864,
+      "sha256": "64908966483d3e87"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SDCE.png",
+      "bytes": 74977,
+      "sha256": "28384a212aaa1ac4"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SIBL.png",
+      "bytes": 13825,
+      "sha256": "c3fbec3b1436415f"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SIDC.png",
+      "bytes": 77956,
+      "sha256": "3d06b6e9d1a281ba"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SMCB.png",
+      "bytes": 64318,
+      "sha256": "aeabc074a9d8a1be"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SPCB.png",
+      "bytes": 70522,
+      "sha256": "b752b91831244dca"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SRCB.png",
+      "bytes": 19595,
+      "sha256": "7c59772f862d9220"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/STCB0000065.png",
+      "bytes": 15327,
+      "sha256": "ee02aed737b707bb"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SURY.png",
+      "bytes": 11036,
+      "sha256": "e7a1047e2ceaf7fa"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SUTB.png",
+      "bytes": 7300,
+      "sha256": "e7230adac3a03a84"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SVCB.png",
+      "bytes": 14115,
+      "sha256": "af46372b796ee314"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/SVSH.png",
+      "bytes": 76075,
+      "sha256": "fe42548c9f42eee0"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/TBSB.png",
+      "bytes": 64159,
+      "sha256": "4a898fea3bc8ba5a"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/TJSB.png",
+      "bytes": 21432,
+      "sha256": "6de27300657a0d51"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/TMBL.png",
+      "bytes": 12694,
+      "sha256": "bb9c0b550d9946c2"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/TSAB.png",
+      "bytes": 66131,
+      "sha256": "3b292fb9da811397"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/UBIN.png",
+      "bytes": 10835,
+      "sha256": "061f86cb5c21dce7"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/UBIN0RRBKGS.png",
+      "bytes": 47339,
+      "sha256": "8e8d633545f1b26b"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/UCBA.png",
+      "bytes": 26650,
+      "sha256": "0823870fd35a58d1"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/UCBA0RRBPBG.png",
+      "bytes": 8910,
+      "sha256": "9b073c749a7b9ec4"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/UJVN.png",
+      "bytes": 14414,
+      "sha256": "36c4900606c444e1"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/UTBI0RRBAGB.png",
+      "bytes": 31292,
+      "sha256": "a0c28c2143c57558"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/UTIB0SSNS01.png",
+      "bytes": 86154,
+      "sha256": "eb6a00ad9dad3c6e"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/UTIB0SSSKCB.png",
+      "bytes": 57142,
+      "sha256": "1da4324ae896721d"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/UTKS.png",
+      "bytes": 12380,
+      "sha256": "a00ea27901384baf"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/UUCB0000001.png",
+      "bytes": 51025,
+      "sha256": "5616c1babcfd1c77"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/VARA.png",
+      "bytes": 65321,
+      "sha256": "24d382790dae7b19"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/VSBL.png",
+      "bytes": 8087,
+      "sha256": "75a0254c18ace3fd"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/VVSB.png",
+      "bytes": 83630,
+      "sha256": "48c3e913d492437f"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/YESB.png",
+      "bytes": 8550,
+      "sha256": "ff658f300e76442a"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/YESB0CSB001.png",
+      "bytes": 14447,
+      "sha256": "be85570de7540c02"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/YESB0KNB006.png",
+      "bytes": 19680,
+      "sha256": "45d5360eb41b45cb"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/YESB0MAN001.png",
+      "bytes": 15073,
+      "sha256": "bd012e98df660225"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/YESB0MSB.png",
+      "bytes": 18349,
+      "sha256": "0c77df71045d0b42"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/YESB0SNSB01.png",
+      "bytes": 19654,
+      "sha256": "5df0ff139c236517"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/YESB0YESUPI.png",
+      "bytes": 22593,
+      "sha256": "32417ce3118365e6"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/YESB0YLNS01.png",
+      "bytes": 33490,
+      "sha256": "0b63f253f2ce2564"
+    },
+    {
+      "path": "assets/images/bank_logo_with_bank_code/all-banks.png",
+      "bytes": 12419,
+      "sha256": "f02512be981b86bc"
+    },
+    {
+      "path": "assets/images/bbps_raise_complaint/bharat_billPay.png",
+      "bytes": 3296,
+      "sha256": "db893a525cd28bf1"
+    },
+    {
+      "path": "assets/images/bbps_raise_complaint/call_icon.svg",
+      "bytes": 1530,
+      "sha256": "5ae3ea78a0ddf119"
+    },
+    {
+      "path": "assets/images/bbps_raise_complaint/complaint_info_icon.svg",
+      "bytes": 1814,
+      "sha256": "6a63b3e6e939aa7c"
+    },
+    {
+      "path": "assets/images/bbps_raise_complaint/mail_icon.svg",
+      "bytes": 539,
+      "sha256": "d2f9b4963bc75162"
+    },
+    {
+      "path": "assets/images/bbps_raise_complaint/track_complaint_icon.svg",
+      "bytes": 1611,
+      "sha256": "91548dc916ab0ec6"
+    },
+    {
+      "path": "assets/images/bharat_connect/B_Assured_Logo_PNG.png",
+      "bytes": 100011,
+      "sha256": "4f8ab196570492b1"
+    },
+    {
+      "path": "assets/images/bharat_connect/Bharat_Connect_Primary_Logo_PNG.png",
+      "bytes": 44515,
+      "sha256": "f9912a6900595053"
+    },
+    {
+      "path": "assets/images/bharat_connect/Bharat_Connect_Reverse_Logo_PNG.png",
+      "bytes": 55775,
+      "sha256": "68b2a49daceb74cf"
+    },
+    {
+      "path": "assets/images/bharat_connect/Bharat_Connect_Reverse_Logo_White_BG_PNG.png",
+      "bytes": 40459,
+      "sha256": "ca21fb0f629e0056"
+    },
+    {
+      "path": "assets/images/cardDetails/activate_emi_icon.png",
+      "bytes": 731,
+      "sha256": "dc12ebe1d7638243"
+    },
+    {
+      "path": "assets/images/cardDetails/activate_emi_icon.svg",
+      "bytes": 1430,
+      "sha256": "3132afc54898e3f0"
+    },
+    {
+      "path": "assets/images/cardDetails/bill_payment_icon.svg",
+      "bytes": 2111,
+      "sha256": "2ca1a68f29c73592"
+    },
+    {
+      "path": "assets/images/cardDetails/bill_payments_to_others_icon.svg",
+      "bytes": 2508,
+      "sha256": "22b353a1795645a8"
+    },
+    {
+      "path": "assets/images/cardDetails/bob_card_icon.svg",
+      "bytes": 62447,
+      "sha256": "242c34b4ccaf2bae"
+    },
+    {
+      "path": "assets/images/cardDetails/card_wifi_icon.svg",
+      "bytes": 963,
+      "sha256": "305a2fe5e0c6fffd"
+    },
+    {
+      "path": "assets/images/cardDetails/check.svg",
+      "bytes": 483,
+      "sha256": "87f43fc55e21a42d"
+    },
+    {
+      "path": "assets/images/cardDetails/convert_to_emi_icon.svg",
+      "bytes": 1065,
+      "sha256": "33a2aa28291ff6c2"
+    },
+    {
+      "path": "assets/images/cardDetails/easy_icon.svg",
+      "bytes": 4118,
+      "sha256": "adefba7fe2994904"
+    },
+    {
+      "path": "assets/images/cardDetails/rupay_icon.svg",
+      "bytes": 140059,
+      "sha256": "41c029e8ba721688"
+    },
+    {
+      "path": "assets/images/cardDetails/rupuy_icon.png",
+      "bytes": 2764,
+      "sha256": "1acfd7161342842c"
+    },
+    {
+      "path": "assets/images/cardDetails/transaction_history_icon.svg",
+      "bytes": 1445,
+      "sha256": "189dfc1f2f6adccf"
+    },
+    {
+      "path": "assets/images/cash_deposit/bank_of_maharashtra.png",
+      "bytes": 6066,
+      "sha256": "1944ee58a96dec2c"
+    },
+    {
+      "path": "assets/images/cash_deposit/bank_of_maharashtra.svg",
+      "bytes": 8618,
+      "sha256": "0ab5fcf25c190e5e"
+    },
+    {
+      "path": "assets/images/createVpa/bankDefault.png",
+      "bytes": 18747,
+      "sha256": "016d2d608baafbfd"
+    },
+    {
+      "path": "assets/images/createVpa/bankDefault.svg",
+      "bytes": 1823,
+      "sha256": "b0d25c1b54dc4e17"
+    },
+    {
+      "path": "assets/images/createVpa/congrulationBackground.svg",
+      "bytes": 1470,
+      "sha256": "f059e0924d68c38b"
+    },
+    {
+      "path": "assets/images/createVpa/contactUs.svg",
+      "bytes": 1474,
+      "sha256": "87bc3f9bd6dd87fe"
+    },
+    {
+      "path": "assets/images/createVpa/defaultBankLogo.png",
+      "bytes": 1076,
+      "sha256": "d8e9c784d9bce951"
+    },
+    {
+      "path": "assets/images/createVpa/digitalAccount.svg",
+      "bytes": 3129,
+      "sha256": "a39748dfc96746c5"
+    },
+    {
+      "path": "assets/images/createVpa/lock.svg",
+      "bytes": 1130,
+      "sha256": "2fe9159df93ecf2a"
+    },
+    {
+      "path": "assets/images/createVpa/moreItem.svg",
+      "bytes": 1070,
+      "sha256": "c6bab7f35fa42ec2"
+    },
+    {
+      "path": "assets/images/createVpa/obscure.svg",
+      "bytes": 1765,
+      "sha256": "9d88bed734a1f558"
+    },
+    {
+      "path": "assets/images/createVpa/otpBar.svg",
+      "bytes": 182,
+      "sha256": "c2c21f0dfef44a81"
+    },
+    {
+      "path": "assets/images/createVpa/payPImage.png",
+      "bytes": 169348,
+      "sha256": "a3acdc89793b1665"
+    },
+    {
+      "path": "assets/images/createVpa/smsBackGround.svg",
+      "bytes": 190869,
+      "sha256": "41620000052cc6d3"
+    },
+    {
+      "path": "assets/images/createVpa/watchDemo.svg",
+      "bytes": 1045,
+      "sha256": "3d25a2f85ffe8b01"
+    },
+    {
+      "path": "assets/images/dashBoard/BOB.jpg",
+      "bytes": 632552,
+      "sha256": "ecf63da98fa90c68"
+    },
+    {
+      "path": "assets/images/dashBoard/BOB.svg",
+      "bytes": 9290,
+      "sha256": "1dafadebaa1c4e22"
+    },
+    {
+      "path": "assets/images/dashBoard/BobEpay.png",
+      "bytes": 447707,
+      "sha256": "dee0f0d5c9c6e6cc"
+    },
+    {
+      "path": "assets/images/dashBoard/Bob_BobEpay.png",
+      "bytes": 94328,
+      "sha256": "170bd795a9455f1c"
+    },
+    {
+      "path": "assets/images/dashBoard/Group.png",
+      "bytes": 87748,
+      "sha256": "288e8faaeaa9e66b"
+    },
+    {
+      "path": "assets/images/dashBoard/Payplus1.png",
+      "bytes": 339537,
+      "sha256": "d6fd9b39d46dca09"
+    },
+    {
+      "path": "assets/images/dashBoard/alerts.svg",
+      "bytes": 2505,
+      "sha256": "1ed0d8fcd79e5fb5"
+    },
+    {
+      "path": "assets/images/dashBoard/approve.svg",
+      "bytes": 1676,
+      "sha256": "3304cb08f66dc824"
+    },
+    {
+      "path": "assets/images/dashBoard/balanceInquiry.svg",
+      "bytes": 2388,
+      "sha256": "2c7b6547ddf1245e"
+    },
+    {
+      "path": "assets/images/dashBoard/bank.svg",
+      "bytes": 1469,
+      "sha256": "679009010388402f"
+    },
+    {
+      "path": "assets/images/dashBoard/beneficiary.svg",
+      "bytes": 2319,
+      "sha256": "d4be2eb410d8ea1f"
+    },
+    {
+      "path": "assets/images/dashBoard/billPayment.svg",
+      "bytes": 2263,
+      "sha256": "453742df2fd5012d"
+    },
+    {
+      "path": "assets/images/dashBoard/bobSolo.svg",
+      "bytes": 1659,
+      "sha256": "35b7620812228630"
+    },
+    {
+      "path": "assets/images/dashBoard/bobUpiTile.svg",
+      "bytes": 28504,
+      "sha256": "357e1546a4271db4"
+    },
+    {
+      "path": "assets/images/dashBoard/bobWorld.svg",
+      "bytes": 4390,
+      "sha256": "83dbc118bb4ce50d"
+    },
+    {
+      "path": "assets/images/dashBoard/bobWorldNTitle.svg",
+      "bytes": 67139,
+      "sha256": "076ed01b26ece493"
+    },
+    {
+      "path": "assets/images/dashBoard/bob_bg.png",
+      "bytes": 212512,
+      "sha256": "93085c71d897821f"
+    },
+    {
+      "path": "assets/images/dashBoard/bob_e_pay.png",
+      "bytes": 30792,
+      "sha256": "954bce94cd8ca829"
+    },
+    {
+      "path": "assets/images/dashBoard/bob_e_pay_logo.png",
+      "bytes": 34775,
+      "sha256": "27a49ff147b1b534"
+    },
+    {
+      "path": "assets/images/dashBoard/bob_logo.png",
+      "bytes": 17562,
+      "sha256": "a0873f8e69b70b7f"
+    },
+    {
+      "path": "assets/images/dashBoard/bob_world_upi.png",
+      "bytes": 41861,
+      "sha256": "bc01b949a98980e9"
+    },
+    {
+      "path": "assets/images/dashBoard/bobupi.png",
+      "bytes": 33062,
+      "sha256": "bc3f09d7da136be9"
+    },
+    {
+      "path": "assets/images/dashBoard/bobupiLogo.png",
+      "bytes": 14852,
+      "sha256": "af5faa2aaf85bfcd"
+    },
+    {
+      "path": "assets/images/dashBoard/collect.svg",
+      "bytes": 1658,
+      "sha256": "fcfa26b984f9b7fc"
+    },
+    {
+      "path": "assets/images/dashBoard/contact.svg",
+      "bytes": 1834,
+      "sha256": "a57dae6fc5f5b2af"
+    },
+    {
+      "path": "assets/images/dashBoard/contact2.svg",
+      "bytes": 1587,
+      "sha256": "0ec62ee992d7974e"
+    },
+    {
+      "path": "assets/images/dashBoard/create.svg",
+      "bytes": 1815,
+      "sha256": "fd8b9c0cc1385903"
+    },
+    {
+      "path": "assets/images/dashBoard/dispute.svg",
+      "bytes": 3010,
+      "sha256": "5276d670f6dd9481"
+    },
+    {
+      "path": "assets/images/dashBoard/epay.png",
+      "bytes": 136380,
+      "sha256": "b7b8af83b4720649"
+    },
+    {
+      "path": "assets/images/dashBoard/epayLauncher.png",
+      "bytes": 5968956,
+      "sha256": "d2f9de4523508171"
+    },
+    {
+      "path": "assets/images/dashBoard/epayLogo.svg",
+      "bytes": 8251,
+      "sha256": "3ebe4abcca058cdb"
+    },
+    {
+      "path": "assets/images/dashBoard/home.svg",
+      "bytes": 876,
+      "sha256": "565ec7d5906109d3"
+    },
+    {
+      "path": "assets/images/dashBoard/launcher.png",
+      "bytes": 7204,
+      "sha256": "e181920f2da1a27e"
+    },
+    {
+      "path": "assets/images/dashBoard/link.svg",
+      "bytes": 704,
+      "sha256": "b2cb1720246b3d3f"
+    },
+    {
+      "path": "assets/images/dashBoard/lite.svg",
+      "bytes": 1819,
+      "sha256": "2f8ed9dbf7c74862"
+    },
+    {
+      "path": "assets/images/dashBoard/logout.svg",
+      "bytes": 978,
+      "sha256": "92d78f9abbc870dd"
+    },
+    {
+      "path": "assets/images/dashBoard/mapper.svg",
+      "bytes": 1793,
+      "sha256": "9b146c4a6f7f37d2"
+    },
+    {
+      "path": "assets/images/dashBoard/modify.svg",
+      "bytes": 1413,
+      "sha256": "4430845590c5cb42"
+    },
+    {
+      "path": "assets/images/dashBoard/needHelp.svg",
+      "bytes": 848,
+      "sha256": "e1d1bebe3e495622"
+    },
+    {
+      "path": "assets/images/dashBoard/new_bob_e_pay_launcher_icon.png",
+      "bytes": 148161,
+      "sha256": "349a7b661710e586"
+    },
+    {
+      "path": "assets/images/dashBoard/payPImage.png",
+      "bytes": 169348,
+      "sha256": "a3acdc89793b1665"
+    },
+    {
+      "path": "assets/images/dashBoard/payPlus.png",
+      "bytes": 11071,
+      "sha256": "75632de40a91f04d"
+    },
+    {
+      "path": "assets/images/dashBoard/revoke.svg",
+      "bytes": 1831,
+      "sha256": "41fb60262b96e639"
+    },
+    {
+      "path": "assets/images/dashBoard/reward.png",
+      "bytes": 95830,
+      "sha256": "5491051682df1c6e"
+    },
+    {
+      "path": "assets/images/dashBoard/search.svg",
+      "bytes": 434,
+      "sha256": "366b6b50c384823d"
+    },
+    {
+      "path": "assets/images/dashBoard/self.svg",
+      "bytes": 1672,
+      "sha256": "8a789feb7f3ab604"
+    },
+    {
+      "path": "assets/images/dashBoard/transcationHistory.svg",
+      "bytes": 1473,
+      "sha256": "0d1260fc1f03a543"
+    },
+    {
+      "path": "assets/images/dashBoard/upi.svg",
+      "bytes": 373,
+      "sha256": "16292513907299e6"
+    },
+    {
+      "path": "assets/images/dashBoard/upiNumber.svg",
+      "bytes": 468,
+      "sha256": "80c3487dd15e90f6"
+    },
+    {
+      "path": "assets/images/dashBoard/vpa.svg",
+      "bytes": 1935,
+      "sha256": "5807889a98af17e4"
+    },
+    {
+      "path": "assets/images/mandateServices/appBarScanIcon.svg",
+      "bytes": 1679,
+      "sha256": "dccc622609f73bd1"
+    },
+    {
+      "path": "assets/images/mandateServices/autopay_new1.png",
+      "bytes": 110969,
+      "sha256": "f24ec81868988ac2"
+    },
+    {
+      "path": "assets/images/mandateServices/contactManagement.svg",
+      "bytes": 1446,
+      "sha256": "a4fa735f32365250"
+    },
+    {
+      "path": "assets/images/mandateServices/deRegister.svg",
+      "bytes": 1285,
+      "sha256": "74c13dcf32fad4e7"
+    },
+    {
+      "path": "assets/images/mandateServices/debitBlocking.svg",
+      "bytes": 1572,
+      "sha256": "297e58397b99f60b"
+    },
+    {
+      "path": "assets/images/mandateServices/debitLimit.svg",
+      "bytes": 1725,
+      "sha256": "f17c178a784847da"
+    },
+    {
+      "path": "assets/images/mandateServices/disputeManagement.svg",
+      "bytes": 3002,
+      "sha256": "c7c7b41c953821b8"
+    },
+    {
+      "path": "assets/images/mandateServices/mandateErrorIcon.svg",
+      "bytes": 25936,
+      "sha256": "4d441121d5061a03"
+    },
+    {
+      "path": "assets/images/mandateServices/myAccounts.svg",
+      "bytes": 1576,
+      "sha256": "999067d1283c10a5"
+    },
+    {
+      "path": "assets/images/mandateServices/profile.svg",
+      "bytes": 1458,
+      "sha256": "a6cd87c5fb2fbdbd"
+    },
+    {
+      "path": "assets/images/mandateServices/scanQr.svg",
+      "bytes": 2079,
+      "sha256": "df805fe9dcb9792e"
+    },
+    {
+      "path": "assets/images/mandateServices/transactionHistory.svg",
+      "bytes": 1468,
+      "sha256": "2d07e1080dedfef8"
+    },
+    {
+      "path": "assets/images/mandateServices/unblockUpid.svg",
+      "bytes": 1419,
+      "sha256": "2b287d82707221b1"
+    },
+    {
+      "path": "assets/images/mandateServices/upiIdManagement.svg",
+      "bytes": 1805,
+      "sha256": "37b4f37b70cf1240"
+    },
+    {
+      "path": "assets/images/mySpace/aadhar_card.png",
+      "bytes": 59201,
+      "sha256": "83eb3c4fac62a0e8"
+    },
+    {
+      "path": "assets/images/mySpace/accountManagement.svg",
+      "bytes": 2212,
+      "sha256": "a34598a19a7d05fb"
+    },
+    {
+      "path": "assets/images/mySpace/atmLocator.svg",
+      "bytes": 2312,
+      "sha256": "536928e54656a3f2"
+    },
+    {
+      "path": "assets/images/mySpace/autopay_settings_icon.svg",
+      "bytes": 1404,
+      "sha256": "0f3c1e5b2482e827"
+    },
+    {
+      "path": "assets/images/mySpace/browseFromGallery.svg",
+      "bytes": 1427,
+      "sha256": "d3cbb3d83c66c81c"
+    },
+    {
+      "path": "assets/images/mySpace/changePin.svg",
+      "bytes": 7457,
+      "sha256": "2518a37109a5bb3c"
+    },
+    {
+      "path": "assets/images/mySpace/change_app_language_icon.svg",
+      "bytes": 2720,
+      "sha256": "1eedbb689788b26c"
+    },
+    {
+      "path": "assets/images/mySpace/copy.svg",
+      "bytes": 664,
+      "sha256": "8baeba429cc4b68e"
+    },
+    {
+      "path": "assets/images/mySpace/creditCardGear.svg",
+      "bytes": 1865,
+      "sha256": "37add0cf4e16b1c2"
+    },
+    {
+      "path": "assets/images/mySpace/debitBlocking.svg",
+      "bytes": 1227,
+      "sha256": "98d0fc6fb2975cdb"
+    },
+    {
+      "path": "assets/images/mySpace/debit_card.png",
+      "bytes": 7613,
+      "sha256": "bef0aae235897254"
+    },
+    {
+      "path": "assets/images/mySpace/defaultUPI.svg",
+      "bytes": 989,
+      "sha256": "9001c19addd30158"
+    },
+    {
+      "path": "assets/images/mySpace/delete.svg",
+      "bytes": 1017,
+      "sha256": "954d3b0d0186bc78"
+    },
+    {
+      "path": "assets/images/mySpace/deregister.svg",
+      "bytes": 1279,
+      "sha256": "dbaf870613890720"
+    },
+    {
+      "path": "assets/images/mySpace/downloadQr.svg",
+      "bytes": 979,
+      "sha256": "89e125f58dab4513"
+    },
+    {
+      "path": "assets/images/mySpace/earn.svg",
+      "bytes": 101637,
+      "sha256": "f11a062c8dd25186"
+    },
+    {
+      "path": "assets/images/mySpace/edit.svg",
+      "bytes": 906,
+      "sha256": "dd0467fe8b142a38"
+    },
+    {
+      "path": "assets/images/mySpace/edit_icon.svg",
+      "bytes": 318,
+      "sha256": "05713c92e17cfac1"
+    },
+    {
+      "path": "assets/images/mySpace/info_icon.svg",
+      "bytes": 853,
+      "sha256": "15368a94a38a0c17"
+    },
+    {
+      "path": "assets/images/mySpace/intentBobIcon.svg",
+      "bytes": 1906,
+      "sha256": "e82359e6e2dc9f1e"
+    },
+    {
+      "path": "assets/images/mySpace/logout.svg",
+      "bytes": 1315,
+      "sha256": "11c242e3b8f445f2"
+    },
+    {
+      "path": "assets/images/mySpace/personalDetails.svg",
+      "bytes": 2219,
+      "sha256": "47904caae15a7163"
+    },
+    {
+      "path": "assets/images/mySpace/phone.svg",
+      "bytes": 1668,
+      "sha256": "811f4d8e79f398ec"
+    },
+    {
+      "path": "assets/images/mySpace/privacyPolicy.svg",
+      "bytes": 1678,
+      "sha256": "8920141c7c08390b"
+    },
+    {
+      "path": "assets/images/mySpace/profileManagement.svg",
+      "bytes": 2159,
+      "sha256": "d9a4e0005492702e"
+    },
+    {
+      "path": "assets/images/mySpace/qrCode.svg",
+      "bytes": 17432,
+      "sha256": "8549e1d0e8f194e6"
+    },
+    {
+      "path": "assets/images/mySpace/referAFriend.svg",
+      "bytes": 2406,
+      "sha256": "d218d331b90fb88b"
+    },
+    {
+      "path": "assets/images/mySpace/save.svg",
+      "bytes": 948,
+      "sha256": "44a76b109d9ff06e"
+    },
+    {
+      "path": "assets/images/mySpace/shareQr.svg",
+      "bytes": 1368,
+      "sha256": "08aca0a57f8e6ead"
+    },
+    {
+      "path": "assets/images/mySpace/takeAPhoto.svg",
+      "bytes": 1024,
+      "sha256": "1831b129565e3999"
+    },
+    {
+      "path": "assets/images/mySpace/upi.svg",
+      "bytes": 77844,
+      "sha256": "a333471f08ed00df"
+    },
+    {
+      "path": "assets/images/mySpace/upiId.svg",
+      "bytes": 1802,
+      "sha256": "ddb580d34ed1ce06"
+    },
+    {
+      "path": "assets/images/mySpace/upiLogoSvg.SVG",
+      "bytes": 6674,
+      "sha256": "53f3100680e7b56c"
+    },
+    {
+      "path": "assets/images/mySpace/upilogo.png",
+      "bytes": 1022,
+      "sha256": "8c02edd91989e714"
+    },
+    {
+      "path": "assets/images/mySpace/whitelist_merchant_icon.svg",
+      "bytes": 1668,
+      "sha256": "4df35858cd2b7dd4"
+    },
+    {
+      "path": "assets/images/mySpace/whitelist_user_icon.svg",
+      "bytes": 972,
+      "sha256": "1975a15eecb2c36b"
+    },
+    {
+      "path": "assets/images/mySpace/whitelisted_merchants_icon.svg",
+      "bytes": 2747,
+      "sha256": "2ebbd667daac1679"
+    },
+    {
+      "path": "assets/images/mySpace/whitelisted_user_icon.svg",
+      "bytes": 2613,
+      "sha256": "a1f95861af03f1e6"
+    },
+    {
+      "path": "assets/images/pay/bharatScanner.svg",
+      "bytes": 3853,
+      "sha256": "7e32e6d55d2f153e"
+    },
+    {
+      "path": "assets/images/pay/contactPaySuccess.svg",
+      "bytes": 29226,
+      "sha256": "2934e4344e3f3fd7"
+    },
+    {
+      "path": "assets/images/pay/copySummary.svg",
+      "bytes": 649,
+      "sha256": "f99a980546d0acd2"
+    },
+    {
+      "path": "assets/images/pay/deleteIcon.svg",
+      "bytes": 1288,
+      "sha256": "53e040b9faf0e908"
+    },
+    {
+      "path": "assets/images/pay/download.svg",
+      "bytes": 991,
+      "sha256": "66cfb0e2b21f16ac"
+    },
+    {
+      "path": "assets/images/pay/failedIcon.svg",
+      "bytes": 507,
+      "sha256": "df2d2215b789a278"
+    },
+    {
+      "path": "assets/images/pay/failedPaymentTransactionIcon.svg",
+      "bytes": 716,
+      "sha256": "afeee830791af0bd"
+    },
+    {
+      "path": "assets/images/pay/flash.svg",
+      "bytes": 1835,
+      "sha256": "fb555b9067ecefed"
+    },
+    {
+      "path": "assets/images/pay/gallery.svg",
+      "bytes": 1437,
+      "sha256": "b41811154c689e88"
+    },
+    {
+      "path": "assets/images/pay/moreNDispute.svg",
+      "bytes": 892,
+      "sha256": "a39f9a727d5a0c66"
+    },
+    {
+      "path": "assets/images/pay/noUpi.svg",
+      "bytes": 26105,
+      "sha256": "cd9a423ef92c3e18"
+    },
+    {
+      "path": "assets/images/pay/pendingIcon.svg",
+      "bytes": 498,
+      "sha256": "c4bc8b93696a8f6a"
+    },
+    {
+      "path": "assets/images/pay/pendingPaymentTransactionIcon.svg",
+      "bytes": 691,
+      "sha256": "1fa4c43eb47331bd"
+    },
+    {
+      "path": "assets/images/pay/saveSummary.svg",
+      "bytes": 872,
+      "sha256": "be7468c8789a2bdd"
+    },
+    {
+      "path": "assets/images/pay/tagSpending.svg",
+      "bytes": 1872,
+      "sha256": "8e8e3dd48e77958c"
+    },
+    {
+      "path": "assets/images/pay/transferBackIcon.svg",
+      "bytes": 1839,
+      "sha256": "1171e2425d3cd49f"
+    },
+    {
+      "path": "assets/images/pay/upi.png",
+      "bytes": 98349,
+      "sha256": "0b50eadc13233c75"
+    },
+    {
+      "path": "assets/images/pay/upi.svg",
+      "bytes": 77861,
+      "sha256": "b4a2b7694a907ca6"
+    },
+    {
+      "path": "assets/images/pay/upiIcon.svg",
+      "bytes": 77822,
+      "sha256": "d953c436f4dc8918"
+    },
+    {
+      "path": "assets/images/profileManagement/bulb.svg",
+      "bytes": 1674,
+      "sha256": "de360605905161dc"
+    },
+    {
+      "path": "assets/images/profileManagement/lock.svg",
+      "bytes": 1130,
+      "sha256": "6587ccd7301263f6"
+    },
+    {
+      "path": "assets/images/rechargesAndBills/broadband_postpaid_icon.svg",
+      "bytes": 3097,
+      "sha256": "e2886adfd4b18021"
+    },
+    {
+      "path": "assets/images/rechargesAndBills/cable_tv_icon.svg",
+      "bytes": 913,
+      "sha256": "48a81aaf2c34c72e"
+    },
+    {
+      "path": "assets/images/rechargesAndBills/donation_icon.svg",
+      "bytes": 2644,
+      "sha256": "b548a2ad84093ef5"
+    },
+    {
+      "path": "assets/images/rechargesAndBills/dth_icon.svg",
+      "bytes": 673,
+      "sha256": "397da9c5127b38c2"
+    },
+    {
+      "path": "assets/images/rechargesAndBills/education_icon.svg",
+      "bytes": 728,
+      "sha256": "3035f50f4dafeea6"
+    },
+    {
+      "path": "assets/images/rechargesAndBills/fast_tag_icon.svg",
+      "bytes": 30264,
+      "sha256": "56a854e010f8e9a3"
+    },
+    {
+      "path": "assets/images/rechargesAndBills/gas_icon.svg",
+      "bytes": 704,
+      "sha256": "e6563f79c850b1dd"
+    },
+    {
+      "path": "assets/images/rechargesAndBills/hospital_icon.svg",
+      "bytes": 836,
+      "sha256": "d1f57523adbf8211"
+    },
+    {
+      "path": "assets/images/rechargesAndBills/housing_society_icon.svg",
+      "bytes": 1053,
+      "sha256": "a3611e6050b08b03"
+    },
+    {
+      "path": "assets/images/rechargesAndBills/insurance_icon.svg",
+      "bytes": 1028,
+      "sha256": "fa4483f35ab0947b"
+    },
+    {
+      "path": "assets/images/rechargesAndBills/landline_icon.svg",
+      "bytes": 3485,
+      "sha256": "71737355d44d60d5"
+    },
+    {
+      "path": "assets/images/rechargesAndBills/loan_icon.svg",
+      "bytes": 1674,
+      "sha256": "d20cf3e9f5be744d"
+    },
+    {
+      "path": "assets/images/rechargesAndBills/lpg_cylinder_icon.svg",
+      "bytes": 1731,
+      "sha256": "27d027c11909d4c5"
+    },
+    {
+      "path": "assets/images/rechargesAndBills/municipal_services_icon.svg",
+      "bytes": 1065,
+      "sha256": "2b0b39a5235cd5c8"
+    },
+    {
+      "path": "assets/images/rechargesAndBills/municipal_tax_icon.svg",
+      "bytes": 1689,
+      "sha256": "6cacc5251f9efe43"
+    },
+    {
+      "path": "assets/images/rechargesAndBills/subscription_icon.svg",
+      "bytes": 1031,
+      "sha256": "a107ecf6eea9b275"
+    },
+    {
+      "path": "assets/images/rechargesAndBills/water_icon.svg",
+      "bytes": 1477,
+      "sha256": "16f9b503b6b1b8fb"
+    },
+    {
+      "path": "assets/images/resendOtp/refresh_icon.svg",
+      "bytes": 632,
+      "sha256": "509aa58d22b65a77"
+    },
+    {
+      "path": "assets/images/resendOtp/timer_icon.png",
+      "bytes": 804,
+      "sha256": "999bf4a6ece15582"
+    },
+    {
+      "path": "assets/images/resendOtp/timer_icon.svg",
+      "bytes": 17428,
+      "sha256": "a6d9c66f7a81f382"
+    },
+    {
+      "path": "assets/images/sendMoney/back_icon.svg",
+      "bytes": 255,
+      "sha256": "ab475331f5549b64"
+    },
+    {
+      "path": "assets/images/sendMoney/bank_transfer_icon.svg",
+      "bytes": 1751,
+      "sha256": "b711580fd187b615"
+    },
+    {
+      "path": "assets/images/sendMoney/cc_success_image.svg",
+      "bytes": 60598,
+      "sha256": "225aa766f84b73dd"
+    },
+    {
+      "path": "assets/images/sendMoney/chat_message_icon.svg",
+      "bytes": 663,
+      "sha256": "d427fd8d6571bd6f"
+    },
+    {
+      "path": "assets/images/sendMoney/content_copy.svg",
+      "bytes": 987,
+      "sha256": "ec5e4de10552f764"
+    },
+    {
+      "path": "assets/images/sendMoney/download.svg",
+      "bytes": 664,
+      "sha256": "d86739da729ec4ca"
+    },
+    {
+      "path": "assets/images/sendMoney/exclamation_mark_icon.svg",
+      "bytes": 337,
+      "sha256": "1d5c54a333177fcd"
+    },
+    {
+      "path": "assets/images/sendMoney/google_pay_icon.png",
+      "bytes": 1524,
+      "sha256": "7a22e0dedaaabb3a"
+    },
+    {
+      "path": "assets/images/sendMoney/google_pay_icon.svg",
+      "bytes": 98113,
+      "sha256": "902b444390dd081f"
+    },
+    {
+      "path": "assets/images/sendMoney/green_check_icon.svg",
+      "bytes": 222,
+      "sha256": "83bd97339dbaf627"
+    },
+    {
+      "path": "assets/images/sendMoney/info_icon.svg",
+      "bytes": 943,
+      "sha256": "c4f447e39242171d"
+    },
+    {
+      "path": "assets/images/sendMoney/receipt.svg",
+      "bytes": 553,
+      "sha256": "9278aa6b6b6d63bc"
+    },
+    {
+      "path": "assets/images/sendMoney/refresh_icon.svg",
+      "bytes": 563,
+      "sha256": "56c54b7dbf45981a"
+    },
+    {
+      "path": "assets/images/sendMoney/remove_comment.svg",
+      "bytes": 564,
+      "sha256": "dbde26335c8e5656"
+    },
+    {
+      "path": "assets/images/sendMoney/search_icon.svg",
+      "bytes": 576,
+      "sha256": "b4c798a790f41791"
+    },
+    {
+      "path": "assets/images/sendMoney/send_payment_icon.svg",
+      "bytes": 389,
+      "sha256": "64aa050fa92749e9"
+    },
+    {
+      "path": "assets/images/sendMoney/to_any_ap_icon.svg",
+      "bytes": 555,
+      "sha256": "363a4a3a2581eb8e"
+    },
+    {
+      "path": "assets/images/sendMoney/upi_logo.svg",
+      "bytes": 964,
+      "sha256": "e337519bf8c7170e"
+    },
+    {
+      "path": "assets/images/sendMoney/upi_logo2.svg",
+      "bytes": 14788,
+      "sha256": "8389a5de1e94bcc4"
+    },
+    {
+      "path": "assets/images/sendMoney/verified_icon.svg",
+      "bytes": 1169,
+      "sha256": "0f700861a7ac73cc"
+    },
+    {
+      "path": "assets/images/sendMoney/view_history_icon.svg",
+      "bytes": 481,
+      "sha256": "0e4215f4332114bd"
+    },
+    {
+      "path": "assets/images/sendMoney/wrong_icon.svg",
+      "bytes": 311,
+      "sha256": "414e57cffa0cf2af"
+    },
+    {
+      "path": "assets/images/sendMoneySuccess/send_money_rewards_icon.svg",
+      "bytes": 21976,
+      "sha256": "ee2fab4ac0a68948"
+    },
+    {
+      "path": "assets/images/sendMoneySuccess/success_check_icon.svg",
+      "bytes": 152,
+      "sha256": "de8270aabd274a37"
+    },
+    {
+      "path": "assets/images/transactionHistory/calendar.svg",
+      "bytes": 2200,
+      "sha256": "f64294e5faad6083"
+    },
+    {
+      "path": "assets/images/transactionHistory/expandMore.svg",
+      "bytes": 706,
+      "sha256": "8f0ac9f4233d8429"
+    },
+    {
+      "path": "assets/images/transactionHistory/filter.svg",
+      "bytes": 285,
+      "sha256": "f954fd766c5081b9"
+    },
+    {
+      "path": "assets/images/transactionHistory/history.svg",
+      "bytes": 37579,
+      "sha256": "648bec5682afe6b3"
+    },
+    {
+      "path": "assets/images/transactionHistory/incoming.svg",
+      "bytes": 1278,
+      "sha256": "cb5447c9934d3ce7"
+    },
+    {
+      "path": "assets/images/transactionHistory/outgoing.svg",
+      "bytes": 1274,
+      "sha256": "04a21476c6f40c27"
+    },
+    {
+      "path": "assets/images/transactionHistory/raiseDispute.svg",
+      "bytes": 938,
+      "sha256": "51ff4951b3e765e1"
+    },
+    {
+      "path": "assets/images/transactionHistory/success.svg",
+      "bytes": 380,
+      "sha256": "e5b9e4d47446ef6c"
+    },
+    {
+      "path": "assets/images/transactionHistory/ticket.svg",
+      "bytes": 3486,
+      "sha256": "c7957cc96a7e87e6"
+    },
+    {
+      "path": "assets/images/transactionHistory/transferFailed.svg",
+      "bytes": 501,
+      "sha256": "869801c5d812cec6"
+    },
+    {
+      "path": "assets/images/upiNumber/activate.svg",
+      "bytes": 577,
+      "sha256": "e415180dca3164ef"
+    },
+    {
+      "path": "assets/images/upiNumber/deactivate.svg",
+      "bytes": 714,
+      "sha256": "75b9a5e967879ae1"
+    },
+    {
+      "path": "assets/images/upiNumber/deregister.svg",
+      "bytes": 1101,
+      "sha256": "34b8226e17738175"
+    },
+    {
+      "path": "assets/images/upi_circle/bharat_qr_code.svg",
+      "bytes": 5981,
+      "sha256": "74842b227f7a3edd"
+    },
+    {
+      "path": "assets/images/upi_circle/delete_card_details.png",
+      "bytes": 426,
+      "sha256": "8741594f84de7824"
+    },
+    {
+      "path": "assets/images/upi_circle/delete_card_details.svg",
+      "bytes": 1723,
+      "sha256": "770d337e11fe29c9"
+    },
+    {
+      "path": "assets/images/upi_circle/edit_card_details.png",
+      "bytes": 393,
+      "sha256": "29a9d45297612a31"
+    },
+    {
+      "path": "assets/images/upi_circle/edit_card_details.svg",
+      "bytes": 1863,
+      "sha256": "e473639f3a6d2960"
+    },
+    {
+      "path": "assets/images/upi_circle/green_check_upi_circle.png",
+      "bytes": 11357,
+      "sha256": "950c33dfc866b350"
+    },
+    {
+      "path": "assets/images/upi_circle/green_check_upi_circle.svg",
+      "bytes": 29711,
+      "sha256": "27fbd785a0b32856"
+    },
+    {
+      "path": "assets/images/upi_circle/powered_by_upi_circle.png",
+      "bytes": 15383,
+      "sha256": "605229787d46f05d"
+    },
+    {
+      "path": "assets/images/upi_circle/trusted_contact_phone.png",
+      "bytes": 12979,
+      "sha256": "a2733884a5ba5a1a"
+    },
+    {
+      "path": "assets/images/upi_circle/trusted_contact_phone.svg",
+      "bytes": 435690,
+      "sha256": "bce3175412696394"
+    },
+    {
+      "path": "assets/images/upi_circle/upi_circle.png",
+      "bytes": 147528,
+      "sha256": "17b98f3073249cf7"
+    },
+    {
+      "path": "assets/images/upi_circle/upi_circle.svg",
+      "bytes": 496493,
+      "sha256": "8fb557721bbd433c"
+    },
+    {
+      "path": "assets/images/upi_circle/upi_circle_banner.png",
+      "bytes": 192058,
+      "sha256": "de047a9cf49e61cb"
+    },
+    {
+      "path": "assets/images/upi_circle/upi_circle_banner.svg",
+      "bytes": 745872,
+      "sha256": "0aef46778c8f5fc4"
+    },
+    {
+      "path": "assets/images/upi_circle/upi_circle_logo.svg",
+      "bytes": 13665,
+      "sha256": "be356d5cda8ea5bc"
+    },
+    {
+      "path": "assets/images/upi_circle/upi_circle_logo_2.png",
+      "bytes": 4427,
+      "sha256": "e58616a57cad4b86"
+    },
+    {
+      "path": "assets/images/upi_circle/upi_circle_new_logo.png",
+      "bytes": 2196,
+      "sha256": "1b4e8ba01d62de9d"
+    },
+    {
+      "path": "assets/images/upi_circle/upi_circle_scanQr.png",
+      "bytes": 17988,
+      "sha256": "f94b5bc291dbd8af"
+    },
+    {
+      "path": "assets/images/upilite/img_upilite.svg",
+      "bytes": 46762,
+      "sha256": "1b16d0ac900eb28b"
+    },
+    {
+      "path": "assets/images/upilite/liteupi.svg",
+      "bytes": 12460,
+      "sha256": "7d1a4260a61fe1f6"
+    },
+    {
+      "path": "assets/images/upilite/upi_lite_logo.svg",
+      "bytes": 12272,
+      "sha256": "98d6d8c360e7546d"
+    },
+    {
+      "path": "assets/images/vouchers/erupi.png",
+      "bytes": 5417,
+      "sha256": "7b46e8f8d9f9c3d6"
+    },
+    {
+      "path": "assets/images/vouchers/reward.png",
+      "bytes": 144000,
+      "sha256": "55907e63f08fc909"
+    },
+    {
+      "path": "assets/images/vpaExist/adv.svg",
+      "bytes": 421213,
+      "sha256": "f90d46e4a7f96b7e"
+    },
+    {
+      "path": "assets/images/vpaExist/advertisment.svg",
+      "bytes": 1950769,
+      "sha256": "9a1b3eef50deb580"
+    },
+    {
+      "path": "assets/images/vpaExist/alert.svg",
+      "bytes": 1940,
+      "sha256": "50d8f444374e548f"
+    },
+    {
+      "path": "assets/images/vpaExist/appPermission.svg",
+      "bytes": 20721,
+      "sha256": "2f49fc62062f50a0"
+    },
+    {
+      "path": "assets/images/vpaExist/bhimUpi.svg",
+      "bytes": 8367,
+      "sha256": "373a00f9293b50ff"
+    },
+    {
+      "path": "assets/images/vpaExist/bobTitle.svg",
+      "bytes": 62720,
+      "sha256": "b25e44bed3a6599b"
+    },
+    {
+      "path": "assets/images/vpaExist/complaints.svg",
+      "bytes": 784,
+      "sha256": "c78e42c24636359e"
+    },
+    {
+      "path": "assets/images/vpaExist/congrulation.svg",
+      "bytes": 380,
+      "sha256": "8dcf1df630d1fdc9"
+    },
+    {
+      "path": "assets/images/vpaExist/congrulationBackground.svg",
+      "bytes": 1470,
+      "sha256": "f059e0924d68c38b"
+    },
+    {
+      "path": "assets/images/vpaExist/faq.svg",
+      "bytes": 1606,
+      "sha256": "3bf089b31cbc5e99"
+    },
+    {
+      "path": "assets/images/vpaExist/fingerPrint.png",
+      "bytes": 576,
+      "sha256": "f0ef7a7a54eb83bd"
+    },
+    {
+      "path": "assets/images/vpaExist/information.svg",
+      "bytes": 1843,
+      "sha256": "cadfbd025376eea3"
+    },
+    {
+      "path": "assets/images/vpaExist/light.svg",
+      "bytes": 1671,
+      "sha256": "69459282d7847fcc"
+    },
+    {
+      "path": "assets/images/vpaExist/locateUs.svg",
+      "bytes": 1259,
+      "sha256": "09935f6a922fd3a0"
+    },
+    {
+      "path": "assets/images/vpaExist/numberVerify.svg",
+      "bytes": 21128,
+      "sha256": "8eb4ae05636d26cc"
+    },
+    {
+      "path": "assets/images/vpaExist/pay.svg",
+      "bytes": 2159,
+      "sha256": "166257dac32a1380"
+    },
+    {
+      "path": "assets/images/vpaExist/person.svg",
+      "bytes": 3968,
+      "sha256": "4ba6a5a8bd0f1847"
+    },
+    {
+      "path": "assets/images/vpaExist/scanner.svg",
+      "bytes": 1704,
+      "sha256": "304080d959588c37"
+    },
+    {
+      "path": "assets/images/vpaExist/upi.svg",
+      "bytes": 77861,
+      "sha256": "b4a2b7694a907ca6"
+    },
+    {
+      "path": "assets/images/vpaExist/upi_sdk_ic_globe.png",
+      "bytes": 10330,
+      "sha256": "861d92ff50f28b17"
+    },
+    {
+      "path": "assets/images/vpaExist/verifyNumber.svg",
+      "bytes": 25485,
+      "sha256": "c48346550380e7d2"
+    },
+    {
+      "path": "assets/lottieAssets/nfc/nfc_scanner.json",
+      "bytes": 9819,
+      "sha256": "48601a5f7b3c6ee9"
+    },
+    {
+      "path": "i18n/en.json",
+      "bytes": 73075,
+      "sha256": "917e3ce72473becb"
+    },
+    {
+      "path": "i18n/hi.json",
+      "bytes": 148834,
+      "sha256": "16fceff275200edb"
+    },
+    {
+      "path": "i18n/kn.json",
+      "bytes": 120412,
+      "sha256": "2f6aa3d9f8afbe76"
+    },
+    {
+      "path": "packages/cupertino_icons/assets/CupertinoIcons.ttf",
+      "bytes": 848,
+      "sha256": "edd21b1e12ad804d"
+    }
+  ]
+}

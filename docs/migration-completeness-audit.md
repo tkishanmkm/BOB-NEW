@@ -31,22 +31,22 @@
 | `/alerts` | Alerts | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
 | `/all-accounts` | All accounts | Shared page alias | Route re-exports another page component; not an independent screen |
 | `/app-settings` | App settings | Shared page alias | Route re-exports another page component; not an independent screen |
-| `/bill-pay` | Bill payment | Dedicated page file | Local-only utility bill draft and preview; no bill fetch or payment submission; visual/functional APK parity remains unverified |
+| `/bill-pay` | Bill payment | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
 | `/borrow` | Borrow | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
 | `/bus-tickets` | Bus tickets | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
 | `/cards` | Cards | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
 | `/change-login-pin` | Change login PIN | Shared page alias | Route re-exports another page component; not an independent screen |
 | `/change-transaction-pin` | Change transaction PIN | Shared page alias | Route re-exports another page component; not an independent screen |
-| `/cheque-book-request` | Cheque book request | Dedicated page file | Local-only sample request draft and preview; no bank submission; visual/functional APK parity remains unverified |
+| `/cheque-book-request` | Cheque book request | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
 | `/complaints` | Complaints | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
 | `/contact-details` | Contact details | Shared page alias | Route re-exports another page component; not an independent screen |
 | `/contact-us-help` | Contact/help | Shared page alias | Route re-exports another page component; not an independent screen |
 | `/credit-card-apply` | Credit card application | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
 | `/current-account-details` | Current account details | Shared page alias | Route re-exports another page component; not an independent screen |
 | `/digital-loan` | Digital loan | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
-| `/digital-planner` | Digital planner | Dedicated page file | Local-only personal reminder planner; data remains in browser storage; visual/functional APK parity remains unverified |
-| `/faqs` | FAQs | Dedicated page file | Interactive prototype FAQ; visual/functional APK parity remains unverified |
-| `/fixed-deposit` | Fixed deposit | Dedicated page file | Illustrative maturity calculator; no deposit is opened; visual/functional APK parity remains unverified |
+| `/digital-planner` | Digital planner | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
+| `/faqs` | FAQs | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
+| `/fixed-deposit` | Fixed deposit | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
 | `/fund-transfer` | Fund transfer | Shared page alias | Route re-exports another page component; not an independent screen |
 | `/help` | Help | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
 | `/invest` | Investments | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
@@ -55,13 +55,13 @@
 | `/more` | More services | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
 | `/need-help` | Need help | Shared page alias | Route re-exports another page component; not an independent screen |
 | `/nominee-registration` | Nominee registration | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
-| `/offers` | Offers | Dedicated page file | Searchable category-filtered sample cards; not live offers; visual/functional APK parity remains unverified |
+| `/offers` | Offers | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
 | `/passbook` | Passbook / transactions | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
 | `/personal-details` | Personal details | Shared page alias | Route re-exports another page component; not an independent screen |
 | `/personal-loan-info` | Personal loan information | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
-| `/positive-pay` | Positive pay | Dedicated page file | Local-only cheque-detail draft and preview; no bank submission; visual/functional APK parity remains unverified |
+| `/positive-pay` | Positive pay | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
 | `/profile` | Profile | Shared page alias | Route re-exports another page component; not an independent screen |
-| `/recharge` | Recharge | Dedicated page file | Local-only recharge preview with validation; no payment or operator submission; visual/functional APK parity remains unverified |
+| `/recharge` | Recharge | Dedicated page file | Direct page component exists; visual/functional parity still requires verification |
 | `/save` | Savings | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
 | `/scan` | Scan / QR | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
 | `/security` | Security settings | Generic feature page | Route file delegates to the shared FeaturePage component; not an independent APK-matched screen |
@@ -131,10 +131,6 @@ The source manifest is compared against actual files under public/. A present fi
 - None detected.
 
 ## Completion decision
-
-The shared dynamic feature route now renders a dashboard/settings fallback for unknown feature keys instead of returning a blank screen. This is defensive routing behavior, not evidence of original APK parity.
-
-The feature-action route audit now discovers dedicated Next.js routes by scanning `app/**/page.*` instead of relying on a manually maintained route allowlist, reducing stale route-check entries as pages are added.
 
 **NOT COMPLETE / NOT VISUALLY VERIFIED.** Route coverage is not the same as screen parity. Some routes are served by the generic feature page, and this static scan cannot verify original APK layout geometry, navigation, animations, responsive behavior, or native/SDK screens. Each route still needs comparison with authorized screenshots/runtime captures, and each asset needs a page mapping with confidence (confirmed/likely/unknown).
 
