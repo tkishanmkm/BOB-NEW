@@ -60,6 +60,20 @@ test("rejects invalid demo PIN shape", () => {
   const s = validAccount(); s.demoPin = "12ab";
   assert.equal(api.valid(s), false);
 });
+test("normalizes imported account data to known schema fields", () => {
+  const s = validAccount();
+  s.unexpectedImportedProperty = "must not persist";
+  s.transactions[0].unexpected = "must not persist";
+  const normalized = api.normalizeImportedState(s);
+  assert.equal(normalized.unexpectedImportedProperty, undefined);
+  assert.equal(normalized.transactions[0].unexpected, undefined);
+  assert.equal(normalized.name, s.name);
+  assert.equal(normalized.transactions.length, s.transactions.length);
+});
+test("rejects invalid account data during import normalization", () => {
+  const s = validAccount(); s.transactions[0].amount = -1;
+  assert.equal(api.normalizeImportedState(s), null);
+});
 test("accepts an empty beneficiary list", () => assert.equal(api.validWorkspacePayees([]), true));
 test("rejects duplicate beneficiary account numbers", () => {
   assert.equal(api.validWorkspacePayees([payee(), { ...payee(), id: "p2" }]), false);
