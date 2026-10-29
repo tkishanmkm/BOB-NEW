@@ -36,6 +36,8 @@ function test(name, fn) {
 }
 
 test("state saves use an atomic stale-write guard for cross-tab consistency", () => { assert.match(source, /function putRecordIfUnchanged\(/); assert.match(source, /JSON\.stringify\(stored\)!==JSON\.stringify\(expected\)/); assert.match(source, /const expected:State=read\(\)/); assert.match(source, /putRecordIfUnchanged\(db,next,expected\)/); });
+test("workspace restore checks current account state before replacing all records", () => { assert.match(source, /export async function restoreWorkspaceRecords/); assert.match(source, /const expected:State=read\(\)/); assert.match(source, /const request=store\.get\(STATE_RECORD\)/); assert.match(source, /Workspace restore was cancelled; refresh before retrying/); });
+
 test("accepts the default demo account", () => assert.equal(api.valid(validAccount()), true));
 test("rejects impossible ISO transaction dates", () => {
   const s = validAccount(); s.transactions[0].date = "2026-02-30";
