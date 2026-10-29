@@ -228,7 +228,7 @@ export function validWorkspaceMessages(value:unknown):boolean{
     ids.add(m.id);return true;
   });
 }
-export async function restoreWorkspaceRecords(account:State,payees:unknown,supportMessages:unknown,expectedCollections?:{account?:State;payees:unknown;supportMessages:unknown}):Promise<boolean>{
+export async function restoreWorkspaceRecords(account:State,payees:unknown,supportMessages:unknown,expectedCollections?:{account?:State;payees:unknown;supportMessages:unknown}):Promise<boolean|"cleanup-pending">{
   if(!valid(account)||!validWorkspacePayees(payees)||!validWorkspaceMessages(supportMessages)||typeof window==="undefined")return false;
   // Backups are untrusted input: persist only the documented schema, not
   // unexpected fields that happen to pass structural validation.
@@ -283,8 +283,15 @@ export async function restoreWorkspaceRecords(account:State,payees:unknown,suppo
         return false;
       }
       cache=next;
-      try{localStorage.removeItem(KEY);localStorage.removeItem("bob-new-sample-payees-v1");localStorage.removeItem("bob-new-support-messages-v1")}catch{}
+      let cleanupPending=false;
+      for(const key of [KEY,"bob-new-sample-payees-v1","bob-new-support-messages-v1"]){
+        try{localStorage.removeItem(key)}catch{cleanupPending=true}
+      }
       notifyStateChange();
+      if(cleanupPending){
+        window.dispatchEvent(new CustomEvent("bob-new-storage-error",{detail:"Workspace restore succeeded in IndexedDB, but one or more legacy browser copies could not be removed. The restored records are saved; retry cleanup after checking browser storage."}));
+        return "cleanup-pending";
+      }
       return true;
     }catch{
       window.dispatchEvent(new CustomEvent("bob-new-storage-error",{detail:"Could not restore workspace backup. Existing records were not confirmed as changed."}));
