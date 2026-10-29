@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -44,6 +44,7 @@ export default function Transfers() {
   const [remark, setRemark] = useState("");
   const [error, setError] = useState("");
   const [saving, setSaving] = useState(false);
+  const saveLock = useRef(false);
   const [payees, setPayees] = useState<Payee[]>([]);
   const [payeesLoadError, setPayeesLoadError] = useState(false);
   const [selectedPayee, setSelectedPayee] = useState("");
@@ -67,7 +68,7 @@ export default function Transfers() {
   }
 
   async function finish() {
-    if (saving) return;
+    if (saveLock.current || saving) return;
     const value = parseAmount(amount);
     if (value === null) {
       setError("Enter a positive amount with no more than two decimal places.");
@@ -109,6 +110,7 @@ export default function Transfers() {
         },
       ],
     };
+    saveLock.current = true;
     setSaving(true);
     setError("");
     try {
@@ -121,6 +123,7 @@ export default function Transfers() {
     } catch {
       setError("The sample result could not be saved or opened. Check browser storage and try again; no bank payment was sent.");
     } finally {
+      saveLock.current = false;
       setSaving(false);
     }
   }
