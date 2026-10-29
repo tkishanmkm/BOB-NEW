@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { Shell } from "@/components/app-shell";
 import { ApkAssetIcon } from "@/components/apk-asset-map";
-import { read, money, type State } from "@/lib/demo";
+import { read, money, sortTransactionsNewestFirst, type State } from "@/lib/demo";
 
 type Filter = "all" | "credit" | "debit";
 type StatusFilter = "all" | "posted" | "pending";
@@ -23,12 +23,11 @@ export default function Passbook() {
     return () => { window.removeEventListener("bob-new-state-change", refresh); window.removeEventListener("storage", refresh); };
   }, []);
   const invalidRange = Boolean(from && to && from > to);
-  const transactions = useMemo(() => state.transactions.map((tx, index) => ({ tx, index }))
-    .filter(({ tx }) => !invalidRange && (!from || tx.date >= from) && (!to || tx.date <= to))
-    .filter(({ tx }) => type === "all" || tx.type === type)
-    .filter(({ tx }) => status === "all" || tx.status === status)
-    .filter(({ tx }) => !query.trim() || tx.description.toLowerCase().includes(query.trim().toLowerCase()) || tx.date.includes(query.trim()) || tx.id.toLowerCase().includes(query.trim().toLowerCase()))
-    .sort((a, b) => b.tx.date.localeCompare(a.tx.date) || b.index - a.index).map(({ tx }) => tx), [state.transactions, query, from, to, type, status, invalidRange]);
+  const transactions = useMemo(() => sortTransactionsNewestFirst(state.transactions)
+    .filter(tx => !invalidRange && (!from || tx.date >= from) && (!to || tx.date <= to))
+    .filter(tx => type === "all" || tx.type === type)
+    .filter(tx => status === "all" || tx.status === status)
+    .filter(tx => !query.trim() || tx.description.toLowerCase().includes(query.trim().toLowerCase()) || tx.date.includes(query.trim()) || tx.id.toLowerCase().includes(query.trim().toLowerCase())), [state.transactions, query, from, to, type, status, invalidRange]);
   const credits = transactions.filter(tx => tx.type === "credit" && tx.status === "posted").reduce((sum, tx) => sum + tx.amount, 0);
   const debits = transactions.filter(tx => tx.type === "debit" && tx.status === "posted").reduce((sum, tx) => sum + tx.amount, 0);
   function clearFilters() { setQuery(""); setFrom(""); setTo(""); setType("all"); setStatus("all"); }
