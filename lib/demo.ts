@@ -253,7 +253,7 @@ export async function restoreWorkspaceRecords(account:State,payees:unknown,suppo
         const request=store.get(STATE_RECORD);
         const payeesRequest=store.get("collection:bob-new-sample-payees-v1");
         const supportRequest=store.get("collection:bob-new-support-messages-v1");
-        let accountReady=false,payeesReady=!expectedCollections,supportReady=!expectedCollections;
+        let accountReady=false,payeesReady=false,supportReady=false;
         const maybeRestore=()=>{
           if(!accountReady||!payeesReady||!supportReady)return;
           const stored=request.result?.value;
