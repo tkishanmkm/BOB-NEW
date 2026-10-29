@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Shell } from "@/components/app-shell";
 import { ApkAssetIcon, type AssetKey } from "@/components/apk-asset-map";
-import { read, balance, money, maskAccountIdentifier, sortTransactionsNewestFirst, type State } from "@/lib/demo";
+import { hydrate, read, balance, money, maskAccountIdentifier, sortTransactionsNewestFirst, type State } from "@/lib/demo";
 
 const primaryActions: { icon: AssetKey; title: string; detail: string; href: string }[] = [
   { icon: "transfer", title: "Fund transfer", detail: "Create and review a transfer", href: "/transfers" },
@@ -27,17 +27,31 @@ const exploreActions: { icon: AssetKey; title: string; href: string }[] = [
 
 export default function Dashboard() {
   const [s, S] = useState<State>(read());
+  const [stateReady, setStateReady] = useState(false);
+  const [loadError, setLoadError] = useState(false);
   useEffect(() => {
+    let active = true;
     const refresh = () => S(read());
+    void hydrate().then(() => {
+      if (!active) return;
+      refresh();
+      setStateReady(true);
+    }).catch(() => {
+      if (active) setLoadError(true);
+    });
     window.addEventListener("bob-new-state-change", refresh);
     window.addEventListener("storage", refresh);
     return () => {
+      active = false;
       window.removeEventListener("bob-new-state-change", refresh);
       window.removeEventListener("storage", refresh);
     };
   }, []);
 
   const recent = sortTransactionsNewestFirst(s.transactions).slice(0, 5);
+
+  if (loadError) return <Shell><section className="card"><h1>Dashboard unavailable</h1><p className="error" role="alert">Saved account data could not be loaded. Dashboard balances are hidden to avoid showing unverified defaults. Check browser storage, then reload.</p><button type="button" onClick={() => window.location.reload()}>Retry</button></section></Shell>;
+  if (!stateReady) return <Shell><section className="card" role="status"><h1>Loading dashboard</h1><p className="muted">Loading saved account and transaction data from this browser…</p></section></Shell>;
 
   return <Shell>
     <div className="dashboard-brand-strip" aria-label="BOB World original APK brand asset, displayed in a local demo">
